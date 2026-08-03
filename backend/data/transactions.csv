@@ -1,0 +1,3013 @@
+id_transaction,id_collaborateur,date_transaction,client,categorie,montant_euros,statut
+T000001,C0085,2024-09-17,Cabinet Ferrand,Maintenance,3810.71,payee
+T000002,C0002,2024-12-17,Cabinet Ferrand,Licence,2049.28,annulee
+T000003,C0214,2024-01-25,Sigma Sante,Formation,2899.28,payee
+T000004,C0005,10-06-2025,Nord Logistique,Formation,2939.7,en attente
+T000005,C0199,2024-06-05,Maison Delaunay,Conseil,4967.89,payee
+T000006,C0181,03-06-2025,Nord Logistique,Maintenance,2943.18,payee
+T000007,C0185,2025-02-16,Orion Energie,Audit,4181.87,payee
+T000008,C0038,2024-05-27,Cabinet Ferrand,Maintenance,3066.56,en attente
+T000009,C0205,2024-12-08,Sigma Sante,Formation,5146.41,payee
+T000010,C0139,27/01/2024,Nord Logistique,Licence,2583.16,payee
+T000011,C0094,2025-05-27,Sigma Sante,Audit,1804.35,payee
+T000012,C0159,2024-08-09,Orion Energie,Licence,4182.18,payee
+T000013,C0080,2024-10-06,Atelier Bastide,Audit,4257.17,payee
+T000014,C0065,2024-04-24,Verne Industries,Licence,3357.94,payee
+T000015,C0067,2024-09-23,Verne Industries,Licence,3076.2,en attente
+T000016,C0133,2024-10-15,Cabinet Ferrand,Licence,4276.67,annulee
+T000017,C0140,2024-06-13,Cabinet Ferrand,Formation,1780.31,payee
+T000018,C0056,15/12/2025,Groupe Lorrain,Licence,3927.47,payee
+T000019,C0057,23/07/2024,Orion Energie,Formation,6872.26,payee
+T000020,C0220,2024-05-12,Sigma Sante,Maintenance,2335.04,payee
+T000021,C0120,2025-02-04,Nord Logistique,Maintenance,2922.76,en attente
+T000022,C0200,2024-08-20,Verne Industries,Formation,5972.71,payee
+T000023,C0077,2024-11-27,Sigma Sante,Audit,3360.81,payee
+T000024,C0067,2025-06-13,Verne Industries,Licence,4931.18,payee
+T000025,C0066,2024-02-27,Verne Industries,Audit,4043.63,payee
+T000026,C0123,06/01/2025,Orion Energie,Maintenance,4213.67,payee
+T000027,C0181,16/01/2024,Orion Energie,Audit,2264.42,en attente
+T000028,C0117,02/02/2024,Nord Logistique,Audit,2225.83,payee
+T000029,C0069,2024-03-08,Atelier Bastide,Formation,4607.36,payee
+T000030,C0117,2024-04-28,Groupe Lorrain,Formation,1488.12,payee
+T000031,C0133,12/09/2024,Orion Energie,Audit,2992.49,payee
+T000032,C0092,2025-11-13,Verne Industries,Formation,4279.15,payee
+T000033,C0003,2025-10-23,Maison Delaunay,Maintenance,2915.06,payee
+T000034,C0131,2024-03-16,Verne Industries,Conseil,3092.06,payee
+T000035,C0145,24-12-2025,Cabinet Ferrand,Audit,6892.67,payee
+T000036,C0216,2025-04-08,Orion Energie,Maintenance,5052.92,payee
+T000037,C0054,2025-02-08,Nord Logistique,Licence,6331.73,payee
+T000038,C0038,2025-08-01,Cabinet Ferrand,Licence,9531.37,payee
+T000039,C0089,2024-12-19,Cabinet Ferrand,Maintenance,6060.73,en attente
+T000040,C0128,2024-07-12,Atelier Bastide,Formation,2603.48,en attente
+T000041,C0007,2025-01-21,Nord Logistique,Formation,2057.3,annulee
+T000042,C0025,2025-06-13,Nord Logistique,Formation,2622.68,annulee
+T000043,C0111,2025-05-13,Groupe Lorrain,Conseil,4315.22,payee
+T000044,C0144,2024-05-04,Cabinet Ferrand,Audit,2764.89,payee
+T000045,C0057,2025-11-15,Maison Delaunay,Maintenance,2312.06,payee
+T000046,C0085,26-07-2024,Groupe Lorrain,Licence,6715.15,payee
+T000047,C0171,2025-08-21,Orion Energie,Audit,2718.22,annulee
+T000048,C0203,15/08/2024,Sigma Sante,Maintenance,4146.79,payee
+T000049,C0114,2024-02-16,Maison Delaunay,Licence,4092.36,payee
+T000050,C0097,28/12/2025,Groupe Lorrain,Conseil,1077.66,payee
+T000051,C0084,05-03-2025,Nord Logistique,Licence,6511.98,en attente
+T000052,C0032,2024-06-05,Orion Energie,Conseil,1718.98,payee
+T000053,C0013,2024-01-01,Groupe Lorrain,Maintenance,1402.17,payee
+T000054,C0194,2024-04-04,Sigma Sante,Conseil,2556.73,payee
+T000055,C0009,04/05/2024,Sigma Sante,Licence,2073.39,payee
+T000056,C0191,2025-11-06,Groupe Lorrain,Formation,6001.05,payee
+T000057,C0058,2024-05-09,Atelier Bastide,Conseil,3791.48,payee
+T000058,C0162,28-04-2024,Maison Delaunay,Licence,2431.49,payee
+T000059,C0169,2025-09-03,Orion Energie,Formation,1370.42,payee
+T000060,C0174,2025-10-03,Sigma Sante,Formation,4016.38,payee
+T000061,C0170,01/06/2024,Nord Logistique,Audit,2849.89,annulee
+T000062,C0062,2025-04-19,Nord Logistique,Formation,4293.92,payee
+T000063,C0139,2025-01-25,Nord Logistique,Licence,3803.87,payee
+T000064,C0149,25/02/2025,Nord Logistique,Conseil,2110.95,payee
+T000065,C0099,2024-08-15,Sigma Sante,Formation,4569.57,en attente
+T000066,C0009,2025-07-02,Groupe Lorrain,Formation,1605.12,payee
+T000067,C0212,05-10-2025,Atelier Bastide,Maintenance,2785.7,payee
+T000068,C0046,13-06-2025,Groupe Lorrain,Conseil,2986.06,en attente
+T000069,C0001,2025-10-21,Sigma Sante,Audit,3200.03,payee
+T000070,C0217,2024-03-21,Maison Delaunay,Conseil,1548.53,payee
+T000071,C0005,24-04-2025,Groupe Lorrain,Maintenance,5852.61,payee
+T000072,C0172,30/12/2025,Groupe Lorrain,Conseil,2108.14,payee
+T000073,C9999,2025-01-26,Verne Industries,Audit,1187.27,en attente
+T000074,C0054,18-11-2025,Atelier Bastide,Maintenance,3865.09,payee
+T000075,C0189,2024-09-11,Nord Logistique,Audit,7898.59,en attente
+T000076,C0026,16/10/2025,Cabinet Ferrand,Audit,1074.29,annulee
+T000077,C0058,16-11-2025,Verne Industries,Audit,1878.07,payee
+T000078,C0169,2025-03-30,Atelier Bastide,Maintenance,5085.82,payee
+T000079,C0173,2025-05-29,Maison Delaunay,Audit,3317.63,payee
+T000080,C0027,16/01/2025,Sigma Sante,Conseil,1583.17,en attente
+T000081,C0034,2024-08-19,Maison Delaunay,Maintenance,2973.34,payee
+T000082,C0060,2025-01-26,Sigma Sante,Audit,6947.67,payee
+T000083,C0017,2025-12-03,Orion Energie,Formation,6166.27,en attente
+T000084,C0043,2024-01-11,Sigma Sante,Audit,10438.52,payee
+T000085,C0133,29/05/2024,Maison Delaunay,Licence,4674.93,en attente
+T000086,C0002,30/12/2024,Groupe Lorrain,Licence,2514.94,payee
+T000087,C0067,2024-09-04,Verne Industries,Formation,5040.16,payee
+T000088,C0073,2025-03-31,Cabinet Ferrand,Conseil,2232.94,payee
+T000089,C0001,2024-09-20,Maison Delaunay,Audit,3104.94,payee
+T000090,C0014,2025-04-25,Sigma Sante,Maintenance,2242.26,payee
+T000091,C0197,18/03/2024,Maison Delaunay,Licence,4665.12,payee
+T000092,C0080,2024-08-30,Verne Industries,Audit,4458.57,payee
+T000093,C0123,2025-05-20,Sigma Sante,Conseil,2349.12,annulee
+T000094,C0117,10-12-2024,Maison Delaunay,Maintenance,5619.55,payee
+T000095,C0200,04-06-2025,Sigma Sante,Licence,6505.0,payee
+T000096,C0174,2025-04-09,Nord Logistique,Maintenance,2527.94,payee
+T000097,C0211,2024-08-27,Maison Delaunay,Conseil,4055.09,payee
+T000098,C0128,2024-11-08,Verne Industries,Maintenance,6704.94,payee
+T000099,C0214,05/12/2025,Cabinet Ferrand,Maintenance,3875.29,payee
+T000100,C0173,2025-12-03,Verne Industries,Audit,2788.75,payee
+T000101,C0172,2024-01-26,Verne Industries,Formation,3170.61,payee
+T000102,C0154,2025-05-29,Maison Delaunay,Conseil,2511.36,payee
+T000103,C0078,2024-12-24,Cabinet Ferrand,Conseil,5706.55,annulee
+T000104,C0142,2024-01-01,Atelier Bastide,Conseil,5359.46,payee
+T000105,C0083,2025-04-07,Groupe Lorrain,Formation,8662.65,payee
+T000106,C0151,2024-01-17,Sigma Sante,Audit,2202.82,payee
+T000107,C0060,2024-08-20,Cabinet Ferrand,Conseil,2429.46,en attente
+T000108,C0186,2025-05-18,Nord Logistique,Conseil,1415.23,en attente
+T000109,C0133,2025-08-16,Orion Energie,Conseil,4331.23,payee
+T000110,C0165,2024-10-28,Groupe Lorrain,Formation,1744.84,payee
+T000111,C0052,2025-08-13,Orion Energie,Maintenance,8441.41,payee
+T000112,C0184,04/09/2025,Maison Delaunay,Formation,2073.81,payee
+T000113,C0187,22-11-2024,Maison Delaunay,Licence,8693.17,payee
+T000114,C0034,06-05-2024,Cabinet Ferrand,Formation,450.31,payee
+T000115,C0082,2025-04-26,Maison Delaunay,Audit,1028.9,payee
+T000116,C0158,2024-01-11,Atelier Bastide,Conseil,1706.76,annulee
+T000117,C0203,2025-10-14,Verne Industries,Formation,3814.81,payee
+T000118,C0171,10-10-2024,Orion Energie,Licence,3146.9,payee
+T000119,C0110,2025-07-08,Verne Industries,Audit,2049.66,payee
+T000120,C0070,2025-06-21,Maison Delaunay,Licence,3065.7,annulee
+T000121,C0212,11/12/2024,Orion Energie,Conseil,2376.82,payee
+T000122,C0203,2025-12-10,Nord Logistique,Licence,4278.05,payee
+T000123,C0209,04-08-2025,Verne Industries,Formation,1783.11,payee
+T000124,C0071,2025-10-07,Sigma Sante,Formation,3540.86,payee
+T000125,C0102,2024-03-09,Sigma Sante,Audit,3617.58,payee
+T000126,C0057,2024-12-19,Nord Logistique,Audit,3197.97,annulee
+T000127,C0062,25/11/2025,Groupe Lorrain,Formation,4022.91,payee
+T000128,C0202,2025-08-16,Cabinet Ferrand,Licence,3047.93,payee
+T000129,C0041,2024-11-27,Cabinet Ferrand,Licence,4639.92,payee
+T000130,C0058,2024-02-21,Atelier Bastide,Audit,3196.53,payee
+T000131,C0129,2024-07-25,Cabinet Ferrand,Audit,5831.52,en attente
+T000132,C9999,21/02/2025,Atelier Bastide,Formation,3531.32,payee
+T000133,C0107,2025-04-13,Maison Delaunay,Conseil,5649.15,payee
+T000134,C0086,2025-11-05,Cabinet Ferrand,Conseil,2401.92,payee
+T000135,C0157,2024-03-08,Maison Delaunay,Conseil,1899.26,payee
+T000136,C0209,16/10/2024,Cabinet Ferrand,Maintenance,4622.63,en attente
+T000137,C0213,17-07-2024,Maison Delaunay,Maintenance,3226.81,payee
+T000138,C0106,2025-12-01,Maison Delaunay,Audit,822.02,en attente
+T000139,C0193,2024-05-01,Atelier Bastide,Conseil,2178.47,payee
+T000140,C0162,2024-06-10,Cabinet Ferrand,Conseil,3824.22,annulee
+T000141,C0046,2024-08-05,Maison Delaunay,Conseil,3083.56,en attente
+T000142,C0185,2024-03-18,Nord Logistique,Maintenance,2126.3,payee
+T000143,C0082,2025-04-14,Atelier Bastide,Conseil,3212.91,payee
+T000144,C0146,18-01-2025,Sigma Sante,Maintenance,3485.87,en attente
+T000145,C0168,11/02/2025,Atelier Bastide,Audit,1190.76,payee
+T000146,C0219,24-10-2025,Orion Energie,Conseil,5571.98,payee
+T000147,C0169,12-11-2024,Maison Delaunay,Maintenance,6197.73,en attente
+T000148,C0187,2024-08-15,Verne Industries,Licence,2172.11,en attente
+T000149,C0118,2024-10-01,Atelier Bastide,Audit,7764.46,payee
+T000150,C0093,2025-08-07,Orion Energie,Formation,3098.41,en attente
+T000151,C0103,2025-01-20,Nord Logistique,Formation,2306.96,payee
+T000152,C0169,2024-05-03,Sigma Sante,Conseil,2269.53,payee
+T000153,C0048,18/05/2025,Sigma Sante,Maintenance,7506.33,payee
+T000154,C0122,2025-06-28,Groupe Lorrain,Audit,1803.34,payee
+T000155,C0158,2024-07-01,Maison Delaunay,Conseil,3523.95,payee
+T000156,C0006,10/02/2025,Verne Industries,Licence,3743.49,payee
+T000157,C0148,2025-02-15,Orion Energie,Maintenance,4638.21,annulee
+T000158,C0061,07/05/2024,Atelier Bastide,Maintenance,3380.43,payee
+T000159,C0066,2024-01-07,Groupe Lorrain,Audit,7235.61,payee
+T000160,C0145,08/06/2025,Maison Delaunay,Maintenance,7916.4,payee
+T000161,C0003,25-03-2025,Nord Logistique,Audit,6416.45,payee
+T000162,C0037,05/06/2025,Nord Logistique,Audit,3931.96,payee
+T000163,C0106,2024-10-02,Verne Industries,Audit,5118.17,annulee
+T000164,C0136,11/01/2025,Cabinet Ferrand,Licence,2766.5,payee
+T000165,C0026,2025-12-17,Orion Energie,Licence,5674.53,payee
+T000166,C0084,2024-06-13,Sigma Sante,Licence,2380.1,payee
+T000167,C0072,2025-04-21,Orion Energie,Audit,1974.22,en attente
+T000168,C0124,2024-04-06,Verne Industries,Formation,1943.37,payee
+T000169,C0070,17/02/2024,Sigma Sante,Maintenance,4332.59,payee
+T000170,C0001,2025-11-29,Cabinet Ferrand,Maintenance,6795.38,payee
+T000171,C0123,2024-04-04,Orion Energie,Conseil,7065.76,payee
+T000172,C0197,23/04/2025,Sigma Sante,Licence,861.25,payee
+T000173,C0136,2025-01-10,Atelier Bastide,Conseil,5275.04,payee
+T000174,C0084,2025-08-13,Orion Energie,Maintenance,1901.01,payee
+T000175,C0112,2025-02-03,Nord Logistique,Licence,9458.34,payee
+T000176,C0033,2025-05-23,Sigma Sante,Formation,1566.25,annulee
+T000177,C0055,2025-10-14,Nord Logistique,Conseil,1205.62,en attente
+T000178,C0102,2025-08-28,Atelier Bastide,Conseil,5328.83,payee
+T000179,C0138,2025-06-10,Orion Energie,Maintenance,2677.92,payee
+T000180,C0113,28/04/2024,Groupe Lorrain,Audit,2594.69,annulee
+T000181,C0025,2024-05-03,Sigma Sante,Formation,2153.53,payee
+T000182,C0148,28-12-2024,Atelier Bastide,Audit,2355.49,annulee
+T000183,C0006,2025-04-25,Sigma Sante,Licence,5445.77,payee
+T000184,C0122,2025-05-02,Cabinet Ferrand,Formation,1939.88,payee
+T000185,C0136,2025-07-28,Atelier Bastide,Licence,3036.31,payee
+T000186,C0011,2024-03-16,Atelier Bastide,Maintenance,1826.84,en attente
+T000187,C0090,2024-05-06,Verne Industries,Audit,3455.27,payee
+T000188,C0203,19-04-2024,Orion Energie,Licence,2571.65,payee
+T000189,C0083,2025-01-29,Sigma Sante,Formation,4146.79,payee
+T000190,C0106,2025-04-07,Maison Delaunay,Maintenance,4423.49,annulee
+T000191,C0052,2024-03-25,Maison Delaunay,Licence,6852.86,payee
+T000192,C0018,2025-09-26,Cabinet Ferrand,Formation,9146.64,en attente
+T000193,C0074,09/08/2024,Orion Energie,Licence,2275.52,payee
+T000194,C0180,27-04-2025,Verne Industries,Licence,4682.0,en attente
+T000195,C0073,2025-07-02,Orion Energie,Conseil,2547.41,payee
+T000196,C0154,2024-01-27,Cabinet Ferrand,Conseil,4357.97,payee
+T000197,C0193,23/09/2025,Verne Industries,Maintenance,4264.46,payee
+T000198,C0151,09-12-2025,Cabinet Ferrand,Conseil,4197.19,payee
+T000199,C0153,2025-11-30,Maison Delaunay,Licence,4864.47,payee
+T000200,C0100,2024-04-11,Maison Delaunay,Maintenance,3569.29,payee
+T000201,C0015,2024-10-13,Sigma Sante,Formation,2683.75,payee
+T000202,C0096,2024-06-18,Groupe Lorrain,Formation,3475.84,en attente
+T000203,C0201,25/11/2024,Atelier Bastide,Audit,8800.84,payee
+T000204,C0125,2025-12-12,Sigma Sante,Conseil,2415.73,en attente
+T000205,C0177,11-07-2025,Orion Energie,Maintenance,2797.63,payee
+T000206,C0012,2025-07-16,Atelier Bastide,Conseil,2180.83,payee
+T000207,C0047,2024-11-04,Orion Energie,Audit,1068.44,payee
+T000208,C0070,2025-11-14,Verne Industries,Licence,3180.47,payee
+T000209,C0084,2025-11-02,Orion Energie,Conseil,4507.88,payee
+T000210,C0045,2025-08-11,Orion Energie,Maintenance,1987.61,payee
+T000211,C0108,17-08-2025,Maison Delaunay,Conseil,6325.14,payee
+T000212,C0154,2025-04-20,Atelier Bastide,Formation,4083.02,payee
+T000213,C0150,10-03-2024,Sigma Sante,Licence,5471.14,en attente
+T000214,C0098,2024-07-26,Groupe Lorrain,Maintenance,3888.44,annulee
+T000215,C0203,15-07-2025,Verne Industries,Licence,3028.62,payee
+T000216,C0052,2024-08-26,Maison Delaunay,Audit,2716.97,payee
+T000217,C0009,2024-05-05,Groupe Lorrain,Licence,3805.43,payee
+T000218,C0173,2025-11-22,Cabinet Ferrand,Formation,3981.36,payee
+T000219,C0152,2024-12-22,Sigma Sante,Formation,2510.15,payee
+T000220,C0061,2025-09-20,Groupe Lorrain,Audit,2988.96,payee
+T000221,C0202,2024-07-26,Verne Industries,Maintenance,7945.55,payee
+T000222,C0038,2024-09-19,Groupe Lorrain,Conseil,3508.93,payee
+T000223,C0059,2024-09-07,Maison Delaunay,Maintenance,3693.86,payee
+T000224,C0036,2024-09-29,Groupe Lorrain,Licence,6983.03,payee
+T000225,C0044,2024-11-15,Verne Industries,Formation,4007.95,payee
+T000226,C0170,2024-08-05,Nord Logistique,Conseil,3283.63,en attente
+T000227,C0164,2025-08-17,Atelier Bastide,Audit,5393.14,payee
+T000228,C0150,26/08/2024,Atelier Bastide,Conseil,4793.37,payee
+T000229,C0200,2024-11-18,Sigma Sante,Audit,3741.5,payee
+T000230,C0017,2025-09-20,Sigma Sante,Conseil,3906.05,payee
+T000231,C0144,2024-11-15,Groupe Lorrain,Licence,2842.09,payee
+T000232,C0027,2024-01-08,Sigma Sante,Conseil,1753.33,payee
+T000233,C0062,01/01/2024,Cabinet Ferrand,Licence,4449.12,payee
+T000234,C0148,2024-11-14,Atelier Bastide,Audit,1375.85,payee
+T000235,C0177,2025-04-18,Orion Energie,Licence,1796.89,payee
+T000236,C0133,2025-11-19,Verne Industries,Licence,2968.1,payee
+T000237,C0090,2024-04-05,Verne Industries,Conseil,2813.11,payee
+T000238,C0160,31/01/2025,Atelier Bastide,Audit,4690.37,payee
+T000239,C0194,2024-07-29,Orion Energie,Formation,5302.04,payee
+T000240,C0042,2024-11-24,Verne Industries,Licence,8509.86,payee
+T000241,C0203,2024-11-19,Nord Logistique,Audit,1252.69,payee
+T000242,C0169,2024-08-16,Atelier Bastide,Maintenance,4186.22,payee
+T000243,C0020,2024-01-14,Orion Energie,Maintenance,4100.44,payee
+T000244,C0218,2024-02-23,Sigma Sante,Conseil,3844.04,annulee
+T000245,C0042,16/01/2025,Nord Logistique,Licence,4448.12,payee
+T000246,C0140,2024-06-12,Verne Industries,Licence,4920.41,payee
+T000247,C0031,26-08-2024,Maison Delaunay,Conseil,6424.57,payee
+T000248,C0046,07-03-2024,Cabinet Ferrand,Formation,3902.92,payee
+T000249,C0150,2024-02-06,Orion Energie,Audit,7394.21,payee
+T000250,C0158,2024-04-02,Maison Delaunay,Audit,3917.37,payee
+T000251,C0160,2024-10-02,Groupe Lorrain,Audit,2612.12,en attente
+T000252,C0080,2024-04-29,Sigma Sante,Audit,3739.48,en attente
+T000253,C0191,2024-06-17,Atelier Bastide,Audit,2084.43,payee
+T000254,C0012,2024-08-08,Verne Industries,Conseil,2143.53,payee
+T000255,C0199,2024-07-31,Cabinet Ferrand,Audit,3099.53,payee
+T000256,C0071,09/01/2024,Atelier Bastide,Maintenance,2872.86,payee
+T000257,C0144,2024-03-26,Orion Energie,Audit,6335.41,payee
+T000258,C0211,2025-11-24,Orion Energie,Maintenance,3079.33,payee
+T000259,C0060,02/05/2025,Atelier Bastide,Conseil,1922.32,payee
+T000260,C0096,2024-03-31,Verne Industries,Licence,3390.16,payee
+T000261,C0193,2024-07-26,Verne Industries,Maintenance,3897.65,payee
+T000262,C0201,2024-10-06,Maison Delaunay,Conseil,3577.0,payee
+T000263,C0055,2025-10-23,Nord Logistique,Licence,1869.74,payee
+T000264,C0119,2025-10-04,Maison Delaunay,Maintenance,6678.34,payee
+T000265,C0078,2025-07-16,Groupe Lorrain,Licence,1170.02,payee
+T000266,C0120,2024-03-18,Nord Logistique,Maintenance,3549.07,payee
+T000267,C0088,24/12/2024,Atelier Bastide,Conseil,1835.34,payee
+T000268,C0002,2024-12-19,Atelier Bastide,Formation,5549.24,en attente
+T000269,C0215,10-04-2025,Sigma Sante,Audit,4195.52,payee
+T000270,C0148,2025-09-08,Atelier Bastide,Licence,3897.55,payee
+T000271,C0108,2024-08-22,Groupe Lorrain,Conseil,2957.84,payee
+T000272,C0026,10/02/2025,Cabinet Ferrand,Conseil,6387.46,payee
+T000273,C0017,2024-07-11,Maison Delaunay,Licence,2953.95,payee
+T000274,C0112,2024-06-02,Nord Logistique,Audit,7722.24,payee
+T000275,C0151,2024-08-16,Atelier Bastide,Conseil,2109.81,payee
+T000276,C0061,2025-06-20,Sigma Sante,Conseil,3402.09,payee
+T000277,C0173,15/11/2024,Cabinet Ferrand,Formation,4853.44,payee
+T000278,C0092,12-05-2025,Maison Delaunay,Formation,4341.45,payee
+T000279,C0003,2025-05-19,Atelier Bastide,Conseil,3265.39,payee
+T000280,C0125,2024-09-21,Orion Energie,Formation,1264.9,payee
+T000281,C0043,2025-11-28,Verne Industries,Maintenance,3672.98,en attente
+T000282,C0004,2024-02-03,Orion Energie,Audit,2769.71,en attente
+T000283,C0031,2025-10-16,Cabinet Ferrand,Formation,2427.85,payee
+T000284,C0067,2024-01-06,Maison Delaunay,Maintenance,4997.1,payee
+T000285,C0120,2024-10-06,Nord Logistique,Audit,1109.62,payee
+T000286,C0045,2025-08-25,Groupe Lorrain,Conseil,3327.49,payee
+T000287,C0051,2025-05-14,Groupe Lorrain,Audit,617.01,payee
+T000288,C0014,2024-08-22,Cabinet Ferrand,Conseil,4358.26,payee
+T000289,C0045,2025-10-08,Atelier Bastide,Maintenance,5023.36,payee
+T000290,C0075,2024-04-10,Nord Logistique,Maintenance,3646.56,payee
+T000291,C0048,04-05-2025,Atelier Bastide,Audit,2632.05,en attente
+T000292,C0075,2025-01-13,Nord Logistique,Licence,6340.57,payee
+T000293,C0203,2024-05-31,Atelier Bastide,Maintenance,6554.54,payee
+T000294,C0089,2025-11-03,Atelier Bastide,Conseil,4000.51,payee
+T000295,C0148,2025-07-12,Verne Industries,Licence,7046.16,payee
+T000296,C0159,2024-01-07,Nord Logistique,Audit,2107.44,payee
+T000297,C0031,04-03-2024,Cabinet Ferrand,Conseil,3160.33,payee
+T000298,C0058,2024-02-10,Verne Industries,Conseil,802.28,payee
+T000299,C0097,2024-10-30,Verne Industries,Maintenance,1762.94,payee
+T000300,C0107,2024-10-31,Verne Industries,Licence,1675.68,en attente
+T000301,C0004,2025-06-12,Cabinet Ferrand,Licence,4344.76,payee
+T000302,C0150,2025-05-08,Sigma Sante,Formation,1832.29,payee
+T000303,C0070,2024-01-12,Nord Logistique,Conseil,1066.21,payee
+T000304,C0075,13/12/2024,Cabinet Ferrand,Maintenance,2326.78,payee
+T000305,C0140,2025-07-26,Maison Delaunay,Formation,2487.52,payee
+T000306,C0169,2025-10-17,Nord Logistique,Maintenance,1570.34,en attente
+T000307,C0201,2024-08-01,Orion Energie,Licence,3504.03,en attente
+T000308,C0151,2024-02-02,Nord Logistique,Formation,3835.62,en attente
+T000309,C0096,2024-04-21,Atelier Bastide,Formation,1351.83,payee
+T000310,C0028,05/09/2024,Nord Logistique,Maintenance,4683.24,payee
+T000311,C0051,19-11-2024,Sigma Sante,Formation,2027.25,payee
+T000312,C0080,2024-09-13,Atelier Bastide,Audit,2466.49,annulee
+T000313,C0070,2024-03-07,Atelier Bastide,Licence,4212.34,payee
+T000314,C0049,2024-09-05,Nord Logistique,Audit,2478.37,payee
+T000315,C0036,2024-07-30,Orion Energie,Licence,1778.37,en attente
+T000316,C0044,2024-12-22,Verne Industries,Licence,3398.9,payee
+T000317,C0153,2024-02-27,Nord Logistique,Licence,5581.9,en attente
+T000318,C0114,31-07-2025,Maison Delaunay,Licence,5243.02,payee
+T000319,C0009,31/10/2024,Maison Delaunay,Licence,2353.33,en attente
+T000320,C0131,20/08/2024,Atelier Bastide,Audit,1946.55,payee
+T000321,C0196,23-10-2025,Cabinet Ferrand,Maintenance,2170.73,payee
+T000322,C0099,2025-06-27,Orion Energie,Conseil,5271.21,payee
+T000323,C0074,09/04/2024,Orion Energie,Conseil,2151.05,payee
+T000324,C0064,2024-04-16,Sigma Sante,Conseil,6872.12,payee
+T000325,C0089,2024-01-02,Groupe Lorrain,Maintenance,4185.24,annulee
+T000326,C0065,2025-02-13,Cabinet Ferrand,Formation,3199.49,en attente
+T000327,C0215,2024-09-15,Groupe Lorrain,Formation,2332.63,annulee
+T000328,C0196,2024-09-30,Verne Industries,Audit,3422.94,payee
+T000329,C0080,2025-01-06,Sigma Sante,Conseil,1772.04,payee
+T000330,C0215,2025-01-28,Cabinet Ferrand,Conseil,1377.53,en attente
+T000331,C0199,2024-01-01,Atelier Bastide,Conseil,4205.55,payee
+T000332,C0018,2024-03-19,Maison Delaunay,Formation,3192.09,payee
+T000333,C0114,2025-07-30,Sigma Sante,Conseil,4769.37,payee
+T000334,C0153,2025-11-27,Maison Delaunay,Maintenance,3772.15,en attente
+T000335,C0098,2025-09-03,Sigma Sante,Maintenance,2312.08,payee
+T000336,C0106,2025-10-23,Maison Delaunay,Conseil,5240.02,payee
+T000337,C0115,2024-12-04,Maison Delaunay,Licence,2460.69,payee
+T000338,C0160,2025-08-26,Orion Energie,Formation,5977.36,payee
+T000339,C0069,2025-10-06,Verne Industries,Conseil,2419.54,payee
+T000340,C0139,2025-10-13,Cabinet Ferrand,Licence,1510.68,payee
+T000341,C0057,2024-04-19,Nord Logistique,Maintenance,6516.06,payee
+T000342,C0207,17/04/2024,Maison Delaunay,Formation,2375.3,payee
+T000343,C0020,2024-10-20,Cabinet Ferrand,Maintenance,2465.84,payee
+T000344,C0016,2025-01-02,Cabinet Ferrand,Audit,1549.05,payee
+T000345,C0009,30-11-2025,Atelier Bastide,Conseil,3056.66,en attente
+T000346,C0082,2024-08-20,Maison Delaunay,Conseil,1662.55,payee
+T000347,C0141,30-08-2025,Groupe Lorrain,Formation,6325.44,payee
+T000348,C0073,2025-10-09,Cabinet Ferrand,Audit,2664.91,payee
+T000349,C0106,2025-12-05,Cabinet Ferrand,Conseil,1967.26,annulee
+T000350,C0043,18-05-2024,Sigma Sante,Licence,3335.8,payee
+T000351,C0086,25-06-2024,Cabinet Ferrand,Licence,9040.62,payee
+T000352,C0030,09/06/2024,Groupe Lorrain,Conseil,3414.37,payee
+T000353,C0110,2025-06-20,Nord Logistique,Conseil,2860.9,payee
+T000354,C0170,16/05/2025,Atelier Bastide,Conseil,3294.95,payee
+T000355,C0009,2024-10-24,Cabinet Ferrand,Conseil,4890.5,annulee
+T000356,C0181,05/03/2024,Verne Industries,Licence,4668.62,payee
+T000357,C0054,2025-01-15,Atelier Bastide,Audit,3714.79,en attente
+T000358,C0156,2025-06-18,Orion Energie,Formation,5348.17,payee
+T000359,C0190,2024-12-12,Verne Industries,Formation,3390.88,payee
+T000360,C0181,2024-07-14,Nord Logistique,Formation,2986.64,payee
+T000361,C0156,2025-03-08,Sigma Sante,Audit,3352.74,payee
+T000362,C0161,2025-04-27,Verne Industries,Audit,2427.56,payee
+T000363,C0044,2025-03-07,Orion Energie,Maintenance,4942.68,payee
+T000364,C0032,2025-09-29,Cabinet Ferrand,Licence,2365.21,payee
+T000365,C0089,2024-08-17,Orion Energie,Conseil,982.16,payee
+T000366,C0142,2025-03-21,Cabinet Ferrand,Audit,1372.47,en attente
+T000367,C0144,2025-09-16,Groupe Lorrain,Conseil,3906.3,payee
+T000368,C0181,2024-06-04,Sigma Sante,Conseil,2158.02,en attente
+T000369,C0072,2024-07-24,Sigma Sante,Maintenance,4723.88,payee
+T000370,C0201,2024-02-05,Orion Energie,Conseil,3207.55,payee
+T000371,C0105,2024-09-30,Groupe Lorrain,Conseil,4924.23,en attente
+T000372,C0058,2024-02-02,Sigma Sante,Licence,1040.0,payee
+T000373,C0171,28-06-2025,Verne Industries,Conseil,2355.38,en attente
+T000374,C0030,05/03/2024,Sigma Sante,Formation,1931.97,payee
+T000375,C0095,20/05/2025,Orion Energie,Maintenance,9938.83,payee
+T000376,C0182,27/02/2025,Atelier Bastide,Conseil,2569.26,payee
+T000377,C0179,2025-12-22,Verne Industries,Maintenance,1360.55,payee
+T000378,C0060,2024-09-11,Verne Industries,Conseil,3869.11,payee
+T000379,C0039,08/09/2024,Verne Industries,Maintenance,1840.11,payee
+T000380,C0008,2024-06-26,Nord Logistique,Conseil,5180.85,payee
+T000381,C0021,2025-01-27,Cabinet Ferrand,Maintenance,5614.75,payee
+T000382,C0192,2024-06-09,Maison Delaunay,Maintenance,1942.44,en attente
+T000383,C0182,2024-03-23,Maison Delaunay,Maintenance,7323.7,payee
+T000384,C0118,2025-11-23,Atelier Bastide,Formation,2192.55,payee
+T000385,C0133,10/05/2025,Groupe Lorrain,Formation,3687.27,payee
+T000386,C0076,2024-03-27,Maison Delaunay,Audit,5257.58,en attente
+T000387,C0045,27-03-2025,Atelier Bastide,Maintenance,3904.69,en attente
+T000388,C0003,2024-08-10,Atelier Bastide,Conseil,2571.51,payee
+T000389,C0156,2024-05-11,Nord Logistique,Conseil,1516.1,en attente
+T000390,C0009,10-12-2024,Verne Industries,Formation,7182.86,payee
+T000391,C0025,28-07-2025,Atelier Bastide,Maintenance,3952.53,payee
+T000392,C0184,01/01/2024,Verne Industries,Formation,7947.6,en attente
+T000393,C0136,2024-09-16,Nord Logistique,Audit,4240.26,payee
+T000394,C0114,2025-11-03,Sigma Sante,Licence,7424.48,payee
+T000395,C0051,2024-10-14,Orion Energie,Audit,2084.12,payee
+T000396,C0035,2024-03-13,Maison Delaunay,Audit,2169.46,annulee
+T000397,C0109,2024-11-08,Orion Energie,Licence,2926.54,payee
+T000398,C0084,2025-05-13,Nord Logistique,Audit,1993.45,payee
+T000399,C0124,2025-12-28,Cabinet Ferrand,Licence,1235.24,payee
+T000400,C0039,2025-04-04,Sigma Sante,Conseil,2294.07,payee
+T000401,C0054,2024-02-06,Verne Industries,Formation,4210.0,payee
+T000402,C0027,13-08-2025,Sigma Sante,Licence,1621.93,payee
+T000403,C0099,23/07/2025,Orion Energie,Audit,1726.55,payee
+T000404,C0065,2025-04-20,Cabinet Ferrand,Audit,2373.97,payee
+T000405,C0052,2025-10-16,Maison Delaunay,Conseil,1871.56,annulee
+T000406,C0128,15-07-2025,Sigma Sante,Conseil,2447.02,en attente
+T000407,C0116,2024-06-18,Sigma Sante,Licence,3041.2,payee
+T000408,C0049,2024-11-03,Atelier Bastide,Licence,1685.79,payee
+T000409,C0163,2025-01-05,Orion Energie,Maintenance,2403.7,payee
+T000410,C9999,2024-12-22,Nord Logistique,Formation,3185.02,payee
+T000411,C0080,11-04-2025,Groupe Lorrain,Audit,2037.56,payee
+T000412,C0111,27-05-2025,Groupe Lorrain,Licence,1515.79,payee
+T000413,C0033,2024-03-16,Maison Delaunay,Formation,2120.71,payee
+T000414,C0098,2025-02-18,Cabinet Ferrand,Licence,-2649.22,payee
+T000415,C0136,2024-01-29,Groupe Lorrain,Audit,1196.45,payee
+T000416,C0030,2025-01-08,Nord Logistique,Formation,4242.44,payee
+T000417,C0132,04-11-2024,Nord Logistique,Licence,2725.01,en attente
+T000418,C0010,2024-05-30,Groupe Lorrain,Audit,2127.11,payee
+T000419,C0141,2025-12-24,Verne Industries,Conseil,1311.42,payee
+T000420,C0009,2024-07-07,Cabinet Ferrand,Licence,3971.4,payee
+T000421,C0041,2024-02-11,Sigma Sante,Maintenance,5642.81,payee
+T000422,C0082,2024-09-18,Maison Delaunay,Audit,2345.62,payee
+T000423,C0143,2025-07-06,Groupe Lorrain,Conseil,7597.42,payee
+T000424,C0167,07-01-2024,Nord Logistique,Maintenance,3107.83,payee
+T000425,C0109,25-12-2024,Orion Energie,Audit,3167.15,payee
+T000426,C0031,2024-10-31,Groupe Lorrain,Formation,4835.91,payee
+T000427,C0090,2025-09-24,Orion Energie,Maintenance,4076.59,en attente
+T000428,C0183,03/01/2024,Groupe Lorrain,Licence,1615.75,payee
+T000429,C0021,2024-01-13,Nord Logistique,Maintenance,2298.51,payee
+T000430,C0167,16/02/2025,Verne Industries,Formation,5249.5,payee
+T000431,C0090,2024-05-10,Maison Delaunay,Conseil,4118.07,en attente
+T000432,C0001,2025-05-28,Sigma Sante,Audit,7632.42,payee
+T000433,C0162,22-07-2024,Sigma Sante,Formation,3801.82,payee
+T000434,C0007,2025-02-14,Sigma Sante,Conseil,4188.89,payee
+T000435,C0086,2024-01-28,Sigma Sante,Audit,2116.87,en attente
+T000436,C0046,21/05/2025,Verne Industries,Audit,5599.37,payee
+T000437,C0136,2025-01-13,Cabinet Ferrand,Maintenance,795.72,payee
+T000438,C0014,2024-01-01,Maison Delaunay,Licence,3451.72,payee
+T000439,C0022,2024-07-13,Atelier Bastide,Formation,4252.04,payee
+T000440,C0124,2024-02-13,Nord Logistique,Maintenance,3674.82,payee
+T000441,C0196,2024-02-02,Nord Logistique,Maintenance,3121.21,payee
+T000442,C0010,2025-05-24,Orion Energie,Licence,2941.64,payee
+T000443,C0107,2024-11-08,Groupe Lorrain,Maintenance,3188.07,payee
+T000444,C0187,09/08/2025,Groupe Lorrain,Licence,1759.97,payee
+T000445,C0068,2024-07-07,Groupe Lorrain,Audit,3665.26,en attente
+T000446,C0115,2025-06-07,Nord Logistique,Maintenance,2129.93,payee
+T000447,C0195,2025-03-25,Nord Logistique,Formation,2346.7,en attente
+T000448,C0169,28-04-2025,Nord Logistique,Maintenance,1648.9,en attente
+T000449,C0069,2025-08-27,Atelier Bastide,Formation,11046.79,payee
+T000450,C0175,2025-05-31,Verne Industries,Formation,3535.48,payee
+T000451,C0157,2025-06-28,Cabinet Ferrand,Audit,1457.61,payee
+T000452,C0118,23/06/2025,Groupe Lorrain,Licence,3349.7,payee
+T000453,C0103,2024-11-22,Sigma Sante,Conseil,5568.2,payee
+T000454,C0215,2025-06-12,Groupe Lorrain,Formation,3644.64,payee
+T000455,C0203,2025-09-06,Maison Delaunay,Audit,3078.7,payee
+T000456,C0045,2025-06-22,Cabinet Ferrand,Maintenance,2035.32,payee
+T000457,C0157,19-03-2025,Orion Energie,Audit,3647.69,payee
+T000458,C0084,2024-02-24,Maison Delaunay,Licence,4585.49,en attente
+T000459,C0026,2024-11-14,Cabinet Ferrand,Conseil,4610.43,payee
+T000460,C0030,16-02-2024,Maison Delaunay,Conseil,3474.72,payee
+T000461,C0169,16/03/2024,Groupe Lorrain,Conseil,3469.21,payee
+T000462,C0085,2024-09-20,Atelier Bastide,Maintenance,6026.63,payee
+T000463,C0026,2024-12-04,Cabinet Ferrand,Maintenance,5712.52,annulee
+T000464,C0052,20/01/2025,Sigma Sante,Licence,2855.28,payee
+T000465,C0005,2025-10-19,Sigma Sante,Maintenance,7303.69,en attente
+T000466,C0124,2025-07-10,Cabinet Ferrand,Licence,1472.76,annulee
+T000467,C0138,2024-11-04,Verne Industries,Maintenance,3554.03,payee
+T000468,C0088,01/09/2024,Orion Energie,Maintenance,3736.69,payee
+T000469,C0173,2025-06-04,Nord Logistique,Licence,1970.57,payee
+T000470,C0112,2024-07-19,Groupe Lorrain,Maintenance,1295.33,payee
+T000471,C0117,2025-10-07,Atelier Bastide,Formation,1994.81,annulee
+T000472,C0178,2025-07-24,Sigma Sante,Maintenance,5045.13,payee
+T000473,C0018,13/05/2025,Orion Energie,Audit,5119.11,en attente
+T000474,C0064,01/07/2024,Orion Energie,Formation,4460.81,payee
+T000475,C0175,2025-03-29,Groupe Lorrain,Maintenance,2150.37,payee
+T000476,C0125,22/08/2025,Sigma Sante,Conseil,5151.05,payee
+T000477,C0175,2024-02-22,Groupe Lorrain,Formation,2232.1,payee
+T000478,C0078,09/05/2024,Sigma Sante,Maintenance,3664.5,payee
+T000479,C0009,2025-01-11,Orion Energie,Formation,3177.9,payee
+T000480,C0183,19/09/2024,Verne Industries,Formation,2591.81,payee
+T000481,C0183,2025-06-02,Atelier Bastide,Formation,4350.83,annulee
+T000482,C0149,2024-10-19,Maison Delaunay,Conseil,4786.19,payee
+T000483,C0094,2025-12-28,Groupe Lorrain,Maintenance,2080.73,payee
+T000484,C0002,2024-08-06,Nord Logistique,Conseil,3275.19,payee
+T000485,C0169,19/09/2024,Verne Industries,Formation,4661.85,payee
+T000486,C0154,2024-01-03,Cabinet Ferrand,Formation,574.72,payee
+T000487,C0155,2024-06-29,Sigma Sante,Audit,3912.54,payee
+T000488,C0040,20/06/2024,Orion Energie,Audit,4710.55,payee
+T000489,C0170,2025-07-10,Cabinet Ferrand,Conseil,4001.56,payee
+T000490,C0169,03-09-2024,Verne Industries,Conseil,4098.45,payee
+T000491,C0199,2024-05-28,Sigma Sante,Maintenance,3059.6,payee
+T000492,C0132,2024-08-16,Cabinet Ferrand,Formation,4549.72,payee
+T000493,C0170,2025-02-14,Atelier Bastide,Maintenance,1589.57,payee
+T000494,C0094,2025-07-27,Orion Energie,Audit,2000.97,payee
+T000495,C0162,15-12-2025,Orion Energie,Conseil,4063.01,payee
+T000496,C0162,2024-02-04,Verne Industries,Audit,4557.13,payee
+T000497,C0181,05-09-2025,Atelier Bastide,Conseil,5586.18,payee
+T000498,C0199,2024-10-10,Atelier Bastide,Formation,6764.25,payee
+T000499,C0001,2025-08-13,Nord Logistique,Licence,2166.48,en attente
+T000500,C0181,28-01-2024,Verne Industries,Audit,1742.12,en attente
+T000501,C0184,02-04-2025,Nord Logistique,Licence,4987.43,payee
+T000502,C0127,2025-11-10,Sigma Sante,Conseil,2531.94,payee
+T000503,C0121,2024-01-29,Groupe Lorrain,Formation,3123.68,payee
+T000504,C0168,2025-07-30,Sigma Sante,Maintenance,4737.3,payee
+T000505,C0106,24/03/2024,Groupe Lorrain,Licence,3550.5,en attente
+T000506,C0097,2025-12-17,Groupe Lorrain,Conseil,4478.34,payee
+T000507,C0187,2025-06-27,Maison Delaunay,Licence,2055.63,payee
+T000508,C0184,2025-10-26,Nord Logistique,Licence,3759.94,payee
+T000509,C0049,17/10/2025,Orion Energie,Conseil,3720.35,payee
+T000510,C0193,2024-08-18,Nord Logistique,Formation,5537.43,payee
+T000511,C0076,2024-10-30,Cabinet Ferrand,Audit,6150.6,payee
+T000512,C0032,2025-05-19,Maison Delaunay,Maintenance,2502.31,en attente
+T000513,C0204,2024-05-07,Sigma Sante,Conseil,1857.62,payee
+T000514,C0056,2024-08-11,Maison Delaunay,Conseil,4610.48,annulee
+T000515,C0048,2024-03-13,Verne Industries,Formation,1223.57,payee
+T000516,C0063,2025-10-10,Orion Energie,Licence,4772.11,en attente
+T000517,C0115,2024-06-29,Verne Industries,Licence,4957.0,en attente
+T000518,C0039,2024-10-26,Verne Industries,Maintenance,2397.1,payee
+T000519,C0038,2024-11-26,Verne Industries,Conseil,661.79,en attente
+T000520,C0092,2024-10-01,Verne Industries,Conseil,5218.85,payee
+T000521,C0051,2025-07-21,Atelier Bastide,Maintenance,6364.93,payee
+T000522,C0045,2025-10-29,Nord Logistique,Audit,6149.75,payee
+T000523,C0212,22-02-2025,Maison Delaunay,Conseil,6249.43,payee
+T000524,C0139,2025-09-02,Cabinet Ferrand,Formation,1521.6,payee
+T000525,C0004,2024-03-21,Orion Energie,Maintenance,3325.58,payee
+T000526,C0024,06-12-2025,Cabinet Ferrand,Conseil,3708.34,annulee
+T000527,C0189,2024-03-25,Cabinet Ferrand,Audit,3428.29,en attente
+T000528,C0063,2024-02-18,Groupe Lorrain,Formation,4501.59,payee
+T000529,C0036,17-01-2024,Orion Energie,Licence,1792.3,payee
+T000530,C0155,2024-06-26,Atelier Bastide,Formation,1202.85,payee
+T000531,C0195,03/09/2025,Atelier Bastide,Maintenance,980.98,payee
+T000532,C0093,2024-08-07,Orion Energie,Conseil,5274.19,en attente
+T000533,C0173,2025-07-31,Nord Logistique,Conseil,1511.44,annulee
+T000534,C0098,2024-11-05,Groupe Lorrain,Licence,3416.83,payee
+T000535,C0026,2024-03-16,Cabinet Ferrand,Audit,2337.31,payee
+T000536,C0186,11/12/2024,Nord Logistique,Maintenance,2395.29,payee
+T000537,C0214,18-06-2024,Groupe Lorrain,Maintenance,2903.4,payee
+T000538,C0073,31/07/2024,Sigma Sante,Licence,-2451.81,payee
+T000539,C0024,2025-01-12,Maison Delaunay,Conseil,1204.59,payee
+T000540,C0132,2025-07-31,Groupe Lorrain,Licence,2904.55,payee
+T000541,C0145,2025-03-04,Nord Logistique,Audit,2080.13,payee
+T000542,C0019,2024-06-11,Atelier Bastide,Maintenance,2023.24,en attente
+T000543,C0169,2025-06-07,Maison Delaunay,Maintenance,7266.96,payee
+T000544,C0024,2025-05-23,Cabinet Ferrand,Formation,1375.42,payee
+T000545,C0063,22/06/2024,Atelier Bastide,Licence,2832.17,payee
+T000546,C0203,2025-09-13,Nord Logistique,Maintenance,3568.97,en attente
+T000547,C0130,07-09-2025,Cabinet Ferrand,Maintenance,7270.97,payee
+T000548,C0158,2025-03-16,Verne Industries,Audit,1685.98,en attente
+T000549,C0115,2024-08-04,Orion Energie,Maintenance,5990.3,payee
+T000550,C0175,15/09/2024,Maison Delaunay,Formation,2893.32,en attente
+T000551,C0019,16/11/2024,Cabinet Ferrand,Formation,2949.43,payee
+T000552,C0157,2024-05-17,Atelier Bastide,Maintenance,4369.44,en attente
+T000553,C0016,11-08-2024,Nord Logistique,Audit,6458.64,payee
+T000554,C0042,2024-04-08,Groupe Lorrain,Audit,2441.53,en attente
+T000555,C0118,2024-04-22,Orion Energie,Maintenance,3705.31,payee
+T000556,C0105,2025-06-27,Groupe Lorrain,Licence,3449.34,payee
+T000557,C0036,2024-04-03,Maison Delaunay,Audit,3364.41,payee
+T000558,C0186,2024-12-08,Verne Industries,Audit,4748.12,payee
+T000559,C0071,2024-11-09,Maison Delaunay,Conseil,2160.64,payee
+T000560,C0201,2024-02-03,Verne Industries,Formation,2623.96,payee
+T000561,C0004,2025-08-29,Groupe Lorrain,Formation,1224.98,payee
+T000562,C0056,2025-12-19,Orion Energie,Licence,4196.89,en attente
+T000563,C0069,2025-04-11,Sigma Sante,Formation,3284.59,payee
+T000564,C0139,05-05-2025,Groupe Lorrain,Formation,6378.17,payee
+T000565,C0094,18/06/2024,Groupe Lorrain,Conseil,1664.69,en attente
+T000566,C0037,08/09/2025,Nord Logistique,Conseil,7726.74,payee
+T000567,C0133,26/07/2025,Orion Energie,Licence,4552.01,payee
+T000568,C0117,15-11-2024,Nord Logistique,Audit,671.61,payee
+T000569,C0032,2025-05-30,Groupe Lorrain,Formation,4452.95,payee
+T000570,C0059,2025-11-28,Maison Delaunay,Formation,2306.61,payee
+T000571,C0112,16/03/2025,Cabinet Ferrand,Formation,2765.53,payee
+T000572,C0169,2024-05-25,Maison Delaunay,Audit,2524.41,en attente
+T000573,C0032,2024-08-29,Verne Industries,Maintenance,5806.96,payee
+T000574,C0054,15/05/2024,Groupe Lorrain,Maintenance,1110.34,payee
+T000575,C0055,2024-08-30,Groupe Lorrain,Conseil,2980.02,payee
+T000576,C0143,2025-10-11,Maison Delaunay,Audit,3112.02,payee
+T000577,C0020,2024-05-18,Maison Delaunay,Conseil,2476.75,payee
+T000578,C0153,12-10-2025,Verne Industries,Audit,1903.94,payee
+T000579,C0099,2024-07-27,Groupe Lorrain,Audit,765.63,en attente
+T000580,C0077,2024-12-30,Sigma Sante,Licence,3005.74,payee
+T000581,C0201,2025-01-20,Atelier Bastide,Audit,4191.34,payee
+T000582,C0190,2024-04-01,Atelier Bastide,Audit,3286.62,payee
+T000583,C0187,2024-05-14,Cabinet Ferrand,Licence,1905.11,payee
+T000584,C0206,2024-08-10,Maison Delaunay,Maintenance,3128.81,payee
+T000585,C0055,2024-02-13,Orion Energie,Licence,6416.61,payee
+T000586,C0199,2025-07-04,Maison Delaunay,Licence,2212.84,payee
+T000587,C0041,2025-02-02,Orion Energie,Formation,3534.57,payee
+T000588,C0077,09/09/2025,Maison Delaunay,Maintenance,3790.82,payee
+T000589,C0129,2025-09-22,Sigma Sante,Formation,1436.75,payee
+T000590,C0173,10-09-2024,Atelier Bastide,Conseil,2697.1,payee
+T000591,C0135,2025-08-19,Groupe Lorrain,Formation,2714.07,payee
+T000592,C0130,14/02/2024,Maison Delaunay,Conseil,3219.85,payee
+T000593,C0088,2024-11-09,Orion Energie,Audit,5709.83,payee
+T000594,C0138,2025-04-30,Maison Delaunay,Formation,1630.09,payee
+T000595,C0111,06/12/2024,Verne Industries,Maintenance,5887.67,payee
+T000596,C0111,2025-06-23,Cabinet Ferrand,Licence,4350.53,payee
+T000597,C0136,2025-09-18,Groupe Lorrain,Formation,7834.29,payee
+T000598,C0140,2024-11-05,Verne Industries,Formation,918.09,annulee
+T000599,C0077,2024-07-19,Maison Delaunay,Audit,623.92,en attente
+T000600,C0032,01-03-2025,Atelier Bastide,Licence,9964.6,payee
+T000601,C0070,2025-09-25,Cabinet Ferrand,Licence,1400.3,payee
+T000602,C0095,2025-12-21,Verne Industries,Maintenance,1981.97,payee
+T000603,C0038,2025-08-18,Cabinet Ferrand,Audit,1992.12,payee
+T000604,C0042,27-06-2024,Sigma Sante,Maintenance,1691.65,payee
+T000605,C0169,2024-05-29,Orion Energie,Licence,4246.24,payee
+T000606,C0065,2025-02-22,Cabinet Ferrand,Audit,2820.43,payee
+T000607,C0172,20-10-2024,Sigma Sante,Audit,2154.69,payee
+T000608,C0030,22-03-2025,Maison Delaunay,Audit,7119.71,payee
+T000609,C0001,2025-11-05,Orion Energie,Conseil,822.47,payee
+T000610,C0050,2025-02-04,Maison Delaunay,Audit,5170.91,payee
+T000611,C0092,2024-09-16,Nord Logistique,Conseil,3074.28,payee
+T000612,C0182,2025-09-26,Maison Delaunay,Maintenance,2133.68,payee
+T000613,C0047,16-11-2024,Verne Industries,Maintenance,2277.63,payee
+T000614,C0128,17-03-2025,Maison Delaunay,Formation,2670.78,annulee
+T000615,C0183,2024-04-08,Maison Delaunay,Conseil,2006.98,payee
+T000616,C0006,2025-01-05,Nord Logistique,Audit,4764.27,payee
+T000617,C0006,2024-11-07,Groupe Lorrain,Audit,2552.12,payee
+T000618,C0183,2024-03-30,Nord Logistique,Conseil,4423.39,payee
+T000619,C0061,2024-06-03,Maison Delaunay,Maintenance,2297.6,payee
+T000620,C0211,28-05-2025,Atelier Bastide,Conseil,3502.9,payee
+T000621,C0216,2024-05-11,Sigma Sante,Licence,3502.14,annulee
+T000622,C0205,2024-04-06,Sigma Sante,Formation,3203.26,payee
+T000623,C0089,2024-02-12,Nord Logistique,Maintenance,5980.85,payee
+T000624,C0191,2024-01-20,Orion Energie,Licence,6281.33,payee
+T000625,C0089,13/11/2024,Sigma Sante,Licence,4638.39,payee
+T000626,C0196,22-12-2024,Cabinet Ferrand,Maintenance,5386.13,payee
+T000627,C0081,2025-03-31,Orion Energie,Licence,4511.67,en attente
+T000628,C0137,2025-02-21,Orion Energie,Conseil,2454.55,payee
+T000629,C0002,26-01-2025,Groupe Lorrain,Licence,2943.95,payee
+T000630,C0025,30/12/2025,Orion Energie,Maintenance,922.25,payee
+T000631,C0138,2024-07-01,Groupe Lorrain,Licence,1828.78,payee
+T000632,C0169,2025-06-03,Cabinet Ferrand,Conseil,1406.08,annulee
+T000633,C0082,2024-02-28,Orion Energie,Conseil,2123.09,payee
+T000634,C0073,2025-09-11,Maison Delaunay,Formation,3646.38,payee
+T000635,C0122,2024-09-21,Verne Industries,Maintenance,2406.11,payee
+T000636,C0201,09-09-2024,Maison Delaunay,Formation,4879.58,payee
+T000637,C0128,2024-04-08,Atelier Bastide,Audit,1869.6,payee
+T000638,C0184,06-01-2025,Atelier Bastide,Formation,4319.3,payee
+T000639,C0050,18/10/2024,Orion Energie,Licence,1776.62,payee
+T000640,C0180,12/12/2025,Groupe Lorrain,Maintenance,5769.35,payee
+T000641,C0170,2024-05-09,Orion Energie,Maintenance,1867.36,payee
+T000642,C0208,2024-10-31,Cabinet Ferrand,Conseil,4001.31,payee
+T000643,C0014,2025-10-19,Groupe Lorrain,Conseil,2156.88,en attente
+T000644,C0090,12/08/2025,Sigma Sante,Conseil,6755.18,payee
+T000645,C0021,2025-07-12,Groupe Lorrain,Audit,6614.24,payee
+T000646,C0093,2025-01-18,Verne Industries,Conseil,3932.52,en attente
+T000647,C0177,2025-09-29,Atelier Bastide,Conseil,3893.0,en attente
+T000648,C0149,12/06/2024,Sigma Sante,Maintenance,4698.86,payee
+T000649,C0175,14-08-2025,Cabinet Ferrand,Maintenance,4282.49,payee
+T000650,C0172,2025-02-27,Maison Delaunay,Audit,5017.68,en attente
+T000651,C0196,2024-09-12,Groupe Lorrain,Formation,1843.37,payee
+T000652,C0205,08/06/2024,Maison Delaunay,Maintenance,3203.7,payee
+T000653,C0137,2025-01-15,Maison Delaunay,Conseil,2245.54,payee
+T000654,C0204,03-01-2024,Verne Industries,Licence,6563.26,en attente
+T000655,C0012,2025-06-05,Orion Energie,Conseil,1542.3,payee
+T000656,C0168,2024-06-21,Cabinet Ferrand,Audit,7144.18,payee
+T000657,C0122,2024-10-11,Maison Delaunay,Licence,3233.72,annulee
+T000658,C0062,20/05/2024,Atelier Bastide,Formation,5056.69,payee
+T000659,C0117,05-12-2024,Orion Energie,Audit,2394.71,payee
+T000660,C0042,2024-09-27,Atelier Bastide,Conseil,1466.52,payee
+T000661,C0168,2024-05-17,Maison Delaunay,Maintenance,6432.72,payee
+T000662,C0169,2025-10-10,Groupe Lorrain,Licence,4112.82,payee
+T000663,C0004,08/07/2025,Groupe Lorrain,Maintenance,1625.03,payee
+T000664,C0015,2024-10-10,Atelier Bastide,Formation,3012.86,payee
+T000665,C0154,2024-02-12,Orion Energie,Audit,2893.45,en attente
+T000666,C0129,08/09/2025,Atelier Bastide,Licence,4040.11,payee
+T000667,C0128,2025-05-23,Orion Energie,Licence,1838.66,payee
+T000668,C0021,2025-02-09,Nord Logistique,Licence,1603.65,payee
+T000669,C0133,17/03/2025,Groupe Lorrain,Formation,3431.01,payee
+T000670,C0132,06/01/2024,Cabinet Ferrand,Formation,1900.33,payee
+T000671,C0198,2024-12-11,Cabinet Ferrand,Conseil,6534.18,payee
+T000672,C0091,2024-05-17,Verne Industries,Licence,4813.72,payee
+T000673,C0081,2025-04-20,Nord Logistique,Licence,4742.47,payee
+T000674,C0019,2025-11-10,Sigma Sante,Formation,908.72,payee
+T000675,C0132,2025-01-22,Orion Energie,Audit,2447.64,payee
+T000676,C0151,2025-03-17,Nord Logistique,Conseil,2725.34,payee
+T000677,C0066,02/05/2025,Orion Energie,Audit,1731.48,payee
+T000678,C0170,2025-11-09,Orion Energie,Audit,4290.54,annulee
+T000679,C0218,2024-01-28,Groupe Lorrain,Conseil,4000.75,payee
+T000680,C0041,2024-08-14,Maison Delaunay,Maintenance,4645.7,payee
+T000681,C0133,14-07-2024,Sigma Sante,Formation,5332.32,en attente
+T000682,C0162,2025-06-07,Groupe Lorrain,Conseil,5196.92,payee
+T000683,C0005,2024-11-22,Nord Logistique,Audit,10395.49,annulee
+T000684,C0042,2025-07-17,Orion Energie,Conseil,3149.41,payee
+T000685,C0092,2024-12-10,Verne Industries,Formation,2870.11,en attente
+T000686,C0032,13/12/2025,Sigma Sante,Conseil,4262.16,en attente
+T000687,C0083,2025-07-13,Orion Energie,Conseil,5810.44,en attente
+T000688,C0035,2024-01-14,Maison Delaunay,Conseil,1210.36,payee
+T000689,C0209,2025-12-22,Maison Delaunay,Audit,2050.52,en attente
+T000690,C0139,2025-11-26,Nord Logistique,Conseil,2319.35,payee
+T000691,C0077,2024-02-01,Cabinet Ferrand,Maintenance,3317.5,payee
+T000692,C0181,12-10-2024,Cabinet Ferrand,Conseil,2455.34,payee
+T000693,C0005,2025-12-09,Nord Logistique,Audit,5374.68,payee
+T000694,C0139,2025-09-03,Cabinet Ferrand,Audit,3561.26,en attente
+T000695,C0159,2024-12-07,Sigma Sante,Maintenance,2994.26,payee
+T000696,C0188,2025-02-01,Sigma Sante,Audit,4019.21,payee
+T000697,C0052,2024-01-22,Verne Industries,Formation,997.94,payee
+T000698,C0138,2025-02-16,Nord Logistique,Maintenance,3919.74,payee
+T000699,C0179,2025-05-01,Atelier Bastide,Formation,1931.65,payee
+T000700,C0185,2024-09-19,Atelier Bastide,Maintenance,4893.76,payee
+T000701,C0041,11/08/2024,Verne Industries,Audit,1105.48,payee
+T000702,C0014,2025-08-27,Groupe Lorrain,Maintenance,4155.88,payee
+T000703,C0064,2024-11-23,Sigma Sante,Formation,1961.5,payee
+T000704,C0091,2024-07-11,Atelier Bastide,Maintenance,5869.47,payee
+T000705,C0045,30-09-2024,Verne Industries,Audit,1271.9,payee
+T000706,C0035,2024-12-25,Verne Industries,Audit,3254.3,payee
+T000707,C0060,08-07-2024,Atelier Bastide,Maintenance,4536.4,annulee
+T000708,C0032,2025-02-12,Verne Industries,Maintenance,3804.11,en attente
+T000709,C0171,20/09/2025,Maison Delaunay,Maintenance,3791.49,en attente
+T000710,C0139,26-06-2025,Orion Energie,Maintenance,1535.03,en attente
+T000711,C0091,2024-06-17,Atelier Bastide,Conseil,1476.45,payee
+T000712,C0127,10/12/2024,Atelier Bastide,Audit,3716.7,payee
+T000713,C0141,2025-01-31,Cabinet Ferrand,Conseil,3426.7,en attente
+T000714,C0043,2025-05-11,Verne Industries,Licence,1779.05,payee
+T000715,C0069,2025-07-06,Sigma Sante,Formation,1721.16,en attente
+T000716,C0205,2024-12-20,Atelier Bastide,Formation,3018.85,payee
+T000717,C0003,17/08/2024,Cabinet Ferrand,Formation,2593.18,en attente
+T000718,C0062,26/04/2025,Nord Logistique,Conseil,7695.85,payee
+T000719,C0025,01-04-2024,Cabinet Ferrand,Licence,6045.49,en attente
+T000720,C0059,2025-05-07,Nord Logistique,Licence,4803.55,payee
+T000721,C0075,2025-10-16,Sigma Sante,Licence,6420.47,payee
+T000722,C0048,01/06/2025,Nord Logistique,Conseil,2226.99,en attente
+T000723,C0131,12-11-2024,Cabinet Ferrand,Maintenance,2411.66,payee
+T000724,C0050,2025-08-24,Orion Energie,Conseil,5606.4,payee
+T000725,C0184,2025-01-23,Orion Energie,Audit,3249.17,payee
+T000726,C0090,2025-01-29,Orion Energie,Conseil,3353.38,payee
+T000727,C0203,2025-09-14,Groupe Lorrain,Conseil,1655.01,payee
+T000728,C0198,2024-05-21,Sigma Sante,Formation,5477.27,payee
+T000729,C0094,2025-07-23,Orion Energie,Licence,4257.46,payee
+T000730,C0139,2025-05-11,Sigma Sante,Audit,2754.71,payee
+T000731,C0006,2025-01-21,Maison Delaunay,Licence,2421.48,en attente
+T000732,C0016,2024-02-26,Verne Industries,Formation,5921.13,payee
+T000733,C0118,2025-07-12,Maison Delaunay,Audit,2242.06,payee
+T000734,C0110,2024-06-08,Nord Logistique,Formation,1362.52,payee
+T000735,C0093,2025-10-15,Sigma Sante,Audit,6089.38,payee
+T000736,C0021,2025-08-01,Verne Industries,Licence,6151.16,en attente
+T000737,C0195,22/09/2024,Maison Delaunay,Formation,2237.21,payee
+T000738,C0095,2024-11-13,Sigma Sante,Formation,8448.47,payee
+T000739,C0110,2024-01-19,Sigma Sante,Conseil,3058.03,payee
+T000740,C0094,29/12/2024,Atelier Bastide,Maintenance,-2251.06,en attente
+T000741,C0116,12/02/2024,Sigma Sante,Licence,4187.22,payee
+T000742,C0151,21/12/2025,Atelier Bastide,Maintenance,1512.35,payee
+T000743,C0178,12-04-2025,Orion Energie,Maintenance,1893.0,payee
+T000744,C0128,2024-06-20,Groupe Lorrain,Conseil,3728.82,annulee
+T000745,C0039,2025-08-09,Atelier Bastide,Audit,3392.79,payee
+T000746,C0203,2024-01-15,Nord Logistique,Licence,5046.02,payee
+T000747,C0067,2025-02-05,Nord Logistique,Maintenance,1644.31,en attente
+T000748,C0004,22/03/2024,Maison Delaunay,Conseil,7722.94,payee
+T000749,C0010,2024-02-09,Cabinet Ferrand,Maintenance,2566.34,payee
+T000750,C0180,2024-06-27,Groupe Lorrain,Maintenance,3329.52,payee
+T000751,C0090,2024-08-02,Nord Logistique,Formation,2503.55,annulee
+T000752,C0006,13/06/2025,Nord Logistique,Audit,1505.05,payee
+T000753,C0189,2025-10-12,Nord Logistique,Maintenance,3143.86,payee
+T000754,C0071,2025-07-20,Cabinet Ferrand,Audit,4505.35,en attente
+T000755,C0014,2025-06-24,Orion Energie,Audit,2900.1,payee
+T000756,C0205,16/02/2025,Sigma Sante,Formation,2011.84,payee
+T000757,C0012,2024-09-27,Atelier Bastide,Audit,5130.73,payee
+T000758,C0161,05/07/2024,Groupe Lorrain,Maintenance,5228.73,payee
+T000759,C0140,21/11/2025,Atelier Bastide,Conseil,2820.65,payee
+T000760,C0040,2025-01-15,Groupe Lorrain,Maintenance,3847.6,payee
+T000761,C0080,2025-02-15,Maison Delaunay,Licence,5111.76,en attente
+T000762,C0114,2024-01-11,Nord Logistique,Audit,4479.73,payee
+T000763,C0034,30-11-2024,Cabinet Ferrand,Conseil,3792.35,en attente
+T000764,C0168,2025-05-12,Nord Logistique,Formation,4386.95,payee
+T000765,C0065,2024-12-27,Sigma Sante,Formation,3982.65,payee
+T000766,C0218,24/03/2025,Sigma Sante,Licence,3237.88,payee
+T000767,C0186,2025-08-14,Cabinet Ferrand,Maintenance,1625.07,payee
+T000768,C0148,2024-01-16,Nord Logistique,Formation,1849.41,payee
+T000769,C0028,2025-10-22,Nord Logistique,Maintenance,4070.12,payee
+T000770,C0006,19-08-2025,Orion Energie,Conseil,2490.07,payee
+T000771,C0034,2024-11-02,Sigma Sante,Formation,3995.97,payee
+T000772,C0116,2025-07-11,Verne Industries,Maintenance,1600.64,payee
+T000773,C0182,2024-02-18,Orion Energie,Formation,2115.38,en attente
+T000774,C0036,2024-08-13,Cabinet Ferrand,Licence,2900.05,payee
+T000775,C0165,19-03-2024,Sigma Sante,Maintenance,797.26,payee
+T000776,C0012,2025-04-08,Orion Energie,Formation,1965.25,payee
+T000777,C0062,2025-09-17,Sigma Sante,Audit,2266.71,payee
+T000778,C0139,2025-03-15,Groupe Lorrain,Audit,3519.46,payee
+T000779,C0193,03-06-2025,Atelier Bastide,Audit,2807.83,payee
+T000780,C0181,2024-04-14,Sigma Sante,Licence,3615.77,payee
+T000781,C0124,12/11/2025,Groupe Lorrain,Formation,3297.58,payee
+T000782,C0009,2024-05-21,Groupe Lorrain,Audit,2747.64,annulee
+T000783,C0069,2025-01-19,Verne Industries,Maintenance,2274.93,payee
+T000784,C0182,2025-05-13,Cabinet Ferrand,Maintenance,3354.96,payee
+T000785,C0019,2025-09-17,Atelier Bastide,Conseil,5815.39,annulee
+T000786,C0164,2025-11-12,Atelier Bastide,Audit,2267.63,payee
+T000787,C0164,13/03/2025,Verne Industries,Licence,7565.27,payee
+T000788,C0175,2025-02-24,Nord Logistique,Maintenance,3387.54,payee
+T000789,C0051,2024-10-31,Nord Logistique,Audit,4918.69,en attente
+T000790,C0057,2025-02-18,Sigma Sante,Conseil,3869.52,payee
+T000791,C0047,2025-05-07,Orion Energie,Conseil,4157.47,payee
+T000792,C0092,2025-04-17,Groupe Lorrain,Conseil,1956.85,payee
+T000793,C0122,2025-03-08,Maison Delaunay,Maintenance,2478.58,payee
+T000794,C0028,17/11/2024,Atelier Bastide,Audit,1193.59,annulee
+T000795,C0132,22-05-2024,Verne Industries,Conseil,2865.8,annulee
+T000796,C0056,09/02/2024,Verne Industries,Conseil,4353.38,payee
+T000797,C0131,03/11/2024,Maison Delaunay,Licence,2876.75,payee
+T000798,C0071,16/10/2024,Verne Industries,Formation,5054.03,payee
+T000799,C0062,2025-03-19,Orion Energie,Conseil,2607.45,payee
+T000800,C0075,2025-10-19,Cabinet Ferrand,Maintenance,2191.44,payee
+T000801,C0203,2025-05-27,Sigma Sante,Audit,2422.49,payee
+T000802,C0041,2025-08-10,Orion Energie,Formation,4564.02,en attente
+T000803,C0020,26/02/2025,Nord Logistique,Conseil,6747.73,annulee
+T000804,C0044,2025-11-08,Groupe Lorrain,Formation,7950.27,payee
+T000805,C0098,2025-11-16,Maison Delaunay,Conseil,4327.25,payee
+T000806,C0210,2024-04-21,Cabinet Ferrand,Licence,4938.03,en attente
+T000807,C0041,2025-04-11,Verne Industries,Conseil,1359.19,payee
+T000808,C0182,2025-01-04,Cabinet Ferrand,Formation,1581.4,payee
+T000809,C0162,2025-12-10,Verne Industries,Conseil,2003.48,payee
+T000810,C0080,02-03-2025,Verne Industries,Maintenance,5990.11,en attente
+T000811,C0079,12/01/2024,Orion Energie,Licence,5947.68,payee
+T000812,C0220,2024-06-02,Verne Industries,Conseil,8841.9,payee
+T000813,C0166,2024-04-04,Cabinet Ferrand,Conseil,1978.6,payee
+T000814,C0056,26/05/2024,Maison Delaunay,Licence,3044.1,payee
+T000815,C0212,2024-03-10,Atelier Bastide,Licence,1188.75,payee
+T000816,C0095,2025-07-24,Nord Logistique,Conseil,1441.61,payee
+T000817,C9999,2024-12-26,Orion Energie,Formation,2741.93,payee
+T000818,C0189,2025-05-05,Sigma Sante,Maintenance,2026.8,payee
+T000819,C0202,2025-12-30,Groupe Lorrain,Licence,2040.14,payee
+T000820,C0103,17/04/2025,Cabinet Ferrand,Conseil,2323.32,en attente
+T000821,C0164,2024-12-15,Groupe Lorrain,Formation,6328.94,payee
+T000822,C0055,13/07/2024,Nord Logistique,Conseil,5403.72,payee
+T000823,C0198,2025-07-04,Verne Industries,Audit,1837.14,payee
+T000824,C0086,04/01/2025,Orion Energie,Audit,5329.28,payee
+T000825,C0063,06-07-2025,Atelier Bastide,Formation,2116.38,payee
+T000826,C0117,2024-01-17,Sigma Sante,Formation,1348.56,payee
+T000827,C0062,2024-04-29,Verne Industries,Conseil,2279.14,payee
+T000828,C0144,2024-04-04,Orion Energie,Maintenance,3691.83,payee
+T000829,C0174,2025-05-12,Atelier Bastide,Audit,1952.59,en attente
+T000830,C0095,2025-01-13,Verne Industries,Formation,4287.74,en attente
+T000831,C0182,2024-08-19,Verne Industries,Maintenance,2365.38,payee
+T000832,C0101,14-08-2024,Orion Energie,Formation,3827.04,annulee
+T000833,C0001,2025-03-18,Maison Delaunay,Audit,1825.0,payee
+T000834,C0062,2025-12-05,Sigma Sante,Formation,3198.69,payee
+T000835,C0164,2025-12-27,Nord Logistique,Conseil,1985.75,payee
+T000836,C0125,10-12-2024,Sigma Sante,Audit,2784.01,en attente
+T000837,C0219,2025-05-04,Maison Delaunay,Audit,7621.96,payee
+T000838,C0051,2024-03-02,Maison Delaunay,Formation,2533.07,en attente
+T000839,C0046,21/11/2025,Sigma Sante,Audit,1561.65,payee
+T000840,C0202,2024-01-14,Orion Energie,Formation,3302.55,payee
+T000841,C0210,2024-09-06,Nord Logistique,Formation,3331.38,payee
+T000842,C0174,2025-06-13,Cabinet Ferrand,Licence,3320.43,en attente
+T000843,C0111,2025-12-08,Maison Delaunay,Maintenance,4164.09,en attente
+T000844,C0096,2024-05-05,Maison Delaunay,Formation,2470.05,payee
+T000845,C0155,2025-04-27,Orion Energie,Maintenance,4368.98,payee
+T000846,C0174,17-05-2024,Maison Delaunay,Maintenance,3131.95,payee
+T000847,C0065,06-02-2024,Orion Energie,Conseil,1511.35,en attente
+T000848,C0002,2024-11-05,Maison Delaunay,Audit,4675.75,payee
+T000849,C0018,2025-02-24,Orion Energie,Conseil,3463.95,payee
+T000850,C0080,11/07/2024,Sigma Sante,Licence,4255.21,payee
+T000851,C0159,2025-12-11,Orion Energie,Licence,1612.66,payee
+T000852,C0103,2025-03-26,Atelier Bastide,Licence,4813.51,payee
+T000853,C0144,2024-11-15,Orion Energie,Conseil,8619.95,annulee
+T000854,C0109,2024-12-20,Verne Industries,Formation,1544.59,payee
+T000855,C0059,2024-12-04,Sigma Sante,Conseil,5149.18,payee
+T000856,C0174,2024-03-22,Cabinet Ferrand,Audit,3471.39,payee
+T000857,C0168,2025-03-18,Cabinet Ferrand,Conseil,3148.93,payee
+T000858,C0025,26-07-2025,Maison Delaunay,Licence,4841.07,payee
+T000859,C0192,03/11/2024,Nord Logistique,Formation,4581.26,payee
+T000860,C0089,06/11/2024,Maison Delaunay,Conseil,5783.61,payee
+T000861,C0164,26-10-2025,Groupe Lorrain,Formation,1648.01,payee
+T000862,C0082,21-03-2025,Sigma Sante,Audit,5894.76,payee
+T000863,C0203,2024-08-05,Cabinet Ferrand,Licence,3807.81,payee
+T000864,C0142,2024-01-03,Sigma Sante,Audit,1209.66,en attente
+T000865,C0194,2025-08-23,Verne Industries,Audit,2545.47,payee
+T000866,C0066,2025-04-02,Nord Logistique,Licence,3511.83,payee
+T000867,C0004,02-04-2025,Nord Logistique,Audit,2516.14,en attente
+T000868,C0033,2024-07-25,Atelier Bastide,Formation,2950.83,en attente
+T000869,C0124,2024-05-15,Cabinet Ferrand,Licence,2331.49,payee
+T000870,C0025,2024-12-26,Maison Delaunay,Maintenance,7329.8,payee
+T000871,C0146,2025-07-07,Sigma Sante,Licence,10862.18,payee
+T000872,C0188,2024-08-05,Orion Energie,Audit,4404.34,payee
+T000873,C0109,2025-01-19,Cabinet Ferrand,Conseil,3293.95,payee
+T000874,C0117,28-12-2025,Maison Delaunay,Licence,1802.1,payee
+T000875,C0219,2024-06-09,Atelier Bastide,Maintenance,5791.34,payee
+T000876,C0051,2024-06-17,Orion Energie,Formation,4119.92,payee
+T000877,C0201,21-06-2024,Sigma Sante,Audit,1905.8,payee
+T000878,C0005,2025-10-28,Orion Energie,Formation,1913.22,payee
+T000879,C0138,20/01/2025,Cabinet Ferrand,Formation,2988.15,payee
+T000880,C0102,2025-11-01,Verne Industries,Formation,3311.01,payee
+T000881,C0070,2025-11-22,Sigma Sante,Maintenance,4352.38,payee
+T000882,C0217,2024-11-03,Maison Delaunay,Conseil,3091.06,payee
+T000883,C0154,2024-02-10,Atelier Bastide,Conseil,4537.65,payee
+T000884,C0033,2024-08-09,Nord Logistique,Maintenance,2517.44,en attente
+T000885,C0033,31/01/2025,Maison Delaunay,Formation,3095.32,annulee
+T000886,C0028,05-10-2024,Cabinet Ferrand,Conseil,5897.98,payee
+T000887,C0071,2024-01-02,Verne Industries,Formation,4640.18,en attente
+T000888,C0016,2025-12-23,Atelier Bastide,Formation,3190.86,payee
+T000889,C0062,2024-08-09,Cabinet Ferrand,Conseil,3739.49,payee
+T000890,C0178,2025-03-27,Atelier Bastide,Audit,3102.44,payee
+T000891,C0203,2025-11-22,Verne Industries,Conseil,1449.8,payee
+T000892,C0183,2025-02-01,Atelier Bastide,Licence,607.76,payee
+T000893,C0116,2025-05-21,Cabinet Ferrand,Formation,6895.36,payee
+T000894,C0162,27/01/2024,Maison Delaunay,Formation,1975.14,en attente
+T000895,C0219,2025-05-23,Cabinet Ferrand,Conseil,2619.67,en attente
+T000896,C0013,2025-09-10,Atelier Bastide,Audit,9915.19,en attente
+T000897,C0210,2025-11-01,Sigma Sante,Audit,1763.16,payee
+T000898,C0168,02/03/2024,Cabinet Ferrand,Conseil,3010.51,annulee
+T000899,C0090,2024-06-15,Nord Logistique,Conseil,6091.24,payee
+T000900,C0105,2024-02-04,Nord Logistique,Audit,7640.9,payee
+T000901,C0102,2025-11-01,Nord Logistique,Licence,4090.81,payee
+T000902,C0037,2024-07-19,Cabinet Ferrand,Conseil,5817.92,en attente
+T000903,C0054,22-01-2025,Sigma Sante,Conseil,2853.07,payee
+T000904,C0069,2024-12-13,Sigma Sante,Licence,605.97,payee
+T000905,C0002,2025-05-17,Orion Energie,Licence,5560.51,annulee
+T000906,C0117,2025-10-15,Cabinet Ferrand,Maintenance,3153.18,payee
+T000907,C0111,24-08-2024,Verne Industries,Conseil,2681.47,payee
+T000908,C0077,2025-07-30,Groupe Lorrain,Formation,2557.15,payee
+T000909,C0041,31-07-2024,Cabinet Ferrand,Formation,4493.03,payee
+T000910,C0203,24/05/2024,Orion Energie,Licence,4466.79,payee
+T000911,C0158,2024-03-18,Verne Industries,Formation,3200.93,payee
+T000912,C0111,2024-09-28,Sigma Sante,Formation,3991.77,payee
+T000913,C0168,2025-02-13,Sigma Sante,Audit,1743.53,payee
+T000914,C0087,2025-07-23,Maison Delaunay,Licence,2875.28,payee
+T000915,C0051,11/09/2025,Nord Logistique,Licence,1788.28,payee
+T000916,C0157,2025-01-19,Sigma Sante,Conseil,1754.55,payee
+T000917,C0179,2024-10-25,Groupe Lorrain,Conseil,3800.42,payee
+T000918,C0151,2024-05-07,Atelier Bastide,Maintenance,3289.69,payee
+T000919,C0132,2025-10-29,Atelier Bastide,Audit,2520.21,payee
+T000920,C0001,2024-10-16,Sigma Sante,Licence,2801.04,payee
+T000921,C0148,2025-07-12,Cabinet Ferrand,Conseil,3962.66,en attente
+T000922,C0144,2025-04-01,Atelier Bastide,Licence,4539.41,payee
+T000923,C0096,2025-11-10,Groupe Lorrain,Formation,4176.11,payee
+T000924,C0057,11-12-2025,Cabinet Ferrand,Conseil,1176.95,payee
+T000925,C0151,30-05-2025,Cabinet Ferrand,Conseil,766.88,payee
+T000926,C0088,2025-04-28,Atelier Bastide,Licence,2077.86,payee
+T000927,C0064,10-04-2024,Groupe Lorrain,Licence,773.57,annulee
+T000928,C0164,2024-01-12,Sigma Sante,Licence,6493.59,payee
+T000929,C0112,2025-02-02,Sigma Sante,Maintenance,2752.22,payee
+T000930,C0130,2025-05-29,Atelier Bastide,Formation,1505.29,payee
+T000931,C0151,28/06/2025,Cabinet Ferrand,Formation,2735.5,payee
+T000932,C0086,2024-07-02,Verne Industries,Maintenance,1014.38,payee
+T000933,C0036,2025-01-02,Cabinet Ferrand,Conseil,1525.45,payee
+T000934,C0039,2025-09-21,Groupe Lorrain,Conseil,2628.38,payee
+T000935,C0218,10-03-2024,Orion Energie,Audit,2400.69,payee
+T000936,C0118,07-10-2024,Maison Delaunay,Formation,2616.91,en attente
+T000937,C0097,2025-11-20,Orion Energie,Conseil,4026.76,payee
+T000938,C0075,2024-05-25,Verne Industries,Maintenance,5102.42,payee
+T000939,C0168,19-08-2024,Sigma Sante,Licence,3397.94,payee
+T000940,C0212,07-12-2024,Nord Logistique,Conseil,5238.38,payee
+T000941,C0179,2025-05-17,Atelier Bastide,Audit,2430.21,payee
+T000942,C0124,05/07/2024,Verne Industries,Formation,5594.02,payee
+T000943,C0111,2025-08-01,Sigma Sante,Maintenance,3425.76,payee
+T000944,C0201,2024-06-21,Sigma Sante,Maintenance,4882.99,en attente
+T000945,C0199,25-09-2024,Maison Delaunay,Audit,2456.77,payee
+T000946,C0091,2025-02-22,Atelier Bastide,Maintenance,3346.17,payee
+T000947,C0025,2024-01-09,Maison Delaunay,Maintenance,8151.46,payee
+T000948,C0192,14-07-2025,Orion Energie,Conseil,3333.29,payee
+T000949,C0197,2025-05-03,Groupe Lorrain,Audit,5080.18,payee
+T000950,C0014,2025-09-01,Verne Industries,Conseil,5394.91,payee
+T000951,C0031,19-07-2024,Groupe Lorrain,Formation,4338.68,payee
+T000952,C0070,2024-10-17,Groupe Lorrain,Licence,4725.83,payee
+T000953,C0177,17-10-2025,Orion Energie,Formation,2460.72,payee
+T000954,C0019,18/02/2024,Atelier Bastide,Licence,2040.71,payee
+T000955,C0020,2024-12-24,Atelier Bastide,Conseil,1802.63,payee
+T000956,C0008,2024-12-19,Groupe Lorrain,Licence,3931.45,en attente
+T000957,C0045,2024-11-22,Orion Energie,Formation,3284.0,annulee
+T000958,C0214,2024-11-12,Cabinet Ferrand,Maintenance,3794.39,payee
+T000959,C0168,2025-06-29,Sigma Sante,Licence,1635.34,payee
+T000960,C0167,2024-05-23,Verne Industries,Maintenance,2217.48,payee
+T000961,C0068,2025-10-12,Maison Delaunay,Conseil,5009.99,payee
+T000962,C0146,2025-10-16,Orion Energie,Audit,3547.68,payee
+T000963,C0181,2024-05-10,Maison Delaunay,Formation,3438.72,en attente
+T000964,C0124,2025-12-12,Nord Logistique,Formation,2864.21,payee
+T000965,C0199,10/07/2024,Atelier Bastide,Licence,2109.43,payee
+T000966,C0133,07-02-2024,Atelier Bastide,Conseil,5686.5,payee
+T000967,C0076,2024-10-17,Nord Logistique,Audit,6157.4,payee
+T000968,C0149,2025-08-03,Cabinet Ferrand,Formation,3354.78,payee
+T000969,C0219,2025-09-08,Groupe Lorrain,Audit,1062.34,payee
+T000970,C0192,2025-04-16,Atelier Bastide,Conseil,3018.77,payee
+T000971,C0116,2025-08-15,Cabinet Ferrand,Audit,6381.12,payee
+T000972,C0139,2024-07-09,Atelier Bastide,Formation,2252.68,payee
+T000973,C0014,2025-10-03,Nord Logistique,Maintenance,2544.22,payee
+T000974,C0174,08-04-2025,Verne Industries,Audit,4893.08,en attente
+T000975,C0117,07-04-2024,Verne Industries,Conseil,2521.72,payee
+T000976,C0066,2024-04-03,Groupe Lorrain,Formation,3257.07,payee
+T000977,C0211,14/07/2024,Nord Logistique,Audit,886.86,en attente
+T000978,C0014,2024-02-20,Atelier Bastide,Conseil,6230.54,payee
+T000979,C0017,25/07/2024,Maison Delaunay,Conseil,4688.59,payee
+T000980,C0008,26/12/2025,Orion Energie,Licence,5491.04,en attente
+T000981,C0027,2024-06-24,Orion Energie,Conseil,1940.54,payee
+T000982,C0090,2025-04-09,Maison Delaunay,Audit,6900.12,en attente
+T000983,C0038,14-12-2025,Sigma Sante,Audit,3103.36,payee
+T000984,C0205,2024-07-03,Orion Energie,Conseil,5728.01,payee
+T000985,C0213,2025-05-23,Maison Delaunay,Conseil,3877.67,payee
+T000986,C0042,24-11-2024,Verne Industries,Maintenance,4796.72,payee
+T000987,C0193,2024-07-27,Nord Logistique,Licence,4028.49,payee
+T000988,C0033,2025-11-24,Sigma Sante,Audit,2511.46,payee
+T000989,C0183,2025-04-24,Maison Delaunay,Audit,1279.34,payee
+T000990,C0085,2024-11-16,Verne Industries,Licence,5948.03,payee
+T000991,C0010,2025-08-15,Atelier Bastide,Formation,643.7,payee
+T000992,C0100,2025-10-19,Atelier Bastide,Maintenance,5062.01,payee
+T000993,C0191,2025-07-24,Cabinet Ferrand,Maintenance,5944.21,payee
+T000994,C0217,26-09-2025,Sigma Sante,Licence,1470.61,payee
+T000995,C0029,23-08-2024,Nord Logistique,Formation,2586.45,payee
+T000996,C0194,08/09/2024,Groupe Lorrain,Formation,1374.68,payee
+T000997,C0069,2024-06-18,Orion Energie,Licence,2314.1,payee
+T000998,C0108,2025-05-23,Cabinet Ferrand,Licence,5446.5,en attente
+T000999,C0026,2025-08-09,Cabinet Ferrand,Licence,4769.44,en attente
+T001000,C0001,2025-04-27,Sigma Sante,Conseil,4452.09,payee
+T001001,C0184,13-03-2025,Cabinet Ferrand,Audit,2596.15,payee
+T001002,C0150,16/07/2025,Nord Logistique,Maintenance,692.73,en attente
+T001003,C0169,2024-05-12,Orion Energie,Audit,1594.3,payee
+T001004,C0203,2024-09-24,Nord Logistique,Audit,2864.08,payee
+T001005,C0034,31-05-2025,Nord Logistique,Maintenance,1795.76,payee
+T001006,C0058,2024-02-08,Verne Industries,Formation,5089.07,payee
+T001007,C0009,26/10/2025,Orion Energie,Maintenance,7008.74,payee
+T001008,C0114,2024-05-04,Groupe Lorrain,Licence,3862.43,payee
+T001009,C0115,2025-07-28,Verne Industries,Audit,1460.17,payee
+T001010,C0007,2025-03-26,Orion Energie,Formation,6056.79,payee
+T001011,C0154,10-09-2025,Cabinet Ferrand,Conseil,3440.15,payee
+T001012,C0003,2025-07-19,Atelier Bastide,Conseil,3203.11,payee
+T001013,C0184,2025-01-11,Cabinet Ferrand,Conseil,4265.74,en attente
+T001014,C0164,05/07/2025,Verne Industries,Maintenance,1633.53,payee
+T001015,C0190,2024-09-09,Nord Logistique,Conseil,2619.26,payee
+T001016,C0028,2025-03-02,Atelier Bastide,Conseil,3089.27,payee
+T001017,C0202,29-10-2025,Cabinet Ferrand,Formation,3694.15,payee
+T001018,C0128,2024-03-02,Orion Energie,Maintenance,3886.62,payee
+T001019,C0201,16/09/2024,Groupe Lorrain,Licence,4261.98,payee
+T001020,C0162,2024-01-13,Sigma Sante,Formation,2348.2,payee
+T001021,C0153,2025-01-25,Groupe Lorrain,Formation,1130.68,en attente
+T001022,C0008,2025-07-24,Cabinet Ferrand,Audit,2848.93,payee
+T001023,C0161,2024-01-29,Maison Delaunay,Licence,3037.84,payee
+T001024,C0105,2025-02-05,Orion Energie,Formation,1099.77,en attente
+T001025,C0198,30-10-2024,Verne Industries,Maintenance,2279.09,payee
+T001026,C0159,2025-07-25,Groupe Lorrain,Formation,3522.98,payee
+T001027,C0018,09-06-2024,Sigma Sante,Formation,2473.93,payee
+T001028,C0207,2024-04-28,Orion Energie,Maintenance,3449.95,en attente
+T001029,C0015,10-03-2024,Nord Logistique,Formation,2416.14,payee
+T001030,C0070,2024-10-24,Groupe Lorrain,Licence,4421.07,payee
+T001031,C0051,2024-12-21,Nord Logistique,Maintenance,1876.15,payee
+T001032,C0014,2025-11-01,Cabinet Ferrand,Formation,3224.06,payee
+T001033,C0036,06-12-2024,Cabinet Ferrand,Conseil,3305.7,payee
+T001034,C0196,2024-05-05,Groupe Lorrain,Audit,4990.61,en attente
+T001035,C0052,2025-05-25,Verne Industries,Formation,2693.16,payee
+T001036,C0151,14/02/2024,Orion Energie,Formation,6959.42,annulee
+T001037,C0021,09-09-2024,Groupe Lorrain,Licence,6826.61,payee
+T001038,C0091,22-04-2025,Orion Energie,Conseil,1945.47,payee
+T001039,C0145,04/07/2024,Nord Logistique,Conseil,3175.22,payee
+T001040,C0165,2025-03-10,Nord Logistique,Licence,1547.41,payee
+T001041,C0203,26-11-2024,Orion Energie,Audit,4095.31,payee
+T001042,C0190,2025-11-25,Atelier Bastide,Licence,2455.41,payee
+T001043,C0121,2024-07-28,Orion Energie,Licence,3415.83,payee
+T001044,C0071,2025-10-23,Verne Industries,Maintenance,2809.59,payee
+T001045,C0061,2025-04-01,Verne Industries,Audit,10656.37,payee
+T001046,C0196,2025-07-01,Cabinet Ferrand,Audit,2982.21,payee
+T001047,C0142,03-05-2024,Nord Logistique,Conseil,2845.64,payee
+T001048,C0211,2024-01-14,Verne Industries,Licence,5154.82,payee
+T001049,C0101,2025-06-17,Sigma Sante,Licence,5526.03,payee
+T001050,C0113,16/12/2024,Groupe Lorrain,Formation,3672.62,en attente
+T001051,C0192,2024-08-13,Maison Delaunay,Audit,5603.28,en attente
+T001052,C0168,2025-10-16,Maison Delaunay,Formation,9749.07,payee
+T001053,C0047,2024-08-26,Nord Logistique,Audit,2731.36,payee
+T001054,C0122,2024-11-12,Nord Logistique,Conseil,1653.2,payee
+T001055,C0050,12/06/2025,Maison Delaunay,Maintenance,3935.47,payee
+T001056,C0177,2025-12-03,Orion Energie,Maintenance,5341.36,en attente
+T001057,C0007,2025-10-18,Atelier Bastide,Licence,6676.46,payee
+T001058,C0192,2025-04-21,Cabinet Ferrand,Conseil,4297.71,en attente
+T001059,C0216,2024-03-21,Nord Logistique,Conseil,3265.5,payee
+T001060,C0006,2024-03-20,Verne Industries,Maintenance,2105.96,annulee
+T001061,C0147,2025-05-20,Orion Energie,Audit,5960.3,payee
+T001062,C0019,2025-01-06,Nord Logistique,Licence,3770.65,payee
+T001063,C0084,07-04-2024,Nord Logistique,Conseil,1148.11,en attente
+T001064,C0079,2025-05-22,Atelier Bastide,Maintenance,8142.11,payee
+T001065,C0121,2025-11-18,Cabinet Ferrand,Licence,1711.42,payee
+T001066,C0213,2024-02-17,Maison Delaunay,Conseil,5391.86,payee
+T001067,C0108,25/08/2025,Cabinet Ferrand,Formation,3613.22,en attente
+T001068,C0093,08-09-2024,Sigma Sante,Formation,1202.01,en attente
+T001069,C0022,17/10/2024,Atelier Bastide,Audit,3070.34,payee
+T001070,C0206,2025-06-07,Atelier Bastide,Audit,2735.47,payee
+T001071,C0074,2024-06-29,Verne Industries,Conseil,1374.17,payee
+T001072,C0108,2024-04-24,Verne Industries,Licence,4089.97,payee
+T001073,C0022,2025-12-04,Sigma Sante,Conseil,5013.35,payee
+T001074,C0068,11/09/2024,Sigma Sante,Licence,3182.22,payee
+T001075,C0129,03-05-2024,Cabinet Ferrand,Conseil,2696.64,payee
+T001076,C0209,18/05/2025,Nord Logistique,Maintenance,4248.61,payee
+T001077,C0077,2024-06-07,Verne Industries,Conseil,535.42,payee
+T001078,C0131,2025-07-20,Nord Logistique,Audit,2536.08,payee
+T001079,C0204,2024-02-21,Maison Delaunay,Formation,2637.93,payee
+T001080,C0084,2025-01-13,Maison Delaunay,Formation,3236.14,payee
+T001081,C0069,2024-10-21,Orion Energie,Audit,1323.33,payee
+T001082,C0011,2025-11-29,Nord Logistique,Audit,959.38,en attente
+T001083,C0211,2025-01-15,Verne Industries,Conseil,1806.06,payee
+T001084,C0026,2025-11-06,Groupe Lorrain,Conseil,4057.64,en attente
+T001085,C0050,2024-06-30,Maison Delaunay,Audit,2614.0,payee
+T001086,C0033,2024-12-11,Sigma Sante,Audit,1799.26,en attente
+T001087,C0165,17/08/2025,Nord Logistique,Licence,7505.83,payee
+T001088,C0085,27/04/2024,Orion Energie,Conseil,2695.36,payee
+T001089,C0164,2025-11-08,Verne Industries,Conseil,3246.35,payee
+T001090,C0141,2025-07-18,Groupe Lorrain,Formation,5915.18,payee
+T001091,C0004,2025-05-09,Maison Delaunay,Maintenance,3492.74,payee
+T001092,C0072,2024-06-26,Groupe Lorrain,Conseil,4227.21,payee
+T001093,C0001,2025-08-20,Groupe Lorrain,Maintenance,2048.61,payee
+T001094,C0016,2025-09-07,Maison Delaunay,Audit,3338.03,payee
+T001095,C0110,2024-08-01,Cabinet Ferrand,Conseil,7027.54,en attente
+T001096,C0062,04-03-2025,Nord Logistique,Audit,3957.28,payee
+T001097,C0021,14/02/2024,Maison Delaunay,Audit,3669.78,payee
+T001098,C0095,2024-10-14,Cabinet Ferrand,Formation,2838.68,annulee
+T001099,C0105,2024-04-19,Nord Logistique,Conseil,1534.4,payee
+T001100,C0196,2025-02-10,Nord Logistique,Formation,5597.61,payee
+T001101,C0154,2025-02-04,Nord Logistique,Formation,3113.63,en attente
+T001102,C0092,2025-01-23,Maison Delaunay,Formation,2212.39,annulee
+T001103,C0110,2025-05-09,Cabinet Ferrand,Audit,1438.5,payee
+T001104,C0021,06/11/2025,Nord Logistique,Conseil,3767.03,payee
+T001105,C0090,2024-05-23,Nord Logistique,Formation,1678.73,payee
+T001106,C0135,2024-06-05,Atelier Bastide,Maintenance,5622.38,en attente
+T001107,C0005,2024-06-06,Atelier Bastide,Conseil,2284.63,en attente
+T001108,C0214,2025-11-08,Groupe Lorrain,Conseil,3376.09,payee
+T001109,C0120,2024-03-08,Atelier Bastide,Formation,3917.6,en attente
+T001110,C0183,23/01/2024,Cabinet Ferrand,Audit,3689.73,payee
+T001111,C0064,27/04/2024,Orion Energie,Audit,5021.74,payee
+T001112,C0195,2025-07-15,Orion Energie,Audit,2401.23,payee
+T001113,C0086,27/02/2025,Sigma Sante,Audit,3258.16,payee
+T001114,C0216,02/11/2025,Nord Logistique,Conseil,4344.29,en attente
+T001115,C0122,2024-05-29,Atelier Bastide,Licence,6688.66,payee
+T001116,C0148,14/10/2024,Verne Industries,Licence,4842.53,payee
+T001117,C0048,2025-02-09,Sigma Sante,Conseil,5299.84,payee
+T001118,C0196,2024-02-23,Orion Energie,Audit,2732.19,payee
+T001119,C0045,2025-11-01,Orion Energie,Maintenance,3956.2,payee
+T001120,C0008,2025-08-10,Cabinet Ferrand,Audit,6204.6,en attente
+T001121,C0103,2024-04-14,Cabinet Ferrand,Formation,3173.76,payee
+T001122,C0194,2025-09-07,Nord Logistique,Maintenance,3968.15,payee
+T001123,C0214,2024-11-23,Groupe Lorrain,Conseil,1244.63,payee
+T001124,C0199,02-09-2024,Groupe Lorrain,Conseil,4557.18,payee
+T001125,C0129,2025-11-21,Groupe Lorrain,Maintenance,3649.79,en attente
+T001126,C0213,2025-01-13,Maison Delaunay,Conseil,4405.71,payee
+T001127,C0115,2024-06-14,Atelier Bastide,Formation,2767.06,en attente
+T001128,C0111,2025-08-13,Maison Delaunay,Maintenance,1068.62,payee
+T001129,C0042,2025-06-06,Cabinet Ferrand,Licence,4665.98,payee
+T001130,C0183,2024-05-20,Sigma Sante,Formation,2201.43,en attente
+T001131,C0074,09-05-2025,Groupe Lorrain,Formation,1328.67,en attente
+T001132,C0046,2025-04-04,Verne Industries,Maintenance,3521.9,payee
+T001133,C0086,2024-07-20,Atelier Bastide,Audit,7121.68,payee
+T001134,C0140,2024-11-10,Cabinet Ferrand,Maintenance,2021.55,en attente
+T001135,C0063,04-09-2025,Nord Logistique,Formation,2250.86,payee
+T001136,C0084,07/05/2024,Atelier Bastide,Licence,4783.78,en attente
+T001137,C0077,11-06-2025,Maison Delaunay,Conseil,2905.04,payee
+T001138,C0139,2025-08-29,Orion Energie,Conseil,4657.73,payee
+T001139,C0166,2025-11-14,Groupe Lorrain,Formation,2823.0,payee
+T001140,C0157,25-08-2024,Groupe Lorrain,Formation,2587.32,payee
+T001141,C0033,2024-07-13,Orion Energie,Audit,2076.79,payee
+T001142,C0081,2025-11-13,Maison Delaunay,Audit,3815.14,payee
+T001143,C0151,2024-12-03,Orion Energie,Conseil,2069.53,annulee
+T001144,C0051,2025-02-19,Maison Delaunay,Formation,2504.1,payee
+T001145,C0017,2025-01-09,Maison Delaunay,Conseil,5577.3,annulee
+T001146,C0075,10-01-2025,Atelier Bastide,Conseil,8641.67,payee
+T001147,C0158,2025-03-31,Nord Logistique,Formation,4061.85,payee
+T001148,C0155,2024-11-05,Verne Industries,Audit,5685.79,payee
+T001149,C0031,2024-10-13,Sigma Sante,Conseil,2666.32,payee
+T001150,C0158,2024-10-19,Groupe Lorrain,Maintenance,2858.58,payee
+T001151,C0046,2025-04-24,Groupe Lorrain,Formation,3606.87,payee
+T001152,C0172,2025-08-20,Nord Logistique,Licence,2219.53,payee
+T001153,C0132,2025-02-09,Orion Energie,Audit,2567.76,payee
+T001154,C0030,09-05-2025,Orion Energie,Audit,4577.95,payee
+T001155,C0082,28-10-2024,Nord Logistique,Audit,3297.47,payee
+T001156,C0190,18-07-2025,Cabinet Ferrand,Licence,3018.13,payee
+T001157,C0101,2024-10-14,Verne Industries,Conseil,2941.69,payee
+T001158,C0160,2024-11-03,Orion Energie,Audit,1813.7,payee
+T001159,C0174,2024-02-10,Atelier Bastide,Audit,3538.33,en attente
+T001160,C0008,2024-07-09,Atelier Bastide,Audit,2220.37,en attente
+T001161,C0217,2025-06-23,Nord Logistique,Licence,1236.88,payee
+T001162,C0078,2024-03-04,Cabinet Ferrand,Formation,1670.48,payee
+T001163,C0185,2024-06-12,Cabinet Ferrand,Conseil,2970.82,en attente
+T001164,C0109,2025-07-20,Orion Energie,Formation,4391.2,en attente
+T001165,C0134,29/09/2025,Verne Industries,Formation,4973.43,payee
+T001166,C0084,2024-10-30,Orion Energie,Formation,1447.59,payee
+T001167,C0198,2024-10-24,Atelier Bastide,Audit,4172.86,payee
+T001168,C0028,06/01/2025,Verne Industries,Maintenance,7337.78,annulee
+T001169,C0208,2025-07-16,Groupe Lorrain,Formation,5098.63,payee
+T001170,C0049,08/12/2024,Maison Delaunay,Maintenance,3468.77,payee
+T001171,C0205,2024-05-06,Sigma Sante,Maintenance,3615.19,en attente
+T001172,C0006,2024-11-10,Orion Energie,Licence,3417.94,payee
+T001173,C0004,2024-07-04,Atelier Bastide,Audit,2468.98,payee
+T001174,C0022,2025-05-14,Sigma Sante,Audit,5222.02,payee
+T001175,C0128,14/04/2024,Atelier Bastide,Licence,1902.32,payee
+T001176,C0062,20/03/2025,Maison Delaunay,Licence,3562.36,payee
+T001177,C0139,04-04-2024,Maison Delaunay,Formation,1223.5,payee
+T001178,C0191,10/12/2025,Atelier Bastide,Maintenance,5460.01,payee
+T001179,C0007,2025-04-12,Groupe Lorrain,Audit,3489.31,payee
+T001180,C0123,2024-04-11,Groupe Lorrain,Maintenance,1385.35,payee
+T001181,C0172,2025-11-30,Maison Delaunay,Formation,6370.72,payee
+T001182,C0099,2025-02-22,Nord Logistique,Licence,3088.9,payee
+T001183,C0215,18-03-2025,Groupe Lorrain,Maintenance,1570.96,payee
+T001184,C0154,16-02-2024,Nord Logistique,Conseil,7666.31,payee
+T001185,C0009,2024-05-17,Sigma Sante,Licence,2826.76,payee
+T001186,C0126,12/08/2025,Atelier Bastide,Maintenance,2095.94,payee
+T001187,C0090,07-12-2024,Nord Logistique,Licence,3652.0,payee
+T001188,C0031,25/03/2025,Verne Industries,Maintenance,1677.67,payee
+T001189,C0169,2025-12-21,Verne Industries,Audit,2468.99,payee
+T001190,C0052,2024-11-08,Cabinet Ferrand,Conseil,5999.84,en attente
+T001191,C0020,2024-10-05,Verne Industries,Licence,7907.6,payee
+T001192,C0052,2025-08-08,Cabinet Ferrand,Maintenance,2863.13,en attente
+T001193,C0191,18-02-2024,Atelier Bastide,Audit,4049.52,payee
+T001194,C0140,2024-11-28,Cabinet Ferrand,Licence,6134.5,annulee
+T001195,C0191,16/09/2025,Nord Logistique,Audit,2816.14,payee
+T001196,C0108,2024-06-15,Cabinet Ferrand,Formation,2047.26,payee
+T001197,C0028,2024-08-09,Maison Delaunay,Licence,4432.43,payee
+T001198,C0090,10-12-2024,Groupe Lorrain,Audit,1534.64,payee
+T001199,C0047,24-02-2024,Atelier Bastide,Licence,1923.39,payee
+T001200,C0130,2024-02-21,Sigma Sante,Formation,1363.08,payee
+T001201,C0063,2024-07-02,Cabinet Ferrand,Licence,5914.89,payee
+T001202,C0001,2025-10-17,Nord Logistique,Maintenance,3354.37,payee
+T001203,C0088,2024-06-10,Maison Delaunay,Audit,4516.66,payee
+T001204,C0073,2025-06-17,Atelier Bastide,Maintenance,1994.48,payee
+T001205,C0073,2024-11-07,Orion Energie,Conseil,3968.72,payee
+T001206,C0121,09-07-2025,Cabinet Ferrand,Conseil,4038.71,en attente
+T001207,C0040,29-08-2024,Orion Energie,Audit,7646.62,payee
+T001208,C0112,2025-09-30,Cabinet Ferrand,Licence,4323.12,payee
+T001209,C0060,2024-09-27,Cabinet Ferrand,Formation,4967.54,payee
+T001210,C0167,2025-07-31,Nord Logistique,Formation,3491.44,payee
+T001211,C0134,29-08-2025,Atelier Bastide,Conseil,592.28,payee
+T001212,C0170,11-11-2024,Nord Logistique,Conseil,3790.59,en attente
+T001213,C0219,2025-05-01,Orion Energie,Maintenance,2959.94,payee
+T001214,C0170,2024-03-27,Maison Delaunay,Maintenance,2884.48,annulee
+T001215,C0080,2024-12-28,Groupe Lorrain,Licence,2528.98,payee
+T001216,C0047,29-09-2024,Maison Delaunay,Conseil,2884.46,annulee
+T001217,C0123,2025-11-27,Groupe Lorrain,Maintenance,2276.07,payee
+T001218,C0105,2025-11-12,Groupe Lorrain,Audit,4732.3,payee
+T001219,C0073,25/07/2025,Verne Industries,Audit,1827.27,payee
+T001220,C0189,23/11/2025,Verne Industries,Formation,7142.31,payee
+T001221,C0211,2025-12-13,Groupe Lorrain,Maintenance,4532.32,payee
+T001222,C0089,14-07-2025,Groupe Lorrain,Formation,5360.72,payee
+T001223,C0158,2025-03-09,Sigma Sante,Audit,1902.84,payee
+T001224,C0073,2024-05-29,Cabinet Ferrand,Audit,2434.65,payee
+T001225,C0003,18/08/2025,Atelier Bastide,Formation,3421.02,en attente
+T001226,C0085,2024-05-21,Cabinet Ferrand,Licence,3252.07,payee
+T001227,C0172,2024-05-15,Maison Delaunay,Formation,4537.98,payee
+T001228,C0116,2025-10-04,Maison Delaunay,Maintenance,3258.9,payee
+T001229,C0184,2024-03-24,Verne Industries,Formation,7334.17,payee
+T001230,C0111,2024-04-13,Atelier Bastide,Maintenance,1925.53,en attente
+T001231,C0015,08/01/2025,Orion Energie,Audit,1707.6,en attente
+T001232,C0101,2025-03-02,Maison Delaunay,Audit,2371.61,payee
+T001233,C0094,2024-02-03,Orion Energie,Conseil,2887.5,payee
+T001234,C0197,2024-10-03,Verne Industries,Conseil,5595.76,annulee
+T001235,C0035,13-06-2024,Groupe Lorrain,Audit,3914.26,payee
+T001236,C0037,08/08/2024,Cabinet Ferrand,Conseil,676.22,en attente
+T001237,C0033,12/05/2024,Verne Industries,Licence,724.34,payee
+T001238,C0132,2025-05-09,Maison Delaunay,Audit,3029.15,payee
+T001239,C0196,2024-12-11,Maison Delaunay,Licence,2582.06,payee
+T001240,C0144,2025-12-01,Groupe Lorrain,Conseil,3075.83,payee
+T001241,C0190,07-01-2024,Nord Logistique,Audit,2888.57,en attente
+T001242,C0198,2025-07-21,Verne Industries,Maintenance,6798.88,payee
+T001243,C0140,2025-10-26,Nord Logistique,Formation,5176.58,payee
+T001244,C0142,2024-12-20,Cabinet Ferrand,Maintenance,2439.62,payee
+T001245,C0057,2025-05-25,Nord Logistique,Maintenance,3227.44,payee
+T001246,C0117,2024-11-17,Maison Delaunay,Licence,2764.75,en attente
+T001247,C0183,2025-03-10,Verne Industries,Audit,925.98,payee
+T001248,C0203,24/10/2025,Atelier Bastide,Maintenance,2501.32,payee
+T001249,C0073,22-01-2025,Maison Delaunay,Formation,2519.93,payee
+T001250,C0081,26/02/2025,Orion Energie,Audit,2226.46,en attente
+T001251,C0034,2025-12-21,Cabinet Ferrand,Audit,2461.55,payee
+T001252,C0200,2024-12-28,Orion Energie,Conseil,2793.47,payee
+T001253,C0110,2024-05-06,Atelier Bastide,Formation,4075.83,payee
+T001254,C0117,2025-05-13,Sigma Sante,Maintenance,2324.15,payee
+T001255,C0162,2025-05-20,Orion Energie,Audit,6012.31,payee
+T001256,C0060,22-06-2024,Verne Industries,Maintenance,1913.03,payee
+T001257,C0083,2025-06-15,Atelier Bastide,Licence,5503.94,payee
+T001258,C0142,16/02/2024,Maison Delaunay,Formation,3751.01,en attente
+T001259,C0092,2024-08-21,Sigma Sante,Conseil,1623.54,payee
+T001260,C0066,2025-09-16,Groupe Lorrain,Audit,2755.67,payee
+T001261,C0049,2025-03-26,Maison Delaunay,Licence,6928.27,en attente
+T001262,C0151,19-03-2025,Sigma Sante,Licence,1933.44,payee
+T001263,C0009,2025-03-29,Groupe Lorrain,Audit,7026.46,payee
+T001264,C0022,2024-04-30,Nord Logistique,Conseil,4134.01,en attente
+T001265,C0010,02/12/2025,Groupe Lorrain,Formation,3783.48,payee
+T001266,C0171,2024-08-05,Atelier Bastide,Audit,4013.27,en attente
+T001267,C0007,28-07-2025,Cabinet Ferrand,Formation,2718.73,payee
+T001268,C0098,2025-12-23,Verne Industries,Audit,267.84,payee
+T001269,C0029,24/06/2024,Groupe Lorrain,Audit,1980.67,annulee
+T001270,C0137,08-04-2025,Sigma Sante,Conseil,3302.97,payee
+T001271,C0008,2024-01-31,Atelier Bastide,Licence,3853.47,payee
+T001272,C0007,2025-04-09,Sigma Sante,Maintenance,4229.93,en attente
+T001273,C0096,2024-11-17,Atelier Bastide,Licence,4146.43,en attente
+T001274,C0162,22/02/2024,Nord Logistique,Formation,4683.77,en attente
+T001275,C0026,2025-05-05,Maison Delaunay,Conseil,8368.15,payee
+T001276,C0116,2025-12-08,Cabinet Ferrand,Conseil,3688.53,payee
+T001277,C0188,01-03-2024,Cabinet Ferrand,Conseil,5856.23,payee
+T001278,C0146,2025-10-13,Sigma Sante,Formation,4308.15,en attente
+T001279,C0175,2025-09-07,Groupe Lorrain,Formation,8816.1,payee
+T001280,C0074,2025-02-03,Sigma Sante,Audit,3420.32,payee
+T001281,C0219,2025-10-20,Maison Delaunay,Licence,3229.47,payee
+T001282,C0034,2024-08-13,Sigma Sante,Conseil,5673.34,payee
+T001283,C0141,09-06-2025,Cabinet Ferrand,Conseil,5676.9,payee
+T001284,C0102,2025-05-24,Cabinet Ferrand,Conseil,2837.54,payee
+T001285,C0008,2025-02-27,Nord Logistique,Formation,4229.88,payee
+T001286,C0220,2025-08-31,Maison Delaunay,Maintenance,4707.7,payee
+T001287,C0163,2025-10-01,Orion Energie,Conseil,4575.93,payee
+T001288,C0053,2025-07-27,Sigma Sante,Licence,4016.42,en attente
+T001289,C0013,05-03-2025,Groupe Lorrain,Licence,1168.93,payee
+T001290,C0157,14-12-2025,Atelier Bastide,Conseil,4609.15,payee
+T001291,C0127,09-02-2025,Orion Energie,Conseil,4716.05,payee
+T001292,C0012,2025-04-09,Cabinet Ferrand,Formation,4098.05,payee
+T001293,C0073,17/05/2024,Nord Logistique,Conseil,2675.53,payee
+T001294,C0167,2024-08-22,Groupe Lorrain,Maintenance,6583.32,annulee
+T001295,C0108,2025-10-22,Groupe Lorrain,Audit,1959.59,payee
+T001296,C0056,29/12/2024,Cabinet Ferrand,Maintenance,5728.34,payee
+T001297,C0063,08-01-2025,Maison Delaunay,Maintenance,1945.59,en attente
+T001298,C0105,18/08/2025,Sigma Sante,Maintenance,5379.34,en attente
+T001299,C0014,26-08-2024,Orion Energie,Audit,1995.41,payee
+T001300,C0086,2024-07-12,Atelier Bastide,Conseil,5223.51,payee
+T001301,C0051,2024-01-07,Atelier Bastide,Audit,7312.52,payee
+T001302,C0027,2024-06-17,Nord Logistique,Licence,7326.62,payee
+T001303,C0030,08/01/2025,Nord Logistique,Licence,6526.64,payee
+T001304,C0081,2025-06-13,Groupe Lorrain,Maintenance,3409.68,payee
+T001305,C0089,28-08-2024,Cabinet Ferrand,Licence,2439.61,payee
+T001306,C0082,20-11-2024,Orion Energie,Formation,625.36,payee
+T001307,C0161,2024-06-10,Atelier Bastide,Conseil,3133.29,payee
+T001308,C0122,2025-08-19,Sigma Sante,Conseil,5513.71,payee
+T001309,C0045,2025-01-18,Cabinet Ferrand,Conseil,4573.04,payee
+T001310,C0001,14-04-2024,Nord Logistique,Formation,9218.6,en attente
+T001311,C0170,20/03/2025,Maison Delaunay,Maintenance,2569.76,payee
+T001312,C0110,2024-09-02,Maison Delaunay,Formation,7562.73,payee
+T001313,C0012,23/09/2025,Maison Delaunay,Licence,3262.27,payee
+T001314,C0213,14/07/2024,Groupe Lorrain,Conseil,1941.3,payee
+T001315,C0173,2025-09-23,Verne Industries,Licence,3948.12,payee
+T001316,C0108,2025-05-24,Sigma Sante,Audit,4514.69,payee
+T001317,C0038,08-04-2024,Groupe Lorrain,Formation,6226.67,payee
+T001318,C0025,08/07/2025,Maison Delaunay,Licence,2564.05,payee
+T001319,C0068,2025-06-10,Nord Logistique,Audit,3947.47,payee
+T001320,C0054,2024-11-28,Groupe Lorrain,Maintenance,3440.64,en attente
+T001321,C0049,2024-04-27,Groupe Lorrain,Formation,2832.41,annulee
+T001322,C0095,2024-12-14,Orion Energie,Conseil,7176.32,payee
+T001323,C0011,20/03/2025,Groupe Lorrain,Audit,4547.36,payee
+T001324,C0076,06/04/2024,Groupe Lorrain,Maintenance,866.0,payee
+T001325,C0203,2024-09-05,Groupe Lorrain,Conseil,3980.39,payee
+T001326,C0201,2025-05-27,Maison Delaunay,Licence,1334.98,payee
+T001327,C0002,2025-02-07,Orion Energie,Audit,3780.56,en attente
+T001328,C0158,25/12/2025,Atelier Bastide,Audit,1473.85,payee
+T001329,C0045,07-06-2024,Sigma Sante,Conseil,4557.98,payee
+T001330,C0135,2025-07-21,Maison Delaunay,Licence,1322.83,payee
+T001331,C0091,06/11/2024,Atelier Bastide,Audit,2002.86,payee
+T001332,C0114,2024-06-11,Groupe Lorrain,Maintenance,5077.1,payee
+T001333,C0050,2025-11-25,Cabinet Ferrand,Licence,3410.04,payee
+T001334,C0093,30-03-2025,Groupe Lorrain,Formation,1554.38,payee
+T001335,C0218,25/01/2025,Groupe Lorrain,Maintenance,-6950.89,payee
+T001336,C0143,03/08/2024,Cabinet Ferrand,Licence,2743.46,en attente
+T001337,C0100,05/10/2025,Sigma Sante,Licence,2989.51,payee
+T001338,C0029,2024-01-23,Orion Energie,Audit,3132.65,payee
+T001339,C0211,25/03/2024,Maison Delaunay,Formation,4746.81,payee
+T001340,C0038,11/05/2024,Verne Industries,Maintenance,2856.53,payee
+T001341,C0168,21/04/2025,Verne Industries,Conseil,3197.68,payee
+T001342,C0071,2024-03-15,Nord Logistique,Maintenance,5925.43,payee
+T001343,C0065,04/08/2025,Atelier Bastide,Licence,5560.42,payee
+T001344,C0040,23/05/2024,Nord Logistique,Audit,3095.86,payee
+T001345,C0088,2025-05-08,Sigma Sante,Formation,3152.08,payee
+T001346,C0158,03-08-2025,Sigma Sante,Audit,659.01,payee
+T001347,C0097,03-10-2025,Groupe Lorrain,Licence,3746.18,payee
+T001348,C0006,2024-08-01,Verne Industries,Formation,5173.11,payee
+T001349,C0062,24-02-2024,Verne Industries,Conseil,2776.62,en attente
+T001350,C0038,2025-07-06,Nord Logistique,Conseil,6435.61,payee
+T001351,C0094,2024-11-23,Atelier Bastide,Formation,1233.12,payee
+T001352,C0210,2025-11-23,Orion Energie,Licence,2080.55,payee
+T001353,C0025,17-05-2024,Orion Energie,Audit,6182.91,payee
+T001354,C0089,23-02-2025,Verne Industries,Audit,5070.92,payee
+T001355,C0027,2024-03-27,Cabinet Ferrand,Maintenance,1186.83,payee
+T001356,C0114,2024-12-20,Cabinet Ferrand,Licence,1331.6,payee
+T001357,C0011,2024-01-01,Groupe Lorrain,Maintenance,4593.73,annulee
+T001358,C0115,2025-07-01,Orion Energie,Formation,4121.94,payee
+T001359,C0134,2025-03-17,Sigma Sante,Formation,2963.32,payee
+T001360,C0180,2024-03-11,Verne Industries,Licence,6325.59,payee
+T001361,C0079,30/12/2024,Nord Logistique,Audit,2370.23,payee
+T001362,C0009,2024-11-08,Cabinet Ferrand,Conseil,897.58,payee
+T001363,C0106,06/05/2025,Atelier Bastide,Conseil,4745.69,payee
+T001364,C0100,2024-12-30,Verne Industries,Conseil,5278.74,payee
+T001365,C0145,2024-12-01,Groupe Lorrain,Formation,2446.07,payee
+T001366,C0024,2025-08-29,Sigma Sante,Conseil,1760.3,payee
+T001367,C0143,13/01/2025,Maison Delaunay,Conseil,926.99,payee
+T001368,C0094,17-08-2025,Orion Energie,Conseil,3376.14,payee
+T001369,C0172,08/10/2025,Groupe Lorrain,Formation,4018.04,annulee
+T001370,C0073,2025-09-11,Maison Delaunay,Maintenance,5471.77,payee
+T001371,C0053,2025-11-28,Nord Logistique,Conseil,4143.25,payee
+T001372,C0175,24/05/2025,Nord Logistique,Formation,2551.33,payee
+T001373,C0030,14-02-2025,Orion Energie,Audit,3746.52,payee
+T001374,C0073,22-01-2025,Cabinet Ferrand,Conseil,5609.94,payee
+T001375,C0112,29-05-2024,Atelier Bastide,Audit,3991.26,payee
+T001376,C0174,2025-08-27,Groupe Lorrain,Licence,5207.05,payee
+T001377,C0181,21/05/2025,Cabinet Ferrand,Maintenance,1809.53,payee
+T001378,C0142,2025-09-29,Atelier Bastide,Formation,4654.17,payee
+T001379,C0090,27/05/2025,Atelier Bastide,Formation,4146.87,payee
+T001380,C0175,2024-12-16,Atelier Bastide,Formation,2841.21,payee
+T001381,C0111,2024-08-03,Verne Industries,Conseil,5661.81,payee
+T001382,C0153,2025-12-20,Groupe Lorrain,Formation,8315.36,en attente
+T001383,C0143,2025-06-19,Cabinet Ferrand,Audit,1433.43,payee
+T001384,C0108,2025-09-30,Maison Delaunay,Conseil,1162.22,en attente
+T001385,C0028,03/03/2025,Verne Industries,Licence,2916.08,payee
+T001386,C0068,2025-01-07,Atelier Bastide,Maintenance,3250.94,payee
+T001387,C0218,2024-01-26,Nord Logistique,Conseil,3377.97,payee
+T001388,C0121,2024-02-20,Groupe Lorrain,Conseil,2401.43,payee
+T001389,C0148,2025-05-30,Maison Delaunay,Licence,1301.79,payee
+T001390,C0060,2024-06-12,Cabinet Ferrand,Formation,2996.74,payee
+T001391,C0164,2024-02-29,Cabinet Ferrand,Audit,3264.23,payee
+T001392,C0113,20/07/2025,Atelier Bastide,Conseil,2861.48,payee
+T001393,C0051,28/03/2025,Verne Industries,Conseil,3304.15,payee
+T001394,C0034,2024-03-22,Atelier Bastide,Formation,3791.77,payee
+T001395,C0092,2024-12-30,Nord Logistique,Formation,3055.83,payee
+T001396,C0132,2024-12-08,Atelier Bastide,Conseil,2386.3,payee
+T001397,C0065,2024-01-03,Maison Delaunay,Maintenance,3314.04,en attente
+T001398,C0057,2025-03-17,Verne Industries,Formation,3940.73,annulee
+T001399,C0063,2024-10-16,Nord Logistique,Licence,3466.27,payee
+T001400,C0069,2025-10-03,Nord Logistique,Formation,8594.27,payee
+T001401,C0172,2024-03-25,Maison Delaunay,Conseil,4083.12,payee
+T001402,C0116,2025-09-10,Sigma Sante,Conseil,3386.66,payee
+T001403,C9999,2024-01-05,Nord Logistique,Conseil,2200.23,payee
+T001404,C0038,2025-07-11,Sigma Sante,Audit,2228.98,payee
+T001405,C0127,25-07-2025,Verne Industries,Formation,2864.95,payee
+T001406,C0025,24-10-2024,Sigma Sante,Formation,2911.67,payee
+T001407,C0173,23-07-2024,Verne Industries,Licence,2853.73,en attente
+T001408,C0104,2024-04-13,Maison Delaunay,Conseil,4172.57,payee
+T001409,C0072,05-09-2024,Cabinet Ferrand,Maintenance,5570.59,payee
+T001410,C0082,03-05-2025,Orion Energie,Licence,4754.01,payee
+T001411,C0007,2025-06-13,Verne Industries,Maintenance,4480.16,payee
+T001412,C0007,2024-05-12,Nord Logistique,Conseil,2068.04,en attente
+T001413,C0181,2024-01-09,Atelier Bastide,Conseil,5981.49,payee
+T001414,C0196,2025-02-13,Maison Delaunay,Maintenance,2174.42,en attente
+T001415,C0203,2025-02-27,Groupe Lorrain,Formation,3891.87,payee
+T001416,C0146,2025-12-16,Cabinet Ferrand,Conseil,4344.4,payee
+T001417,C0216,2025-07-09,Groupe Lorrain,Licence,6068.36,payee
+T001418,C0097,2025-02-05,Verne Industries,Licence,7816.97,payee
+T001419,C0059,08-03-2025,Cabinet Ferrand,Audit,2802.16,en attente
+T001420,C0057,2025-04-16,Verne Industries,Audit,3729.06,payee
+T001421,C0055,25-11-2024,Cabinet Ferrand,Licence,5795.28,payee
+T001422,C0173,2025-05-09,Atelier Bastide,Conseil,8151.65,payee
+T001423,C0003,2024-05-22,Maison Delaunay,Maintenance,2961.53,payee
+T001424,C0220,2025-08-29,Sigma Sante,Formation,2126.01,en attente
+T001425,C0180,2025-09-21,Cabinet Ferrand,Audit,1552.78,en attente
+T001426,C0089,2024-11-13,Groupe Lorrain,Maintenance,1197.28,payee
+T001427,C0163,2024-11-29,Groupe Lorrain,Formation,2322.56,payee
+T001428,C0032,2024-12-29,Maison Delaunay,Audit,5234.22,payee
+T001429,C0101,2025-08-19,Orion Energie,Licence,5385.86,en attente
+T001430,C0026,2024-05-08,Sigma Sante,Formation,4082.85,payee
+T001431,C0027,2024-09-06,Cabinet Ferrand,Conseil,2892.97,annulee
+T001432,C0002,2025-03-24,Cabinet Ferrand,Maintenance,4178.81,en attente
+T001433,C0185,21-05-2025,Atelier Bastide,Formation,3494.03,payee
+T001434,C0173,03/08/2024,Groupe Lorrain,Conseil,2965.17,payee
+T001435,C0208,2024-03-26,Sigma Sante,Conseil,3988.54,payee
+T001436,C0151,2025-01-05,Cabinet Ferrand,Maintenance,2827.52,payee
+T001437,C0025,2025-04-11,Cabinet Ferrand,Audit,3978.73,payee
+T001438,C0196,2025-07-13,Verne Industries,Formation,4296.1,payee
+T001439,C0004,03/01/2024,Verne Industries,Formation,4822.2,payee
+T001440,C0182,2024-01-13,Orion Energie,Maintenance,1333.03,payee
+T001441,C0168,2024-10-09,Sigma Sante,Conseil,6021.74,en attente
+T001442,C0038,2025-02-15,Maison Delaunay,Conseil,3262.95,en attente
+T001443,C0032,03-01-2024,Cabinet Ferrand,Maintenance,7860.45,payee
+T001444,C0014,06-05-2024,Maison Delaunay,Licence,5251.53,payee
+T001445,C0205,2024-11-01,Verne Industries,Conseil,2160.04,payee
+T001446,C0077,2024-07-22,Nord Logistique,Formation,4516.61,payee
+T001447,C0018,2025-06-02,Atelier Bastide,Conseil,5805.42,payee
+T001448,C0078,2024-01-26,Maison Delaunay,Maintenance,3041.54,payee
+T001449,C0002,2025-10-10,Groupe Lorrain,Maintenance,2072.17,payee
+T001450,C9999,2024-05-03,Maison Delaunay,Maintenance,1885.41,payee
+T001451,C0089,2024-11-17,Nord Logistique,Conseil,1525.93,en attente
+T001452,C0012,21/12/2025,Groupe Lorrain,Audit,961.51,payee
+T001453,C0151,28/04/2025,Nord Logistique,Formation,3295.89,annulee
+T001454,C0192,2025-12-29,Atelier Bastide,Audit,1939.37,en attente
+T001455,C0210,15-01-2024,Cabinet Ferrand,Audit,2447.81,payee
+T001456,C0089,2025-06-09,Groupe Lorrain,Licence,7953.39,payee
+T001457,C0004,2024-02-25,Maison Delaunay,Maintenance,4306.14,en attente
+T001458,C0180,2025-03-22,Nord Logistique,Maintenance,2124.33,payee
+T001459,C0183,2024-08-25,Verne Industries,Maintenance,9769.36,payee
+T001460,C0182,2025-07-21,Orion Energie,Conseil,3962.9,payee
+T001461,C0062,31/03/2024,Maison Delaunay,Conseil,464.99,payee
+T001462,C0091,2025-10-16,Nord Logistique,Audit,9338.06,payee
+T001463,C0216,16/12/2024,Atelier Bastide,Maintenance,7012.62,payee
+T001464,C0016,2025-01-14,Nord Logistique,Maintenance,4032.6,en attente
+T001465,C0149,2025-02-20,Maison Delaunay,Formation,3282.07,payee
+T001466,C0184,2024-01-26,Orion Energie,Licence,5198.84,en attente
+T001467,C0186,2024-08-14,Nord Logistique,Formation,3859.42,en attente
+T001468,C0139,01-06-2025,Atelier Bastide,Licence,2704.8,payee
+T001469,C0178,02-12-2025,Maison Delaunay,Maintenance,2616.98,payee
+T001470,C0211,2025-12-19,Groupe Lorrain,Maintenance,5612.39,payee
+T001471,C0178,2025-01-26,Verne Industries,Formation,2121.72,payee
+T001472,C0027,07-07-2024,Orion Energie,Audit,5573.3,annulee
+T001473,C0057,14/12/2024,Sigma Sante,Conseil,3542.23,en attente
+T001474,C0071,2024-12-04,Orion Energie,Audit,1365.41,payee
+T001475,C0080,16-10-2024,Verne Industries,Maintenance,5795.27,en attente
+T001476,C0084,2024-09-20,Maison Delaunay,Licence,2152.51,payee
+T001477,C0052,2025-09-25,Maison Delaunay,Formation,2312.82,en attente
+T001478,C0159,12-10-2024,Atelier Bastide,Formation,3115.61,payee
+T001479,C0026,2024-01-22,Orion Energie,Formation,3378.35,payee
+T001480,C0183,10-06-2025,Orion Energie,Audit,4046.04,en attente
+T001481,C0153,2025-04-30,Groupe Lorrain,Conseil,5646.25,payee
+T001482,C0117,03-10-2024,Sigma Sante,Maintenance,5552.83,payee
+T001483,C0002,2025-04-04,Cabinet Ferrand,Audit,2574.36,payee
+T001484,C0069,2025-11-17,Maison Delaunay,Licence,2619.39,payee
+T001485,C0209,05/11/2025,Nord Logistique,Maintenance,5346.18,payee
+T001486,C0115,30-07-2025,Atelier Bastide,Licence,1947.01,payee
+T001487,C0131,01-03-2025,Groupe Lorrain,Licence,3541.21,payee
+T001488,C0007,2024-01-21,Nord Logistique,Maintenance,6755.83,payee
+T001489,C0177,08-01-2025,Sigma Sante,Audit,2780.32,payee
+T001490,C0059,2025-08-20,Sigma Sante,Maintenance,1511.35,payee
+T001491,C0025,2025-09-08,Verne Industries,Audit,2152.84,payee
+T001492,C0087,2025-07-18,Sigma Sante,Licence,2228.78,en attente
+T001493,C0044,2025-12-21,Verne Industries,Maintenance,2055.1,en attente
+T001494,C0138,2025-01-12,Nord Logistique,Audit,3039.05,payee
+T001495,C0111,21/03/2024,Verne Industries,Formation,9245.55,payee
+T001496,C0110,2024-12-28,Nord Logistique,Audit,4456.19,en attente
+T001497,C0169,2024-08-20,Nord Logistique,Maintenance,3192.86,en attente
+T001498,C0085,2025-09-01,Maison Delaunay,Licence,3335.8,payee
+T001499,C0093,2025-07-21,Cabinet Ferrand,Maintenance,2388.9,payee
+T001500,C0145,06/11/2024,Nord Logistique,Conseil,3329.25,payee
+T001501,C0040,2024-10-10,Maison Delaunay,Maintenance,6608.05,payee
+T001502,C0193,2024-04-26,Cabinet Ferrand,Licence,3602.37,payee
+T001503,C0054,2024-02-01,Nord Logistique,Audit,5535.66,payee
+T001504,C0057,2024-08-16,Groupe Lorrain,Maintenance,5172.2,payee
+T001505,C0003,24-06-2024,Sigma Sante,Licence,9031.24,en attente
+T001506,C0080,12-07-2024,Atelier Bastide,Licence,5125.61,payee
+T001507,C0136,2025-12-29,Sigma Sante,Licence,8717.87,payee
+T001508,C0164,2025-05-12,Sigma Sante,Audit,5742.64,payee
+T001509,C0209,2025-02-06,Orion Energie,Maintenance,4046.97,payee
+T001510,C0181,2024-05-10,Groupe Lorrain,Conseil,2278.8,payee
+T001511,C0075,06/09/2025,Atelier Bastide,Licence,5519.46,annulee
+T001512,C0192,2025-04-15,Groupe Lorrain,Formation,5753.89,payee
+T001513,C0046,2025-01-10,Cabinet Ferrand,Conseil,5830.77,payee
+T001514,C0049,2024-12-06,Orion Energie,Audit,614.2,payee
+T001515,C0084,07-02-2025,Sigma Sante,Audit,2742.45,payee
+T001516,C9999,04/09/2025,Maison Delaunay,Audit,4427.32,en attente
+T001517,C0048,2025-06-09,Sigma Sante,Formation,2852.71,en attente
+T001518,C0209,2024-12-20,Groupe Lorrain,Licence,2608.78,payee
+T001519,C0063,2025-05-02,Sigma Sante,Maintenance,2383.59,en attente
+T001520,C0091,2025-11-09,Verne Industries,Conseil,1390.64,payee
+T001521,C0141,2024-08-26,Maison Delaunay,Conseil,4308.58,en attente
+T001522,C0100,2025-10-19,Sigma Sante,Licence,2512.88,payee
+T001523,C0094,18/03/2025,Maison Delaunay,Maintenance,2782.99,payee
+T001524,C0073,2024-05-15,Cabinet Ferrand,Licence,3192.9,payee
+T001525,C9999,2025-12-06,Nord Logistique,Formation,4662.19,en attente
+T001526,C0027,15/05/2025,Cabinet Ferrand,Licence,3991.83,en attente
+T001527,C0170,2024-10-08,Maison Delaunay,Audit,3897.91,payee
+T001528,C0164,2024-06-05,Cabinet Ferrand,Formation,866.07,en attente
+T001529,C0051,2025-10-30,Cabinet Ferrand,Licence,5589.41,payee
+T001530,C0198,2025-08-24,Atelier Bastide,Formation,7620.57,payee
+T001531,C0091,2024-02-02,Cabinet Ferrand,Formation,3843.7,payee
+T001532,C0035,2025-04-09,Maison Delaunay,Maintenance,1908.51,payee
+T001533,C0041,24/03/2024,Sigma Sante,Formation,2645.26,payee
+T001534,C0166,2024-08-02,Groupe Lorrain,Maintenance,1956.89,payee
+T001535,C0051,2025-02-18,Atelier Bastide,Conseil,7172.53,payee
+T001536,C9999,2024-06-30,Nord Logistique,Maintenance,2774.95,payee
+T001537,C0171,09-01-2025,Maison Delaunay,Conseil,3934.18,payee
+T001538,C0198,09-11-2024,Atelier Bastide,Formation,3125.45,payee
+T001539,C0114,2025-02-28,Verne Industries,Audit,4554.0,payee
+T001540,C0211,07/08/2025,Groupe Lorrain,Formation,2197.11,payee
+T001541,C0071,2024-04-23,Groupe Lorrain,Maintenance,3855.76,payee
+T001542,C0203,2025-08-04,Atelier Bastide,Formation,2789.24,en attente
+T001543,C0059,11-06-2024,Maison Delaunay,Audit,5959.43,annulee
+T001544,C0015,25-01-2024,Sigma Sante,Audit,923.28,payee
+T001545,C0169,2024-11-21,Cabinet Ferrand,Audit,2952.8,en attente
+T001546,C0176,08/08/2024,Atelier Bastide,Formation,5675.91,payee
+T001547,C0215,2024-05-14,Orion Energie,Formation,5347.59,en attente
+T001548,C0214,04/11/2024,Verne Industries,Maintenance,1451.66,payee
+T001549,C0024,2025-09-26,Atelier Bastide,Audit,5056.53,payee
+T001550,C0145,2025-03-03,Atelier Bastide,Licence,2085.75,payee
+T001551,C0164,2025-06-15,Verne Industries,Maintenance,2429.78,en attente
+T001552,C0140,2024-04-19,Maison Delaunay,Audit,5520.84,payee
+T001553,C0005,2024-02-25,Cabinet Ferrand,Maintenance,2920.59,payee
+T001554,C0011,2024-09-01,Cabinet Ferrand,Formation,1393.86,payee
+T001555,C0156,2025-07-19,Verne Industries,Formation,1802.24,annulee
+T001556,C0199,08-10-2025,Orion Energie,Licence,3562.84,payee
+T001557,C0042,2024-03-15,Maison Delaunay,Licence,2870.04,payee
+T001558,C0011,2024-12-13,Maison Delaunay,Audit,2842.02,payee
+T001559,C0094,2024-10-16,Cabinet Ferrand,Formation,4514.05,en attente
+T001560,C0073,2025-06-27,Nord Logistique,Conseil,4108.2,payee
+T001561,C0073,2024-05-30,Orion Energie,Formation,2978.64,payee
+T001562,C0215,2024-12-19,Maison Delaunay,Licence,5392.7,payee
+T001563,C0130,2025-09-12,Sigma Sante,Formation,4533.49,payee
+T001564,C0169,05/12/2024,Groupe Lorrain,Formation,3984.67,payee
+T001565,C0054,24/07/2025,Sigma Sante,Formation,2633.62,payee
+T001566,C0196,30-03-2025,Orion Energie,Audit,5817.79,payee
+T001567,C0104,2025-03-12,Maison Delaunay,Licence,2824.33,payee
+T001568,C0111,2024-07-08,Orion Energie,Maintenance,2960.83,payee
+T001569,C0012,25/12/2025,Nord Logistique,Licence,7253.41,payee
+T001570,C0042,01-07-2024,Verne Industries,Conseil,2148.2,en attente
+T001571,C0046,10-11-2025,Nord Logistique,Formation,2132.2,payee
+T001572,C0114,23/12/2025,Maison Delaunay,Audit,3020.97,payee
+T001573,C0045,08-01-2025,Atelier Bastide,Licence,1898.86,payee
+T001574,C0024,26-09-2025,Atelier Bastide,Maintenance,1926.68,en attente
+T001575,C0141,2025-06-06,Verne Industries,Maintenance,7148.46,en attente
+T001576,C0203,22/06/2025,Nord Logistique,Licence,2995.62,en attente
+T001577,C0017,20/02/2024,Atelier Bastide,Licence,4051.43,payee
+T001578,C0131,10-04-2024,Sigma Sante,Formation,1532.01,payee
+T001579,C0117,20-02-2024,Groupe Lorrain,Formation,2047.8,payee
+T001580,C0094,2024-01-23,Orion Energie,Conseil,7641.52,payee
+T001581,C0043,02-09-2025,Maison Delaunay,Formation,1909.08,payee
+T001582,C0019,2024-05-08,Verne Industries,Maintenance,4115.81,payee
+T001583,C0218,2024-01-05,Verne Industries,Audit,579.85,payee
+T001584,C0095,15/11/2025,Maison Delaunay,Licence,1465.62,payee
+T001585,C0025,2024-07-22,Groupe Lorrain,Maintenance,2970.62,payee
+T001586,C0201,18/08/2025,Maison Delaunay,Audit,5310.68,en attente
+T001587,C0187,2025-12-02,Nord Logistique,Maintenance,3461.37,payee
+T001588,C0164,2025-01-16,Atelier Bastide,Formation,3109.53,payee
+T001589,C0020,07/11/2025,Orion Energie,Formation,4716.74,payee
+T001590,C0020,2025-12-08,Maison Delaunay,Maintenance,3827.19,payee
+T001591,C0051,2024-04-15,Atelier Bastide,Formation,1241.9,payee
+T001592,C0038,2024-04-17,Maison Delaunay,Formation,3345.99,payee
+T001593,C0124,27-09-2024,Cabinet Ferrand,Licence,2663.46,payee
+T001594,C0092,2025-02-12,Sigma Sante,Maintenance,3049.87,payee
+T001595,C0178,27-07-2025,Cabinet Ferrand,Formation,2622.87,payee
+T001596,C0024,2024-05-13,Orion Energie,Conseil,3368.87,payee
+T001597,C0169,2024-05-21,Orion Energie,Maintenance,4186.92,payee
+T001598,C0217,11/08/2024,Groupe Lorrain,Formation,1641.4,payee
+T001599,C0031,17-07-2024,Cabinet Ferrand,Maintenance,2338.88,payee
+T001600,C0152,2025-11-17,Atelier Bastide,Conseil,4640.2,payee
+T001601,C0119,2024-10-16,Cabinet Ferrand,Formation,4933.5,payee
+T001602,C0022,2025-09-25,Atelier Bastide,Maintenance,6641.75,payee
+T001603,C0068,2024-02-10,Nord Logistique,Conseil,3497.23,payee
+T001604,C0183,15-03-2024,Atelier Bastide,Formation,2267.04,en attente
+T001605,C0202,2025-08-09,Nord Logistique,Maintenance,2360.98,payee
+T001606,C0086,2024-07-01,Cabinet Ferrand,Maintenance,3440.18,payee
+T001607,C0025,01-03-2024,Orion Energie,Formation,2043.9,en attente
+T001608,C0057,2025-03-09,Orion Energie,Conseil,6414.95,payee
+T001609,C0196,17-04-2024,Nord Logistique,Conseil,2613.72,payee
+T001610,C0133,2024-02-14,Cabinet Ferrand,Licence,5968.52,payee
+T001611,C0100,23/10/2024,Maison Delaunay,Maintenance,1898.0,payee
+T001612,C0004,05-02-2025,Maison Delaunay,Licence,3056.25,payee
+T001613,C0182,2025-01-19,Atelier Bastide,Licence,2819.42,payee
+T001614,C0108,2025-03-02,Cabinet Ferrand,Conseil,1506.94,payee
+T001615,C0127,18-01-2024,Orion Energie,Formation,2934.07,payee
+T001616,C0196,31-07-2024,Verne Industries,Conseil,3820.13,payee
+T001617,C0131,07-09-2024,Groupe Lorrain,Licence,880.74,payee
+T001618,C0216,2024-08-01,Sigma Sante,Formation,4381.69,payee
+T001619,C0130,2025-02-12,Orion Energie,Conseil,3985.59,en attente
+T001620,C0080,2024-06-16,Maison Delaunay,Maintenance,3328.42,payee
+T001621,C0215,2025-04-06,Maison Delaunay,Formation,4823.01,payee
+T001622,C0150,14-11-2025,Verne Industries,Audit,4988.61,payee
+T001623,C0177,2025-04-27,Verne Industries,Licence,10848.19,en attente
+T001624,C0053,2024-10-10,Orion Energie,Conseil,1462.88,payee
+T001625,C0156,2024-11-13,Sigma Sante,Maintenance,6885.52,payee
+T001626,C0130,03/03/2025,Cabinet Ferrand,Maintenance,5443.84,en attente
+T001627,C0025,2025-06-12,Verne Industries,Audit,3984.19,payee
+T001628,C0059,2024-08-08,Atelier Bastide,Maintenance,1918.22,en attente
+T001629,C0212,2024-01-29,Groupe Lorrain,Formation,2712.58,payee
+T001630,C0133,27-05-2025,Cabinet Ferrand,Maintenance,2511.63,en attente
+T001631,C0180,27/04/2025,Nord Logistique,Maintenance,3153.62,payee
+T001632,C0040,2024-03-15,Maison Delaunay,Licence,4729.01,payee
+T001633,C0051,2025-04-02,Sigma Sante,Maintenance,6240.28,payee
+T001634,C0219,2024-02-22,Verne Industries,Audit,7862.57,payee
+T001635,C0098,2025-04-14,Atelier Bastide,Maintenance,2723.72,payee
+T001636,C0206,2025-06-27,Sigma Sante,Licence,3669.26,annulee
+T001637,C0188,2024-01-12,Sigma Sante,Licence,2119.94,payee
+T001638,C0079,2025-06-14,Nord Logistique,Audit,5568.55,payee
+T001639,C0169,28/03/2024,Groupe Lorrain,Audit,4112.74,payee
+T001640,C0181,12-07-2024,Cabinet Ferrand,Formation,3003.78,en attente
+T001641,C0030,2025-05-29,Nord Logistique,Conseil,1410.23,payee
+T001642,C0023,2024-09-16,Sigma Sante,Audit,3695.32,payee
+T001643,C0030,2025-12-14,Nord Logistique,Formation,3893.14,payee
+T001644,C0172,2025-11-29,Cabinet Ferrand,Audit,1166.22,payee
+T001645,C0034,2025-12-21,Cabinet Ferrand,Conseil,1656.37,payee
+T001646,C0066,17-03-2024,Cabinet Ferrand,Audit,3649.43,payee
+T001647,C0101,08-05-2024,Groupe Lorrain,Maintenance,7519.53,payee
+T001648,C0032,2024-05-13,Groupe Lorrain,Formation,5859.36,payee
+T001649,C0077,2025-03-03,Sigma Sante,Conseil,3048.07,payee
+T001650,C0158,2024-11-09,Verne Industries,Audit,2813.21,en attente
+T001651,C0001,2025-06-28,Sigma Sante,Conseil,2301.28,payee
+T001652,C0109,2024-07-24,Cabinet Ferrand,Conseil,2174.27,en attente
+T001653,C0174,2024-05-25,Orion Energie,Maintenance,2920.74,payee
+T001654,C0123,2025-04-18,Atelier Bastide,Maintenance,8637.94,annulee
+T001655,C0109,2025-03-26,Atelier Bastide,Conseil,2802.22,payee
+T001656,C0121,2025-05-19,Nord Logistique,Formation,3371.23,en attente
+T001657,C0117,15/08/2024,Sigma Sante,Maintenance,1722.52,payee
+T001658,C0014,19-01-2025,Atelier Bastide,Maintenance,4466.18,payee
+T001659,C0120,2025-11-08,Nord Logistique,Formation,3341.53,payee
+T001660,C0012,2025-03-22,Atelier Bastide,Licence,2716.15,payee
+T001661,C0204,2025-11-11,Maison Delaunay,Conseil,1955.38,payee
+T001662,C0140,2024-11-12,Nord Logistique,Conseil,2231.42,payee
+T001663,C0011,02-02-2024,Maison Delaunay,Audit,2621.28,payee
+T001664,C0145,2025-07-09,Verne Industries,Formation,2709.36,en attente
+T001665,C0102,2024-12-02,Verne Industries,Audit,1944.69,payee
+T001666,C0011,2024-01-31,Maison Delaunay,Conseil,3183.41,payee
+T001667,C0014,11-04-2024,Verne Industries,Audit,3739.27,payee
+T001668,C0088,2024-08-16,Maison Delaunay,Licence,4864.02,payee
+T001669,C0006,2024-05-19,Atelier Bastide,Audit,7311.46,payee
+T001670,C0143,2025-05-14,Verne Industries,Audit,1148.79,payee
+T001671,C0088,2025-03-22,Groupe Lorrain,Formation,4022.9,en attente
+T001672,C0153,2024-08-28,Groupe Lorrain,Maintenance,2872.57,en attente
+T001673,C0038,2024-03-02,Verne Industries,Formation,953.48,payee
+T001674,C0193,2024-02-27,Cabinet Ferrand,Maintenance,2390.31,payee
+T001675,C0098,2025-11-21,Atelier Bastide,Audit,1236.59,en attente
+T001676,C0098,2024-09-08,Groupe Lorrain,Audit,4613.16,payee
+T001677,C0187,19/03/2024,Orion Energie,Maintenance,4316.03,payee
+T001678,C0128,2025-06-03,Nord Logistique,Formation,3562.31,payee
+T001679,C0001,2025-09-27,Maison Delaunay,Conseil,2261.3,payee
+T001680,C0135,30/03/2024,Maison Delaunay,Licence,6355.69,payee
+T001681,C0150,2025-11-20,Groupe Lorrain,Conseil,1814.09,payee
+T001682,C0073,12/06/2025,Nord Logistique,Licence,2736.21,annulee
+T001683,C0042,02-07-2024,Sigma Sante,Audit,2996.47,en attente
+T001684,C0013,2025-07-20,Cabinet Ferrand,Conseil,3215.85,payee
+T001685,C0197,2024-11-02,Sigma Sante,Audit,9450.11,payee
+T001686,C0001,2025-04-08,Orion Energie,Licence,7009.84,en attente
+T001687,C0136,2024-04-02,Nord Logistique,Conseil,4247.2,payee
+T001688,C0194,2024-06-27,Groupe Lorrain,Maintenance,3353.81,payee
+T001689,C0082,2025-07-18,Nord Logistique,Conseil,3334.74,payee
+T001690,C0047,10-08-2025,Orion Energie,Maintenance,4782.42,payee
+T001691,C0166,2024-01-08,Nord Logistique,Licence,5754.95,en attente
+T001692,C0147,2024-06-05,Sigma Sante,Maintenance,1790.24,payee
+T001693,C0004,2025-03-19,Nord Logistique,Formation,7345.77,payee
+T001694,C0134,23-10-2025,Cabinet Ferrand,Conseil,4142.46,payee
+T001695,C0001,07-05-2025,Orion Energie,Formation,2506.16,en attente
+T001696,C0093,2025-05-30,Atelier Bastide,Maintenance,3120.56,payee
+T001697,C0071,2024-10-10,Cabinet Ferrand,Audit,4254.17,payee
+T001698,C0194,2024-02-09,Atelier Bastide,Formation,4357.77,payee
+T001699,C0014,2025-07-13,Maison Delaunay,Formation,1962.13,payee
+T001700,C0163,2025-08-06,Orion Energie,Audit,3268.12,annulee
+T001701,C0171,19/11/2024,Orion Energie,Formation,3733.0,en attente
+T001702,C0006,2025-01-04,Atelier Bastide,Formation,5798.73,en attente
+T001703,C0015,2024-06-20,Maison Delaunay,Audit,6108.98,payee
+T001704,C0181,26-11-2024,Sigma Sante,Licence,1674.11,payee
+T001705,C0100,2024-06-25,Sigma Sante,Licence,3440.31,payee
+T001706,C0118,2024-11-02,Nord Logistique,Licence,2436.28,payee
+T001707,C0161,07-04-2024,Atelier Bastide,Maintenance,4204.97,payee
+T001708,C0081,2025-03-18,Cabinet Ferrand,Formation,9209.87,payee
+T001709,C0159,2024-06-29,Sigma Sante,Maintenance,5462.48,payee
+T001710,C0169,2025-06-12,Nord Logistique,Formation,4392.08,payee
+T001711,C0056,12/01/2025,Cabinet Ferrand,Licence,5007.78,payee
+T001712,C0160,2025-10-16,Atelier Bastide,Conseil,6761.14,payee
+T001713,C0040,2024-06-10,Maison Delaunay,Conseil,5221.41,payee
+T001714,C0073,18/07/2024,Cabinet Ferrand,Licence,1837.76,payee
+T001715,C0181,2024-06-26,Cabinet Ferrand,Conseil,7621.28,payee
+T001716,C0073,2025-04-05,Orion Energie,Audit,3614.14,en attente
+T001717,C0015,2024-03-19,Groupe Lorrain,Audit,4121.25,payee
+T001718,C0151,2025-05-16,Atelier Bastide,Formation,6105.43,en attente
+T001719,C0133,2025-08-20,Orion Energie,Formation,8985.39,payee
+T001720,C0141,2025-05-07,Orion Energie,Licence,2730.68,en attente
+T001721,C0183,08/04/2024,Verne Industries,Formation,5939.96,payee
+T001722,C0017,25-12-2024,Orion Energie,Audit,2643.04,en attente
+T001723,C0172,2025-01-24,Atelier Bastide,Conseil,3951.65,en attente
+T001724,C0065,2024-10-12,Groupe Lorrain,Licence,1510.93,payee
+T001725,C0036,06-12-2024,Verne Industries,Conseil,2650.98,payee
+T001726,C0104,2025-07-10,Nord Logistique,Audit,3852.1,payee
+T001727,C0007,01-09-2025,Groupe Lorrain,Conseil,4510.97,payee
+T001728,C0147,2024-08-07,Atelier Bastide,Licence,4383.72,en attente
+T001729,C0132,2024-08-28,Sigma Sante,Audit,5565.34,en attente
+T001730,C0119,2024-05-31,Nord Logistique,Licence,2856.54,payee
+T001731,C0008,2024-10-20,Nord Logistique,Conseil,3290.97,payee
+T001732,C0178,2025-02-02,Orion Energie,Conseil,3373.19,payee
+T001733,C0009,04/06/2025,Atelier Bastide,Maintenance,2966.89,payee
+T001734,C0061,2024-07-14,Orion Energie,Conseil,2149.13,payee
+T001735,C0092,06-06-2024,Verne Industries,Formation,3626.65,payee
+T001736,C0163,2024-01-25,Orion Energie,Maintenance,5120.14,en attente
+T001737,C0095,2024-03-09,Sigma Sante,Formation,4079.11,payee
+T001738,C0190,2024-02-07,Atelier Bastide,Audit,2778.1,payee
+T001739,C0217,31-05-2024,Atelier Bastide,Maintenance,3662.53,payee
+T001740,C0178,22/05/2025,Nord Logistique,Conseil,2690.31,payee
+T001741,C0010,2025-07-19,Nord Logistique,Audit,4567.47,payee
+T001742,C0179,2025-12-11,Atelier Bastide,Audit,5203.48,payee
+T001743,C0048,01-02-2025,Verne Industries,Formation,5264.94,payee
+T001744,C0207,2024-11-27,Orion Energie,Formation,3118.07,en attente
+T001745,C0151,2025-10-18,Sigma Sante,Formation,2720.19,payee
+T001746,C0020,17/04/2024,Atelier Bastide,Licence,5565.35,payee
+T001747,C0023,2025-04-05,Maison Delaunay,Licence,2996.79,payee
+T001748,C0162,2025-08-20,Atelier Bastide,Audit,3632.93,payee
+T001749,C0034,2025-01-01,Cabinet Ferrand,Maintenance,4057.96,payee
+T001750,C0203,2024-07-09,Groupe Lorrain,Audit,3483.59,payee
+T001751,C0126,2025-03-29,Maison Delaunay,Formation,4888.97,payee
+T001752,C0134,2025-12-27,Atelier Bastide,Licence,1609.07,en attente
+T001753,C0200,2024-06-21,Atelier Bastide,Conseil,4360.93,payee
+T001754,C0051,2025-02-15,Atelier Bastide,Formation,2308.62,payee
+T001755,C0129,2024-02-07,Atelier Bastide,Licence,2831.13,payee
+T001756,C0089,2024-06-18,Groupe Lorrain,Conseil,3808.3,payee
+T001757,C0006,13-07-2025,Nord Logistique,Audit,1386.16,payee
+T001758,C0041,2024-12-28,Sigma Sante,Formation,3203.98,payee
+T001759,C0034,2024-05-25,Verne Industries,Conseil,2932.8,annulee
+T001760,C0078,2024-09-01,Sigma Sante,Maintenance,3292.51,payee
+T001761,C0031,2024-03-29,Nord Logistique,Conseil,2851.19,payee
+T001762,C0040,2025-07-23,Verne Industries,Formation,3644.86,payee
+T001763,C0198,2025-11-19,Groupe Lorrain,Conseil,2640.25,payee
+T001764,C0108,2024-03-18,Sigma Sante,Maintenance,3417.21,en attente
+T001765,C0084,22-06-2024,Groupe Lorrain,Audit,3803.87,payee
+T001766,C0098,2025-09-17,Cabinet Ferrand,Conseil,5663.47,en attente
+T001767,C0001,2025-10-03,Groupe Lorrain,Licence,6265.22,payee
+T001768,C0114,14/07/2025,Sigma Sante,Licence,1684.94,payee
+T001769,C0109,05-06-2025,Orion Energie,Maintenance,5876.39,payee
+T001770,C0216,20-09-2025,Verne Industries,Formation,2142.0,payee
+T001771,C0009,29-09-2024,Verne Industries,Licence,3431.31,payee
+T001772,C0111,2025-10-15,Nord Logistique,Licence,1440.08,en attente
+T001773,C0174,09/10/2025,Nord Logistique,Conseil,1059.8,payee
+T001774,C0120,2024-06-16,Cabinet Ferrand,Licence,8940.89,payee
+T001775,C0202,23-02-2024,Verne Industries,Licence,3477.2,payee
+T001776,C0206,2025-01-15,Atelier Bastide,Audit,3103.62,payee
+T001777,C0079,2025-07-07,Verne Industries,Licence,4023.12,payee
+T001778,C0190,2025-09-12,Nord Logistique,Audit,3140.56,payee
+T001779,C0057,2024-04-13,Maison Delaunay,Formation,5172.89,payee
+T001780,C0056,2024-10-02,Sigma Sante,Maintenance,3912.49,payee
+T001781,C0014,2025-07-14,Nord Logistique,Audit,4769.03,payee
+T001782,C0003,2024-02-14,Sigma Sante,Conseil,2321.11,payee
+T001783,C0082,2025-06-11,Nord Logistique,Licence,1554.29,payee
+T001784,C0147,2024-07-31,Verne Industries,Audit,5458.23,payee
+T001785,C0096,2024-01-17,Verne Industries,Licence,4108.16,payee
+T001786,C0197,2024-06-25,Nord Logistique,Audit,1839.81,en attente
+T001787,C0059,2025-06-25,Verne Industries,Licence,1856.6,en attente
+T001788,C0129,2025-09-27,Sigma Sante,Audit,3684.04,en attente
+T001789,C0030,29/02/2024,Atelier Bastide,Maintenance,4588.62,payee
+T001790,C0049,2024-12-04,Groupe Lorrain,Licence,2133.73,payee
+T001791,C0041,2024-05-26,Cabinet Ferrand,Formation,6921.53,en attente
+T001792,C0172,2025-05-13,Groupe Lorrain,Conseil,4879.79,payee
+T001793,C0048,23/07/2025,Atelier Bastide,Formation,5645.45,payee
+T001794,C0156,2025-12-03,Cabinet Ferrand,Maintenance,3637.54,payee
+T001795,C0081,2024-09-16,Groupe Lorrain,Licence,3487.31,payee
+T001796,C0132,2024-08-06,Atelier Bastide,Formation,1750.93,payee
+T001797,C0203,2024-08-14,Nord Logistique,Licence,2332.0,payee
+T001798,C0201,09/07/2025,Verne Industries,Formation,3272.95,payee
+T001799,C0003,20/11/2024,Orion Energie,Audit,4160.77,payee
+T001800,C0182,2024-01-17,Groupe Lorrain,Formation,-3800.75,en attente
+T001801,C0062,22/11/2025,Maison Delaunay,Licence,1167.45,payee
+T001802,C0155,2024-03-17,Nord Logistique,Licence,2070.85,en attente
+T001803,C0044,2025-11-08,Maison Delaunay,Maintenance,3922.15,payee
+T001804,C0155,2024-04-28,Maison Delaunay,Formation,4212.3,en attente
+T001805,C0148,27/01/2025,Groupe Lorrain,Conseil,2826.07,payee
+T001806,C0154,2024-08-16,Sigma Sante,Maintenance,4676.84,en attente
+T001807,C0100,2025-05-16,Verne Industries,Licence,4643.12,en attente
+T001808,C0122,21-10-2024,Maison Delaunay,Maintenance,8645.88,payee
+T001809,C0152,2024-09-25,Verne Industries,Licence,3498.9,payee
+T001810,C0108,2024-12-14,Cabinet Ferrand,Licence,2771.89,payee
+T001811,C0180,2025-12-09,Maison Delaunay,Audit,2140.72,payee
+T001812,C0165,2024-06-28,Orion Energie,Conseil,1628.81,payee
+T001813,C0071,2024-06-09,Orion Energie,Conseil,4548.6,payee
+T001814,C0142,2024-02-18,Maison Delaunay,Audit,4305.61,payee
+T001815,C0176,23/06/2025,Nord Logistique,Audit,1742.99,payee
+T001816,C0114,2025-05-09,Nord Logistique,Licence,4563.35,en attente
+T001817,C0166,2025-03-20,Orion Energie,Licence,3734.89,payee
+T001818,C0030,2024-01-18,Atelier Bastide,Licence,2982.58,en attente
+T001819,C0090,31/07/2025,Orion Energie,Audit,1112.11,payee
+T001820,C0163,13/08/2025,Maison Delaunay,Licence,4284.75,payee
+T001821,C0208,2025-11-20,Nord Logistique,Maintenance,7384.25,payee
+T001822,C0150,2025-11-09,Nord Logistique,Formation,2286.76,en attente
+T001823,C0154,11/07/2024,Sigma Sante,Formation,3738.18,payee
+T001824,C0080,2025-06-02,Maison Delaunay,Maintenance,4451.46,payee
+T001825,C0163,2024-10-20,Groupe Lorrain,Formation,829.33,payee
+T001826,C0083,2025-03-11,Sigma Sante,Conseil,2093.51,payee
+T001827,C0013,2024-08-30,Maison Delaunay,Conseil,1489.41,payee
+T001828,C0058,2025-04-24,Orion Energie,Audit,7362.54,payee
+T001829,C0142,2025-11-26,Orion Energie,Formation,802.19,payee
+T001830,C0025,2025-04-21,Orion Energie,Conseil,2975.8,en attente
+T001831,C0116,2025-11-03,Groupe Lorrain,Audit,3947.71,payee
+T001832,C0200,11-11-2025,Maison Delaunay,Audit,2276.8,payee
+T001833,C0181,27/03/2024,Orion Energie,Licence,905.48,payee
+T001834,C0131,2025-12-04,Orion Energie,Maintenance,3039.2,annulee
+T001835,C0187,2025-08-20,Nord Logistique,Maintenance,2256.96,payee
+T001836,C0094,2024-11-07,Orion Energie,Conseil,4163.61,payee
+T001837,C0103,2025-03-14,Orion Energie,Formation,4916.58,payee
+T001838,C0171,2025-03-26,Groupe Lorrain,Licence,1750.26,en attente
+T001839,C0149,2025-07-28,Orion Energie,Licence,2382.26,payee
+T001840,C0123,09-08-2025,Maison Delaunay,Formation,2446.25,payee
+T001841,C0101,15/03/2024,Nord Logistique,Conseil,4881.52,en attente
+T001842,C0014,2024-01-01,Atelier Bastide,Audit,3532.06,payee
+T001843,C0016,2024-06-28,Orion Energie,Maintenance,1789.38,payee
+T001844,C0013,2025-01-19,Verne Industries,Maintenance,5641.53,payee
+T001845,C0112,2025-09-11,Cabinet Ferrand,Licence,2273.19,payee
+T001846,C0008,21-04-2025,Verne Industries,Licence,2600.57,payee
+T001847,C0080,2024-04-09,Orion Energie,Licence,2022.05,payee
+T001848,C0132,07-06-2025,Cabinet Ferrand,Licence,3667.56,payee
+T001849,C0094,07/12/2024,Groupe Lorrain,Maintenance,2824.89,payee
+T001850,C0048,2024-09-26,Groupe Lorrain,Audit,6454.72,payee
+T001851,C0067,2025-07-17,Orion Energie,Maintenance,3556.06,payee
+T001852,C0141,2024-08-03,Atelier Bastide,Maintenance,2089.29,payee
+T001853,C0169,2025-03-27,Sigma Sante,Conseil,3363.22,payee
+T001854,C0182,2024-05-12,Groupe Lorrain,Licence,6904.88,payee
+T001855,C0127,05/10/2024,Orion Energie,Audit,1675.93,en attente
+T001856,C0033,2025-02-11,Maison Delaunay,Formation,4282.66,payee
+T001857,C0057,2025-03-31,Atelier Bastide,Licence,1121.76,payee
+T001858,C0103,2025-11-02,Orion Energie,Formation,6232.03,en attente
+T001859,C0058,30-07-2024,Verne Industries,Conseil,2635.97,payee
+T001860,C0160,16/10/2025,Orion Energie,Maintenance,2057.67,payee
+T001861,C0085,2025-08-19,Nord Logistique,Formation,6697.31,payee
+T001862,C0194,2024-09-19,Cabinet Ferrand,Licence,3250.27,payee
+T001863,C0063,12/04/2024,Groupe Lorrain,Licence,3314.15,payee
+T001864,C0116,07-07-2024,Verne Industries,Audit,2656.77,payee
+T001865,C0166,2025-04-25,Groupe Lorrain,Audit,2717.64,payee
+T001866,C0048,2025-07-29,Sigma Sante,Licence,1051.2,payee
+T001867,C0177,2025-03-22,Groupe Lorrain,Conseil,4251.1,payee
+T001868,C0136,2025-06-13,Groupe Lorrain,Licence,1495.22,payee
+T001869,C0151,2024-03-15,Groupe Lorrain,Audit,5262.38,annulee
+T001870,C0106,2025-01-03,Orion Energie,Licence,1851.24,payee
+T001871,C0217,29-09-2025,Orion Energie,Licence,3470.36,payee
+T001872,C0180,2024-10-10,Maison Delaunay,Maintenance,2426.73,payee
+T001873,C0045,18-10-2025,Groupe Lorrain,Licence,2656.42,payee
+T001874,C0129,2024-03-31,Nord Logistique,Licence,2928.73,payee
+T001875,C0210,15-12-2025,Orion Energie,Licence,3925.1,payee
+T001876,C0065,2025-07-27,Groupe Lorrain,Audit,6602.34,payee
+T001877,C0125,2025-04-02,Sigma Sante,Licence,2622.33,payee
+T001878,C0176,26/03/2025,Groupe Lorrain,Formation,-938.12,payee
+T001879,C0064,2025-11-14,Sigma Sante,Licence,5903.27,payee
+T001880,C0121,2024-10-02,Nord Logistique,Maintenance,4573.36,payee
+T001881,C0129,2024-04-30,Orion Energie,Audit,1811.41,payee
+T001882,C0042,2025-11-01,Cabinet Ferrand,Audit,1633.81,en attente
+T001883,C0042,2024-03-16,Sigma Sante,Maintenance,4014.6,payee
+T001884,C0131,2025-04-26,Sigma Sante,Maintenance,3669.19,payee
+T001885,C0042,2024-07-13,Verne Industries,Licence,7410.7,payee
+T001886,C0169,09/11/2025,Maison Delaunay,Formation,4272.2,annulee
+T001887,C0122,11-12-2025,Cabinet Ferrand,Licence,2344.69,payee
+T001888,C0164,2024-12-12,Cabinet Ferrand,Maintenance,2064.11,payee
+T001889,C0093,2025-01-24,Sigma Sante,Licence,3412.64,payee
+T001890,C0070,27/11/2024,Atelier Bastide,Formation,1084.21,payee
+T001891,C0113,2024-11-06,Groupe Lorrain,Conseil,1329.86,payee
+T001892,C0165,2025-11-15,Cabinet Ferrand,Conseil,1690.44,payee
+T001893,C0093,2024-07-28,Sigma Sante,Licence,2312.77,payee
+T001894,C0066,01/12/2025,Atelier Bastide,Maintenance,3223.53,payee
+T001895,C0034,2025-04-19,Verne Industries,Maintenance,4413.29,payee
+T001896,C0126,2025-12-02,Maison Delaunay,Audit,6077.07,annulee
+T001897,C0158,2025-03-22,Cabinet Ferrand,Maintenance,5504.78,payee
+T001898,C0123,2025-08-20,Nord Logistique,Conseil,5083.47,payee
+T001899,C0060,23/12/2024,Nord Logistique,Audit,2602.26,payee
+T001900,C0058,2024-12-03,Sigma Sante,Audit,2095.24,payee
+T001901,C0088,06/07/2024,Orion Energie,Audit,3973.45,payee
+T001902,C0081,02/06/2024,Cabinet Ferrand,Licence,4100.69,payee
+T001903,C0048,2024-01-28,Cabinet Ferrand,Formation,1789.86,payee
+T001904,C0219,2024-10-06,Verne Industries,Audit,2921.41,payee
+T001905,C0077,2025-12-22,Cabinet Ferrand,Conseil,2003.38,payee
+T001906,C0059,2025-11-15,Sigma Sante,Maintenance,1300.06,payee
+T001907,C0141,2025-05-18,Nord Logistique,Audit,3823.3,payee
+T001908,C0186,2024-09-22,Maison Delaunay,Audit,5034.06,payee
+T001909,C0108,2025-01-14,Cabinet Ferrand,Licence,7072.35,en attente
+T001910,C0155,06/07/2025,Maison Delaunay,Audit,3037.77,payee
+T001911,C0023,2024-01-02,Maison Delaunay,Audit,1155.1,payee
+T001912,C0124,2025-11-04,Nord Logistique,Audit,7693.32,payee
+T001913,C0016,2025-09-27,Orion Energie,Formation,8034.48,payee
+T001914,C0032,2025-12-09,Orion Energie,Maintenance,11620.68,annulee
+T001915,C0138,2024-03-09,Atelier Bastide,Audit,9260.44,payee
+T001916,C0048,2025-11-22,Atelier Bastide,Formation,3709.34,payee
+T001917,C0009,2025-03-23,Orion Energie,Formation,3300.11,payee
+T001918,C0042,09/02/2025,Cabinet Ferrand,Formation,4773.43,payee
+T001919,C0180,2024-05-11,Verne Industries,Formation,1449.69,payee
+T001920,C0137,2024-12-25,Sigma Sante,Maintenance,2244.25,payee
+T001921,C0089,2024-09-22,Nord Logistique,Audit,3060.05,payee
+T001922,C0001,2025-12-21,Atelier Bastide,Conseil,5606.48,payee
+T001923,C0090,2024-09-04,Groupe Lorrain,Formation,5731.08,en attente
+T001924,C0204,08/06/2024,Sigma Sante,Audit,3149.77,payee
+T001925,C0081,21/11/2025,Sigma Sante,Licence,1537.03,payee
+T001926,C9999,16-05-2024,Verne Industries,Formation,4990.46,payee
+T001927,C0026,2025-10-22,Sigma Sante,Maintenance,1475.18,payee
+T001928,C0064,04/12/2025,Atelier Bastide,Audit,2458.62,payee
+T001929,C0044,12/08/2024,Sigma Sante,Formation,3695.66,payee
+T001930,C0037,2025-05-18,Groupe Lorrain,Licence,1375.97,payee
+T001931,C0089,2025-08-04,Maison Delaunay,Maintenance,2166.86,payee
+T001932,C0014,2025-01-26,Sigma Sante,Audit,5370.63,en attente
+T001933,C0047,2025-05-23,Nord Logistique,Licence,4775.6,payee
+T001934,C0055,2024-04-06,Sigma Sante,Audit,1655.89,annulee
+T001935,C0196,2025-01-11,Verne Industries,Maintenance,3922.9,payee
+T001936,C0047,2025-01-09,Verne Industries,Licence,1142.77,payee
+T001937,C0193,2025-02-17,Verne Industries,Licence,4522.45,payee
+T001938,C0145,2025-11-20,Groupe Lorrain,Maintenance,2276.4,payee
+T001939,C0216,25-08-2025,Verne Industries,Conseil,2952.97,payee
+T001940,C0130,2025-03-16,Atelier Bastide,Formation,3470.04,payee
+T001941,C0138,2024-10-21,Sigma Sante,Formation,1715.9,payee
+T001942,C0053,22/10/2024,Atelier Bastide,Audit,2179.04,payee
+T001943,C0134,2024-01-15,Atelier Bastide,Audit,7205.47,annulee
+T001944,C0156,2025-02-06,Maison Delaunay,Audit,2841.43,payee
+T001945,C0073,2024-07-03,Nord Logistique,Conseil,3570.88,payee
+T001946,C0023,2025-10-08,Atelier Bastide,Formation,3601.1,payee
+T001947,C0037,2025-07-18,Maison Delaunay,Formation,6159.53,payee
+T001948,C0005,2025-10-28,Atelier Bastide,Conseil,4923.5,payee
+T001949,C0184,2025-12-27,Sigma Sante,Formation,410.8,payee
+T001950,C0020,2024-10-19,Groupe Lorrain,Licence,1768.94,payee
+T001951,C0213,2024-11-08,Nord Logistique,Audit,6549.39,payee
+T001952,C0085,2025-03-19,Nord Logistique,Conseil,7754.14,en attente
+T001953,C0067,2024-11-10,Verne Industries,Audit,1762.59,payee
+T001954,C0014,2024-07-22,Maison Delaunay,Audit,2745.96,en attente
+T001955,C0168,2025-05-31,Cabinet Ferrand,Conseil,3110.21,payee
+T001956,C0127,2024-11-25,Maison Delaunay,Formation,2802.97,en attente
+T001957,C0207,2025-11-18,Atelier Bastide,Licence,4533.89,en attente
+T001958,C0176,09/06/2024,Nord Logistique,Audit,2963.16,en attente
+T001959,C0148,2024-11-19,Sigma Sante,Maintenance,2479.01,payee
+T001960,C0075,2025-01-22,Orion Energie,Audit,4638.38,payee
+T001961,C0073,2025-10-24,Verne Industries,Formation,956.29,en attente
+T001962,C0167,2025-02-26,Cabinet Ferrand,Audit,3712.73,payee
+T001963,C0220,2024-02-20,Cabinet Ferrand,Audit,4269.03,payee
+T001964,C0203,2024-09-03,Sigma Sante,Licence,6341.6,payee
+T001965,C0128,2025-10-08,Orion Energie,Conseil,3435.51,payee
+T001966,C0084,2024-07-17,Maison Delaunay,Formation,1195.95,payee
+T001967,C0220,2024-09-05,Sigma Sante,Conseil,3542.7,payee
+T001968,C0089,20-04-2024,Groupe Lorrain,Audit,1138.84,payee
+T001969,C0029,09/06/2025,Sigma Sante,Formation,4039.37,payee
+T001970,C0149,11-04-2024,Sigma Sante,Maintenance,5795.26,payee
+T001971,C0140,2024-09-25,Maison Delaunay,Formation,3196.25,payee
+T001972,C0174,03/06/2025,Nord Logistique,Audit,2965.0,en attente
+T001973,C0014,15-10-2025,Orion Energie,Maintenance,4867.99,payee
+T001974,C0059,2024-06-10,Maison Delaunay,Formation,3963.98,payee
+T001975,C0014,30-08-2024,Sigma Sante,Licence,4685.76,payee
+T001976,C0150,2024-03-27,Atelier Bastide,Conseil,9159.03,payee
+T001977,C0020,15-11-2024,Maison Delaunay,Conseil,2567.15,payee
+T001978,C0119,30/12/2025,Cabinet Ferrand,Audit,4175.68,payee
+T001979,C0031,2024-08-10,Sigma Sante,Audit,6605.15,payee
+T001980,C0062,08-07-2024,Orion Energie,Audit,6656.81,payee
+T001981,C0178,2024-10-18,Sigma Sante,Maintenance,4379.0,payee
+T001982,C0210,2025-10-16,Atelier Bastide,Formation,2900.83,en attente
+T001983,C0140,03-02-2025,Cabinet Ferrand,Conseil,4654.89,payee
+T001984,C0093,20-03-2025,Groupe Lorrain,Maintenance,4704.39,payee
+T001985,C0100,23/07/2025,Orion Energie,Formation,5103.01,payee
+T001986,C0220,2025-06-06,Verne Industries,Conseil,1830.75,payee
+T001987,C0036,2025-03-13,Nord Logistique,Conseil,7651.09,payee
+T001988,C0206,2025-02-13,Cabinet Ferrand,Licence,6617.38,en attente
+T001989,C0098,24/01/2025,Orion Energie,Audit,3248.97,payee
+T001990,C0137,11-05-2024,Sigma Sante,Formation,6293.25,payee
+T001991,C0155,2024-10-29,Sigma Sante,Audit,3131.98,payee
+T001992,C0020,2025-09-10,Maison Delaunay,Formation,7040.3,payee
+T001993,C0035,2024-01-29,Groupe Lorrain,Maintenance,3528.7,payee
+T001994,C0038,2025-08-27,Orion Energie,Formation,2050.55,payee
+T001995,C0181,2025-02-17,Groupe Lorrain,Maintenance,8541.54,payee
+T001996,C0018,2024-09-12,Cabinet Ferrand,Formation,5001.0,payee
+T001997,C0142,2024-03-24,Cabinet Ferrand,Maintenance,3025.74,payee
+T001998,C0026,11/07/2025,Cabinet Ferrand,Licence,7335.63,payee
+T001999,C0179,2024-01-01,Orion Energie,Conseil,4680.66,payee
+T002000,C0014,2025-01-31,Atelier Bastide,Formation,2825.94,payee
+T002001,C0097,2024-04-28,Nord Logistique,Formation,7381.89,payee
+T002002,C0050,2025-10-25,Atelier Bastide,Licence,5091.98,payee
+T002003,C0104,2024-05-13,Orion Energie,Formation,4015.88,payee
+T002004,C0161,09/08/2025,Maison Delaunay,Licence,3411.07,payee
+T002005,C0169,23-02-2025,Cabinet Ferrand,Audit,2006.79,payee
+T002006,C0148,2024-01-30,Groupe Lorrain,Maintenance,715.55,en attente
+T002007,C0136,2025-06-09,Atelier Bastide,Formation,4840.38,payee
+T002008,C0147,03/10/2025,Atelier Bastide,Maintenance,1773.37,payee
+T002009,C0051,2024-06-10,Cabinet Ferrand,Audit,2006.1,payee
+T002010,C0048,2025-12-08,Orion Energie,Formation,3104.7,payee
+T002011,C0216,2025-08-05,Groupe Lorrain,Formation,3145.54,payee
+T002012,C0135,2025-06-25,Nord Logistique,Conseil,2157.43,payee
+T002013,C0200,02-09-2024,Verne Industries,Audit,4838.05,payee
+T002014,C0146,2024-03-28,Groupe Lorrain,Audit,1244.47,en attente
+T002015,C0106,2024-11-09,Nord Logistique,Licence,4789.5,en attente
+T002016,C0133,2025-08-12,Maison Delaunay,Audit,2917.53,payee
+T002017,C0161,2025-03-04,Orion Energie,Maintenance,2096.3,payee
+T002018,C0044,2025-04-17,Nord Logistique,Audit,1318.22,annulee
+T002019,C0108,2025-07-24,Verne Industries,Audit,3711.54,payee
+T002020,C0168,04/09/2024,Sigma Sante,Audit,1693.64,annulee
+T002021,C0021,2024-01-28,Atelier Bastide,Formation,1550.69,payee
+T002022,C0017,2025-10-07,Maison Delaunay,Maintenance,6569.01,payee
+T002023,C0038,2025-03-23,Orion Energie,Conseil,1461.37,payee
+T002024,C0138,2025-02-16,Groupe Lorrain,Audit,1229.51,payee
+T002025,C0056,22-02-2025,Orion Energie,Formation,4596.68,en attente
+T002026,C0102,2025-09-14,Atelier Bastide,Licence,3868.05,payee
+T002027,C0032,2025-07-15,Cabinet Ferrand,Licence,2466.12,payee
+T002028,C0059,2025-05-04,Verne Industries,Maintenance,1933.48,payee
+T002029,C0005,2025-07-24,Atelier Bastide,Maintenance,2236.88,en attente
+T002030,C0188,2024-07-29,Maison Delaunay,Audit,2503.46,payee
+T002031,C0109,2025-06-03,Cabinet Ferrand,Maintenance,4330.01,payee
+T002032,C0041,2025-12-12,Nord Logistique,Maintenance,3757.83,payee
+T002033,C0123,2024-06-20,Cabinet Ferrand,Licence,2746.03,payee
+T002034,C0217,2025-02-20,Maison Delaunay,Licence,2729.7,en attente
+T002035,C0192,12/05/2025,Orion Energie,Audit,4703.01,payee
+T002036,C0206,2025-01-12,Nord Logistique,Formation,2091.91,payee
+T002037,C0095,08/12/2025,Atelier Bastide,Maintenance,1290.47,en attente
+T002038,C0084,2024-10-21,Verne Industries,Formation,6211.08,payee
+T002039,C0074,08/06/2024,Cabinet Ferrand,Licence,2747.87,payee
+T002040,C0071,2024-04-09,Groupe Lorrain,Formation,8102.51,en attente
+T002041,C0214,2025-09-11,Atelier Bastide,Formation,2540.25,payee
+T002042,C0032,2025-05-15,Atelier Bastide,Audit,3316.09,en attente
+T002043,C0198,2025-02-25,Orion Energie,Maintenance,1996.71,payee
+T002044,C0213,2024-11-10,Cabinet Ferrand,Maintenance,3789.53,payee
+T002045,C0196,2024-10-26,Orion Energie,Conseil,2766.19,payee
+T002046,C0146,2025-11-13,Nord Logistique,Formation,2946.21,payee
+T002047,C0199,2025-05-11,Nord Logistique,Formation,3504.45,payee
+T002048,C0008,2025-12-05,Orion Energie,Maintenance,2571.6,payee
+T002049,C0190,2025-08-08,Maison Delaunay,Audit,3726.87,payee
+T002050,C0119,14/07/2025,Atelier Bastide,Formation,2255.26,payee
+T002051,C0117,2025-02-08,Verne Industries,Formation,3627.68,payee
+T002052,C0020,2024-06-26,Maison Delaunay,Licence,1145.36,payee
+T002053,C0216,2025-04-22,Groupe Lorrain,Audit,1461.45,payee
+T002054,C0134,2025-06-06,Atelier Bastide,Formation,1978.09,payee
+T002055,C0025,2025-01-16,Groupe Lorrain,Formation,1640.05,payee
+T002056,C0119,15/01/2024,Maison Delaunay,Licence,1717.11,payee
+T002057,C0009,2025-12-01,Cabinet Ferrand,Audit,4196.7,payee
+T002058,C0020,26-08-2025,Groupe Lorrain,Maintenance,2806.51,payee
+T002059,C0124,2024-09-14,Maison Delaunay,Licence,2571.65,payee
+T002060,C0190,26/12/2024,Maison Delaunay,Maintenance,3744.75,en attente
+T002061,C0026,2024-03-31,Maison Delaunay,Conseil,3891.67,payee
+T002062,C0061,14-11-2025,Atelier Bastide,Maintenance,2414.28,en attente
+T002063,C0091,2024-06-17,Sigma Sante,Conseil,5431.27,payee
+T002064,C0126,02/10/2024,Atelier Bastide,Formation,2892.37,payee
+T002065,C0001,2024-11-08,Nord Logistique,Formation,4399.13,payee
+T002066,C0149,2024-07-11,Nord Logistique,Maintenance,2253.4,payee
+T002067,C0116,2025-04-08,Atelier Bastide,Formation,3669.74,payee
+T002068,C0025,2025-12-27,Cabinet Ferrand,Formation,4608.06,payee
+T002069,C0070,2025-09-16,Groupe Lorrain,Audit,4341.23,payee
+T002070,C0115,2025-01-22,Cabinet Ferrand,Licence,4140.61,payee
+T002071,C0019,2024-04-05,Maison Delaunay,Maintenance,2192.89,payee
+T002072,C0213,2025-09-22,Verne Industries,Licence,1597.82,payee
+T002073,C0194,2024-07-06,Nord Logistique,Maintenance,1490.76,payee
+T002074,C0083,2025-10-27,Orion Energie,Maintenance,2506.27,en attente
+T002075,C0107,2024-10-15,Atelier Bastide,Maintenance,2410.12,payee
+T002076,C0199,2025-01-13,Verne Industries,Audit,3924.71,payee
+T002077,C0069,14-11-2024,Groupe Lorrain,Maintenance,3249.57,payee
+T002078,C0055,2024-11-28,Nord Logistique,Formation,1515.76,payee
+T002079,C0057,2024-04-30,Atelier Bastide,Conseil,5016.77,payee
+T002080,C0165,2025-02-07,Sigma Sante,Audit,3567.41,en attente
+T002081,C0049,21-10-2024,Verne Industries,Formation,2111.97,payee
+T002082,C0021,2025-09-10,Maison Delaunay,Formation,2311.77,payee
+T002083,C0039,14/12/2024,Atelier Bastide,Conseil,6188.63,payee
+T002084,C0073,2025-12-05,Verne Industries,Licence,1640.12,payee
+T002085,C0203,04/08/2024,Atelier Bastide,Licence,6353.0,payee
+T002086,C0062,2024-08-27,Nord Logistique,Audit,2768.43,annulee
+T002087,C0065,2024-01-27,Groupe Lorrain,Maintenance,2868.15,payee
+T002088,C0103,2025-06-23,Groupe Lorrain,Maintenance,3755.42,payee
+T002089,C0114,23/02/2024,Nord Logistique,Licence,1271.08,payee
+T002090,C0122,2024-07-27,Nord Logistique,Audit,3559.72,payee
+T002091,C0007,2025-10-26,Verne Industries,Audit,4562.17,payee
+T002092,C0139,2025-03-21,Cabinet Ferrand,Audit,2470.21,payee
+T002093,C0009,2025-02-11,Cabinet Ferrand,Formation,3114.47,payee
+T002094,C0064,2025-08-10,Sigma Sante,Formation,8193.44,payee
+T002095,C0068,2025-07-17,Cabinet Ferrand,Conseil,4811.67,payee
+T002096,C0157,09-10-2025,Sigma Sante,Audit,1893.9,payee
+T002097,C0208,30-04-2025,Atelier Bastide,Maintenance,2389.1,payee
+T002098,C0163,2024-11-23,Atelier Bastide,Audit,2723.16,payee
+T002099,C0102,2024-04-05,Cabinet Ferrand,Maintenance,4965.07,annulee
+T002100,C0122,2024-09-26,Groupe Lorrain,Licence,1890.08,payee
+T002101,C0119,29/05/2025,Maison Delaunay,Conseil,4347.25,payee
+T002102,C0035,2024-07-04,Cabinet Ferrand,Conseil,4361.6,en attente
+T002103,C0117,04/05/2025,Verne Industries,Maintenance,3216.23,payee
+T002104,C0214,2024-04-07,Nord Logistique,Formation,5049.19,payee
+T002105,C0056,2024-02-14,Groupe Lorrain,Formation,1996.31,payee
+T002106,C0027,2024-09-23,Cabinet Ferrand,Audit,5557.83,en attente
+T002107,C9999,2024-06-16,Orion Energie,Licence,1111.81,payee
+T002108,C0146,28-09-2025,Maison Delaunay,Audit,1884.25,payee
+T002109,C0007,2024-10-03,Nord Logistique,Licence,1128.21,annulee
+T002110,C0024,2024-11-01,Nord Logistique,Audit,2060.38,payee
+T002111,C0151,2024-10-21,Cabinet Ferrand,Conseil,4401.69,payee
+T002112,C0034,19/08/2024,Orion Energie,Formation,3837.94,payee
+T002113,C0016,2025-10-31,Orion Energie,Conseil,3543.76,payee
+T002114,C0005,2025-06-23,Cabinet Ferrand,Conseil,2042.03,payee
+T002115,C0164,2024-04-25,Orion Energie,Audit,3087.31,payee
+T002116,C0085,2024-06-06,Groupe Lorrain,Licence,5585.91,payee
+T002117,C0066,29-02-2024,Verne Industries,Formation,2090.53,en attente
+T002118,C0149,2024-07-06,Verne Industries,Formation,2144.3,payee
+T002119,C0040,2025-04-24,Maison Delaunay,Formation,2194.55,en attente
+T002120,C0121,2025-11-14,Nord Logistique,Conseil,3447.58,payee
+T002121,C0113,2024-12-17,Cabinet Ferrand,Audit,4204.5,payee
+T002122,C0157,29-02-2024,Verne Industries,Conseil,4692.24,payee
+T002123,C0145,2024-02-04,Nord Logistique,Formation,2719.32,payee
+T002124,C0157,2024-10-29,Verne Industries,Conseil,2585.17,payee
+T002125,C0050,12/07/2024,Cabinet Ferrand,Audit,2331.51,en attente
+T002126,C0033,25/02/2025,Verne Industries,Formation,4071.75,payee
+T002127,C0124,2024-03-27,Orion Energie,Formation,1299.93,payee
+T002128,C0014,17/06/2024,Maison Delaunay,Maintenance,2912.37,payee
+T002129,C0106,2025-02-09,Atelier Bastide,Licence,2922.32,payee
+T002130,C0146,2024-07-24,Orion Energie,Formation,4392.27,payee
+T002131,C0191,2024-09-23,Maison Delaunay,Licence,1524.31,payee
+T002132,C0152,10/06/2024,Verne Industries,Licence,4563.79,en attente
+T002133,C0196,2024-02-07,Nord Logistique,Formation,3946.28,payee
+T002134,C0130,2024-09-08,Atelier Bastide,Licence,7267.1,payee
+T002135,C0104,28-08-2024,Groupe Lorrain,Formation,6582.04,payee
+T002136,C0058,17-10-2025,Cabinet Ferrand,Audit,5388.07,en attente
+T002137,C0157,2025-10-13,Sigma Sante,Licence,930.9,en attente
+T002138,C0189,2024-11-11,Verne Industries,Maintenance,1611.02,payee
+T002139,C0075,2024-07-29,Cabinet Ferrand,Formation,5059.18,payee
+T002140,C0018,2024-11-01,Orion Energie,Maintenance,2875.56,payee
+T002141,C0003,2025-03-19,Orion Energie,Licence,6576.75,en attente
+T002142,C0147,2024-10-09,Cabinet Ferrand,Maintenance,3256.57,annulee
+T002143,C0154,05/07/2025,Groupe Lorrain,Licence,4315.81,payee
+T002144,C0028,2025-12-04,Maison Delaunay,Maintenance,4161.55,payee
+T002145,C0006,21-10-2024,Maison Delaunay,Conseil,3212.54,payee
+T002146,C0152,2024-03-26,Orion Energie,Maintenance,5101.46,payee
+T002147,C0093,2024-03-29,Orion Energie,Maintenance,4486.66,payee
+T002148,C0097,2025-09-28,Maison Delaunay,Licence,1698.97,payee
+T002149,C0061,2024-10-30,Groupe Lorrain,Conseil,8472.49,payee
+T002150,C0167,2024-08-26,Atelier Bastide,Licence,1612.17,payee
+T002151,C0173,28-03-2025,Maison Delaunay,Maintenance,2139.47,payee
+T002152,C0013,2025-11-29,Nord Logistique,Licence,4279.25,payee
+T002153,C0021,05/11/2024,Cabinet Ferrand,Conseil,3885.05,payee
+T002154,C0129,2024-08-18,Cabinet Ferrand,Formation,4674.97,payee
+T002155,C0140,2025-09-21,Maison Delaunay,Audit,2825.45,payee
+T002156,C0034,01/03/2024,Cabinet Ferrand,Formation,4029.02,payee
+T002157,C0037,08-09-2025,Atelier Bastide,Licence,2220.69,annulee
+T002158,C0159,14/01/2025,Orion Energie,Formation,3255.99,payee
+T002159,C0106,2024-01-15,Verne Industries,Maintenance,6184.66,payee
+T002160,C0028,2024-06-15,Verne Industries,Licence,1607.25,payee
+T002161,C0142,2025-05-10,Groupe Lorrain,Formation,5258.18,payee
+T002162,C0018,2025-07-03,Cabinet Ferrand,Licence,2934.06,payee
+T002163,C0054,2024-05-22,Orion Energie,Licence,1961.24,payee
+T002164,C0166,2025-04-24,Atelier Bastide,Licence,2037.61,payee
+T002165,C0052,23-12-2025,Atelier Bastide,Formation,2888.41,payee
+T002166,C0015,2025-05-16,Atelier Bastide,Conseil,5379.02,en attente
+T002167,C0117,2025-05-27,Groupe Lorrain,Maintenance,4016.84,payee
+T002168,C0053,2024-05-21,Nord Logistique,Formation,1529.9,payee
+T002169,C0120,2025-04-10,Verne Industries,Maintenance,5123.93,payee
+T002170,C0192,2025-06-01,Sigma Sante,Formation,4705.6,payee
+T002171,C0045,2024-03-21,Cabinet Ferrand,Audit,1120.07,annulee
+T002172,C0188,2024-08-15,Maison Delaunay,Maintenance,1910.74,payee
+T002173,C0079,06-10-2025,Groupe Lorrain,Licence,5656.53,payee
+T002174,C0199,2025-12-30,Verne Industries,Formation,3221.4,payee
+T002175,C0003,2024-05-06,Cabinet Ferrand,Maintenance,5108.55,payee
+T002176,C0076,2025-06-18,Groupe Lorrain,Conseil,768.93,payee
+T002177,C0047,2025-01-01,Cabinet Ferrand,Conseil,577.48,payee
+T002178,C0123,07/03/2025,Cabinet Ferrand,Conseil,4429.42,en attente
+T002179,C0207,2025-01-07,Cabinet Ferrand,Formation,2339.16,payee
+T002180,C0180,24-09-2025,Nord Logistique,Licence,4554.95,payee
+T002181,C0089,20/11/2024,Sigma Sante,Formation,5142.19,en attente
+T002182,C0032,06/03/2025,Sigma Sante,Conseil,2362.7,en attente
+T002183,C0175,2025-05-03,Groupe Lorrain,Formation,3065.65,payee
+T002184,C0169,2025-02-07,Maison Delaunay,Licence,2716.96,payee
+T002185,C0106,2025-10-04,Orion Energie,Formation,2341.41,en attente
+T002186,C0023,2024-06-22,Sigma Sante,Licence,3604.53,payee
+T002187,C0025,2025-11-23,Verne Industries,Formation,4880.91,payee
+T002188,C0212,2025-05-10,Sigma Sante,Audit,2149.25,payee
+T002189,C0069,2025-12-01,Sigma Sante,Audit,2143.32,en attente
+T002190,C0148,2024-09-30,Verne Industries,Maintenance,2374.06,payee
+T002191,C0220,2024-12-15,Sigma Sante,Licence,4282.61,payee
+T002192,C0115,2024-02-01,Maison Delaunay,Conseil,5124.44,payee
+T002193,C0049,2025-11-05,Sigma Sante,Maintenance,2692.45,payee
+T002194,C0113,2025-08-18,Maison Delaunay,Formation,965.4,payee
+T002195,C0054,2024-08-04,Sigma Sante,Formation,1776.44,payee
+T002196,C0043,2024-02-07,Orion Energie,Maintenance,2606.48,payee
+T002197,C0189,2025-05-23,Sigma Sante,Conseil,1995.79,payee
+T002198,C0081,05/05/2025,Cabinet Ferrand,Formation,1522.59,annulee
+T002199,C0159,20/01/2025,Nord Logistique,Maintenance,3299.8,payee
+T002200,C0169,24/04/2024,Maison Delaunay,Audit,9519.36,payee
+T002201,C0128,01-11-2025,Sigma Sante,Licence,1844.57,payee
+T002202,C0126,11/11/2024,Cabinet Ferrand,Licence,3621.82,payee
+T002203,C0042,12/06/2025,Verne Industries,Audit,4178.58,payee
+T002204,C0123,19-09-2025,Maison Delaunay,Conseil,4348.02,payee
+T002205,C0175,2025-02-04,Orion Energie,Licence,3114.53,payee
+T002206,C0046,09/03/2024,Orion Energie,Formation,1568.42,payee
+T002207,C0054,2025-10-10,Atelier Bastide,Licence,4866.02,payee
+T002208,C0161,02-05-2025,Orion Energie,Audit,1226.62,payee
+T002209,C0151,2025-10-14,Sigma Sante,Licence,2949.0,annulee
+T002210,C0091,2025-03-23,Atelier Bastide,Audit,2793.32,payee
+T002211,C0193,2025-10-24,Groupe Lorrain,Licence,1644.49,en attente
+T002212,C0043,25-09-2025,Atelier Bastide,Audit,2374.05,payee
+T002213,C0133,2024-06-06,Orion Energie,Conseil,4274.79,payee
+T002214,C0219,2024-05-06,Sigma Sante,Formation,2948.55,payee
+T002215,C0103,2024-04-26,Nord Logistique,Formation,1359.87,payee
+T002216,C0118,06/08/2025,Maison Delaunay,Maintenance,4577.63,en attente
+T002217,C0036,2024-06-24,Cabinet Ferrand,Licence,7162.46,payee
+T002218,C0123,2024-11-24,Orion Energie,Formation,1476.08,payee
+T002219,C0136,2025-07-29,Atelier Bastide,Conseil,3077.17,payee
+T002220,C0151,2024-11-08,Verne Industries,Formation,3136.34,payee
+T002221,C0047,2024-02-15,Atelier Bastide,Conseil,1454.04,payee
+T002222,C0086,2024-09-21,Sigma Sante,Maintenance,5751.14,payee
+T002223,C0151,10-03-2024,Nord Logistique,Audit,3171.39,en attente
+T002224,C0219,2024-10-08,Maison Delaunay,Audit,4948.92,payee
+T002225,C0056,2025-06-21,Orion Energie,Formation,3736.35,payee
+T002226,C0162,14/01/2025,Atelier Bastide,Licence,5644.77,payee
+T002227,C0205,07-05-2025,Orion Energie,Licence,3709.14,payee
+T002228,C0147,2024-03-18,Atelier Bastide,Licence,2514.39,payee
+T002229,C0100,01-07-2025,Sigma Sante,Licence,4112.42,payee
+T002230,C0055,2024-11-06,Maison Delaunay,Formation,2026.13,payee
+T002231,C0067,2024-07-28,Sigma Sante,Conseil,4314.87,payee
+T002232,C0013,2025-04-20,Atelier Bastide,Licence,1842.62,en attente
+T002233,C0036,2024-04-08,Orion Energie,Conseil,3021.91,payee
+T002234,C0102,29-12-2024,Sigma Sante,Conseil,2718.63,payee
+T002235,C0033,2024-11-04,Groupe Lorrain,Licence,3576.76,en attente
+T002236,C0003,2024-05-01,Nord Logistique,Audit,6100.86,en attente
+T002237,C0161,2025-11-26,Sigma Sante,Licence,2330.61,en attente
+T002238,C0017,2024-09-22,Cabinet Ferrand,Conseil,4792.43,payee
+T002239,C0033,30-01-2024,Cabinet Ferrand,Audit,5736.98,payee
+T002240,C0139,2024-11-19,Verne Industries,Maintenance,4719.91,payee
+T002241,C0214,06/12/2025,Nord Logistique,Formation,3563.4,payee
+T002242,C0169,03/05/2025,Orion Energie,Formation,3472.14,payee
+T002243,C0008,2025-04-09,Nord Logistique,Audit,2253.26,payee
+T002244,C0039,2025-10-19,Maison Delaunay,Licence,1239.99,payee
+T002245,C0172,2024-03-02,Sigma Sante,Conseil,3230.57,en attente
+T002246,C0170,2025-02-05,Sigma Sante,Formation,5984.38,payee
+T002247,C0091,2024-08-22,Cabinet Ferrand,Formation,6397.83,en attente
+T002248,C0169,2025-05-08,Sigma Sante,Licence,1396.24,en attente
+T002249,C0207,14-09-2025,Verne Industries,Formation,6300.97,payee
+T002250,C0173,2024-02-26,Nord Logistique,Licence,4208.38,en attente
+T002251,C0174,2024-04-25,Verne Industries,Formation,3971.03,payee
+T002252,C0183,2025-11-27,Orion Energie,Maintenance,5962.26,payee
+T002253,C0035,2024-12-25,Maison Delaunay,Licence,5128.97,annulee
+T002254,C0163,18/08/2024,Nord Logistique,Audit,1825.2,payee
+T002255,C0219,21-04-2024,Cabinet Ferrand,Audit,2114.09,payee
+T002256,C0053,15-09-2024,Nord Logistique,Formation,1147.86,annulee
+T002257,C0004,2024-01-04,Sigma Sante,Conseil,3881.88,payee
+T002258,C0084,2024-06-11,Verne Industries,Licence,1948.65,payee
+T002259,C0063,2024-05-13,Sigma Sante,Formation,2466.26,payee
+T002260,C0169,2024-03-02,Verne Industries,Audit,5610.64,payee
+T002261,C0104,08/12/2025,Atelier Bastide,Licence,4143.41,payee
+T002262,C0154,2025-07-30,Maison Delaunay,Formation,4198.76,payee
+T002263,C0151,2025-11-17,Maison Delaunay,Formation,8388.18,en attente
+T002264,C0184,2024-06-24,Verne Industries,Audit,446.93,payee
+T002265,C0174,2024-07-29,Maison Delaunay,Conseil,2009.26,payee
+T002266,C0203,2024-07-25,Maison Delaunay,Audit,2710.63,payee
+T002267,C0160,11-02-2025,Sigma Sante,Formation,2083.51,payee
+T002268,C0054,2024-05-12,Orion Energie,Audit,4928.51,payee
+T002269,C0169,2024-06-20,Sigma Sante,Licence,2880.43,payee
+T002270,C0075,2025-12-12,Cabinet Ferrand,Licence,1714.63,payee
+T002271,C0077,2024-09-14,Atelier Bastide,Formation,3712.39,payee
+T002272,C0150,2025-07-24,Groupe Lorrain,Maintenance,4030.73,payee
+T002273,C0074,2024-06-16,Nord Logistique,Maintenance,1796.3,payee
+T002274,C0006,2025-11-09,Maison Delaunay,Licence,2954.93,payee
+T002275,C0089,2025-05-21,Maison Delaunay,Licence,4078.86,payee
+T002276,C0133,2025-09-21,Groupe Lorrain,Licence,5768.06,payee
+T002277,C0156,2025-01-11,Maison Delaunay,Licence,2204.1,payee
+T002278,C0188,23-10-2025,Sigma Sante,Audit,4306.49,en attente
+T002279,C0148,2024-09-21,Maison Delaunay,Conseil,2385.42,payee
+T002280,C0142,2024-12-15,Nord Logistique,Formation,3367.27,payee
+T002281,C0184,14/02/2024,Groupe Lorrain,Audit,1888.21,payee
+T002282,C0069,2024-05-04,Cabinet Ferrand,Maintenance,4240.89,payee
+T002283,C0193,16-07-2025,Maison Delaunay,Formation,5287.34,payee
+T002284,C0168,2024-08-26,Nord Logistique,Licence,3023.12,payee
+T002285,C0043,2024-03-15,Nord Logistique,Conseil,2824.15,payee
+T002286,C0034,01/08/2024,Nord Logistique,Conseil,2685.4,payee
+T002287,C0205,2024-09-14,Nord Logistique,Audit,1604.57,payee
+T002288,C0208,07/06/2025,Verne Industries,Maintenance,4661.78,en attente
+T002289,C0196,07-03-2024,Nord Logistique,Conseil,5695.05,payee
+T002290,C0024,2024-01-19,Verne Industries,Maintenance,2136.17,payee
+T002291,C0208,2025-06-12,Cabinet Ferrand,Licence,3601.01,en attente
+T002292,C0201,13/04/2024,Cabinet Ferrand,Licence,4183.14,payee
+T002293,C0179,2024-11-02,Maison Delaunay,Audit,2363.31,payee
+T002294,C0116,2025-05-13,Orion Energie,Audit,6384.72,payee
+T002295,C0118,2025-01-10,Maison Delaunay,Conseil,3634.98,en attente
+T002296,C0100,31/03/2024,Atelier Bastide,Formation,1395.19,payee
+T002297,C0007,11-06-2025,Maison Delaunay,Formation,5427.58,payee
+T002298,C0117,2024-02-05,Verne Industries,Audit,727.22,payee
+T002299,C0056,2024-06-18,Groupe Lorrain,Maintenance,3085.72,payee
+T002300,C0047,20/03/2024,Atelier Bastide,Maintenance,2582.14,payee
+T002301,C0013,09/01/2025,Orion Energie,Conseil,4486.72,payee
+T002302,C0107,2025-05-19,Cabinet Ferrand,Audit,2406.28,payee
+T002303,C0012,2025-04-19,Atelier Bastide,Licence,6185.91,payee
+T002304,C0198,11/04/2024,Atelier Bastide,Formation,5521.92,payee
+T002305,C0207,07/09/2024,Maison Delaunay,Licence,6605.32,payee
+T002306,C0186,2024-04-16,Sigma Sante,Licence,8155.86,payee
+T002307,C0070,2024-09-07,Verne Industries,Formation,4151.13,payee
+T002308,C0038,2024-06-17,Groupe Lorrain,Audit,3234.94,payee
+T002309,C0118,2025-06-24,Verne Industries,Audit,2355.23,payee
+T002310,C0157,2025-07-02,Maison Delaunay,Conseil,4353.79,payee
+T002311,C0005,2025-08-20,Groupe Lorrain,Audit,8044.11,payee
+T002312,C0199,2024-05-26,Verne Industries,Licence,1341.73,payee
+T002313,C0102,10-01-2024,Groupe Lorrain,Maintenance,1611.38,payee
+T002314,C0191,2024-01-26,Cabinet Ferrand,Maintenance,3790.82,payee
+T002315,C0019,2025-09-07,Atelier Bastide,Licence,1383.19,payee
+T002316,C0099,2025-10-23,Atelier Bastide,Maintenance,1349.36,payee
+T002317,C0107,2024-06-03,Groupe Lorrain,Maintenance,5788.36,payee
+T002318,C0012,2025-10-01,Maison Delaunay,Audit,5330.47,payee
+T002319,C0165,2025-01-21,Cabinet Ferrand,Licence,2289.51,payee
+T002320,C0217,2024-05-14,Orion Energie,Maintenance,1776.71,payee
+T002321,C0126,2024-08-16,Cabinet Ferrand,Audit,6733.68,payee
+T002322,C0092,12/07/2024,Atelier Bastide,Audit,1851.21,payee
+T002323,C0148,2025-07-11,Atelier Bastide,Conseil,1533.18,payee
+T002324,C0084,17/05/2024,Orion Energie,Licence,1885.61,en attente
+T002325,C0084,2024-05-13,Nord Logistique,Licence,3990.33,en attente
+T002326,C0177,09/06/2025,Verne Industries,Maintenance,8721.48,en attente
+T002327,C0138,2024-08-08,Maison Delaunay,Maintenance,2374.91,en attente
+T002328,C0062,2024-07-01,Nord Logistique,Audit,5751.87,en attente
+T002329,C0095,2025-08-12,Groupe Lorrain,Licence,3452.81,payee
+T002330,C0194,10/11/2025,Maison Delaunay,Maintenance,970.77,payee
+T002331,C0123,2025-02-09,Groupe Lorrain,Audit,2415.04,payee
+T002332,C0018,2025-08-27,Atelier Bastide,Conseil,5360.05,payee
+T002333,C0199,2025-09-06,Maison Delaunay,Maintenance,5217.12,payee
+T002334,C0172,2025-03-05,Cabinet Ferrand,Formation,2228.1,en attente
+T002335,C0062,2025-08-28,Atelier Bastide,Audit,4649.61,payee
+T002336,C0203,2024-01-07,Groupe Lorrain,Licence,3051.66,payee
+T002337,C0169,26-01-2024,Nord Logistique,Maintenance,3912.92,payee
+T002338,C0089,07-10-2025,Maison Delaunay,Maintenance,5912.92,payee
+T002339,C0088,2024-04-12,Atelier Bastide,Formation,2277.74,payee
+T002340,C0215,2025-06-15,Cabinet Ferrand,Licence,2646.46,payee
+T002341,C0188,2024-11-02,Verne Industries,Maintenance,5967.54,payee
+T002342,C0203,29-07-2025,Orion Energie,Maintenance,8263.32,payee
+T002343,C0127,30/04/2025,Sigma Sante,Formation,5030.39,payee
+T002344,C9999,2024-02-22,Verne Industries,Audit,3790.1,payee
+T002345,C0053,2024-09-02,Nord Logistique,Conseil,5007.26,payee
+T002346,C0203,2025-06-01,Orion Energie,Formation,2407.81,payee
+T002347,C0117,2025-11-03,Verne Industries,Audit,3350.9,payee
+T002348,C0216,2025-08-10,Atelier Bastide,Maintenance,1340.36,payee
+T002349,C0129,2025-10-13,Verne Industries,Licence,2437.29,en attente
+T002350,C0124,2025-11-29,Nord Logistique,Licence,4036.2,payee
+T002351,C0017,2025-10-14,Orion Energie,Audit,3601.44,payee
+T002352,C0094,2025-02-27,Verne Industries,Formation,780.35,payee
+T002353,C0130,02/09/2024,Groupe Lorrain,Formation,2863.73,payee
+T002354,C0026,2025-01-05,Atelier Bastide,Licence,3564.07,payee
+T002355,C0038,2025-08-03,Cabinet Ferrand,Audit,3634.95,en attente
+T002356,C0138,2024-11-06,Groupe Lorrain,Licence,1514.43,payee
+T002357,C0058,29/08/2025,Groupe Lorrain,Maintenance,4694.24,payee
+T002358,C0163,26-05-2025,Maison Delaunay,Audit,7679.23,payee
+T002359,C0107,2024-06-01,Sigma Sante,Audit,4978.58,en attente
+T002360,C0094,2025-11-03,Atelier Bastide,Licence,3352.14,en attente
+T002361,C0028,09/09/2025,Nord Logistique,Licence,6814.63,payee
+T002362,C0095,2025-03-13,Nord Logistique,Conseil,2411.53,payee
+T002363,C0126,21/05/2024,Maison Delaunay,Conseil,4390.66,payee
+T002364,C0134,2024-06-14,Orion Energie,Licence,3168.27,payee
+T002365,C0063,2025-09-04,Orion Energie,Maintenance,6852.3,payee
+T002366,C0007,2024-01-13,Verne Industries,Audit,1929.05,payee
+T002367,C0217,19/12/2024,Orion Energie,Licence,1926.38,payee
+T002368,C0117,2025-03-27,Groupe Lorrain,Licence,6036.08,payee
+T002369,C0210,2024-06-18,Orion Energie,Audit,4231.36,payee
+T002370,C0068,2025-09-23,Atelier Bastide,Formation,6281.38,payee
+T002371,C0140,2025-01-16,Groupe Lorrain,Conseil,2033.84,payee
+T002372,C0033,2024-02-18,Groupe Lorrain,Audit,2244.75,en attente
+T002373,C0211,2024-08-21,Groupe Lorrain,Licence,3863.45,payee
+T002374,C0002,2024-10-17,Cabinet Ferrand,Conseil,1374.55,payee
+T002375,C0110,11/06/2024,Maison Delaunay,Formation,3726.51,en attente
+T002376,C0199,17/11/2025,Maison Delaunay,Formation,2624.25,payee
+T002377,C9999,2024-09-20,Groupe Lorrain,Formation,3158.51,payee
+T002378,C0201,01-01-2025,Verne Industries,Licence,4680.04,payee
+T002379,C0116,2025-01-25,Atelier Bastide,Audit,4801.8,payee
+T002380,C0023,2024-06-10,Atelier Bastide,Maintenance,7486.49,en attente
+T002381,C0002,18/02/2025,Maison Delaunay,Audit,5579.96,en attente
+T002382,C0036,15-09-2024,Maison Delaunay,Audit,989.17,payee
+T002383,C0014,2024-01-08,Atelier Bastide,Formation,2019.12,payee
+T002384,C0104,2024-10-24,Verne Industries,Conseil,2115.89,en attente
+T002385,C0012,2025-03-02,Orion Energie,Conseil,5295.83,payee
+T002386,C0044,2024-03-26,Nord Logistique,Maintenance,6951.1,payee
+T002387,C0098,2025-07-22,Atelier Bastide,Formation,1634.96,en attente
+T002388,C0171,27/04/2025,Orion Energie,Maintenance,5363.43,payee
+T002389,C0157,2024-08-14,Atelier Bastide,Licence,3355.52,payee
+T002390,C0014,2025-03-08,Verne Industries,Audit,963.38,payee
+T002391,C0210,09-08-2024,Maison Delaunay,Licence,3110.97,payee
+T002392,C0128,2025-04-17,Nord Logistique,Audit,2390.82,payee
+T002393,C0081,2024-04-22,Groupe Lorrain,Formation,2885.03,payee
+T002394,C0089,2025-03-21,Sigma Sante,Maintenance,3735.87,payee
+T002395,C0197,2024-02-10,Atelier Bastide,Licence,2543.91,payee
+T002396,C0108,2024-01-13,Maison Delaunay,Conseil,4124.96,payee
+T002397,C0058,2024-07-04,Verne Industries,Formation,3118.18,payee
+T002398,C0099,2024-05-07,Sigma Sante,Formation,2938.12,payee
+T002399,C9999,2024-12-24,Orion Energie,Conseil,4519.18,payee
+T002400,C0036,2024-04-30,Sigma Sante,Audit,3919.21,payee
+T002401,C0073,27/06/2024,Orion Energie,Formation,807.69,payee
+T002402,C0052,2024-03-12,Nord Logistique,Licence,4215.19,payee
+T002403,C0082,2025-10-09,Groupe Lorrain,Licence,3807.55,payee
+T002404,C0016,2025-06-20,Nord Logistique,Licence,5758.01,payee
+T002405,C0142,2024-06-07,Cabinet Ferrand,Maintenance,3885.85,annulee
+T002406,C0027,2024-03-28,Maison Delaunay,Audit,2799.41,en attente
+T002407,C0051,12-09-2025,Atelier Bastide,Audit,2341.16,payee
+T002408,C0014,2025-05-02,Maison Delaunay,Audit,1230.62,payee
+T002409,C0002,2025-10-08,Cabinet Ferrand,Licence,3330.61,payee
+T002410,C0065,2024-05-10,Maison Delaunay,Maintenance,2129.33,payee
+T002411,C0117,2024-09-18,Cabinet Ferrand,Conseil,6191.34,annulee
+T002412,C0072,27-03-2024,Cabinet Ferrand,Audit,3405.59,payee
+T002413,C0075,2024-11-05,Atelier Bastide,Conseil,1803.87,payee
+T002414,C0030,2024-04-28,Sigma Sante,Conseil,1031.55,payee
+T002415,C0099,2024-01-04,Groupe Lorrain,Audit,1273.04,payee
+T002416,C0176,2025-01-06,Atelier Bastide,Maintenance,4038.72,payee
+T002417,C0137,15-12-2025,Cabinet Ferrand,Conseil,6545.59,payee
+T002418,C0215,2025-04-16,Atelier Bastide,Audit,4465.96,en attente
+T002419,C0163,2025-07-06,Orion Energie,Conseil,3153.61,payee
+T002420,C0184,2025-08-15,Verne Industries,Conseil,8345.19,en attente
+T002421,C0101,2025-12-10,Atelier Bastide,Audit,4955.42,payee
+T002422,C0143,03-04-2024,Verne Industries,Formation,3904.15,payee
+T002423,C0135,2024-07-02,Atelier Bastide,Formation,2758.62,en attente
+T002424,C0189,2025-03-25,Maison Delaunay,Maintenance,6714.67,payee
+T002425,C0117,2025-08-22,Cabinet Ferrand,Maintenance,2900.97,payee
+T002426,C0094,2025-07-18,Atelier Bastide,Licence,2125.14,annulee
+T002427,C0017,2025-06-15,Sigma Sante,Audit,3224.22,payee
+T002428,C0200,16-08-2024,Maison Delaunay,Conseil,3564.05,en attente
+T002429,C0102,2024-09-23,Cabinet Ferrand,Audit,5171.18,payee
+T002430,C0186,2024-02-28,Nord Logistique,Formation,2097.52,payee
+T002431,C0158,17/08/2024,Maison Delaunay,Maintenance,2315.71,payee
+T002432,C0001,2024-04-23,Atelier Bastide,Formation,2383.66,payee
+T002433,C0152,2025-11-15,Sigma Sante,Formation,3135.34,payee
+T002434,C0114,2024-03-07,Verne Industries,Formation,1825.84,en attente
+T002435,C0056,22-09-2024,Groupe Lorrain,Licence,6153.83,payee
+T002436,C0062,2025-10-09,Nord Logistique,Audit,1281.45,payee
+T002437,C0149,2025-11-28,Orion Energie,Conseil,6811.96,en attente
+T002438,C0021,2024-10-01,Maison Delaunay,Maintenance,4914.22,payee
+T002439,C0141,2024-12-05,Verne Industries,Audit,2025.71,payee
+T002440,C0197,2025-01-17,Cabinet Ferrand,Maintenance,3002.66,payee
+T002441,C0021,23/08/2025,Nord Logistique,Audit,2209.21,payee
+T002442,C0002,2025-07-15,Atelier Bastide,Conseil,4957.08,payee
+T002443,C0015,2025-01-17,Sigma Sante,Formation,6457.35,payee
+T002444,C0170,28-09-2024,Verne Industries,Licence,12078.3,payee
+T002445,C0197,2024-09-28,Atelier Bastide,Licence,4321.9,payee
+T002446,C0045,2025-04-18,Groupe Lorrain,Formation,1303.14,en attente
+T002447,C0007,01/09/2025,Maison Delaunay,Formation,1938.3,payee
+T002448,C0112,2024-02-25,Groupe Lorrain,Audit,4212.62,payee
+T002449,C0012,2025-07-15,Sigma Sante,Formation,3071.34,payee
+T002450,C0087,17/12/2024,Orion Energie,Audit,4879.72,annulee
+T002451,C0072,2024-04-15,Groupe Lorrain,Conseil,3940.07,en attente
+T002452,C0141,2024-03-11,Groupe Lorrain,Licence,2042.61,annulee
+T002453,C0211,2024-09-03,Orion Energie,Maintenance,2816.38,payee
+T002454,C0187,2024-06-30,Groupe Lorrain,Audit,4998.85,payee
+T002455,C0015,17/03/2024,Cabinet Ferrand,Maintenance,4055.1,payee
+T002456,C0056,2024-08-02,Sigma Sante,Conseil,4907.43,payee
+T002457,C0064,31/08/2025,Atelier Bastide,Maintenance,1567.04,payee
+T002458,C0059,2025-06-07,Maison Delaunay,Formation,2123.2,payee
+T002459,C0082,01-06-2024,Cabinet Ferrand,Audit,5930.51,payee
+T002460,C0141,07-05-2025,Cabinet Ferrand,Maintenance,1604.0,payee
+T002461,C0172,2024-11-25,Orion Energie,Conseil,4760.42,en attente
+T002462,C0219,2025-06-29,Maison Delaunay,Formation,1496.5,payee
+T002463,C0164,2024-06-29,Verne Industries,Audit,3535.31,payee
+T002464,C0070,15-02-2024,Orion Energie,Audit,2599.01,payee
+T002465,C0043,2024-08-16,Nord Logistique,Maintenance,2026.45,payee
+T002466,C0088,2025-12-26,Groupe Lorrain,Formation,3682.93,payee
+T002467,C0186,2025-02-09,Cabinet Ferrand,Formation,5784.9,payee
+T002468,C0196,2024-02-09,Atelier Bastide,Maintenance,2286.8,payee
+T002469,C0092,2025-12-13,Maison Delaunay,Licence,900.16,payee
+T002470,C0041,25-08-2025,Sigma Sante,Formation,3118.15,en attente
+T002471,C0002,2025-01-31,Groupe Lorrain,Formation,2014.91,en attente
+T002472,C0018,24/06/2025,Sigma Sante,Conseil,5051.22,payee
+T002473,C0148,2024-05-14,Orion Energie,Licence,2594.87,payee
+T002474,C0137,07-03-2025,Orion Energie,Licence,2333.85,payee
+T002475,C0150,2025-10-28,Maison Delaunay,Licence,2750.73,payee
+T002476,C0006,2024-11-16,Verne Industries,Audit,5783.41,payee
+T002477,C0102,2024-01-29,Atelier Bastide,Maintenance,4159.03,payee
+T002478,C0042,06/07/2025,Orion Energie,Licence,1849.56,payee
+T002479,C0079,2025-06-16,Cabinet Ferrand,Formation,1565.57,payee
+T002480,C0145,2025-06-24,Verne Industries,Maintenance,6763.67,payee
+T002481,C0064,2025-04-18,Maison Delaunay,Audit,2303.03,payee
+T002482,C0154,2024-04-10,Maison Delaunay,Conseil,5870.89,payee
+T002483,C0068,24/03/2024,Sigma Sante,Formation,3051.38,payee
+T002484,C0119,01-08-2025,Orion Energie,Conseil,2141.93,payee
+T002485,C0107,2025-09-16,Orion Energie,Formation,2234.74,payee
+T002486,C0090,2024-02-27,Atelier Bastide,Conseil,3128.41,payee
+T002487,C0030,28-02-2025,Atelier Bastide,Licence,873.28,payee
+T002488,C0134,31-12-2024,Atelier Bastide,Audit,2181.51,payee
+T002489,C0045,12-09-2024,Maison Delaunay,Audit,7998.11,payee
+T002490,C0150,2025-04-15,Nord Logistique,Formation,9195.17,en attente
+T002491,C0174,2025-10-29,Sigma Sante,Maintenance,2308.14,en attente
+T002492,C0187,2025-08-22,Sigma Sante,Formation,4633.69,payee
+T002493,C0009,2024-04-21,Sigma Sante,Formation,4100.61,payee
+T002494,C0184,04-12-2024,Groupe Lorrain,Maintenance,1695.18,payee
+T002495,C0057,2025-11-14,Maison Delaunay,Maintenance,4673.74,annulee
+T002496,C0155,2024-06-21,Sigma Sante,Licence,2717.02,payee
+T002497,C0073,2025-09-15,Orion Energie,Conseil,3459.68,payee
+T002498,C0208,2024-12-24,Verne Industries,Licence,5149.56,payee
+T002499,C0097,15/01/2025,Sigma Sante,Formation,2816.17,payee
+T002500,C0195,2024-07-01,Cabinet Ferrand,Conseil,2799.35,payee
+T002501,C0144,2025-11-02,Atelier Bastide,Conseil,4415.62,payee
+T002502,C0031,2025-01-20,Verne Industries,Licence,5959.03,payee
+T002503,C0056,2025-02-23,Verne Industries,Conseil,4288.85,payee
+T002504,C0062,03-12-2024,Orion Energie,Maintenance,2872.82,payee
+T002505,C0213,2024-03-06,Atelier Bastide,Conseil,5641.06,en attente
+T002506,C0207,2025-07-23,Atelier Bastide,Formation,4014.87,payee
+T002507,C0090,27/08/2024,Nord Logistique,Audit,6603.18,payee
+T002508,C0075,2024-06-24,Nord Logistique,Maintenance,7491.56,payee
+T002509,C0187,2025-07-24,Nord Logistique,Licence,4252.74,payee
+T002510,C0005,2024-05-25,Atelier Bastide,Conseil,6367.04,payee
+T002511,C0209,13/05/2025,Cabinet Ferrand,Conseil,6463.51,payee
+T002512,C0141,2024-12-12,Orion Energie,Audit,3219.6,payee
+T002513,C0147,06-08-2025,Groupe Lorrain,Maintenance,6462.56,payee
+T002514,C0102,2024-02-06,Sigma Sante,Audit,3543.99,payee
+T002515,C0151,2025-07-19,Atelier Bastide,Audit,4902.88,payee
+T002516,C0174,2024-06-16,Atelier Bastide,Conseil,3360.7,payee
+T002517,C0013,2025-09-27,Orion Energie,Audit,1410.07,payee
+T002518,C0122,2024-09-15,Verne Industries,Licence,8579.06,payee
+T002519,C0200,06/01/2024,Nord Logistique,Maintenance,4803.68,en attente
+T002520,C0018,2024-12-21,Cabinet Ferrand,Licence,5021.0,payee
+T002521,C0171,09-02-2024,Nord Logistique,Maintenance,3725.55,payee
+T002522,C0057,2024-07-15,Cabinet Ferrand,Audit,6439.05,payee
+T002523,C0118,2025-06-07,Cabinet Ferrand,Audit,458.21,payee
+T002524,C0205,2025-02-13,Sigma Sante,Licence,3180.78,payee
+T002525,C0115,01-06-2025,Nord Logistique,Formation,3293.78,payee
+T002526,C0009,2025-10-03,Nord Logistique,Maintenance,1862.82,en attente
+T002527,C0005,2024-12-07,Sigma Sante,Licence,3927.28,payee
+T002528,C0171,31/01/2025,Cabinet Ferrand,Formation,6273.46,en attente
+T002529,C0216,2024-02-12,Sigma Sante,Maintenance,3201.84,payee
+T002530,C0068,2024-07-28,Maison Delaunay,Conseil,1716.63,en attente
+T002531,C0218,2025-06-12,Orion Energie,Licence,5614.77,payee
+T002532,C0106,2024-02-15,Cabinet Ferrand,Maintenance,4437.12,payee
+T002533,C0014,2024-09-19,Nord Logistique,Audit,8064.82,payee
+T002534,C0124,2024-04-09,Atelier Bastide,Maintenance,2237.03,payee
+T002535,C0001,17/09/2025,Groupe Lorrain,Audit,4812.86,payee
+T002536,C0059,13/02/2025,Groupe Lorrain,Audit,1673.02,payee
+T002537,C0117,2025-04-15,Maison Delaunay,Formation,3410.67,payee
+T002538,C0152,14/05/2025,Verne Industries,Audit,3758.35,payee
+T002539,C0092,2024-06-12,Verne Industries,Formation,1316.57,payee
+T002540,C0161,2024-02-06,Nord Logistique,Maintenance,6041.46,payee
+T002541,C0093,2024-10-17,Cabinet Ferrand,Formation,5215.28,payee
+T002542,C0020,15-05-2024,Atelier Bastide,Licence,4436.95,payee
+T002543,C0203,23-08-2024,Nord Logistique,Maintenance,1738.44,payee
+T002544,C0087,2024-08-20,Nord Logistique,Audit,2360.31,payee
+T002545,C0132,24-07-2025,Atelier Bastide,Audit,5525.04,payee
+T002546,C0173,21/08/2024,Verne Industries,Audit,3392.87,payee
+T002547,C0020,2024-04-20,Atelier Bastide,Licence,3039.86,payee
+T002548,C0168,2025-11-30,Maison Delaunay,Audit,6363.67,payee
+T002549,C0085,2024-02-05,Atelier Bastide,Conseil,3686.71,payee
+T002550,C0127,28/05/2024,Groupe Lorrain,Audit,1826.77,en attente
+T002551,C0107,2024-09-10,Verne Industries,Formation,5490.19,payee
+T002552,C0181,2024-02-15,Cabinet Ferrand,Licence,1690.81,payee
+T002553,C0044,2025-10-18,Sigma Sante,Audit,3408.24,en attente
+T002554,C0025,2024-09-14,Groupe Lorrain,Maintenance,3959.32,en attente
+T002555,C0096,2025-07-25,Orion Energie,Audit,4906.91,payee
+T002556,C0028,08/04/2024,Verne Industries,Maintenance,1467.06,payee
+T002557,C0057,2025-01-15,Verne Industries,Maintenance,777.78,payee
+T002558,C0153,2024-04-02,Groupe Lorrain,Conseil,798.95,en attente
+T002559,C0190,2024-06-18,Verne Industries,Audit,6770.2,payee
+T002560,C0161,2024-10-24,Cabinet Ferrand,Maintenance,1319.4,payee
+T002561,C0074,2025-09-21,Maison Delaunay,Maintenance,7652.74,payee
+T002562,C0189,2024-08-11,Sigma Sante,Licence,5792.39,payee
+T002563,C0095,04-07-2025,Nord Logistique,Audit,2014.77,payee
+T002564,C0043,2024-03-07,Groupe Lorrain,Licence,968.73,annulee
+T002565,C0176,2024-07-02,Cabinet Ferrand,Conseil,3546.57,payee
+T002566,C0120,2025-03-17,Maison Delaunay,Conseil,2566.84,payee
+T002567,C0086,2024-12-07,Maison Delaunay,Maintenance,6417.55,payee
+T002568,C0154,2025-01-01,Nord Logistique,Maintenance,3938.42,payee
+T002569,C0169,10-05-2025,Nord Logistique,Formation,3429.09,payee
+T002570,C0052,26-02-2024,Nord Logistique,Maintenance,3048.79,payee
+T002571,C0028,2025-05-22,Orion Energie,Audit,4900.17,payee
+T002572,C0120,2025-09-21,Nord Logistique,Licence,3263.25,payee
+T002573,C0012,2025-07-13,Nord Logistique,Audit,8426.83,en attente
+T002574,C0149,2024-07-26,Verne Industries,Conseil,1289.66,payee
+T002575,C0103,13-09-2024,Cabinet Ferrand,Licence,2874.97,payee
+T002576,C0050,2025-12-02,Maison Delaunay,Licence,4543.43,payee
+T002577,C0139,2025-07-30,Sigma Sante,Formation,4239.55,payee
+T002578,C0088,11-11-2025,Sigma Sante,Conseil,8414.72,payee
+T002579,C0091,2025-10-28,Maison Delaunay,Licence,2259.91,en attente
+T002580,C0051,2024-11-12,Sigma Sante,Formation,531.69,payee
+T002581,C0157,04-04-2024,Groupe Lorrain,Formation,5564.72,payee
+T002582,C0210,15-06-2024,Verne Industries,Formation,3841.73,en attente
+T002583,C0144,2024-08-02,Atelier Bastide,Licence,5589.85,en attente
+T002584,C0055,01-09-2025,Maison Delaunay,Audit,4132.76,en attente
+T002585,C0194,2024-07-20,Sigma Sante,Licence,703.11,payee
+T002586,C0029,20-09-2024,Atelier Bastide,Licence,4269.89,payee
+T002587,C0068,2025-09-13,Atelier Bastide,Formation,2250.59,payee
+T002588,C0009,2024-04-29,Cabinet Ferrand,Licence,2876.24,payee
+T002589,C0197,2025-04-29,Orion Energie,Formation,3204.45,payee
+T002590,C0011,2025-02-06,Groupe Lorrain,Audit,1689.91,en attente
+T002591,C0127,19/12/2025,Orion Energie,Licence,2207.03,payee
+T002592,C0045,2024-12-23,Atelier Bastide,Licence,5072.77,en attente
+T002593,C0050,15-01-2025,Verne Industries,Conseil,5068.64,annulee
+T002594,C0142,2025-09-12,Maison Delaunay,Audit,1196.5,payee
+T002595,C0187,2025-12-24,Maison Delaunay,Licence,3864.08,payee
+T002596,C0005,2025-06-16,Sigma Sante,Conseil,5358.0,annulee
+T002597,C0037,2025-05-24,Groupe Lorrain,Conseil,3658.71,payee
+T002598,C0067,2025-10-01,Groupe Lorrain,Formation,-3981.91,payee
+T002599,C0219,2025-12-16,Cabinet Ferrand,Maintenance,1254.23,payee
+T002600,C0014,2025-06-20,Nord Logistique,Conseil,6292.5,payee
+T002601,C0042,2024-08-01,Verne Industries,Conseil,1781.08,payee
+T002602,C0094,2025-04-13,Maison Delaunay,Licence,2794.88,payee
+T002603,C0076,2024-06-21,Verne Industries,Licence,5383.42,en attente
+T002604,C0012,2024-12-31,Orion Energie,Audit,7418.45,payee
+T002605,C0126,2024-11-20,Atelier Bastide,Maintenance,2922.78,payee
+T002606,C0141,2025-12-21,Maison Delaunay,Maintenance,9487.83,payee
+T002607,C0042,08/02/2025,Nord Logistique,Formation,3727.76,annulee
+T002608,C0160,2025-12-01,Groupe Lorrain,Maintenance,3506.81,payee
+T002609,C0014,2025-08-12,Nord Logistique,Licence,1935.22,payee
+T002610,C0170,11-09-2025,Atelier Bastide,Formation,2828.44,payee
+T002611,C0061,2024-05-03,Nord Logistique,Formation,3900.59,en attente
+T002612,C0053,2025-07-19,Maison Delaunay,Audit,4574.55,payee
+T002613,C0046,2024-07-02,Groupe Lorrain,Licence,4464.17,en attente
+T002614,C0202,25-02-2025,Atelier Bastide,Licence,2664.24,payee
+T002615,C0117,2024-12-20,Verne Industries,Maintenance,6739.16,en attente
+T002616,C0161,2024-07-08,Orion Energie,Formation,3568.9,payee
+T002617,C0048,19-12-2025,Atelier Bastide,Formation,3445.58,payee
+T002618,C0014,01-10-2025,Orion Energie,Audit,1857.22,payee
+T002619,C0009,2025-02-23,Nord Logistique,Audit,4816.63,payee
+T002620,C0103,2024-01-08,Orion Energie,Licence,3340.68,en attente
+T002621,C0076,2024-05-13,Sigma Sante,Audit,2944.34,payee
+T002622,C0179,2024-06-15,Verne Industries,Formation,1521.87,en attente
+T002623,C0183,10-12-2025,Nord Logistique,Maintenance,1560.94,payee
+T002624,C0073,21/10/2024,Maison Delaunay,Conseil,4116.44,en attente
+T002625,C0101,04/02/2024,Groupe Lorrain,Maintenance,7246.12,payee
+T002626,C0089,2025-03-03,Maison Delaunay,Conseil,3069.25,annulee
+T002627,C0157,24/11/2025,Cabinet Ferrand,Formation,3057.94,payee
+T002628,C0147,2025-02-13,Groupe Lorrain,Audit,4847.48,payee
+T002629,C0152,20-11-2024,Sigma Sante,Formation,6176.51,payee
+T002630,C0013,2024-05-08,Verne Industries,Licence,2528.11,payee
+T002631,C0079,03-10-2025,Sigma Sante,Audit,1874.63,payee
+T002632,C0203,2024-03-17,Atelier Bastide,Audit,3292.41,en attente
+T002633,C0080,2025-11-12,Nord Logistique,Licence,4431.66,en attente
+T002634,C0041,2024-06-11,Verne Industries,Conseil,802.08,payee
+T002635,C0047,10-04-2024,Orion Energie,Formation,2724.71,en attente
+T002636,C0007,2024-09-11,Orion Energie,Maintenance,3114.74,payee
+T002637,C0182,04/01/2024,Sigma Sante,Formation,2895.33,payee
+T002638,C0002,2024-01-11,Sigma Sante,Maintenance,1433.81,payee
+T002639,C0139,2024-05-16,Sigma Sante,Audit,2730.38,payee
+T002640,C0093,20/05/2025,Verne Industries,Maintenance,3142.38,payee
+T002641,C0022,2025-08-17,Orion Energie,Maintenance,2052.9,payee
+T002642,C0206,29/06/2024,Nord Logistique,Licence,3915.97,payee
+T002643,C0173,2025-04-15,Verne Industries,Conseil,5216.88,payee
+T002644,C0191,2024-09-13,Atelier Bastide,Licence,5313.58,annulee
+T002645,C0218,2024-11-12,Maison Delaunay,Audit,2336.21,payee
+T002646,C0212,01/09/2024,Verne Industries,Maintenance,4387.78,en attente
+T002647,C0163,2025-10-12,Maison Delaunay,Maintenance,4198.75,en attente
+T002648,C0124,2025-01-08,Groupe Lorrain,Audit,8063.57,payee
+T002649,C0162,04-01-2025,Maison Delaunay,Formation,4399.38,payee
+T002650,C0105,2025-09-19,Maison Delaunay,Formation,4536.67,payee
+T002651,C0043,2025-04-24,Nord Logistique,Audit,5752.89,en attente
+T002652,C0090,2024-04-19,Maison Delaunay,Licence,1648.79,payee
+T002653,C0109,17/05/2024,Orion Energie,Maintenance,3519.61,en attente
+T002654,C0011,2024-09-05,Sigma Sante,Maintenance,7477.09,payee
+T002655,C0197,2024-03-12,Cabinet Ferrand,Conseil,7555.67,payee
+T002656,C0212,20-05-2025,Sigma Sante,Formation,2729.93,payee
+T002657,C0098,27/12/2024,Orion Energie,Formation,7373.95,payee
+T002658,C0116,2024-02-02,Atelier Bastide,Conseil,2951.29,payee
+T002659,C0196,19-10-2024,Verne Industries,Maintenance,3989.36,payee
+T002660,C0106,2025-08-28,Maison Delaunay,Audit,1294.64,payee
+T002661,C0160,24-10-2025,Nord Logistique,Audit,6582.2,payee
+T002662,C0120,03-12-2025,Atelier Bastide,Conseil,2872.87,payee
+T002663,C0063,2025-11-04,Cabinet Ferrand,Licence,1462.27,payee
+T002664,C0185,2025-03-19,Verne Industries,Formation,3183.79,payee
+T002665,C0045,2025-11-07,Maison Delaunay,Conseil,658.8,payee
+T002666,C0053,2025-11-29,Nord Logistique,Maintenance,4739.6,payee
+T002667,C0161,2025-04-08,Atelier Bastide,Audit,5970.51,payee
+T002668,C0165,2024-10-28,Groupe Lorrain,Conseil,1908.36,payee
+T002669,C0062,06/12/2025,Verne Industries,Maintenance,1867.86,payee
+T002670,C0165,29-10-2024,Atelier Bastide,Conseil,4564.82,payee
+T002671,C0006,2024-05-01,Orion Energie,Audit,4850.42,payee
+T002672,C0198,2024-03-18,Verne Industries,Conseil,2397.0,payee
+T002673,C0097,18/02/2025,Maison Delaunay,Licence,2058.8,payee
+T002674,C0003,26/01/2024,Atelier Bastide,Conseil,5439.14,annulee
+T002675,C0135,2024-03-27,Cabinet Ferrand,Licence,1374.83,payee
+T002676,C0040,2024-06-27,Orion Energie,Licence,2647.7,annulee
+T002677,C0097,2025-01-21,Maison Delaunay,Licence,2028.81,payee
+T002678,C0110,15/12/2024,Verne Industries,Audit,4529.13,payee
+T002679,C0018,2025-01-08,Maison Delaunay,Audit,2120.9,payee
+T002680,C0198,2025-01-05,Nord Logistique,Formation,8259.16,payee
+T002681,C0119,26-12-2025,Atelier Bastide,Audit,5807.63,payee
+T002682,C0025,2024-06-07,Orion Energie,Licence,2592.85,payee
+T002683,C0108,2024-12-12,Orion Energie,Conseil,4119.33,annulee
+T002684,C0139,2025-03-23,Nord Logistique,Maintenance,2143.73,payee
+T002685,C0189,18-07-2024,Groupe Lorrain,Maintenance,3722.13,payee
+T002686,C0050,2024-05-12,Cabinet Ferrand,Formation,2298.11,payee
+T002687,C0211,2024-02-04,Nord Logistique,Licence,1807.28,payee
+T002688,C0043,26/08/2024,Orion Energie,Licence,4836.18,payee
+T002689,C0089,2024-07-04,Maison Delaunay,Conseil,2109.85,en attente
+T002690,C0149,2024-05-22,Atelier Bastide,Formation,2131.57,payee
+T002691,C0121,17-07-2024,Nord Logistique,Licence,3554.14,payee
+T002692,C0049,2025-05-23,Atelier Bastide,Formation,3878.08,payee
+T002693,C0133,2025-08-27,Cabinet Ferrand,Audit,1768.46,payee
+T002694,C0129,12-01-2025,Nord Logistique,Formation,4343.7,payee
+T002695,C0073,2024-02-18,Nord Logistique,Maintenance,2208.83,payee
+T002696,C0194,2025-06-21,Cabinet Ferrand,Conseil,1510.66,payee
+T002697,C0113,2024-04-20,Cabinet Ferrand,Formation,2847.59,payee
+T002698,C0091,11/02/2024,Sigma Sante,Audit,2823.92,payee
+T002699,C0090,18-02-2025,Nord Logistique,Audit,4160.93,payee
+T002700,C0088,06-11-2024,Groupe Lorrain,Audit,8216.81,payee
+T002701,C0004,15/08/2024,Maison Delaunay,Conseil,3521.63,annulee
+T002702,C0009,06/12/2025,Nord Logistique,Audit,4455.29,payee
+T002703,C0175,2024-03-07,Maison Delaunay,Formation,1272.29,payee
+T002704,C0059,09/02/2024,Maison Delaunay,Conseil,5946.3,en attente
+T002705,C0096,04/03/2025,Atelier Bastide,Conseil,3099.59,payee
+T002706,C0162,01/11/2024,Orion Energie,Maintenance,1586.89,en attente
+T002707,C0141,08/08/2025,Orion Energie,Licence,5831.68,payee
+T002708,C0084,2024-01-30,Atelier Bastide,Licence,3171.23,payee
+T002709,C0175,2024-11-02,Atelier Bastide,Audit,5353.08,payee
+T002710,C0037,2024-04-17,Atelier Bastide,Conseil,8669.94,payee
+T002711,C0110,2024-01-31,Orion Energie,Conseil,1357.87,en attente
+T002712,C0025,2024-12-03,Orion Energie,Audit,2157.64,payee
+T002713,C0124,20-06-2025,Verne Industries,Maintenance,4875.34,payee
+T002714,C0023,2024-04-24,Maison Delaunay,Maintenance,3285.72,en attente
+T002715,C0219,2025-09-06,Atelier Bastide,Licence,703.84,payee
+T002716,C0153,2025-01-13,Groupe Lorrain,Conseil,2679.51,payee
+T002717,C0057,2024-12-16,Atelier Bastide,Licence,2916.45,payee
+T002718,C0143,04/11/2025,Groupe Lorrain,Audit,3173.35,payee
+T002719,C0082,2024-08-28,Sigma Sante,Conseil,2113.21,payee
+T002720,C0121,2024-05-26,Sigma Sante,Conseil,6708.27,en attente
+T002721,C0039,27-07-2025,Atelier Bastide,Formation,1273.27,payee
+T002722,C0117,2024-03-19,Nord Logistique,Licence,4006.4,annulee
+T002723,C0025,2025-09-28,Atelier Bastide,Maintenance,2411.91,payee
+T002724,C0036,25-08-2025,Nord Logistique,Conseil,2315.75,payee
+T002725,C0136,2025-12-14,Orion Energie,Audit,6258.25,payee
+T002726,C0117,01/12/2024,Orion Energie,Conseil,2832.91,payee
+T002727,C0069,2025-03-30,Sigma Sante,Formation,4018.19,payee
+T002728,C0014,2025-10-06,Atelier Bastide,Audit,5043.74,payee
+T002729,C0099,06-04-2024,Atelier Bastide,Formation,3365.89,en attente
+T002730,C0215,2024-08-11,Atelier Bastide,Licence,-6302.5,payee
+T002731,C0165,2024-12-10,Atelier Bastide,Licence,1490.76,payee
+T002732,C0014,2025-04-03,Nord Logistique,Formation,4145.61,payee
+T002733,C0218,10-05-2025,Maison Delaunay,Licence,8261.77,payee
+T002734,C0099,2025-11-05,Orion Energie,Maintenance,3965.49,payee
+T002735,C0134,2024-12-23,Groupe Lorrain,Conseil,1096.17,payee
+T002736,C0001,05/05/2024,Verne Industries,Audit,4221.66,annulee
+T002737,C0072,18/05/2024,Maison Delaunay,Conseil,6847.23,payee
+T002738,C0183,2025-08-07,Maison Delaunay,Audit,2698.54,en attente
+T002739,C0077,2024-12-02,Cabinet Ferrand,Audit,2680.54,payee
+T002740,C0039,2025-04-06,Atelier Bastide,Audit,4774.62,en attente
+T002741,C0022,2025-02-14,Cabinet Ferrand,Maintenance,4335.53,annulee
+T002742,C0215,16/08/2025,Atelier Bastide,Audit,3431.43,payee
+T002743,C0189,08/06/2024,Nord Logistique,Audit,2199.45,en attente
+T002744,C0011,04-05-2024,Orion Energie,Maintenance,2538.77,payee
+T002745,C0215,2025-06-19,Atelier Bastide,Audit,1842.25,payee
+T002746,C0191,2024-11-12,Groupe Lorrain,Formation,1020.65,payee
+T002747,C0084,18-08-2025,Maison Delaunay,Audit,5948.76,payee
+T002748,C0153,04-04-2024,Groupe Lorrain,Audit,4907.91,payee
+T002749,C0060,2024-07-17,Orion Energie,Maintenance,4658.66,payee
+T002750,C0058,01/12/2025,Sigma Sante,Conseil,4613.74,payee
+T002751,C0166,2025-09-07,Cabinet Ferrand,Formation,2966.88,en attente
+T002752,C0047,2024-02-15,Verne Industries,Conseil,2754.61,payee
+T002753,C0083,19/08/2025,Cabinet Ferrand,Licence,1596.41,payee
+T002754,C0083,2024-02-17,Cabinet Ferrand,Licence,5120.05,payee
+T002755,C0035,28/03/2024,Sigma Sante,Audit,10725.99,payee
+T002756,C0193,2025-10-17,Sigma Sante,Formation,4127.72,en attente
+T002757,C0157,2024-04-01,Atelier Bastide,Conseil,5498.32,payee
+T002758,C0200,2024-08-07,Atelier Bastide,Maintenance,5509.42,payee
+T002759,C0122,2024-04-08,Nord Logistique,Conseil,7075.35,en attente
+T002760,C0041,2025-03-11,Maison Delaunay,Audit,2038.41,payee
+T002761,C0065,2024-02-11,Maison Delaunay,Conseil,1287.19,payee
+T002762,C0082,2024-07-28,Verne Industries,Licence,3701.71,payee
+T002763,C0219,2024-08-26,Cabinet Ferrand,Audit,3115.1,payee
+T002764,C0056,2025-04-18,Groupe Lorrain,Licence,10251.21,en attente
+T002765,C0161,28/12/2024,Cabinet Ferrand,Audit,1858.98,payee
+T002766,C0029,2024-05-20,Maison Delaunay,Licence,8198.83,payee
+T002767,C0062,2024-12-04,Verne Industries,Maintenance,3131.91,payee
+T002768,C0150,2024-11-30,Verne Industries,Maintenance,1731.79,payee
+T002769,C0100,2024-09-15,Cabinet Ferrand,Licence,7421.99,payee
+T002770,C0081,2025-01-24,Sigma Sante,Conseil,2056.8,payee
+T002771,C0083,2024-08-26,Nord Logistique,Audit,5515.65,payee
+T002772,C0053,2024-08-31,Orion Energie,Conseil,3758.6,payee
+T002773,C0140,2025-07-25,Groupe Lorrain,Formation,8183.69,payee
+T002774,C0201,02-07-2024,Sigma Sante,Maintenance,6128.34,payee
+T002775,C0056,2024-08-28,Groupe Lorrain,Maintenance,3087.83,payee
+T002776,C0174,2024-04-12,Verne Industries,Licence,7441.7,en attente
+T002777,C0132,2025-05-24,Cabinet Ferrand,Licence,4396.88,payee
+T002778,C0180,2025-05-30,Atelier Bastide,Licence,3481.0,en attente
+T002779,C0179,2025-05-10,Orion Energie,Audit,3715.57,payee
+T002780,C0010,2024-05-02,Orion Energie,Formation,5627.54,payee
+T002781,C0005,2024-11-25,Nord Logistique,Audit,3002.85,payee
+T002782,C0213,2024-08-01,Cabinet Ferrand,Conseil,2550.93,payee
+T002783,C0037,11-07-2025,Sigma Sante,Maintenance,2226.61,payee
+T002784,C0134,2024-09-02,Maison Delaunay,Maintenance,4098.01,en attente
+T002785,C0175,2024-10-30,Cabinet Ferrand,Maintenance,2316.97,en attente
+T002786,C0117,2024-11-27,Sigma Sante,Licence,5670.56,payee
+T002787,C0002,09-07-2025,Atelier Bastide,Maintenance,2963.15,payee
+T002788,C0003,2025-05-27,Verne Industries,Licence,4576.21,payee
+T002789,C0156,21/08/2025,Groupe Lorrain,Licence,6307.64,payee
+T002790,C0209,2024-11-08,Groupe Lorrain,Audit,7182.3,payee
+T002791,C0080,21/08/2025,Atelier Bastide,Maintenance,3877.77,payee
+T002792,C0127,27/09/2025,Nord Logistique,Maintenance,932.26,payee
+T002793,C0217,17/01/2025,Sigma Sante,Audit,970.84,payee
+T002794,C0192,11-05-2025,Nord Logistique,Formation,5592.34,payee
+T002795,C0126,2025-10-25,Cabinet Ferrand,Licence,1974.7,payee
+T002796,C0153,2025-09-04,Verne Industries,Maintenance,2888.4,payee
+T002797,C0025,2024-07-20,Groupe Lorrain,Maintenance,6021.04,payee
+T002798,C0185,2025-06-06,Nord Logistique,Conseil,2569.61,payee
+T002799,C0097,21/11/2024,Atelier Bastide,Maintenance,1599.66,annulee
+T002800,C0161,2024-04-18,Sigma Sante,Conseil,2940.22,payee
+T002801,C0077,2024-09-28,Cabinet Ferrand,Licence,5043.43,payee
+T002802,C0214,2025-12-14,Verne Industries,Maintenance,2541.41,payee
+T002803,C0022,2025-11-30,Groupe Lorrain,Formation,4686.89,payee
+T002804,C0053,28-07-2025,Atelier Bastide,Conseil,1630.36,payee
+T002805,C0081,2025-12-23,Groupe Lorrain,Maintenance,2188.67,payee
+T002806,C0047,2025-02-22,Maison Delaunay,Formation,2963.65,payee
+T002807,C0139,07-07-2025,Cabinet Ferrand,Audit,6429.84,en attente
+T002808,C0166,2024-04-30,Sigma Sante,Audit,2722.46,payee
+T002809,C0207,2024-08-06,Nord Logistique,Formation,2506.18,payee
+T002810,C0117,06/05/2024,Orion Energie,Maintenance,2511.93,payee
+T002811,C0145,2025-11-15,Sigma Sante,Formation,4684.29,payee
+T002812,C0140,2025-03-24,Atelier Bastide,Audit,5297.32,payee
+T002813,C0001,2025-11-11,Groupe Lorrain,Formation,6283.87,payee
+T002814,C0165,2024-10-30,Orion Energie,Audit,8849.08,payee
+T002815,C0006,21/10/2024,Verne Industries,Maintenance,4112.32,payee
+T002816,C0128,2025-05-08,Sigma Sante,Formation,2334.72,payee
+T002817,C0089,2025-02-18,Maison Delaunay,Audit,3190.52,annulee
+T002818,C0183,2024-09-28,Maison Delaunay,Maintenance,2033.85,payee
+T002819,C0118,2024-08-19,Verne Industries,Maintenance,3724.66,payee
+T002820,C0074,2025-01-09,Verne Industries,Formation,2230.58,payee
+T002821,C0195,25-02-2024,Nord Logistique,Formation,6264.62,payee
+T002822,C0200,2024-05-17,Groupe Lorrain,Maintenance,3947.07,payee
+T002823,C0086,2024-02-01,Verne Industries,Conseil,7285.85,payee
+T002824,C0025,2024-04-23,Nord Logistique,Formation,5200.33,payee
+T002825,C0136,2024-05-25,Atelier Bastide,Conseil,4958.92,payee
+T002826,C0148,25/02/2024,Verne Industries,Conseil,1592.15,payee
+T002827,C0217,10-02-2024,Orion Energie,Conseil,4679.96,payee
+T002828,C0207,2025-08-21,Verne Industries,Conseil,8752.13,payee
+T002829,C0054,2024-05-13,Orion Energie,Audit,2767.25,payee
+T002830,C0059,2025-02-09,Orion Energie,Maintenance,5780.99,payee
+T002831,C0089,2024-03-12,Maison Delaunay,Audit,1325.43,payee
+T002832,C0076,2025-11-22,Atelier Bastide,Conseil,1864.24,payee
+T002833,C0107,2024-06-23,Atelier Bastide,Audit,3310.68,payee
+T002834,C0071,2025-07-01,Orion Energie,Licence,2528.96,en attente
+T002835,C0092,2025-04-13,Groupe Lorrain,Maintenance,2211.77,payee
+T002836,C0131,15-07-2025,Nord Logistique,Audit,2535.98,annulee
+T002837,C0068,2025-04-04,Nord Logistique,Formation,4417.64,payee
+T002838,C0096,2025-01-06,Sigma Sante,Maintenance,5816.82,payee
+T002839,C0082,2025-07-17,Orion Energie,Maintenance,4610.32,payee
+T002840,C0026,2025-08-18,Verne Industries,Licence,4747.37,en attente
+T002841,C0183,2024-10-04,Nord Logistique,Licence,3387.27,payee
+T002842,C0207,2025-11-18,Maison Delaunay,Formation,1833.86,en attente
+T002843,C0115,21-12-2025,Orion Energie,Conseil,3246.36,payee
+T002844,C0048,10/06/2025,Nord Logistique,Audit,3774.58,payee
+T002845,C0150,09-11-2025,Groupe Lorrain,Maintenance,5948.51,payee
+T002846,C0124,2024-03-18,Orion Energie,Licence,7869.41,payee
+T002847,C0128,2025-01-29,Nord Logistique,Maintenance,4228.91,annulee
+T002848,C0138,2025-04-20,Atelier Bastide,Licence,5640.1,en attente
+T002849,C0167,2025-11-08,Atelier Bastide,Formation,811.53,payee
+T002850,C0010,2024-03-28,Atelier Bastide,Audit,2936.53,payee
+T002851,C0024,2025-08-11,Maison Delaunay,Audit,3378.81,payee
+T002852,C0023,26-02-2024,Orion Energie,Formation,4549.77,payee
+T002853,C0036,2024-09-18,Cabinet Ferrand,Audit,7964.75,payee
+T002854,C0001,20-05-2025,Groupe Lorrain,Licence,4098.68,en attente
+T002855,C0170,31-07-2024,Orion Energie,Maintenance,1218.55,payee
+T002856,C0155,2025-09-01,Maison Delaunay,Conseil,4776.14,en attente
+T002857,C0163,10/11/2025,Nord Logistique,Licence,2819.95,annulee
+T002858,C0008,2024-04-25,Groupe Lorrain,Conseil,4539.9,payee
+T002859,C0050,07-07-2024,Orion Energie,Audit,4977.35,payee
+T002860,C0185,2024-02-24,Groupe Lorrain,Formation,1165.15,payee
+T002861,C0108,2025-06-02,Nord Logistique,Formation,3284.27,payee
+T002862,C0118,2025-10-09,Nord Logistique,Maintenance,3349.77,payee
+T002863,C0175,15/03/2025,Nord Logistique,Audit,4072.58,payee
+T002864,C0018,2024-04-06,Nord Logistique,Formation,2308.38,payee
+T002865,C0186,06-05-2024,Cabinet Ferrand,Maintenance,1954.37,en attente
+T002866,C0158,2024-01-26,Nord Logistique,Maintenance,7898.16,payee
+T002867,C0094,2024-12-23,Verne Industries,Licence,3859.84,payee
+T002868,C0116,2025-06-10,Cabinet Ferrand,Audit,2072.76,annulee
+T002869,C0018,2024-04-19,Maison Delaunay,Conseil,2568.3,payee
+T002870,C0048,2025-09-10,Maison Delaunay,Audit,8084.13,payee
+T002871,C0058,2024-07-03,Atelier Bastide,Licence,6529.02,payee
+T002872,C0204,2025-01-10,Orion Energie,Conseil,2414.77,payee
+T002873,C0027,02/05/2025,Groupe Lorrain,Audit,1849.93,payee
+T002874,C0068,2025-01-29,Verne Industries,Maintenance,1929.7,payee
+T002875,C0031,2024-12-14,Verne Industries,Audit,6177.73,payee
+T002876,C0067,02/09/2024,Verne Industries,Conseil,2717.97,payee
+T002877,C0003,09/11/2024,Verne Industries,Maintenance,1421.14,payee
+T002878,C0064,2024-06-23,Verne Industries,Maintenance,2612.64,payee
+T002879,C0168,02/08/2024,Cabinet Ferrand,Audit,4049.91,en attente
+T002880,C0179,2025-07-05,Sigma Sante,Formation,3253.03,payee
+T002881,C0089,2025-10-06,Sigma Sante,Audit,6586.29,payee
+T002882,C0164,2025-09-11,Verne Industries,Maintenance,4076.12,payee
+T002883,C0144,2024-08-29,Verne Industries,Formation,4368.44,payee
+T002884,C0210,22-08-2024,Maison Delaunay,Formation,5466.9,en attente
+T002885,C0187,2024-02-12,Groupe Lorrain,Audit,5320.19,en attente
+T002886,C0054,18/07/2024,Cabinet Ferrand,Maintenance,2605.48,payee
+T002887,C0137,2025-03-03,Atelier Bastide,Conseil,1869.09,payee
+T002888,C0183,2024-07-14,Nord Logistique,Conseil,3907.38,payee
+T002889,C0071,2025-06-19,Groupe Lorrain,Audit,3629.5,payee
+T002890,C0133,2024-02-06,Sigma Sante,Conseil,4092.04,payee
+T002891,C0093,27-10-2024,Verne Industries,Formation,4271.29,payee
+T002892,C0072,24/07/2024,Nord Logistique,Maintenance,7593.73,payee
+T002893,C0047,2024-12-26,Nord Logistique,Audit,2995.0,payee
+T002894,C0009,19-01-2024,Cabinet Ferrand,Formation,4359.68,payee
+T002895,C0174,2024-11-01,Cabinet Ferrand,Maintenance,1864.4,payee
+T002896,C0190,2025-07-29,Verne Industries,Maintenance,2209.67,payee
+T002897,C0152,2025-09-17,Sigma Sante,Maintenance,3510.37,payee
+T002898,C0056,2024-07-05,Nord Logistique,Maintenance,2030.96,payee
+T002899,C0005,09/11/2024,Atelier Bastide,Formation,4823.54,annulee
+T002900,C0147,2025-05-18,Verne Industries,Maintenance,4457.14,payee
+T002901,C0047,2024-12-04,Cabinet Ferrand,Conseil,2433.35,en attente
+T002902,C0128,2025-01-31,Sigma Sante,Maintenance,3112.13,payee
+T002903,C0001,2024-09-06,Orion Energie,Maintenance,6209.89,payee
+T002904,C0002,03/09/2025,Cabinet Ferrand,Maintenance,3883.3,payee
+T002905,C0134,05/04/2025,Cabinet Ferrand,Conseil,9823.86,payee
+T002906,C0196,02-12-2025,Atelier Bastide,Audit,3113.64,en attente
+T002907,C0078,2025-07-23,Nord Logistique,Licence,3308.97,payee
+T002908,C0189,2024-09-25,Atelier Bastide,Conseil,3510.49,payee
+T002909,C0193,27-08-2024,Sigma Sante,Licence,1311.84,en attente
+T002910,C0113,05-03-2024,Nord Logistique,Licence,3227.65,payee
+T002911,C0072,2025-03-30,Atelier Bastide,Licence,3168.2,payee
+T002912,C0158,2025-07-01,Orion Energie,Maintenance,5049.09,payee
+T002913,C0144,15-09-2024,Sigma Sante,Licence,6337.95,en attente
+T002914,C0111,16-01-2024,Verne Industries,Formation,2971.03,payee
+T002915,C0045,2025-08-25,Groupe Lorrain,Maintenance,928.27,annulee
+T002916,C0173,2024-06-11,Verne Industries,Formation,3795.8,payee
+T002917,C0050,01/03/2025,Cabinet Ferrand,Conseil,2017.09,payee
+T002918,C0032,2024-02-08,Cabinet Ferrand,Formation,3971.47,en attente
+T002919,C0016,2024-02-15,Sigma Sante,Audit,3917.92,en attente
+T002920,C0104,17/10/2025,Orion Energie,Licence,2331.57,payee
+T002921,C0028,2025-05-05,Maison Delaunay,Formation,3812.42,payee
+T002922,C0078,2024-01-04,Sigma Sante,Formation,1450.3,payee
+T002923,C0057,2024-03-14,Atelier Bastide,Audit,4099.21,payee
+T002924,C0107,25/12/2024,Atelier Bastide,Maintenance,5291.66,payee
+T002925,C0181,2025-05-11,Orion Energie,Maintenance,4559.54,payee
+T002926,C0105,2024-11-05,Nord Logistique,Maintenance,2637.85,en attente
+T002927,C0130,2025-09-29,Atelier Bastide,Audit,5091.88,payee
+T002928,C0034,21-04-2025,Sigma Sante,Maintenance,4798.26,payee
+T002929,C0027,2025-03-24,Atelier Bastide,Licence,4909.52,payee
+T002930,C0014,2024-07-30,Sigma Sante,Formation,6724.39,annulee
+T002931,C0144,12/05/2025,Orion Energie,Conseil,4300.57,payee
+T002932,C0004,2025-09-29,Cabinet Ferrand,Maintenance,1900.92,payee
+T002933,C0132,05/02/2024,Maison Delaunay,Audit,2088.96,payee
+T002934,C0003,2025-06-20,Maison Delaunay,Maintenance,4302.39,payee
+T002935,C0018,2025-10-04,Orion Energie,Licence,1187.83,payee
+T002936,C0087,11/11/2024,Nord Logistique,Conseil,3201.0,en attente
+T002937,C0153,13-07-2025,Verne Industries,Maintenance,2886.35,payee
+T002938,C0144,2024-09-18,Atelier Bastide,Formation,4727.42,payee
+T002939,C0184,2024-05-20,Verne Industries,Maintenance,1700.44,en attente
+T002940,C0042,2025-08-18,Groupe Lorrain,Formation,4775.3,payee
+T002941,C0045,2024-08-15,Maison Delaunay,Audit,3100.54,payee
+T002942,C0124,2025-07-06,Verne Industries,Audit,4157.04,payee
+T002943,C0202,2024-08-18,Maison Delaunay,Formation,1788.39,payee
+T002944,C0168,2024-10-18,Groupe Lorrain,Formation,4870.27,payee
+T002945,C0156,2025-05-15,Verne Industries,Audit,5763.94,annulee
+T002946,C0022,2024-09-06,Cabinet Ferrand,Conseil,14006.24,en attente
+T002947,C0204,2025-08-12,Groupe Lorrain,Licence,4017.07,payee
+T002948,C0073,2024-01-29,Sigma Sante,Conseil,5660.73,payee
+T002949,C0136,09/01/2024,Nord Logistique,Licence,2027.23,payee
+T002950,C0079,2024-02-29,Sigma Sante,Conseil,6541.91,en attente
+T002951,C0154,2024-07-06,Sigma Sante,Conseil,1513.57,payee
+T002952,C0150,09-02-2024,Groupe Lorrain,Licence,7842.28,payee
+T002953,C0216,04/10/2024,Sigma Sante,Conseil,3812.94,payee
+T002954,C0026,18-01-2024,Groupe Lorrain,Maintenance,1599.43,payee
+T002955,C0120,2025-07-06,Sigma Sante,Licence,2929.3,payee
+T002956,C0165,21-04-2024,Maison Delaunay,Licence,5630.37,payee
+T002957,C0081,2025-12-10,Sigma Sante,Licence,3232.97,payee
+T002958,C0195,2025-09-17,Cabinet Ferrand,Audit,3210.1,payee
+T002959,C0016,21-05-2025,Atelier Bastide,Audit,5369.43,payee
+T002960,C0025,2025-08-05,Atelier Bastide,Conseil,3375.84,payee
+T002961,C0184,2025-07-19,Groupe Lorrain,Maintenance,6335.36,payee
+T002962,C0030,2025-09-09,Sigma Sante,Licence,2593.36,payee
+T002963,C0098,2025-02-09,Nord Logistique,Maintenance,1245.78,payee
+T002964,C0066,31/03/2025,Atelier Bastide,Maintenance,3479.71,payee
+T002965,C0160,2024-12-08,Groupe Lorrain,Maintenance,3697.31,payee
+T002966,C0003,2025-03-31,Groupe Lorrain,Maintenance,2539.42,payee
+T002967,C0083,05-10-2024,Verne Industries,Formation,4097.43,payee
+T002968,C0073,31-03-2024,Maison Delaunay,Audit,1372.82,payee
+T002969,C0086,10/11/2025,Orion Energie,Maintenance,4158.05,en attente
+T002970,C0139,2025-05-25,Nord Logistique,Formation,1847.57,payee
+T002971,C0045,29-05-2025,Orion Energie,Formation,1596.31,payee
+T002972,C0141,23/07/2024,Cabinet Ferrand,Licence,3644.11,payee
+T002973,C0176,16-07-2025,Verne Industries,Formation,1522.68,en attente
+T002974,C0117,2025-01-14,Maison Delaunay,Maintenance,1000.04,payee
+T002975,C0144,25-02-2024,Atelier Bastide,Licence,4440.7,en attente
+T002976,C0194,2025-11-27,Orion Energie,Conseil,1968.05,payee
+T002977,C0118,2025-12-25,Sigma Sante,Formation,4674.05,payee
+T002978,C0189,27/09/2025,Groupe Lorrain,Audit,3037.04,payee
+T002979,C0149,2024-12-12,Atelier Bastide,Audit,3642.37,payee
+T002980,C0079,2024-06-19,Maison Delaunay,Formation,5675.01,payee
+T002981,C0130,2024-01-09,Maison Delaunay,Maintenance,4318.0,payee
+T002982,C0078,2025-06-21,Atelier Bastide,Conseil,4724.85,payee
+T002983,C0093,12/10/2025,Maison Delaunay,Audit,4638.23,payee
+T002984,C0068,2024-03-16,Cabinet Ferrand,Maintenance,2411.91,payee
+T002985,C0114,14/05/2025,Maison Delaunay,Conseil,4219.82,en attente
+T002986,C0081,20/01/2024,Cabinet Ferrand,Maintenance,2110.2,payee
+T002987,C9999,2025-07-20,Cabinet Ferrand,Licence,4224.6,en attente
+T002988,C0086,21/01/2024,Cabinet Ferrand,Audit,2961.63,en attente
+T002989,C0114,2025-12-13,Atelier Bastide,Formation,3284.99,en attente
+T002990,C0033,2024-05-04,Atelier Bastide,Audit,7397.42,payee
+T002991,C0090,2024-10-19,Atelier Bastide,Audit,4540.26,payee
+T002992,C0083,2025-05-22,Sigma Sante,Formation,2512.51,en attente
+T002993,C0117,2025-09-09,Cabinet Ferrand,Licence,1367.82,payee
+T002994,C0104,22/09/2024,Cabinet Ferrand,Maintenance,3702.27,payee
+T002995,C0005,2025-12-16,Sigma Sante,Formation,1474.5,payee
+T002996,C0072,2024-01-12,Orion Energie,Audit,7870.67,payee
+T002997,C0170,2024-12-10,Atelier Bastide,Conseil,3333.97,payee
+T002998,C0039,2025-12-22,Verne Industries,Formation,5393.36,payee
+T002999,C0038,2024-07-19,Cabinet Ferrand,Licence,1655.59,payee
+T003000,C0087,24/01/2025,Sigma Sante,Licence,4481.77,en attente
+T002969,C0086,10/11/2025,Orion Energie,Maintenance,4158.05,en attente
+T002960,C0025,2025-08-05,Atelier Bastide,Conseil,3375.84,payee
+T002858,C0008,2024-04-25,Groupe Lorrain,Conseil,4539.9,payee
+T001569,C0012,25/12/2025,Nord Logistique,Licence,7253.41,payee
+T002499,C0097,15/01/2025,Sigma Sante,Formation,2816.17,payee
+T001659,C0120,2025-11-08,Nord Logistique,Formation,3341.53,payee
+T001245,C0057,2025-05-25,Nord Logistique,Maintenance,3227.44,payee
+T001916,C0048,2025-11-22,Atelier Bastide,Formation,3709.34,payee
+T000481,C0183,2025-06-02,Atelier Bastide,Formation,4350.83,annulee
+T000993,C0191,2025-07-24,Cabinet Ferrand,Maintenance,5944.21,payee
+T000928,C0164,2024-01-12,Sigma Sante,Licence,6493.59,payee
+T000281,C0043,2025-11-28,Verne Industries,Maintenance,3672.98,en attente
