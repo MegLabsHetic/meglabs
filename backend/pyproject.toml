@@ -11,6 +11,9 @@ select = ["E", "F", "I", "UP", "B", "ASYNC"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+# Rend `app` importable quel que soit le mode d'invocation : `pytest` seul
+# n'ajoute pas le repertoire courant a sys.path, contrairement a `python -m pytest`.
+pythonpath = ["."]
 asyncio_mode = "auto"
 markers = [
     "integration: tests requiring a live LLM provider API key",
