@@ -23,6 +23,7 @@ node_modules/
 out/
 .turbo/
 *.tsbuildinfo
+next-env.d.ts
 npm-debug.log*
 
 # Application data
