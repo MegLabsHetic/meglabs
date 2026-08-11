@@ -33,7 +33,11 @@ class DataAgent:
 
     def profiler(self, chemin: Path) -> dict:
         """Charge le fichier et retourne son profil complet."""
-        return self._profiler.profiler(self.charger(chemin))
+        return self.profiler_table(self.charger(chemin))
+
+    def profiler_table(self, table: pd.DataFrame) -> dict:
+        """Profile une table deja chargee, sans relire le disque."""
+        return self._profiler.profiler(table)
 
     def llm_context(self, profil: dict) -> dict:
         """Representation compressee d'un profil, seule forme transmise au LLM."""
