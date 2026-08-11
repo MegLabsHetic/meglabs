@@ -2,7 +2,7 @@ services:
   backend:
     build: ./backend
     ports:
-      - "8000:8000"
+      - "${BACKEND_PORT:-8000}:8000"
     env_file:
       - .env
     environment:
@@ -18,9 +18,9 @@ services:
   frontend:
     build: ./frontend
     ports:
-      - "3000:3000"
+      - "${FRONTEND_PORT:-3000}:3000"
     environment:
-      NEXT_PUBLIC_API_URL: http://localhost:8000
+      NEXT_PUBLIC_API_URL: http://localhost:${BACKEND_PORT:-8000}
     volumes:
       - ./frontend:/app
       # Volume anonyme : garde les node_modules de l'image, que le bind mount

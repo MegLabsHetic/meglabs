@@ -29,10 +29,19 @@ async function appeler<T>(chemin: string, init?: RequestInit): Promise<T> {
     return await lire<T>(await fetch(`${BASE}${chemin}`, init));
   } catch (erreur) {
     if (erreur instanceof ErreurApi) throw erreur;
+    // Le navigateur ne dit pas si `fetch` a échoué faute de serveur ou parce que
+    // l'origine a été refusée : les deux se présentent comme une erreur réseau.
+    // Le message doit donc couvrir les deux, sinon il envoie chercher au mauvais
+    // endroit — c'est arrivé en changeant le port du front sans toucher CORS.
     throw new ErreurApi(
-      "Le serveur ne répond pas. Vérifie qu'il est démarré, puis réessaie.",
+      `Impossible de joindre le serveur sur ${BASE}. Vérifie qu'il est démarré, ` +
+        `et que ${origineCourante()} figure bien dans CORS_ORIGINS côté serveur.`,
     );
   }
+}
+
+function origineCourante(): string {
+  return typeof window === "undefined" ? "l'origine du site" : window.location.origin;
 }
 
 export const api = {
