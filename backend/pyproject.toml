@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]
+
+[tool.ruff.lint.per-file-ignores]
+# `Depends(...)` et `File(...)` dans les valeurs par defaut sont la maniere dont FastAPI
+# declare ses dependances. La regle B008 vise un autre probleme.
+"app/api/*.py" = ["B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Rend `app` importable quel que soit le mode d'invocation : `pytest` seul
+# n'ajoute pas le repertoire courant a sys.path, contrairement a `python -m pytest`.
+pythonpath = ["."]
+asyncio_mode = "auto"
+markers = [
+    "integration: tests requiring a live LLM provider API key",
+]
