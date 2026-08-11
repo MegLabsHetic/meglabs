@@ -43,5 +43,16 @@ international et les zéros initiaux. Tout chargement doit forcer le type texte 
 
 ## Documentation
 
-- `docs/architecture.md` — décisions techniques
-- `docs/demo_scenario.md` — déroulé de la soutenance
+La source est [docs/](docs/README.md), relue en PR comme le reste du code. Elle est publiée sur
+[le wiki](https://github.com/MegLabsHetic/meglabs/wiki), qui se lit et se cherche mieux —
+`./scripts/sync-wiki.sh` met le miroir à jour. **Modifiez `docs/`, jamais le wiki.**
+
+| Page | Pour |
+|---|---|
+| [Démarrer](docs/demarrer.md) | installer, lancer, vérifier |
+| [Architecture](docs/architecture.md) | pourquoi le code est structuré ainsi |
+| [Conventions](docs/conventions.md) | branches, commits, PR, style |
+| [API](docs/api.md) | les routes et leurs contrats |
+| [Jeux de données](docs/jeux-de-donnees.md) | les fichiers de démo et leurs défauts volontaires |
+| [Sécurité](docs/securite.md) | ce qu'on protège et comment |
+| [Feuille de route](docs/feuille-de-route.md) | les quatre sprints |
