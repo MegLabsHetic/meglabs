@@ -3,11 +3,14 @@
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
+from app.api import files, workspaces
 from app.core.config import get_settings
 from app.core.database import create_schema
+from app.core.errors import ErreurUtilisateur
 
 settings = get_settings()
 
@@ -33,6 +36,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.exception_handler(ErreurUtilisateur)
+async def erreur_utilisateur(_: Request, erreur: ErreurUtilisateur) -> JSONResponse:
+    """Les erreurs imputables a la demande sortent telles quelles, en francais."""
+    return JSONResponse(status_code=erreur.code_http, content={"detail": erreur.message})
+
+
+app.include_router(workspaces.router)
+app.include_router(files.router)
 
 
 @app.get("/api/health", tags=["health"])
