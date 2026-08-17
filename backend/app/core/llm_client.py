@@ -256,4 +256,3 @@ def construire_fournisseur(settings: Settings) -> Fournisseur:
     from app.core.providers.anthropic_provider import FournisseurAnthropic
 
     return FournisseurAnthropic(cle)
-
