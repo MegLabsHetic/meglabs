@@ -144,6 +144,15 @@ class FileService:
         )
         return list(resultat.scalars())
 
+    async def detecter_pii(self, session: AsyncSession, file_id: str) -> list[Detection]:
+        """Recalcule la detection depuis le fichier stocke.
+
+        Recalculer plutot que stocker : le fichier peut avoir ete nettoye ou
+        pseudonymise depuis le depot, et une detection figee mentirait.
+        """
+        fichier = await self.recuperer(session, file_id)
+        return self._agent.detecter_pii(self._agent.charger(fichier.path))
+
     # --- Pseudonymisation ---------------------------------------------------
 
     async def pseudonymiser(

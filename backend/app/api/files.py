@@ -6,7 +6,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.core.config import get_settings
 from app.core.database import get_session
 from app.core.errors import ErreurUtilisateur
-from app.schemas.fichier import DepotReponse, FichierLecture, PseudonymisationReponse
+from app.schemas.fichier import (
+    DepotReponse,
+    DetectionLecture,
+    FichierLecture,
+    PseudonymisationReponse,
+)
 from app.services.file_service import FileService
 from app.services.workspace_service import WorkspaceService
 
@@ -73,6 +78,18 @@ async def recuperer(file_id: str, session: AsyncSession = Depends(get_session)) 
 async def profil(file_id: str, session: AsyncSession = Depends(get_session)) -> dict:
     fichier = await service.recuperer(session, file_id)
     return fichier.profile or {}
+
+
+@router.get("/files/{file_id}/pii", response_model=list[DetectionLecture])
+async def donnees_personnelles(
+    file_id: str, session: AsyncSession = Depends(get_session)
+) -> list[DetectionLecture]:
+    """Colonnes sensibles d'un fichier deja depose.
+
+    Sans cette route, l'interface perdrait la banniere au premier rechargement : les
+    detections n'etaient rendues qu'au moment du depot.
+    """
+    return service.detections_en_lecture(await service.detecter_pii(session, file_id))
 
 
 @router.post("/files/{file_id}/pseudonymise", response_model=PseudonymisationReponse)
