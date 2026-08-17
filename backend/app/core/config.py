@@ -79,7 +79,11 @@ MODEL_ROUTING: dict[Provider, dict[Task, str]] = {
 class Settings(BaseSettings):
     """Parametres lus depuis l'environnement. Aucune valeur par defaut n'est un secret."""
 
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore", case_sensitive=False)
+    # Le `.env` vit a la racine du depot, mais les commandes backend se lancent depuis
+    # `backend/`. Les deux emplacements sont donc essayes, le plus proche d'abord.
+    model_config = SettingsConfigDict(
+        env_file=(".env", "../.env"), extra="ignore", case_sensitive=False
+    )
 
     llm_provider: Provider = Provider.ANTHROPIC
     anthropic_api_key: str = ""
@@ -128,7 +132,13 @@ def model_for(provider: Provider, task: Task) -> str:
     return MODEL_ROUTING[provider][task]
 
 
-def cost_in_cents(model: str, tokens_in: int, tokens_out: int) -> float:
+# Un jeton relu depuis le cache du fournisseur coute environ un dixieme du prix
+# normal. C'est ce rapport qui rend la mise en cache payante, et c'est lui qu'on
+# affiche comme economie realisee.
+REMISE_CACHE = 0.1
+
+
+def cost_in_cents(model: str, tokens_in: int, tokens_out: int, tokens_caches: int = 0) -> float:
     """Cout d'un appel en centimes de dollar.
 
     Un modele inconnu vaut zero plutot que de faire echouer la requete : perdre la
@@ -137,8 +147,19 @@ def cost_in_cents(model: str, tokens_in: int, tokens_out: int) -> float:
     price = MODEL_PRICING.get(model)
     if price is None:
         return 0.0
-    dollars = (tokens_in * price.input_per_mtok + tokens_out * price.output_per_mtok) / 1_000_000
+    factures = max(0, tokens_in - tokens_caches)
+    entree = (factures + tokens_caches * REMISE_CACHE) * price.input_per_mtok
+    dollars = (entree + tokens_out * price.output_per_mtok) / 1_000_000
     return dollars * 100
+
+
+def savings_in_cents(model: str, tokens_caches: int) -> float:
+    """Ce que la mise en cache a evite de payer sur cet appel."""
+    price = MODEL_PRICING.get(model)
+    if price is None or tokens_caches <= 0:
+        return 0.0
+    evite = tokens_caches * (1 - REMISE_CACHE) * price.input_per_mtok
+    return evite / 1_000_000 * 100
 
 
 def unpriced_routed_models() -> list[str]:
