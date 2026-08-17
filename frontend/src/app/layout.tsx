@@ -1,4 +1,8 @@
 import type { Metadata } from "next";
+
+import { Navigation } from "@/components/Navigation";
+import { FournisseurAtelier } from "@/lib/atelier";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -11,7 +15,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <FournisseurAtelier>
+          <Navigation />
+          {children}
+        </FournisseurAtelier>
+      </body>
     </html>
   );
 }
