@@ -198,3 +198,31 @@ async def test_files_are_listed_for_their_workspace(client: AsyncClient, workspa
     reponse = await client.get(f"/api/workspaces/{workspace_id}/files")
 
     assert {f["nom"] for f in reponse.json()} == {"collaborateurs.csv", "transactions.csv"}
+
+
+async def test_personal_columns_can_be_read_back_after_a_reload(
+    client: AsyncClient, workspace_id: str
+):
+    """Sans cette route, l'interface perdrait la bannière au premier rechargement."""
+    depot = await client.post(f"/api/workspaces/{workspace_id}/files", files=fichier_reel())
+    file_id = depot.json()["fichier"]["id"]
+
+    reponse = await client.get(f"/api/files/{file_id}/pii")
+
+    assert reponse.status_code == 200
+    assert {d["colonne"] for d in reponse.json()} == {
+        d["colonne"] for d in depot.json()["donnees_personnelles"]
+    }
+
+
+async def test_reading_personal_columns_reflects_pseudonymisation(
+    client: AsyncClient, workspace_id: str
+):
+    """La détection est recalculée : après masquage, il ne reste plus rien à protéger."""
+    depot = await client.post(f"/api/workspaces/{workspace_id}/files", files=fichier_reel())
+    file_id = depot.json()["fichier"]["id"]
+    await client.post(f"/api/files/{file_id}/pseudonymise")
+
+    restantes = (await client.get(f"/api/files/{file_id}/pii")).json()
+
+    assert all(d["type_pii"] != "adresse e-mail" for d in restantes)
