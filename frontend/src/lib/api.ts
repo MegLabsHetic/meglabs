@@ -5,7 +5,7 @@
  * l'utilisateur : on le remonte tel quel plutôt que d'en inventer un.
  */
 
-import type { Depot, Profil, Pseudonymisation, Workspace } from "./types";
+import type { Depot, Detection, Fichier, Profil, Pseudonymisation, Workspace } from "./types";
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -51,6 +51,16 @@ export const api = {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ nom }),
     }),
+
+  listerWorkspaces: () => appeler<Workspace[]>("/api/workspaces"),
+
+  recupererWorkspace: (id: string) => appeler<Workspace>(`/api/workspaces/${id}`),
+
+  listerFichiers: (workspaceId: string) =>
+    appeler<Fichier[]>(`/api/workspaces/${workspaceId}/files`),
+
+  donneesPersonnelles: (fichierId: string) =>
+    appeler<Detection[]>(`/api/files/${fichierId}/pii`),
 
   deposer: (workspaceId: string, fichier: File) => {
     const corps = new FormData();
