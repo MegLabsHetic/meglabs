@@ -47,6 +47,15 @@ PREFIXES = {
     NOM_PERSONNE: "PERS",
 }
 
+# Un jeton de pseudonymisation garde la forme de ce qu'il remplace : `email_001@
+# masked.local` EST une adresse valide. Sans cette reconnaissance, une colonne deja
+# protegee serait signalee comme sensible a chaque relecture, et l'interface
+# afficherait une alerte sur un fichier qui n'a plus rien a proteger.
+JETON = re.compile(
+    r"^(?:email_\d+@masked\.local|(?:TEL|IBAN|NIR|PERS)_\d+)$",
+    re.IGNORECASE,
+)
+
 
 def _sans_accents(valeur: str) -> str:
     decompose = unicodedata.normalize("NFKD", valeur)
@@ -108,7 +117,7 @@ class PiiService:
 
     def _detecter_colonne(self, colonne: pd.Series) -> Detection | None:
         valeurs = colonne.dropna().astype(str).str.strip()
-        if valeurs.empty:
+        if valeurs.empty or self._deja_pseudonymisee(valeurs):
             return None
 
         for type_pii, motif in MOTIFS.items():
@@ -120,6 +129,10 @@ class PiiService:
         if taux_noms >= SEUIL_NOMS:
             return self._detection(colonne.name, NOM_PERSONNE, taux_noms, valeurs)
         return None
+
+    def _deja_pseudonymisee(self, valeurs: pd.Series) -> bool:
+        """Une colonne remplie de nos propres jetons n'a plus rien de personnel."""
+        return bool(valeurs.str.match(JETON).mean() >= SEUIL_MOTIF)
 
     def _taux_de_noms(self, valeurs: pd.Series) -> float:
         """Part des valeurs dont le premier mot figure au repertoire des noms francais."""

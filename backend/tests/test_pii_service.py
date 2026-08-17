@@ -190,3 +190,23 @@ def test_nothing_personal_reaches_the_llm_context(collaborateurs: pd.DataFrame):
     for colonne in ("email", "telephone", "iban", "numero_securite_sociale", "prenom", "nom"):
         for valeur in collaborateurs[colonne].dropna().astype(str).head(30):
             assert valeur not in contexte, f"{colonne} : « {valeur} » atteint le LLM"
+
+
+# --- Idempotence ------------------------------------------------------------
+
+
+def test_masking_twice_finds_nothing_left_to_protect(collaborateurs: pd.DataFrame):
+    """Un jeton garde la forme de ce qu'il remplace : `email_001@masked.local` EST une
+    adresse valide. Sans reconnaissance de nos propres jetons, l'interface alerterait
+    sur un fichier deja protege."""
+    service = PiiService()
+
+    masquee, _ = service.pseudonymiser(collaborateurs, service.detecter(collaborateurs))
+
+    assert service.detecter(masquee) == []
+
+
+def test_a_token_column_is_not_flagged():
+    table = pd.DataFrame({"contact": ["email_001@masked.local", "email_002@masked.local"]})
+
+    assert PiiService().detecter(table) == []
