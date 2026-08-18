@@ -17,7 +17,10 @@ Il dépose `collaborateurs.csv` et `transactions.csv`, parcourt l'application et
 photographie chaque écran. Une capture attendue qui ne part pas fait échouer le
 script — une image manquante ne doit pas passer inaperçue.
 
-## Ce que montre chaque image
+Deux jeux d'images sont produits : l'application à la racine du dossier, et le
+déroulé du projet dans `projet/`.
+
+## L'application — racine du dossier
 
 | Fichier | Écran | Ce qu'on y voit |
 |---|---|---|
@@ -29,6 +32,23 @@ script — une image manquante ne doit pas passer inaperçue.
 | `06-pseudonymise.png` | Étape 2 — Après masquage | 944 valeurs remplacées par des jetons stables ; le compteur de colonnes sensibles retombe à zéro |
 | `07` à `09` | Étapes 3 à 5 | Ce qui n'est pas encore livré, annoncé comme tel plutôt que maquetté |
 | `10-accueil-mobile.png` | Landing, 414 px | Le premier écran sur téléphone |
+
+## Le déroulé du projet — `projet/`
+
+Le second jeu ne montre pas le produit mais la façon dont il a été construit. Les
+pages GitHub sont photographiées déconnecté : le dépôt étant public, ces images
+correspondent exactement à ce qu'un lecteur extérieur voit.
+
+| Fichier | Ce qu'on y voit |
+|---|---|
+| `01-graphe-des-branches.png` | Tout l'historique en une page : une branche par lot, partant de `dev` et y revenant par revue, aucune supprimée après fusion |
+| `02-depot.png` | La page d'accueil du dépôt |
+| `03-historique.png` | Les commits de `dev`, par petites touches |
+| `04-revues.png` | Les pull requests, toutes relues avant fusion |
+| `05-integration-continue.png` | Les exécutions de la CI : lint, tests, build Docker |
+| `06-backlog.png` | Les tickets, avec jalons et étiquettes |
+| `07-tableau.png` | Le tableau de suivi, ticket par ticket et sprint par sprint |
+| `08-documentation.png` | Le wiki, miroir de `docs/` |
 
 ## Deux détails de fabrication
 
