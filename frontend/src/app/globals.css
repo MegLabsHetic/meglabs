@@ -3,69 +3,52 @@
 /*
  * Système visuel de MegLabs.
  *
- * Parti pris : un thème sombre unique, assumé, plutôt qu'un clair et un sombre
- * moyens. L'interface est un poste de pilotage — les données brillent, le châssis
- * s'efface.
+ * Registre : calme et éditorial. Beaucoup d'air, une seule teinte d'accent, des
+ * traits fins. Le contraire du tableau de bord clignotant — ici c'est le contenu
+ * qui porte, le châssis se tait.
  *
- * Toutes les valeurs ci-dessous sont mesurées, pas choisies à l'œil :
- *   texte    ink-1 16.8:1 · ink-2 10.1:1 · ink-3 7.2:1 · ink-muted 5.3:1  (seuil AA 4.5)
- *   marques  accent 7.3:1 · bon 9.8:1 · attention 11.3:1 · faible 6.8:1   (seuil 3.0)
- *
- * Le dégradé cyan → violet est DÉCORATIF et ne porte jamais de sens : mesuré, cyan
- * et bleu ne sont séparés que de ΔE 6.7 en vision normale — personne ne les
- * distingue côte à côte. Les données gardent donc une seule teinte.
+ * Toutes les valeurs sont mesurées, jamais choisies à l'œil :
+ *   texte    ink-1 16.2:1 · ink-2 11.1:1 · ink-3 7.3:1 · ink-muted 5.2:1  (AA = 4.5)
+ *   marques  accent 7.8:1 · bon 10.1 · attention 10.5 · sérieux 7.8 · faible 6.4  (seuil 3.0)
  */
 
 :root {
   color-scheme: dark;
 
-  /* Surfaces, du plus profond au plus proche */
-  --fond: #070b16;
-  --panneau: #0b1120;
-  --eleve: #101828;
-  --voile: rgba(255, 255, 255, 0.04);
+  --fond: #0a1211;
+  --panneau: #101b1a;
+  --eleve: #162422;
+  --voile: rgba(255, 255, 255, 0.035);
 
-  /* Encres */
-  --ink-1: #eef2ff;
-  --ink-2: #b4bed9;
-  --ink-3: #95a0bf;
-  --ink-muted: #7d88a8;
+  --ink-1: #f2f6f5;
+  --ink-2: #c3d0cd;
+  --ink-3: #9aaba8;
+  --ink-muted: #7d8f8c;
 
-  /* Accent : un seul pour les données */
-  --accent: #5eb3f6;
-  --accent-donnees: #4aa8f0;
-  --accent-piste: #1c3557;
+  --accent: #3fbfae;
+  --accent-clair: #5fd6c6;
+  --accent-piste: #1d3a37;
 
-  /* États — jamais seuls, toujours doublés d'une icône et d'un libellé */
-  --etat-bon: #34d399;
+  --etat-bon: #4ade80;
   --etat-attention: #fbbf24;
   --etat-serieux: #fb923c;
   --etat-faible: #f87171;
 
-  /* Décor : ces deux teintes ne codent aucune donnée */
-  --deco-a: #22d3ee;
-  --deco-b: #a78bfa;
+  --filet: rgba(154, 171, 168, 0.16);
+  --filet-fort: rgba(154, 171, 168, 0.3);
 
-  /* Traits */
-  --filet: rgba(148, 163, 214, 0.14);
-  --filet-fort: rgba(148, 163, 214, 0.26);
+  --ombre-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --ombre-2: 0 10px 30px -12px rgba(0, 0, 0, 0.65);
+  --lueur: 0 0 32px -10px color-mix(in oklab, var(--accent) 65%, transparent);
 
-  /* Profondeur */
-  --ombre-1: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --ombre-2: 0 8px 24px -8px rgba(0, 0, 0, 0.7);
-  --ombre-3: 0 24px 60px -20px rgba(0, 0, 0, 0.85);
-  --lueur: 0 0 24px -4px color-mix(in oklab, var(--accent) 45%, transparent);
-
-  /* Rayons */
   --r-sm: 8px;
   --r-md: 12px;
   --r-lg: 16px;
-  --r-xl: 22px;
+  --r-xl: 24px;
 
-  /* Mouvement — une seule source, pour que tout batte au même rythme */
   --duree-courte: 140ms;
-  --duree: 260ms;
-  --duree-longue: 620ms;
+  --duree: 280ms;
+  --duree-longue: 700ms;
   --sortie: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -75,6 +58,13 @@
 
 html {
   background: var(--fond);
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -86,16 +76,15 @@ body {
   min-height: 100dvh;
 }
 
-/* Le clavier doit être un citoyen de première classe : sans anneau visible,
-   l'interface est inutilisable sans souris. */
+/* Sans anneau visible, l'interface est inutilisable au clavier. */
 :focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
   border-radius: 4px;
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--accent) 35%, transparent);
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
   color: var(--ink-1);
 }
 
@@ -111,52 +100,54 @@ body {
   border-radius: 999px;
   border: 3px solid var(--fond);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: color-mix(in oklab, var(--accent) 50%, var(--filet-fort));
-}
 
 /* --- Pièces réutilisables ------------------------------------------------ */
 
-/* Panneau de verre : un fond translucide, un filet lumineux en haut qui simule
-   une arête éclairée par le dessus. C'est ce liseré qui donne l'épaisseur. */
-.verre {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--eleve) 92%, transparent),
-    color-mix(in oklab, var(--panneau) 96%, transparent)
-  );
+.panneau {
+  background: var(--panneau);
+  border: 1px solid var(--filet);
+  border-radius: var(--r-lg);
+}
+
+.panneau-doux {
+  background: linear-gradient(180deg, var(--eleve), var(--panneau));
   border: 1px solid var(--filet);
   border-radius: var(--r-lg);
   box-shadow: var(--ombre-2);
-  backdrop-filter: blur(12px);
 }
 
-.verre::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 1px;
-  border-radius: var(--r-lg) var(--r-lg) 0 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    color-mix(in oklab, var(--accent) 55%, transparent),
-    transparent
-  );
-  opacity: 0.7;
-  pointer-events: none;
+.titre-serre {
+  letter-spacing: -0.025em;
+  line-height: 1.05;
 }
 
-.texte-degrade {
-  background: linear-gradient(100deg, var(--ink-1) 10%, var(--deco-a) 55%, var(--deco-b) 95%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.accent-souligne {
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-clair));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  padding-bottom: 2px;
 }
 
 .chiffres-alignes {
   font-variant-numeric: tabular-nums;
+}
+
+/* --- Révélation au défilement --------------------------------------------- */
+
+/* L'état de départ est porté par le CSS et non par React : l'élément ne clignote
+   donc pas avant que le script ne prenne la main. */
+[data-revele="attente"] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+[data-revele="visible"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--duree-longue) var(--sortie),
+    transform var(--duree-longue) var(--sortie);
 }
 
 /* --- Mouvement ------------------------------------------------------------ */
@@ -176,8 +167,6 @@ body {
   animation: apparition var(--duree-longue) var(--sortie) both;
 }
 
-/* Les enfants entrent l'un après l'autre : le regard suit la construction de
-   l'écran au lieu de recevoir tout d'un bloc. */
 .cascade > * {
   animation: apparition var(--duree-longue) var(--sortie) both;
 }
@@ -193,13 +182,11 @@ body {
   to { background-position: 200% 0; }
 }
 
-/* Squelette de chargement : dit « ça arrive et voilà la forme », là où un texte
-   « chargement… » ne dit que « attends ». */
 .squelette {
   background: linear-gradient(
     90deg,
     var(--voile) 25%,
-    color-mix(in oklab, var(--accent) 12%, var(--voile)) 50%,
+    color-mix(in oklab, var(--accent) 10%, var(--voile)) 50%,
     var(--voile) 75%
   );
   background-size: 200% 100%;
@@ -208,12 +195,12 @@ body {
 }
 
 @keyframes pulsation {
-  0%, 100% { opacity: 0.55; }
+  0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
 }
 
 .pulse {
-  animation: pulsation 1.8s ease-in-out infinite;
+  animation: pulsation 2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -223,5 +210,9 @@ body {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+  [data-revele="attente"] {
+    opacity: 1;
+    transform: none;
   }
 }
