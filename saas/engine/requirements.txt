@@ -1,0 +1,25 @@
+fastapi>=0.115
+uvicorn[standard]>=0.32
+pydantic>=2.9
+python-multipart>=0.0.12
+# pandas est epingle sous 3.0 : le code des agents est valide sur la ligne 2.2.
+# pandas 3.0 change le comportement de detection de dates (regression silencieuse).
+# Migration vers pandas 3 a faire de facon deliberee, avec re-test des agents.
+pandas>=2.2,<3.0
+numpy>=1.26,<2.3
+scikit-learn>=1.5,<2.0
+anthropic>=0.78
+# Entrepot analytique : un fichier .duckdb par projet (volume warehouse).
+duckdb>=1.1,<2.0
+# Rapports PDF : graphiques (matplotlib) + mise en page (reportlab).
+# L'arabe s'ecrit de droite a gauche et ses lettres changent de forme selon
+# leur position : sans reshaper + bidi, le texte sort a l'envers et desolidarise.
+matplotlib>=3.9,<4.0
+reportlab>=4.2,<5.0
+arabic-reshaper>=3.0
+python-bidi>=0.4.2
+chardet>=5.2
+openpyxl>=3.1
+xlrd>=2.0
+plotly>=5.24
+folium>=0.18

@@ -1,0 +1,229 @@
+<title>DataVox — Schéma visuel</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f7f9fc;
+    --bg-grad: radial-gradient(1100px 500px at 85% -8%, rgba(109,92,240,.10), transparent 60%),
+               radial-gradient(900px 460px at -5% 8%, rgba(13,89,242,.10), transparent 55%);
+    --surface: #ffffff;
+    --ink: #0b1220;
+    --muted: #5a6577;
+    --line: #e4e9f2;
+    --primary: #0d59f2;
+    --primary-2: #6d5cf0;
+    --paper: #ffffff;         /* fond des figures (toujours clair) */
+    --paper-line: #e7ecf5;
+    --chip: #eef3fe;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      --bg: #0b0f19;
+      --bg-grad: radial-gradient(1100px 520px at 85% -10%, rgba(109,92,240,.16), transparent 60%),
+                 radial-gradient(900px 480px at -5% 6%, rgba(13,89,242,.14), transparent 55%);
+      --surface: #121826;
+      --ink: #e9eef7;
+      --muted: #9aa6b8;
+      --line: #1f2838;
+      --chip: #17233c;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b0f19;
+    --bg-grad: radial-gradient(1100px 520px at 85% -10%, rgba(109,92,240,.16), transparent 60%),
+               radial-gradient(900px 480px at -5% 6%, rgba(13,89,242,.14), transparent 55%);
+    --surface: #121826;
+    --ink: #e9eef7;
+    --muted: #9aa6b8;
+    --line: #1f2838;
+    --chip: #17233c;
+  }
+  :root[data-theme="light"] {
+    --bg: #f7f9fc; --surface: #ffffff; --ink: #0b1220; --muted: #5a6577; --line: #e4e9f2; --chip: #eef3fe;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  .wrap {
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--bg-grad), var(--bg);
+    min-height: 100vh;
+    padding: clamp(1.5rem, 4vw, 3.5rem) 1.25rem 4rem;
+  }
+  .col { max-width: 960px; margin: 0 auto; }
+
+  header { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.6rem; }
+  .mark {
+    width: 42px; height: 42px; border-radius: 12px; flex: none;
+    background: linear-gradient(135deg, var(--primary), var(--primary-2));
+    display: grid; place-items: center; color: #fff; font-size: 22px;
+    box-shadow: 0 6px 20px -8px rgba(13,89,242,.7);
+  }
+  .brand { font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+  .brand small { display: block; font-weight: 500; color: var(--muted); font-size: .78rem; letter-spacing: .02em; }
+
+  h1 {
+    font-size: clamp(1.6rem, 3.6vw, 2.3rem); font-weight: 800; letter-spacing: -.025em;
+    text-wrap: balance; margin: .2rem 0 .5rem;
+  }
+  .sub { color: var(--muted); font-size: 1.02rem; max-width: 60ch; margin: 0 0 1.6rem; }
+
+  .callout {
+    display: flex; gap: .75rem; align-items: flex-start;
+    background: var(--surface); border: 1px solid var(--line);
+    border-left: 3px solid var(--primary);
+    border-radius: 14px; padding: 1rem 1.15rem; margin-bottom: 2rem;
+    box-shadow: 0 12px 30px -24px rgba(0,0,0,.6);
+  }
+  .callout .k { font-size: 1.2rem; line-height: 1.2; }
+  .callout p { margin: 0; font-size: .95rem; }
+  .callout b { color: var(--primary); }
+  .callout code { font-family: var(--mono); font-size: .85em; background: var(--chip); padding: .05rem .35rem; border-radius: 5px; }
+
+  figure {
+    margin: 0 0 1.5rem; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    box-shadow: 0 20px 50px -34px rgba(0,0,0,.65);
+  }
+  figcaption { padding: 1.15rem 1.35rem .4rem; }
+  .eyebrow {
+    display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--primary);
+    background: var(--chip); padding: .25rem .6rem; border-radius: 999px;
+  }
+  figcaption h2 { margin: .55rem 0 .1rem; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
+  figcaption p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+  /* Les figures sont posées sur un "papier" clair dans les deux thèmes -> lisibilité garantie */
+  .paper {
+    margin: .9rem 1.35rem 1.35rem; background: var(--paper);
+    border: 1px solid var(--paper-line); border-radius: 12px;
+    padding: 1rem; overflow-x: auto;
+  }
+  .mermaid { display: flex; justify-content: center; min-width: min-content; }
+  .mermaid svg { max-width: 100%; height: auto; }
+
+  footer { color: var(--muted); font-size: .82rem; text-align: center; margin-top: 2rem; line-height: 1.7; }
+  footer .stack { font-family: var(--mono); font-size: .78rem; }
+</style>
+
+<div class="wrap">
+  <div class="col">
+    <header>
+      <div class="mark">📊</div>
+      <div class="brand">DataVox<small>Analyse de données par IA</small></div>
+    </header>
+
+    <h1>Architecture &amp; flux : d'un dataset à un tableau de bord</h1>
+    <p class="sub">Comment la plateforme est construite (3 tiers) et le chemin technique
+      qui transforme un simple fichier CSV en indicateurs, graphiques et réponses conversationnelles.</p>
+
+    <div class="callout">
+      <span class="k">💡</span>
+      <p><b>Le principe clé :</b> l'IA (Claude) ne renvoie jamais un chiffre — elle renvoie une
+        <b>spécification</b> (ex. <code>{ sum, revenue, group_by: country }</code>) que
+        <b>pandas exécute</b> sur les vraies données. Résultat : <b>aucun chiffre halluciné</b>.</p>
+    </div>
+
+    <figure>
+      <figcaption>
+        <span class="eyebrow">Architecture</span>
+        <h2>Trois tiers, un rôle chacun</h2>
+        <p>Rust porte la couche SaaS (sécurité, robustesse) ; Python garde l'intelligence data déjà vérifiée.</p>
+      </figcaption>
+      <div class="paper">
+        <pre class="mermaid">
+flowchart LR
+    U(["👤 Utilisateur"]):::user --> W["🖥️ web&lt;br/&gt;Next.js + Tailwind"]:::web
+    W -->|HTTP / JSON| A["⚙️ api&lt;br/&gt;Rust · axum"]:::api
+    A -->|HTTP / JSON| E["🧠 engine&lt;br/&gt;Python · pandas + Claude"]:::engine
+    A -->|SQL| DB[("🗄️ PostgreSQL")]:::db
+    E -.->|résultat| A
+    A -.->|résultat| W
+    classDef user fill:#e9eefb,stroke:#0d59f2,color:#0b1220;
+    classDef web fill:#dbeafe,stroke:#2563eb,color:#0b1220;
+    classDef api fill:#e2e0ff,stroke:#6d5cf0,color:#0b1220;
+    classDef engine fill:#dcfce7,stroke:#199e70,color:#0b1220;
+    classDef db fill:#eef2f7,stroke:#64748b,color:#0b1220;
+        </pre>
+      </div>
+    </figure>
+
+    <figure>
+      <figcaption>
+        <span class="eyebrow">Flux</span>
+        <h2>Du dataset au tableau de bord</h2>
+        <p>Import asynchrone via une file de jobs, profilage pandas, puis analyse « l'IA propose, le code calcule ».</p>
+      </figcaption>
+      <div class="paper">
+        <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    participant U as 👤 Utilisateur
+    participant W as 🖥️ web
+    participant A as ⚙️ api (Rust)
+    participant J as 📥 File de jobs
+    participant E as 🧠 engine (Python)
+    participant DB as 🗄️ PostgreSQL
+
+    rect rgb(233, 240, 255)
+    Note over U,DB: 1 — Import &amp; profilage (asynchrone)
+    U->>W: Importe un fichier CSV
+    W->>A: POST /datasets { csv_text }
+    A->>DB: enregistre dataset + job "profile"
+    A-->>W: 202 Accepted (job_id)
+    J->>A: le worker réclame le job (SKIP LOCKED)
+    A->>E: POST /profile
+    E->>E: pandas → types, mesures, dates, anomalies
+    E-->>A: profil (JSON)
+    A->>DB: stocke le profil
+    end
+
+    rect rgb(231, 247, 238)
+    Note over U,DB: 2 — Analyse conversationnelle
+    U->>W: « CA total par pays ? »
+    W->>A: POST /chat
+    A->>E: message + profil
+    E->>E: Claude → spec { sum, revenue, group_by: country }
+    E->>E: pandas exécute la spec
+    E-->>A: réponse + données du graphique
+    A-->>W: bulle + graphique inline (Recharts)
+    end
+        </pre>
+      </div>
+    </figure>
+
+    <figure>
+      <figcaption>
+        <span class="eyebrow">Détail du calcul</span>
+        <h2>Comment une « spec » devient un graphique</h2>
+        <p>La forme de la spec détermine le type de visualisation, calculée en pandas.</p>
+      </figcaption>
+      <div class="paper">
+        <pre class="mermaid">
+flowchart TD
+    Q["❓ Question&lt;br/&gt;« CA par pays ? »"]:::q --> C{{"🧠 Claude&lt;br/&gt;génère une SPEC"}}:::ai
+    C --> S["📋 spec&lt;br/&gt;operation: sum&lt;br/&gt;colonne: revenue&lt;br/&gt;group_by: country"]:::spec
+    S --> P["🐼 pandas exécute&lt;br/&gt;df.groupby('country')['revenue'].sum()"]:::calc
+    P --> R{"Forme du résultat ?"}:::branch
+    R -->|group_by| BAR["📊 Barres (répartition)"]:::out
+    R -->|date_col| LINE["📈 Courbe (évolution)"]:::out
+    R -->|valeur seule| TILE["🔢 Tuile KPI"]:::out
+    classDef q fill:#eef2ff,stroke:#6d5cf0,color:#0b1220;
+    classDef ai fill:#e2e0ff,stroke:#6d5cf0,color:#0b1220;
+    classDef spec fill:#fff4e6,stroke:#d97706,color:#0b1220;
+    classDef calc fill:#dcfce7,stroke:#199e70,color:#0b1220;
+    classDef branch fill:#eef2f7,stroke:#64748b,color:#0b1220;
+    classDef out fill:#dbeafe,stroke:#2563eb,color:#0b1220;
+        </pre>
+      </div>
+    </figure>
+
+    <footer>
+      <div>web · Next.js / React &nbsp;—&nbsp; api · Rust / axum &nbsp;—&nbsp; engine · Python / pandas + Claude &nbsp;—&nbsp; PostgreSQL</div>
+      <div class="stack">DataVox — plateforme d'analyse de données par IA</div>
+    </footer>
+  </div>
+</div>

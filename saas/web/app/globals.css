@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Classes réutilisées par DashboardView (compat) */
+@layer components {
+  .card {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 mb-4 shadow-sm;
+  }
+  .stat {
+    @apply bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 rounded-xl p-4;
+  }
+  .stat b {
+    @apply block text-2xl font-bold tracking-tight;
+  }
+  .stat .lbl {
+    @apply text-slate-500 dark:text-slate-400 text-xs mt-1;
+  }
+  .chartcard {
+    @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4;
+  }
+  .btn {
+    @apply bg-primary text-white rounded-lg px-4 py-2 text-sm font-bold hover:brightness-110 transition disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .muted {
+    @apply text-slate-500 dark:text-slate-400 text-sm;
+  }
+  .tag {
+    @apply inline-block bg-primary/10 text-primary rounded-full px-3 py-1 text-xs font-semibold;
+  }
+  .err {
+    @apply text-red-500 text-sm;
+  }
+  .grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .chip {
+    @apply inline-block px-3 py-1 rounded-full border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 text-xs cursor-pointer m-0.5 transition-colors;
+  }
+  .chip.on {
+    @apply bg-primary/15 border-primary text-primary;
+  }
+  .spinner {
+    @apply inline-block w-3.5 h-3.5 rounded-full animate-spin align-middle mr-1;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Page d'accueil — animations.
+
+   Tout est en CSS (aucune librairie) et tout se désactive sous
+   `prefers-reduced-motion` : une page vitrine ne doit pas rendre
+   malade quelqu'un qui a demandé moins de mouvement.
+   ────────────────────────────────────────────────────────────── */
+@keyframes lp-float {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -14px, 0); }
+}
+@keyframes lp-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  33%  { transform: translate3d(3%, -4%, 0) scale(1.08); }
+  66%  { transform: translate3d(-3%, 3%, 0) scale(0.96); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes lp-sheen {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes lp-grow {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes lp-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes lp-caret {
+  0%, 45%   { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes lp-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.lp-float  { animation: lp-float 7s ease-in-out infinite; }
+.lp-drift  { animation: lp-drift 24s ease-in-out infinite; }
+.lp-caret  { animation: lp-caret 1.1s step-end infinite; }
+.lp-marquee { animation: lp-marquee 38s linear infinite; }
+
+/* Bandeau de dégradé animé sur du texte */
+.lp-sheen {
+  background-size: 200% auto;
+  animation: lp-sheen 6s linear infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Barres du graphique de la maquette : poussent depuis la ligne de base */
+.lp-bar {
+  transform-origin: bottom;
+  animation: lp-grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Courbe qui se trace */
+.lp-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: lp-draw 2.4s cubic-bezier(0.22, 1, 0.36, 1) 400ms forwards;
+}
+
+/* Apparition au défilement — l'état initial est posé ici, la classe
+   `is-in` est ajoutée par l'observateur d'intersection. */
+.lp-reveal {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lp-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Carte qui s'incline légèrement sous le curseur */
+.lp-tilt {
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lp-tilt:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px -20px rgba(13, 89, 242, 0.45);
+}
+
+/* Liseré lumineux au survol, sans bordure qui saute au chargement */
+.lp-glow {
+  position: relative;
+  isolation: isolate;
+}
+.lp-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(13, 89, 242, 0.9), rgba(13, 89, 242, 0) 45%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  z-index: -1;
+}
+.lp-glow:hover::before { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-float, .lp-drift, .lp-caret, .lp-marquee, .lp-sheen,
+  .lp-bar, .lp-line {
+    animation: none !important;
+  }
+  .lp-line { stroke-dashoffset: 0; }
+  .lp-sheen { color: inherit; }
+  .lp-reveal { opacity: 1; transform: none; transition: none; }
+  .lp-tilt:hover { transform: none; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Suivi des traitements — l'étape en cours doit se voir.
+
+   Trois signaux seulement : la pastille qui bat, les points de suite,
+   la coche qui apparaît. Tout s'arrête sous `prefers-reduced-motion`,
+   où seule la couleur distingue alors les états.
+   ────────────────────────────────────────────────────────────── */
+@keyframes pg-pulse {
+  0%, 100% { transform: scale(1);   opacity: 1; }
+  50%      { transform: scale(1.6); opacity: 0.55; }
+}
+@keyframes pg-pop {
+  from { transform: scale(0.4); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+@keyframes pg-points {
+  0%   { content: ""; }
+  25%  { content: "."; }
+  50%  { content: ".."; }
+  75%  { content: "..."; }
+  100% { content: ""; }
+}
+
+.pg-pulse { animation: pg-pulse 1.4s ease-in-out infinite; }
+.pg-pop   { animation: pg-pop 320ms cubic-bezier(0.22, 1, 0.36, 1) both; display: inline-block; }
+.pg-points::after {
+  content: "";
+  animation: pg-points 1.6s steps(1, end) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-pulse, .pg-pop { animation: none !important; }
+  .pg-points::after { animation: none; content: "…"; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   Thème des graphiques — palette catégorielle validée.
+
+   L'ORDRE DES SLOTS EST LE MÉCANISME DE SÛRETÉ DALTONISME :
+   ne jamais le réordonner, ne jamais générer une 9e couleur.
+   Les deux modes sont *choisis* (pas un inversement automatique) et
+   validés contre les surfaces réelles de l'app :
+     clair  (#ffffff)  : tous les tests passent — 3 slots sous 3:1
+                         (aqua/jaune/magenta) => la vue tableau jumelle
+                         de chaque graphique sert de relief obligatoire.
+     sombre (#0f172a)  : tous les tests passent, pire paire DCV ΔE 8.4.
+   Mêmes teintes que utils/viz_theme.py côté Python : les graphiques
+   Plotly du prototype et Recharts du SaaS restent cohérents.
+   ────────────────────────────────────────────────────────────── */
+.viz-root {
+  color-scheme: light;
+  --viz-surface: #ffffff;
+  --viz-ink: #0f172a;
+  --viz-ink-secondary: #475569;
+  --viz-ink-muted: #64748b;
+  --viz-grid: #e2e8f0;
+  --viz-axis: #cbd5e1;
+  --viz-tooltip-bg: #ffffff;
+  --viz-tooltip-ring: rgba(15, 23, 42, 0.12);
+
+  --viz-series-1: #2a78d6; /* bleu    */
+  --viz-series-2: #eb6834; /* orange  */
+  --viz-series-3: #1baf7a; /* aqua    */
+  --viz-series-4: #eda100; /* jaune   */
+  --viz-series-5: #e87ba4; /* magenta */
+  --viz-series-6: #008300; /* vert    */
+  --viz-series-7: #4a3aa7; /* violet  */
+  --viz-series-8: #e34948; /* rouge   */
+}
+
+.dark .viz-root {
+  color-scheme: dark;
+  --viz-surface: #0f172a;
+  --viz-ink: #f1f5f9;
+  --viz-ink-secondary: #cbd5e1;
+  --viz-ink-muted: #94a3b8;
+  --viz-grid: #1e293b;
+  --viz-axis: #334155;
+  --viz-tooltip-bg: #0b1120;
+  --viz-tooltip-ring: rgba(255, 255, 255, 0.12);
+
+  /* Mêmes huit teintes, pas de luminosité choisis pour la surface sombre */
+  --viz-series-1: #3987e5;
+  --viz-series-2: #d95926;
+  --viz-series-3: #199e70;
+  --viz-series-4: #c98500;
+  --viz-series-5: #d55181;
+  --viz-series-6: #008300;
+  --viz-series-7: #9085e9;
+  --viz-series-8: #e66767;
+}

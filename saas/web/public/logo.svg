@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 116" width="440" height="116" role="img" aria-label="DataVox — Natural Language Data Analysis">
+  <!--
+    DataVox — verrou complet, version de reference (fond sombre).
+
+    Le fond fait PARTIE du fichier : sans lui, « Data » en blanc disparait des
+    qu'on pose le logo sur une surface claire. Pour une surface claire, voir
+    logo-sur-fond-clair.svg.
+
+    Le nom est ecrit en <text> : le fichier reste leger et le texte
+    selectionnable. Si la police Inter n'est pas disponible la ou le logo est
+    affiche, le rendu bascule sur la police systeme — vectoriser le texte
+    avant diffusion a un tiers.
+  -->
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="440" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1b30"/>
+      <stop offset="1" stop-color="#050a14"/>
+    </linearGradient>
+    <linearGradient id="anneau" x1="20" y1="18" x2="80" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6db2ff"/>
+      <stop offset="0.55" stop-color="#2f7ce0"/>
+      <stop offset="1" stop-color="#1550ad"/>
+    </linearGradient>
+    <linearGradient id="onde" x1="24" y1="46" x2="76" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63e2ff"/>
+      <stop offset="0.5" stop-color="#a8f0ff"/>
+      <stop offset="1" stop-color="#63e2ff"/>
+    </linearGradient>
+    <filter id="halo" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="1.8" result="flou"/>
+      <feMerge>
+        <feMergeNode in="flou"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="440" height="116" rx="18" fill="url(#fond)"/>
+
+  <g transform="translate(20, 16) scale(1.15)">
+    <circle cx="32" cy="29" r="20" fill="#0b1729"/>
+    <path d="M23.5 44.5C21 51 17.5 55.5 13 58.5C19.5 56 26 52.5 31 48.5Z" fill="url(#anneau)"/>
+    <circle cx="32" cy="29" r="20" stroke="url(#anneau)" stroke-width="4.2" fill="none"/>
+
+    <g fill="#6db2ff" opacity="0.45">
+      <rect x="20.5" y="27" width="3.4" height="12" rx="1.5"/>
+      <rect x="26" y="20" width="3.4" height="19" rx="1.5"/>
+      <rect x="31.5" y="16" width="3.4" height="23" rx="1.5"/>
+      <rect x="37" y="23" width="3.4" height="16" rx="1.5"/>
+      <rect x="42.5" y="18.5" width="3.4" height="20.5" rx="1.5"/>
+    </g>
+
+    <path d="M15 29.5H20.5L23.5 21.5L26.5 37.5L29.5 15L33 42L36.5 22L39.5 32L42 27.5L44.5 29.5H49"
+          stroke="url(#onde)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"
+          fill="none" filter="url(#halo)"/>
+  </g>
+
+  <text x="130" y="63" font-family="Inter, 'Segoe UI', system-ui, sans-serif"
+        font-size="42" font-weight="800" letter-spacing="-1">
+    <tspan fill="#ffffff">Data</tspan><tspan fill="#3b82f6">Vox</tspan>
+  </text>
+  <text x="132" y="86" font-family="Inter, 'Segoe UI', system-ui, sans-serif"
+        font-size="13.5" font-weight="400" letter-spacing="0.3" fill="#94a3b8">
+    Natural Language Data Analysis
+  </text>
+</svg>

@@ -1,0 +1,95 @@
+name: dataanalyst-saas
+
+# Stack SaaS 3 tiers :
+#   web (Next.js) ──HTTP──▶ api (Rust/axum) ──HTTP──▶ engine (Python/FastAPI)
+#                                  │
+#                                  └──▶ db (Postgres)
+#
+# Lancement : cp .env.example .env  puis  docker compose up --build
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: dataanalyst
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev_password}
+      POSTGRES_DB: dataanalyst
+    # Pas de port hote publie : l'API accede a Postgres via le reseau Docker (db:5432).
+    # Pour un acces client depuis l'hote, decommentez en choisissant un port libre.
+    # ports:
+    #   - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dataanalyst"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  engine:
+    build:
+      # Contexte = racine du projet pour réutiliser agents/ et utils/ existants
+      context: ..
+      dockerfile: saas/engine/Dockerfile
+    environment:
+      ENGINE_ALLOW_ORIGINS: "*"
+      # Entrepot analytique : un fichier DuckDB par projet
+      WAREHOUSE_DIR: /warehouse
+    volumes:
+      - warehouse:/warehouse
+    ports:
+      - "8000:8000"
+
+  api:
+    build:
+      context: ./api
+    environment:
+      BIND_ADDR: 0.0.0.0:8080
+      DATABASE_URL: postgres://dataanalyst:${POSTGRES_PASSWORD:-dev_password}@db:5432/dataanalyst
+      ENGINE_URL: http://engine:8000
+      AUTH_MODE: ${AUTH_MODE:-local}
+      AUTH_SECRET: ${AUTH_SECRET:-}
+      SUPABASE_JWT_SECRET: ${SUPABASE_JWT_SECRET:-}
+      # Palier des nouveaux comptes. Une instance personnelle n'a pas a
+      # brider son proprietaire : "enterprise" leve tous les quotas.
+      DEFAULT_TIER: ${DEFAULT_TIER:-free}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ALLOWED_ORIGIN: ${ALLOWED_ORIGIN:-http://localhost:3000}
+      RUST_LOG: ${RUST_LOG:-info,api=debug}
+    depends_on:
+      db:
+        condition: service_healthy
+      engine:
+        condition: service_started
+    ports:
+      # Nombreux ports occupes par d'autres projets -> 8090 cote hote
+      - "8090:8080"
+
+  web:
+    build:
+      context: ./web
+      # Next.js inline les NEXT_PUBLIC_* dans le bundle AU MOMENT DU BUILD :
+      # elles doivent donc etre des arguments de build, pas des variables
+      # d'execution.
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8090}
+        # Vide par defaut : avec AUTH_MODE=local, l'api rejette l'en-tete de
+        # developpement. Le renseigner ferait croire a l'interface qu'une
+        # session est ouverte, et chaque appel repartirait en 401.
+        # A definir UNIQUEMENT en meme temps que AUTH_MODE=dev.
+        NEXT_PUBLIC_DEV_USER_ID: ${NEXT_PUBLIC_DEV_USER_ID:-}
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL:-}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY:-}
+    depends_on:
+      - api
+    # Volontairement PAS de montage des sources : sous Docker/Windows chaque
+    # lecture de fichier traverse la frontiere WSL, et Next.js en lit des
+    # milliers — l'interface devient poussive. Le code est copie dans l'image ;
+    # une modification demande `docker compose build web`.
+    ports:
+      # 3000 occupe cote hote -> expose sur 3001
+      - "3001:3000"
+
+volumes:
+  pgdata:
+  warehouse:

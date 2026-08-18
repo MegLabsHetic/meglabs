@@ -1,40 +1,16 @@
-# Secrets — never commit
+# Secrets — ne jamais versionner
 .env
-.env.*
-!.env.example
-*.pem
-*.key
 
 # Python
 __pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
-venv/
-.pytest_cache/
-.ruff_cache/
-.mypy_cache/
-htmlcov/
-.coverage
+*.pyc
 
-# Node / Next.js
-node_modules/
-.next/
-out/
-.turbo/
-*.tsbuildinfo
-next-env.d.ts
-npm-debug.log*
+# Donnees locales
+data/uploads/
+data/exports/
+data/*.db
+*.log
 
-# Application data
-*.db
-*.sqlite3
-backend/storage/
-backend/data/uploads/
 
-# OS / editors
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/*
-!.vscode/extensions.json
+# Sorties de build
+saas/web/tsconfig.tsbuildinfo
