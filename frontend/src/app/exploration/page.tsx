@@ -91,7 +91,7 @@ export default function Exploration() {
         <h1 className="text-2xl font-semibold tracking-tight">Exploration</h1>
         <p className="mt-2" style={{ color: "var(--ink-2)" }}>
           Aucun fichier sélectionné.{" "}
-          <Link href="/" className="underline underline-offset-2">
+          <Link href="/donnees" className="underline underline-offset-2">
             Déposez-en un
           </Link>{" "}
           pour voir ce qu&apos;il contient.
@@ -106,7 +106,7 @@ export default function Exploration() {
     <main className="mx-auto max-w-5xl px-6 py-10">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
-          <h1 className="texte-degrade text-3xl font-semibold tracking-tight">{fichier.nom}</h1>
+          <h1 className="titre-serre text-3xl font-semibold tracking-tight">{fichier.nom}</h1>
           <p className="mt-1 text-sm" style={{ color: "var(--ink-2)" }}>
             {profil
               ? `${profil.nb_lignes.toLocaleString("fr-FR")} lignes · ${profil.nb_colonnes} colonnes`
@@ -114,7 +114,7 @@ export default function Exploration() {
           </p>
         </div>
         <Link
-          href="/"
+          href="/donnees"
           className="rounded-lg border px-3 py-1.5 text-sm"
           style={{ borderColor: "var(--filet)" }}
         >

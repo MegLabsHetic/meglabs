@@ -38,7 +38,7 @@ export function DetailColonne({
 
   return (
     <aside
-      className="apparait verre p-5"
+      className="apparait panneau-doux p-5"
       aria-label={`Détail de la colonne ${colonne.nom}`}
     >
       <div className="flex items-start justify-between gap-4">

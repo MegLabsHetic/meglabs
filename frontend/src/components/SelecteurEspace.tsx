@@ -33,7 +33,7 @@ export function SelecteurEspace() {
 
   return (
     <div
-      className="verre p-4"
+      className="panneau-doux p-4"
     >
       <h2 className="text-sm font-medium">Espace de travail</h2>
       <p className="mt-1 text-sm" style={{ color: "var(--ink-2)" }}>

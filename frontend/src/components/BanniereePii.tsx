@@ -26,7 +26,7 @@ export function BanniereePii({
   if (statut === "aucune") {
     return (
       <div
-        className="flex items-start gap-3 verre p-4"
+        className="flex items-start gap-3 panneau-doux p-4"
       >
         <span aria-hidden className="pt-0.5" style={{ color: "var(--etat-bon)" }}>
           ●
@@ -44,7 +44,7 @@ export function BanniereePii({
   if (statut === "masquee") {
     return (
       <div
-        className="verre p-4"
+        className="panneau-doux p-4"
       >
         <div className="flex items-start gap-3">
           <span aria-hidden className="pt-0.5" style={{ color: "var(--etat-bon)" }}>

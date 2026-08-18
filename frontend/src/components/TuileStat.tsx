@@ -81,7 +81,7 @@ export function TuileStat({
       ref={carte}
       onMouseMove={incliner}
       onMouseLeave={redresser}
-      className="verre px-4 py-3.5 transition-transform duration-200 will-change-transform"
+      className="panneau-doux px-4 py-3.5 transition-transform duration-200 will-change-transform"
     >
       <div className="text-[12px] uppercase tracking-wider" style={{ color: "var(--ink-muted)" }}>
         {libelle}

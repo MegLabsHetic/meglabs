@@ -1,4 +1,4 @@
-/** Panneau de verre. L'épaisseur vient du liseré lumineux, pas d'une bordure épaisse. */
+/** Surface de contenu : un fond, un filet, rien de plus. */
 export function Carte({
   children,
   className = "",
@@ -6,5 +6,5 @@ export function Carte({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <section className={`verre p-5 ${className}`}>{children}</section>;
+  return <section className={`panneau-doux p-5 ${className}`}>{children}</section>;
 }
