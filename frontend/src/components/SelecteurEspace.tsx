@@ -60,8 +60,8 @@ export function SelecteurEspace() {
           disabled={enCours || !nom.trim()}
           className="rounded-lg px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-50"
           style={{
-            background: "linear-gradient(135deg, var(--deco-a), var(--accent))",
-            color: "#04070f",
+            background: "var(--accent)",
+            color: "#04110f",
             boxShadow: "var(--lueur)",
           }}
         >
