@@ -28,6 +28,11 @@
   --accent: #3fbfae;
   --accent-clair: #5fd6c6;
   --accent-piste: #1d3a37;
+  /* Teinte des marques de données : barres, sélection, filtres. Distincte de
+     --accent par l'intention, pas encore par la valeur — l'étape Données est la
+     seule livrée. Les étapes suivantes pourront la décliner sans toucher aux
+     composants. */
+  --accent-donnees: var(--accent);
 
   --etat-bon: #4ade80;
   --etat-attention: #fbbf24;
