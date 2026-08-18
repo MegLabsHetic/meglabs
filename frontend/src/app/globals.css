@@ -1,79 +1,161 @@
 @import "tailwindcss";
 
 /*
- * Les couleurs de données viennent d'une palette validée : les valeurs d'état
- * (bon / à surveiller / faible) ne sont séparées que de ΔE 4.1 en deutéranopie —
- * la confusion rouge/vert classique. Elles ne portent donc JAMAIS le sens à elles
- * seules : chaque usage est accompagné d'une icône et d'un libellé.
+ * Système visuel de MegLabs.
+ *
+ * Registre : calme et éditorial. Beaucoup d'air, une seule teinte d'accent, des
+ * traits fins. Le contraire du tableau de bord clignotant — ici c'est le contenu
+ * qui porte, le châssis se tait.
+ *
+ * Toutes les valeurs sont mesurées, jamais choisies à l'œil :
+ *   texte    ink-1 16.2:1 · ink-2 11.1:1 · ink-3 7.3:1 · ink-muted 5.2:1  (AA = 4.5)
+ *   marques  accent 7.8:1 · bon 10.1 · attention 10.5 · sérieux 7.8 · faible 6.4  (seuil 3.0)
  */
+
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  --surface-1: #fcfcfb;
-  --plan: #f9f9f7;
-  --ink-1: #0b0b0b;
-  --ink-2: #52514e;
-  --ink-muted: #898781;
-  --hairline: #e1e0d9;
-  --bordure: rgba(11, 11, 11, 0.1);
+  --fond: #0a1211;
+  --panneau: #101b1a;
+  --eleve: #162422;
+  --voile: rgba(255, 255, 255, 0.035);
 
-  --etat-bon: #0ca30c;
-  --etat-attention: #fab219;
-  --etat-serieux: #ec835a;
-  --etat-faible: #d03b3b;
+  --ink-1: #f2f6f5;
+  --ink-2: #c3d0cd;
+  --ink-3: #9aaba8;
+  --ink-muted: #7d8f8c;
 
-  --mesure: #2a78d6;
-  --mesure-piste: #cde2fb;
+  --accent: #3fbfae;
+  --accent-clair: #5fd6c6;
+  --accent-piste: #1d3a37;
+
+  --etat-bon: #4ade80;
+  --etat-attention: #fbbf24;
+  --etat-serieux: #fb923c;
+  --etat-faible: #f87171;
+
+  --filet: rgba(154, 171, 168, 0.16);
+  --filet-fort: rgba(154, 171, 168, 0.3);
+
+  --ombre-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --ombre-2: 0 10px 30px -12px rgba(0, 0, 0, 0.65);
+  --lueur: 0 0 32px -10px color-mix(in oklab, var(--accent) 65%, transparent);
+
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 24px;
+
+  --duree-courte: 140ms;
+  --duree: 280ms;
+  --duree-longue: 700ms;
+  --sortie: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
+* {
+  border-color: var(--filet);
+}
 
-    --surface-1: #1a1a19;
-    --plan: #0d0d0d;
-    --ink-1: #ffffff;
-    --ink-2: #c3c2b7;
-    --ink-muted: #898781;
-    --hairline: #2c2c2a;
-    --bordure: rgba(255, 255, 255, 0.1);
+html {
+  background: var(--fond);
+  scroll-behavior: smooth;
+}
 
-    --mesure: #3987e5;
-    --mesure-piste: #184f95;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-
-  --surface-1: #1a1a19;
-  --plan: #0d0d0d;
-  --ink-1: #ffffff;
-  --ink-2: #c3c2b7;
-  --ink-muted: #898781;
-  --hairline: #2c2c2a;
-  --bordure: rgba(255, 255, 255, 0.1);
-
-  --mesure: #3987e5;
-  --mesure-piste: #184f95;
-}
-
 body {
-  background: var(--plan);
+  background: var(--fond);
   color: var(--ink-1);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
 }
 
-/* Les colonnes de chiffres doivent s'aligner ; les grands nombres isolés non. */
+/* Sans anneau visible, l'interface est inutilisable au clavier. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+  color: var(--ink-1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--filet-fort);
+  border-radius: 999px;
+  border: 3px solid var(--fond);
+}
+
+/* --- Pièces réutilisables ------------------------------------------------ */
+
+.panneau {
+  background: var(--panneau);
+  border: 1px solid var(--filet);
+  border-radius: var(--r-lg);
+}
+
+.panneau-doux {
+  background: linear-gradient(180deg, var(--eleve), var(--panneau));
+  border: 1px solid var(--filet);
+  border-radius: var(--r-lg);
+  box-shadow: var(--ombre-2);
+}
+
+.titre-serre {
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.accent-souligne {
+  background-image: linear-gradient(90deg, var(--accent), var(--accent-clair));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+}
+
 .chiffres-alignes {
   font-variant-numeric: tabular-nums;
 }
 
+/* --- Révélation au défilement --------------------------------------------- */
+
+/* L'état de départ est porté par le CSS et non par React : l'élément ne clignote
+   donc pas avant que le script ne prenne la main. */
+[data-revele="attente"] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+[data-revele="visible"] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--duree-longue) var(--sortie),
+    transform var(--duree-longue) var(--sortie);
+}
+
+/* --- Mouvement ------------------------------------------------------------ */
+
 @keyframes apparition {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -82,11 +164,55 @@ body {
 }
 
 .apparait {
-  animation: apparition 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: apparition var(--duree-longue) var(--sortie) both;
+}
+
+.cascade > * {
+  animation: apparition var(--duree-longue) var(--sortie) both;
+}
+.cascade > *:nth-child(1) { animation-delay: 40ms; }
+.cascade > *:nth-child(2) { animation-delay: 90ms; }
+.cascade > *:nth-child(3) { animation-delay: 140ms; }
+.cascade > *:nth-child(4) { animation-delay: 190ms; }
+.cascade > *:nth-child(5) { animation-delay: 240ms; }
+.cascade > *:nth-child(6) { animation-delay: 290ms; }
+
+@keyframes balayage {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+.squelette {
+  background: linear-gradient(
+    90deg,
+    var(--voile) 25%,
+    color-mix(in oklab, var(--accent) 10%, var(--voile)) 50%,
+    var(--voile) 75%
+  );
+  background-size: 200% 100%;
+  animation: balayage 1.6s linear infinite;
+  border-radius: var(--r-sm);
+}
+
+@keyframes pulsation {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.pulse {
+  animation: pulsation 2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .apparait {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  [data-revele="attente"] {
+    opacity: 1;
+    transform: none;
   }
 }

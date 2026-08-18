@@ -10,6 +10,7 @@ import { DetailColonne } from "@/components/DetailColonne";
 import { ListeFichiers } from "@/components/ListeFichiers";
 import { ScoreQualite } from "@/components/ScoreQualite";
 import { TableauColonnes } from "@/components/TableauColonnes";
+import { SqueletteProfil } from "@/components/Squelette";
 import { TuileStat } from "@/components/TuileStat";
 import { ErreurApi, api } from "@/lib/api";
 import { useAtelier } from "@/lib/atelier";
@@ -90,7 +91,7 @@ export default function Exploration() {
         <h1 className="text-2xl font-semibold tracking-tight">Exploration</h1>
         <p className="mt-2" style={{ color: "var(--ink-2)" }}>
           Aucun fichier sélectionné.{" "}
-          <Link href="/" className="underline underline-offset-2">
+          <Link href="/donnees" className="underline underline-offset-2">
             Déposez-en un
           </Link>{" "}
           pour voir ce qu&apos;il contient.
@@ -105,7 +106,7 @@ export default function Exploration() {
     <main className="mx-auto max-w-5xl px-6 py-10">
       <div className="flex flex-wrap items-baseline justify-between gap-3">
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">{fichier.nom}</h1>
+          <h1 className="titre-serre text-3xl font-semibold tracking-tight">{fichier.nom}</h1>
           <p className="mt-1 text-sm" style={{ color: "var(--ink-2)" }}>
             {profil
               ? `${profil.nb_lignes.toLocaleString("fr-FR")} lignes · ${profil.nb_colonnes} colonnes`
@@ -113,15 +114,15 @@ export default function Exploration() {
           </p>
         </div>
         <Link
-          href="/"
+          href="/donnees"
           className="rounded-lg border px-3 py-1.5 text-sm"
-          style={{ borderColor: "var(--bordure)" }}
+          style={{ borderColor: "var(--filet)" }}
         >
           Déposer un autre fichier
         </Link>
       </div>
 
-      <div className="mt-6 space-y-6">
+      <div className="cascade mt-6 space-y-6">
         {atelier.erreur && <Alerte message={atelier.erreur} />}
 
         {atelier.fichiers.length > 1 && (
@@ -148,26 +149,30 @@ export default function Exploration() {
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               <TuileStat
                 libelle="Lignes"
-                valeur={profil.nb_lignes.toLocaleString("fr-FR")}
+                valeur=""
+                nombre={profil.nb_lignes}
                 precision={`${profil.nb_colonnes} colonnes`}
               />
               <TuileStat
                 libelle="Lignes en double"
-                valeur={profil.doublons.nombre.toLocaleString("fr-FR")}
+                valeur=""
+                nombre={profil.doublons.nombre}
                 precision={`${(profil.doublons.part * 100).toFixed(1)} % du fichier`}
               />
               <TuileStat
                 libelle="Colonnes à corriger"
-                valeur={String(
+                valeur=""
+                nombre={
                   profil.colonnes.filter(
                     (colonne) => colonne.anomalies.length > 0 || colonne.part_manquantes > 0,
-                  ).length,
-                )}
+                  ).length
+                }
                 precision="valeurs absentes ou incohérences"
               />
               <TuileStat
                 libelle="Colonnes sensibles"
-                valeur={String(detections.length)}
+                valeur=""
+                nombre={detections.length}
                 precision={
                   fichier.statut_pii === "masquee"
                     ? "pseudonymisées"
@@ -205,11 +210,7 @@ export default function Exploration() {
           </>
         )}
 
-        {fichier && !profil && !atelier.erreur && (
-          <p className="text-sm" style={{ color: "var(--ink-2)" }}>
-            Lecture du profil…
-          </p>
-        )}
+        {!profil && !atelier.erreur && <SqueletteProfil />}
       </div>
     </main>
   );

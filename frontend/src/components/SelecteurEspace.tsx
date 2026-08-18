@@ -33,8 +33,7 @@ export function SelecteurEspace() {
 
   return (
     <div
-      className="rounded-xl border p-4"
-      style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
+      className="panneau-doux p-4"
     >
       <h2 className="text-sm font-medium">Espace de travail</h2>
       <p className="mt-1 text-sm" style={{ color: "var(--ink-2)" }}>
@@ -50,8 +49,8 @@ export function SelecteurEspace() {
           placeholder="Nom du nouvel espace, par exemple « Analyse RH »"
           className="min-w-0 flex-1 rounded-lg border px-3 py-2 text-sm outline-none"
           style={{
-            borderColor: "var(--bordure)",
-            background: "var(--plan)",
+            borderColor: "var(--filet)",
+            background: "var(--fond)",
             color: "var(--ink-1)",
           }}
         />
@@ -60,7 +59,11 @@ export function SelecteurEspace() {
           onClick={creer}
           disabled={enCours || !nom.trim()}
           className="rounded-lg px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-50"
-          style={{ background: "var(--ink-1)", color: "var(--surface-1)" }}
+          style={{
+            background: "linear-gradient(135deg, var(--deco-a), var(--accent))",
+            color: "#04070f",
+            boxShadow: "var(--lueur)",
+          }}
         >
           Ouvrir
         </button>
@@ -78,7 +81,7 @@ export function SelecteurEspace() {
                 type="button"
                 onClick={() => void choisirEspace(candidat)}
                 className="max-w-[220px] truncate rounded-lg border px-2.5 py-1 text-xs transition-colors"
-                style={{ borderColor: "var(--bordure)", color: "var(--ink-2)" }}
+                style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
               >
                 {candidat.nom}
               </button>

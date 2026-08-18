@@ -6,12 +6,5 @@ export function Carte({
   children: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <section
-      className={`rounded-xl border p-5 ${className}`}
-      style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
-    >
-      {children}
-    </section>
-  );
+  return <section className={`panneau-doux p-5 ${className}`}>{children}</section>;
 }

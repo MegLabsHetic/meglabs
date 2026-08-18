@@ -11,7 +11,7 @@ export interface Etape {
 
 export const ETAPES: Etape[] = [
   {
-    chemin: "/",
+    chemin: "/donnees",
     titre: "Données",
     resume: "Déposer des fichiers et protéger ce qui est personnel",
     disponible: true,

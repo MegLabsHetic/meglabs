@@ -26,8 +26,7 @@ export function BanniereePii({
   if (statut === "aucune") {
     return (
       <div
-        className="flex items-start gap-3 rounded-xl border p-4"
-        style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
+        className="flex items-start gap-3 panneau-doux p-4"
       >
         <span aria-hidden className="pt-0.5" style={{ color: "var(--etat-bon)" }}>
           ●
@@ -45,8 +44,7 @@ export function BanniereePii({
   if (statut === "masquee") {
     return (
       <div
-        className="rounded-xl border p-4"
-        style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
+        className="panneau-doux p-4"
       >
         <div className="flex items-start gap-3">
           <span aria-hidden className="pt-0.5" style={{ color: "var(--etat-bon)" }}>
@@ -70,7 +68,7 @@ export function BanniereePii({
                 <span
                   key={colonne}
                   className="rounded-md border px-2 py-0.5 text-xs"
-                  style={{ borderColor: "var(--bordure)", color: "var(--ink-2)" }}
+                  style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
                 >
                   {colonne}
                 </span>
@@ -86,8 +84,8 @@ export function BanniereePii({
     <div
       className="rounded-xl border p-4"
       style={{
-        background: "color-mix(in oklab, var(--etat-attention) 7%, var(--surface-1))",
-        borderColor: "color-mix(in oklab, var(--etat-attention) 35%, var(--bordure))",
+        background: "color-mix(in oklab, var(--etat-attention) 7%, var(--panneau))",
+        borderColor: "color-mix(in oklab, var(--etat-attention) 35%, var(--filet))",
       }}
     >
       <div className="flex flex-wrap items-start justify-between gap-4">
@@ -112,7 +110,11 @@ export function BanniereePii({
           onClick={onPseudonymiser}
           disabled={enCours}
           className="shrink-0 rounded-lg px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-60"
-          style={{ background: "var(--ink-1)", color: "var(--surface-1)" }}
+          style={{
+            background: "linear-gradient(135deg, var(--deco-a), var(--accent))",
+            color: "#04070f",
+            boxShadow: "var(--lueur)",
+          }}
         >
           {enCours ? "Pseudonymisation…" : "Pseudonymiser"}
         </button>
@@ -123,7 +125,7 @@ export function BanniereePii({
           <li
             key={detection.colonne}
             className="flex items-baseline justify-between gap-3 rounded-lg border px-2.5 py-1.5 text-xs"
-            style={{ borderColor: "var(--bordure)", background: "var(--surface-1)" }}
+            style={{ borderColor: "var(--filet)", background: "var(--panneau)" }}
           >
             <span className="truncate font-medium">{detection.colonne}</span>
             <span className="shrink-0" style={{ color: "var(--ink-2)" }}>

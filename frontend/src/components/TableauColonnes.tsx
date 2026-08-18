@@ -42,13 +42,13 @@ function BarreManquantes({ part }: { part: number }) {
     <div className="flex items-center gap-2">
       <div
         className="h-1.5 w-16 shrink-0 overflow-hidden rounded-full"
-        style={{ background: "var(--mesure-piste)" }}
+        style={{ background: "var(--accent-piste)" }}
       >
         <div
           className="h-full rounded-r-[4px]"
           style={{
             width: `${Math.min(100, Math.max(part > 0 ? 4 : 0, pourcentage))}%`,
-            background: "var(--mesure)",
+            background: "var(--accent-donnees)",
           }}
         />
       </div>
@@ -112,14 +112,14 @@ export function TableauColonnes({
             placeholder="Rechercher une colonne"
             aria-label="Rechercher une colonne"
             className="w-48 rounded-lg border px-2.5 py-1.5 text-sm outline-none"
-            style={{ borderColor: "var(--bordure)", background: "var(--plan)" }}
+            style={{ borderColor: "var(--filet)", background: "var(--fond)" }}
           />
           <select
             value={tri}
             onChange={(evenement) => setTri(evenement.target.value as Tri)}
             aria-label="Trier les colonnes"
             className="rounded-lg border px-2.5 py-1.5 text-sm outline-none"
-            style={{ borderColor: "var(--bordure)", background: "var(--plan)" }}
+            style={{ borderColor: "var(--filet)", background: "var(--fond)" }}
           >
             {TRIS.map((option) => (
               <option key={option.cle} value={option.cle}>
@@ -133,7 +133,7 @@ export function TableauColonnes({
             aria-pressed={seulementProblemes}
             className="rounded-lg border px-2.5 py-1.5 text-sm transition-colors"
             style={{
-              borderColor: seulementProblemes ? "var(--mesure)" : "var(--bordure)",
+              borderColor: seulementProblemes ? "var(--accent-donnees)" : "var(--filet)",
               color: seulementProblemes ? "var(--ink-1)" : "var(--ink-2)",
             }}
           >
@@ -160,10 +160,10 @@ export function TableauColonnes({
                 onClick={() => onSelectionner(colonne.nom)}
                 className="cursor-pointer border-t align-top transition-colors"
                 style={{
-                  borderColor: "var(--hairline)",
+                  borderColor: "var(--filet)",
                   background:
                     selection === colonne.nom
-                      ? "color-mix(in oklab, var(--mesure) 7%, transparent)"
+                      ? "color-mix(in oklab, var(--accent-donnees) 7%, transparent)"
                       : undefined,
                 }}
               >
@@ -186,7 +186,7 @@ export function TableauColonnes({
                 <td className="py-2.5 pr-4">
                   <span
                     className="rounded-md border px-1.5 py-0.5 text-xs"
-                    style={{ borderColor: "var(--bordure)", color: "var(--ink-2)" }}
+                    style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
                   >
                     {colonne.type}
                   </span>
