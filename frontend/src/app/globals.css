@@ -1,79 +1,170 @@
 @import "tailwindcss";
 
 /*
- * Les couleurs de données viennent d'une palette validée : les valeurs d'état
- * (bon / à surveiller / faible) ne sont séparées que de ΔE 4.1 en deutéranopie —
- * la confusion rouge/vert classique. Elles ne portent donc JAMAIS le sens à elles
- * seules : chaque usage est accompagné d'une icône et d'un libellé.
+ * Système visuel de MegLabs.
+ *
+ * Parti pris : un thème sombre unique, assumé, plutôt qu'un clair et un sombre
+ * moyens. L'interface est un poste de pilotage — les données brillent, le châssis
+ * s'efface.
+ *
+ * Toutes les valeurs ci-dessous sont mesurées, pas choisies à l'œil :
+ *   texte    ink-1 16.8:1 · ink-2 10.1:1 · ink-3 7.2:1 · ink-muted 5.3:1  (seuil AA 4.5)
+ *   marques  accent 7.3:1 · bon 9.8:1 · attention 11.3:1 · faible 6.8:1   (seuil 3.0)
+ *
+ * Le dégradé cyan → violet est DÉCORATIF et ne porte jamais de sens : mesuré, cyan
+ * et bleu ne sont séparés que de ΔE 6.7 en vision normale — personne ne les
+ * distingue côte à côte. Les données gardent donc une seule teinte.
  */
+
 :root {
-  color-scheme: light;
-
-  --surface-1: #fcfcfb;
-  --plan: #f9f9f7;
-  --ink-1: #0b0b0b;
-  --ink-2: #52514e;
-  --ink-muted: #898781;
-  --hairline: #e1e0d9;
-  --bordure: rgba(11, 11, 11, 0.1);
-
-  --etat-bon: #0ca30c;
-  --etat-attention: #fab219;
-  --etat-serieux: #ec835a;
-  --etat-faible: #d03b3b;
-
-  --mesure: #2a78d6;
-  --mesure-piste: #cde2fb;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-
-    --surface-1: #1a1a19;
-    --plan: #0d0d0d;
-    --ink-1: #ffffff;
-    --ink-2: #c3c2b7;
-    --ink-muted: #898781;
-    --hairline: #2c2c2a;
-    --bordure: rgba(255, 255, 255, 0.1);
-
-    --mesure: #3987e5;
-    --mesure-piste: #184f95;
-  }
-}
-
-:root[data-theme="dark"] {
   color-scheme: dark;
 
-  --surface-1: #1a1a19;
-  --plan: #0d0d0d;
-  --ink-1: #ffffff;
-  --ink-2: #c3c2b7;
-  --ink-muted: #898781;
-  --hairline: #2c2c2a;
-  --bordure: rgba(255, 255, 255, 0.1);
+  /* Surfaces, du plus profond au plus proche */
+  --fond: #070b16;
+  --panneau: #0b1120;
+  --eleve: #101828;
+  --voile: rgba(255, 255, 255, 0.04);
 
-  --mesure: #3987e5;
-  --mesure-piste: #184f95;
+  /* Encres */
+  --ink-1: #eef2ff;
+  --ink-2: #b4bed9;
+  --ink-3: #95a0bf;
+  --ink-muted: #7d88a8;
+
+  /* Accent : un seul pour les données */
+  --accent: #5eb3f6;
+  --accent-donnees: #4aa8f0;
+  --accent-piste: #1c3557;
+
+  /* États — jamais seuls, toujours doublés d'une icône et d'un libellé */
+  --etat-bon: #34d399;
+  --etat-attention: #fbbf24;
+  --etat-serieux: #fb923c;
+  --etat-faible: #f87171;
+
+  /* Décor : ces deux teintes ne codent aucune donnée */
+  --deco-a: #22d3ee;
+  --deco-b: #a78bfa;
+
+  /* Traits */
+  --filet: rgba(148, 163, 214, 0.14);
+  --filet-fort: rgba(148, 163, 214, 0.26);
+
+  /* Profondeur */
+  --ombre-1: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ombre-2: 0 8px 24px -8px rgba(0, 0, 0, 0.7);
+  --ombre-3: 0 24px 60px -20px rgba(0, 0, 0, 0.85);
+  --lueur: 0 0 24px -4px color-mix(in oklab, var(--accent) 45%, transparent);
+
+  /* Rayons */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+
+  /* Mouvement — une seule source, pour que tout batte au même rythme */
+  --duree-courte: 140ms;
+  --duree: 260ms;
+  --duree-longue: 620ms;
+  --sortie: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  border-color: var(--filet);
+}
+
+html {
+  background: var(--fond);
 }
 
 body {
-  background: var(--plan);
+  background: var(--fond);
   color: var(--ink-1);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100dvh;
 }
 
-/* Les colonnes de chiffres doivent s'aligner ; les grands nombres isolés non. */
+/* Le clavier doit être un citoyen de première classe : sans anneau visible,
+   l'interface est inutilisable sans souris. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 35%, transparent);
+  color: var(--ink-1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--filet-fort);
+  border-radius: 999px;
+  border: 3px solid var(--fond);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--accent) 50%, var(--filet-fort));
+}
+
+/* --- Pièces réutilisables ------------------------------------------------ */
+
+/* Panneau de verre : un fond translucide, un filet lumineux en haut qui simule
+   une arête éclairée par le dessus. C'est ce liseré qui donne l'épaisseur. */
+.verre {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--eleve) 92%, transparent),
+    color-mix(in oklab, var(--panneau) 96%, transparent)
+  );
+  border: 1px solid var(--filet);
+  border-radius: var(--r-lg);
+  box-shadow: var(--ombre-2);
+  backdrop-filter: blur(12px);
+}
+
+.verre::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in oklab, var(--accent) 55%, transparent),
+    transparent
+  );
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.texte-degrade {
+  background: linear-gradient(100deg, var(--ink-1) 10%, var(--deco-a) 55%, var(--deco-b) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .chiffres-alignes {
   font-variant-numeric: tabular-nums;
 }
 
+/* --- Mouvement ------------------------------------------------------------ */
+
 @keyframes apparition {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -82,11 +173,55 @@ body {
 }
 
 .apparait {
-  animation: apparition 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: apparition var(--duree-longue) var(--sortie) both;
+}
+
+/* Les enfants entrent l'un après l'autre : le regard suit la construction de
+   l'écran au lieu de recevoir tout d'un bloc. */
+.cascade > * {
+  animation: apparition var(--duree-longue) var(--sortie) both;
+}
+.cascade > *:nth-child(1) { animation-delay: 40ms; }
+.cascade > *:nth-child(2) { animation-delay: 90ms; }
+.cascade > *:nth-child(3) { animation-delay: 140ms; }
+.cascade > *:nth-child(4) { animation-delay: 190ms; }
+.cascade > *:nth-child(5) { animation-delay: 240ms; }
+.cascade > *:nth-child(6) { animation-delay: 290ms; }
+
+@keyframes balayage {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* Squelette de chargement : dit « ça arrive et voilà la forme », là où un texte
+   « chargement… » ne dit que « attends ». */
+.squelette {
+  background: linear-gradient(
+    90deg,
+    var(--voile) 25%,
+    color-mix(in oklab, var(--accent) 12%, var(--voile)) 50%,
+    var(--voile) 75%
+  );
+  background-size: 200% 100%;
+  animation: balayage 1.6s linear infinite;
+  border-radius: var(--r-sm);
+}
+
+@keyframes pulsation {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+.pulse {
+  animation: pulsation 1.8s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .apparait {
-    animation: none;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
