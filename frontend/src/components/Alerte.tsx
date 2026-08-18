@@ -4,8 +4,8 @@ export function Alerte({ message }: { message: string }) {
     <div
       className="flex items-start gap-3 rounded-xl border p-4 text-sm"
       style={{
-        background: "color-mix(in oklab, var(--etat-faible) 6%, var(--surface-1))",
-        borderColor: "color-mix(in oklab, var(--etat-faible) 35%, var(--bordure))",
+        background: "color-mix(in oklab, var(--etat-faible) 6%, var(--panneau))",
+        borderColor: "color-mix(in oklab, var(--etat-faible) 35%, var(--filet))",
       }}
       role="alert"
     >

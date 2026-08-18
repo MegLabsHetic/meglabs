@@ -22,14 +22,13 @@ export function EtapeAVenir({
       <p className="text-xs uppercase tracking-wide" style={{ color: "var(--ink-muted)" }}>
         Prévu pour le {attendu}
       </p>
-      <h1 className="mt-2 text-2xl font-semibold tracking-tight">{titre}</h1>
+      <h1 className="texte-degrade mt-2 text-3xl font-semibold tracking-tight">{titre}</h1>
       <p className="mt-2" style={{ color: "var(--ink-2)" }}>
         {resume}
       </p>
 
       <div
-        className="mt-6 rounded-xl border p-5"
-        style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
+        className="mt-6 verre p-5"
       >
         <h2 className="text-sm font-medium">Ce que cette étape apportera</h2>
         <ul className="mt-3 space-y-2 text-sm" style={{ color: "var(--ink-2)" }}>

@@ -35,13 +35,13 @@ export default function Donnees() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-10">
-      <h1 className="text-2xl font-semibold tracking-tight">Données</h1>
+      <h1 className="texte-degrade text-3xl font-semibold tracking-tight">Données</h1>
       <p className="mt-1 text-sm" style={{ color: "var(--ink-2)" }}>
         Déposez vos fichiers. On vous dit ce qu&apos;ils contiennent, ce qui cloche, et ce
         qu&apos;il faut protéger — avant qu&apos;une seule ligne ne parte ailleurs.
       </p>
 
-      <div className="mt-6 space-y-6">
+      <div className="cascade mt-6 space-y-6">
         <SelecteurEspace />
 
         {atelier.erreur && <Alerte message={atelier.erreur} />}

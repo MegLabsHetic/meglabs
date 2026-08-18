@@ -44,9 +44,9 @@ export function ListeFichiers({
                 aria-pressed={choisi}
                 className="w-full rounded-xl border p-3 text-left transition-colors"
                 style={{
-                  background: "var(--surface-1)",
-                  borderColor: choisi ? "var(--mesure)" : "var(--bordure)",
-                  boxShadow: choisi ? "inset 0 0 0 1px var(--mesure)" : undefined,
+                  background: "var(--panneau)",
+                  borderColor: choisi ? "var(--accent-donnees)" : "var(--filet)",
+                  boxShadow: choisi ? "inset 0 0 0 1px var(--accent-donnees)" : undefined,
                 }}
               >
                 <div className="flex items-baseline justify-between gap-3">

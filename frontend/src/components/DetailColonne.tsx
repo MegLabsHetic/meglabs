@@ -38,8 +38,7 @@ export function DetailColonne({
 
   return (
     <aside
-      className="apparait rounded-xl border p-5"
-      style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
+      className="apparait verre p-5"
       aria-label={`Détail de la colonne ${colonne.nom}`}
     >
       <div className="flex items-start justify-between gap-4">
@@ -56,7 +55,7 @@ export function DetailColonne({
           type="button"
           onClick={onFermer}
           className="rounded-lg border px-2.5 py-1 text-xs"
-          style={{ borderColor: "var(--bordure)", color: "var(--ink-2)" }}
+          style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
         >
           Fermer
         </button>
@@ -111,13 +110,13 @@ export function DetailColonne({
                 {/* Barre fine, extrémité arrondie, proportionnelle à la plus fréquente. */}
                 <div
                   className="h-1.5 w-24 shrink-0 overflow-hidden rounded-full"
-                  style={{ background: "var(--mesure-piste)" }}
+                  style={{ background: "var(--accent-piste)" }}
                 >
                   <div
                     className="h-full rounded-r-[4px]"
                     style={{
                       width: `${(modalite.occurrences / modalites[0].occurrences) * 100}%`,
-                      background: "var(--mesure)",
+                      background: "var(--accent-donnees)",
                     }}
                   />
                 </div>
@@ -147,7 +146,7 @@ export function DetailColonne({
             <li
               key={`${exemple}-${rang}`}
               className="max-w-full truncate rounded-md border px-2 py-0.5 text-xs"
-              style={{ borderColor: "var(--bordure)", color: "var(--ink-2)" }}
+              style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
             >
               {exemple}
             </li>

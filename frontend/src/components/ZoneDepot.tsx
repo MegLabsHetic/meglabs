@@ -30,12 +30,13 @@ export function ZoneDepot({
         setSurvol(false);
         deposer(evenement.dataTransfer.files);
       }}
-      className="rounded-xl border border-dashed p-10 text-center transition-colors"
+      className="rounded-2xl border border-dashed p-12 text-center transition-all duration-300"
       style={{
         background: survol
-          ? "color-mix(in oklab, var(--mesure) 6%, var(--surface-1))"
-          : "var(--surface-1)",
-        borderColor: survol ? "var(--mesure)" : "var(--bordure)",
+          ? "color-mix(in oklab, var(--accent) 10%, var(--eleve))"
+          : "color-mix(in oklab, var(--eleve) 70%, transparent)",
+        borderColor: survol ? "var(--accent)" : "var(--filet-fort)",
+        boxShadow: survol ? "var(--lueur)" : undefined,
       }}
     >
       <p className="text-base font-medium">
@@ -52,7 +53,7 @@ export function ZoneDepot({
         onClick={() => champ.current?.click()}
         disabled={enCours}
         className="mt-4 rounded-lg border px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-60"
-        style={{ borderColor: "var(--bordure)" }}
+        style={{ borderColor: "var(--filet)" }}
       >
         Choisir un fichier
       </button>
