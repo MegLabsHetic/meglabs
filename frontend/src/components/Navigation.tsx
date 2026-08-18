@@ -1,7 +1,7 @@
 /**
- * Le parcours en cinq étapes.
+ * Le parcours en cinq étapes, présenté comme une progression et non comme un menu.
  *
- * Les étapes non livrées sont affichées mais désactivées, avec le sprint attendu.
+ * Les étapes non livrées restent visibles mais désactivées, avec le sprint attendu.
  * Les masquer laisserait croire que le produit s'arrête là ; les faire cliquer sur
  * une maquette vide serait pire.
  */
@@ -19,29 +19,35 @@ export function Navigation() {
 
   return (
     <header
-      className="sticky top-0 z-20 border-b backdrop-blur"
+      className="sticky top-0 z-30 border-b backdrop-blur-xl"
       style={{
-        borderColor: "var(--bordure)",
-        background: "color-mix(in oklab, var(--plan) 88%, transparent)",
+        borderColor: "var(--filet)",
+        background: "color-mix(in oklab, var(--fond) 78%, transparent)",
       }}
     >
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-3">
-        <Link href="/" className="text-sm font-semibold tracking-tight">
-          MegLabs
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-6 py-3">
+        <Link href="/" className="flex items-center gap-2.5">
+          <span
+            aria-hidden
+            className="h-2.5 w-2.5 rounded-full"
+            style={{
+              background: "linear-gradient(135deg, var(--deco-a), var(--deco-b))",
+              boxShadow: "0 0 12px var(--deco-a)",
+            }}
+          />
+          <span className="text-sm font-semibold tracking-tight">MegLabs</span>
         </Link>
 
-        <nav className="flex flex-wrap items-center gap-1">
+        <nav className="flex flex-wrap items-center gap-0.5">
           {ETAPES.map((etape, rang) => {
             const actif = chemin === etape.chemin;
-            const contenu = (
-              <span className="flex items-baseline gap-1.5">
-                <span
-                  className="chiffres-alignes text-[11px]"
-                  style={{ color: "var(--ink-muted)" }}
-                >
-                  {rang + 1}
-                </span>
-                {etape.titre}
+
+            const numero = (
+              <span
+                className="chiffres-alignes text-[10px] tabular-nums"
+                style={{ color: actif ? "var(--accent)" : "var(--ink-muted)" }}
+              >
+                {String(rang + 1).padStart(2, "0")}
               </span>
             );
 
@@ -50,10 +56,11 @@ export function Navigation() {
                 <span
                   key={etape.chemin}
                   title={`Disponible au ${etape.attendu} — ${etape.resume}`}
-                  className="cursor-not-allowed rounded-lg px-2.5 py-1.5 text-sm"
+                  className="flex cursor-not-allowed items-baseline gap-1.5 rounded-lg px-2.5 py-1.5 text-sm"
                   style={{ color: "var(--ink-muted)" }}
                 >
-                  {contenu}
+                  {numero}
+                  {etape.titre}
                 </span>
               );
             }
@@ -64,14 +71,25 @@ export function Navigation() {
                 href={etape.chemin}
                 title={etape.resume}
                 aria-current={actif ? "page" : undefined}
-                className="rounded-lg px-2.5 py-1.5 text-sm transition-colors"
+                className="relative flex items-baseline gap-1.5 rounded-lg px-2.5 py-1.5 text-sm transition-colors"
                 style={{
-                  background: actif ? "var(--surface-1)" : "transparent",
-                  color: actif ? "var(--ink-1)" : "var(--ink-2)",
-                  boxShadow: actif ? "inset 0 0 0 1px var(--bordure)" : undefined,
+                  color: actif ? "var(--ink-1)" : "var(--ink-3)",
+                  background: actif ? "var(--voile)" : "transparent",
                 }}
               >
-                {contenu}
+                {numero}
+                {etape.titre}
+                {actif && (
+                  <span
+                    aria-hidden
+                    className="absolute inset-x-2.5 -bottom-[13px] h-px"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, transparent, var(--accent), transparent)",
+                      boxShadow: "0 0 10px var(--accent)",
+                    }}
+                  />
+                )}
               </Link>
             );
           })}
@@ -79,16 +97,23 @@ export function Navigation() {
 
         {espace && (
           <div
-            className="ml-auto flex min-w-0 items-baseline gap-2 text-xs"
-            style={{ color: "var(--ink-2)" }}
+            className="ml-auto flex min-w-0 items-center gap-2 text-xs"
+            style={{ color: "var(--ink-3)" }}
           >
-            <span className="truncate">{espace.nom}</span>
+            <span
+              aria-hidden
+              className="h-1.5 w-1.5 shrink-0 rounded-full pulse"
+              style={{ background: "var(--etat-bon)", boxShadow: "0 0 8px var(--etat-bon)" }}
+            />
+            <span className="max-w-[160px] truncate">{espace.nom}</span>
             {fichier && (
               <>
-                <span aria-hidden style={{ color: "var(--ink-muted)" }}>
-                  ·
+                <span aria-hidden style={{ color: "var(--filet-fort)" }}>
+                  /
                 </span>
-                <span className="truncate font-medium">{fichier.nom}</span>
+                <span className="max-w-[200px] truncate font-medium" style={{ color: "var(--ink-2)" }}>
+                  {fichier.nom}
+                </span>
               </>
             )}
           </div>
