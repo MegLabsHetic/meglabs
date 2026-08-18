@@ -65,18 +65,28 @@ done
 # L'image embarque les navigateurs mais pas le paquet npm. On l'installe dans un
 # dossier temporaire du conteneur, en sautant le téléchargement des navigateurs :
 # ils sont déjà là, et à la bonne version.
+# Le graphe des branches est produit par Git sur l'hôte : le conteneur n'a pas le
+# dépôt, et l'y monter pour une seule commande serait disproportionné.
+ENTREE="$(mktemp -d)"
+trap 'nettoyer; rm -rf "$ENTREE"' EXIT
+git -C "$DEPOT_HOTE" log --graph --all --oneline --decorate > "$ENTREE/graphe.txt"
+ENTREE_HOTE="$ENTREE"
+if command -v cygpath >/dev/null 2>&1; then ENTREE_HOTE="$(cygpath -w "$ENTREE")"; fi
+
 docker run --rm \
   --network "$RESEAU" \
   -v "$DEPOT/scripts:/scripts:ro" \
   -v "$DEPOT/backend/data:/donnees:ro" \
   -v "$DEPOT/docs/captures:/captures" \
+  -v "$ENTREE_HOTE:/entree:ro" \
   -e PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 \
   -e API="http://$API_TEMPORAIRE:8000" \
   -w /work \
   "$IMAGE" \
   sh -c "mkdir -p /work && cd /work \
     && npm install --silent --no-fund --no-audit playwright@1.56.0 >/dev/null 2>&1 \
-    && cp /scripts/captures.mjs . \
-    && node captures.mjs"
+    && cp /scripts/captures.mjs /scripts/captures-projet.mjs . \
+    && node captures.mjs \
+    && node captures-projet.mjs"
 
 echo "Captures écrites dans docs/captures/"
