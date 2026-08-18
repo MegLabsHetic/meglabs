@@ -1,4 +1,4 @@
-/** Surface de contenu : un fond, un filet, rien de plus. */
+/** Panneau de verre. L'épaisseur vient du liseré lumineux, pas d'une bordure épaisse. */
 export function Carte({
   children,
   className = "",
@@ -6,12 +6,5 @@ export function Carte({
   children: React.ReactNode;
   className?: string;
 }) {
-  return (
-    <section
-      className={`rounded-xl border p-5 ${className}`}
-      style={{ background: "var(--surface-1)", borderColor: "var(--bordure)" }}
-    >
-      {children}
-    </section>
-  );
+  return <section className={`verre p-5 ${className}`}>{children}</section>;
 }
