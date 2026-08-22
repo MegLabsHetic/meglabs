@@ -67,6 +67,8 @@ class Analyste(BaseAgent):
             ligne += " — exemples : " + ", ".join(exemples)
         if colonne["part_manquantes"]:
             ligne += f" — {colonne['part_manquantes']} % de valeurs absentes"
+        for anomalie in colonne.get("anomalies", []):
+            ligne += f"\n  ⚠ {anomalie['detail']}"
         return ligne
 
     @staticmethod
@@ -150,6 +152,4 @@ class Analyste(BaseAgent):
     ) -> None:
         if self._flux is None:
             return
-        await self._flux.publier(
-            evenement_reparation(sql_echoue, erreur, sql_corrige, explication)
-        )
+        await self._flux.publier(evenement_reparation(sql_echoue, erreur, sql_corrige, explication))
