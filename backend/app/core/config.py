@@ -19,6 +19,10 @@ class Provider(str, Enum):
     ANTHROPIC = "anthropic"
     OPENAI = "openai"
     GROQ = "groq"
+    # Fournisseur francais, inference a Paris. Il sert le meme modele ouvert que Groq
+    # au meme tarif : basculer de l'un a l'autre ne change ni les prompts, ni les
+    # mesures, seulement le pays ou les donnees transitent.
+    SCALEWAY = "scaleway"
 
 
 class Task(str, Enum):
@@ -49,6 +53,9 @@ MODEL_PRICING: dict[str, ModelPrice] = {
     "gpt-5.6-luna": ModelPrice(0.20, 1.20),
     "openai/gpt-oss-120b": ModelPrice(0.15, 0.60),
     "openai/gpt-oss-20b": ModelPrice(0.075, 0.30),
+    # Meme modele, meme tarif, servi depuis Paris. Scaleway le nomme sans prefixe :
+    # c'est l'identifiant que rend sa console, et donc celui qui fait foi.
+    "gpt-oss-120b": ModelPrice(0.15, 0.60),
 }
 
 
@@ -73,6 +80,15 @@ MODEL_ROUTING: dict[Provider, dict[Task, str]] = {
         Task.INTERPRETATION: "openai/gpt-oss-120b",
         Task.REPORT: "openai/gpt-oss-120b",
     },
+    # Un seul modele pour toutes les taches : le petit gpt-oss n'est pas propose en
+    # Serverless chez Scaleway. On perd le routage vers un modele moins cher, on gagne
+    # une inference qui reste en France.
+    Provider.SCALEWAY: {
+        Task.CLASSIFICATION: "gpt-oss-120b",
+        Task.SQL_GENERATION: "gpt-oss-120b",
+        Task.INTERPRETATION: "gpt-oss-120b",
+        Task.REPORT: "gpt-oss-120b",
+    },
 }
 
 
@@ -89,6 +105,10 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     openai_api_key: str = ""
     groq_api_key: str = ""
+    scaleway_api_key: str = ""
+    # L'URL de Scaleway porte l'identifiant du projet : elle change d'un compte a
+    # l'autre et se lit donc dans l'environnement, jamais en dur.
+    scaleway_base_url: str = "https://api.scaleway.ai/v1"
 
     database_url: str = "sqlite+aiosqlite:///./meglabs.db"
     app_env: str = "development"
@@ -117,6 +137,7 @@ class Settings(BaseSettings):
             Provider.ANTHROPIC: self.anthropic_api_key,
             Provider.OPENAI: self.openai_api_key,
             Provider.GROQ: self.groq_api_key,
+            Provider.SCALEWAY: self.scaleway_api_key,
         }
         key = keys[provider]
         if not key:

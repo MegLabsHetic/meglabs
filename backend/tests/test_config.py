@@ -21,12 +21,17 @@ def test_every_provider_covers_every_task():
         assert set(MODEL_ROUTING[provider]) == set(Task)
 
 
-def test_classification_is_routed_to_a_cheaper_model_than_sql():
-    """Le routing n'a d'interet que si la tache courte coute moins cher."""
+def test_classification_is_never_routed_to_a_costlier_model_than_sql():
+    """La tache courte ne doit jamais couter plus cher que la tache lourde.
+
+    L'egalite est acceptee : un fournisseur peut n'exposer qu'un seul modele — c'est
+    le cas de Scaleway, dont le petit gpt-oss n'est pas propose en Serverless. On y
+    perd le gain du routing, pas la coherence du routage.
+    """
     for provider in Provider:
-        cheap = cost_in_cents(model_for(provider, Task.CLASSIFICATION), 1_000_000, 0)
-        rich = cost_in_cents(model_for(provider, Task.SQL_GENERATION), 1_000_000, 0)
-        assert cheap < rich, provider
+        courte = cost_in_cents(model_for(provider, Task.CLASSIFICATION), 1_000_000, 0)
+        lourde = cost_in_cents(model_for(provider, Task.SQL_GENERATION), 1_000_000, 0)
+        assert courte <= lourde, provider
 
 
 def test_cost_is_computed_in_cents():
