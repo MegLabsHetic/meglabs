@@ -25,7 +25,7 @@ def tables() -> dict[str, pd.DataFrame]:
     }
 
 
-async def test_une_lecture_rend_ses_colonnes_et_ses_lignes(tables) -> None:
+async def test_a_read_returns_its_columns_and_rows(tables) -> None:
     resultat = await MoteurDuckdb().executer(
         "SELECT service, COUNT(*) AS effectif FROM collaborateurs GROUP BY service "
         "ORDER BY service",
@@ -38,7 +38,7 @@ async def test_une_lecture_rend_ses_colonnes_et_ses_lignes(tables) -> None:
     assert resultat.en_dicts()[0] == {"service": "Data", "effectif": 2}
 
 
-async def test_une_jointure_entre_deux_fichiers(tables) -> None:
+async def test_a_join_across_two_files(tables) -> None:
     """La question de demonstration : deux fichiers, une seule reponse."""
     resultat = await MoteurDuckdb().executer(
         "SELECT c.service, SUM(t.montant) AS total FROM transactions t "
@@ -53,7 +53,7 @@ async def test_une_jointure_entre_deux_fichiers(tables) -> None:
     ]
 
 
-async def test_le_resultat_est_borne_et_le_signale(tables) -> None:
+async def test_the_result_is_capped_and_says_so(tables) -> None:
     moteur = MoteurDuckdb(limite_lignes=2)
     resultat = await moteur.executer("SELECT * FROM collaborateurs", tables)
 
@@ -61,7 +61,7 @@ async def test_le_resultat_est_borne_et_le_signale(tables) -> None:
     assert resultat.tronque is True
 
 
-def test_la_troncature_ne_se_declare_pas_a_tort(tables) -> None:
+def test_truncation_is_not_reported_wrongly(tables) -> None:
     moteur = MoteurDuckdb(limite_lignes=3)
     resultat = asyncio.run(moteur.executer("SELECT * FROM collaborateurs", tables))
 
@@ -69,7 +69,7 @@ def test_la_troncature_ne_se_declare_pas_a_tort(tables) -> None:
     assert resultat.tronque is False
 
 
-async def test_une_erreur_de_moteur_reste_technique(tables) -> None:
+async def test_an_engine_error_stays_technical(tables) -> None:
     """Elle est destinee au modele qui va se corriger, pas a l'utilisateur."""
     with pytest.raises(ErreurSql) as erreur:
         await MoteurDuckdb().executer("SELECT colonne_absente FROM collaborateurs", tables)
@@ -78,13 +78,13 @@ async def test_une_erreur_de_moteur_reste_technique(tables) -> None:
     assert not isinstance(erreur.value, ErreurUtilisateur)
 
 
-async def test_l_acces_aux_fichiers_est_coupe_dans_le_moteur(tables) -> None:
+async def test_file_access_is_cut_off_in_the_engine(tables) -> None:
     """Deuxieme verrou, independant du garde-fou : meme si une requete lui echappait."""
     with pytest.raises(ErreurSql):
         await MoteurDuckdb().executer("SELECT * FROM read_csv('/etc/passwd')", tables)
 
 
-async def test_une_requete_trop_longue_est_interrompue() -> None:
+async def test_a_query_that_runs_too_long_is_interrupted() -> None:
     grande = {"nombres": pd.DataFrame({"n": range(2_000)})}
     moteur = MoteurDuckdb(timeout_s=1)
 
@@ -98,7 +98,7 @@ async def test_une_requete_trop_longue_est_interrompue() -> None:
     assert "secondes" in erreur.value.message
 
 
-async def test_deux_executions_ne_se_voient_pas() -> None:
+async def test_two_executions_cannot_see_each_other() -> None:
     """Une connexion par requete : ce qui est enregistre ici n'existe pas la-bas."""
     moteur = MoteurDuckdb()
     await moteur.executer("SELECT 1", {"a": pd.DataFrame({"x": [1]})})
@@ -120,11 +120,11 @@ async def test_deux_executions_ne_se_voient_pas() -> None:
         ("___.csv", "fichier"),
     ],
 )
-def test_le_nom_de_table_reste_un_identifiant(fichier: str, attendu: str) -> None:
+def test_a_table_name_stays_an_identifier(fichier: str, attendu: str) -> None:
     assert nom_de_table(fichier, set()) == attendu
 
 
-def test_deux_fichiers_de_meme_nom_ne_se_recouvrent_pas() -> None:
+def test_two_files_with_the_same_name_do_not_collide() -> None:
     pris: set[str] = set()
     for attendu in ("ventes", "ventes_2", "ventes_3"):
         nom = nom_de_table("ventes.csv", pris)

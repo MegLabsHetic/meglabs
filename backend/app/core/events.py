@@ -55,7 +55,9 @@ def evenement_sql(sql: str, duree_ms: int, nb_lignes: int, tronque: bool) -> Eve
     )
 
 
-def evenement_reparation(sql_echoue: str, erreur: str, sql_corrige: str, explication: str) -> Evenement:
+def evenement_reparation(
+    sql_echoue: str, erreur: str, sql_corrige: str, explication: str
+) -> Evenement:
     """L'auto-reparation, rendue visible.
 
     Une correction silencieuse serait plus confortable et beaucoup moins credible :

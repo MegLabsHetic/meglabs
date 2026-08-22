@@ -37,11 +37,11 @@ def garde() -> GardeFouSql:
         "SELECT * FROM (SELECT service FROM collaborateurs) AS s",
     ],
 )
-def test_les_lectures_legitimes_passent(garde: GardeFouSql, sql: str) -> None:
+def test_legitimate_reads_are_allowed(garde: GardeFouSql, sql: str) -> None:
     assert garde.verifier(sql, TABLES)
 
 
-def test_la_requete_renvoyee_est_executable(garde: GardeFouSql) -> None:
+def test_the_returned_query_is_executable(garde: GardeFouSql) -> None:
     """Ce qui sort du garde-fou est du SQL, pas la chaine d'origine recopiee."""
     sortie = garde.verifier("select  service ,count(*) from collaborateurs group by 1", TABLES)
     assert sortie.upper().startswith("SELECT")
@@ -63,7 +63,7 @@ def test_la_requete_renvoyee_est_executable(garde: GardeFouSql) -> None:
         "ALTER TABLE collaborateurs DROP COLUMN salaire_annuel",
     ],
 )
-def test_les_ecritures_sont_refusees(garde: GardeFouSql, sql: str) -> None:
+def test_writes_are_refused(garde: GardeFouSql, sql: str) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier(sql, TABLES)
 
@@ -77,12 +77,12 @@ def test_les_ecritures_sont_refusees(garde: GardeFouSql, sql: str) -> None:
         "INSTALL httpfs",
     ],
 )
-def test_les_instructions_de_moteur_sont_refusees(garde: GardeFouSql, sql: str) -> None:
+def test_engine_statements_are_refused(garde: GardeFouSql, sql: str) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier(sql, TABLES)
 
 
-def test_une_ecriture_cachee_dans_une_cte_est_refusee(garde: GardeFouSql) -> None:
+def test_a_write_hidden_in_a_cte_is_refused(garde: GardeFouSql) -> None:
     """DuckDB accepte le DML en CTE : la requete se presente alors comme un SELECT."""
     with pytest.raises(SqlRefuse):
         garde.verifier(
@@ -91,7 +91,7 @@ def test_une_ecriture_cachee_dans_une_cte_est_refusee(garde: GardeFouSql) -> Non
         )
 
 
-def test_deux_instructions_sont_refusees(garde: GardeFouSql) -> None:
+def test_two_statements_are_refused(garde: GardeFouSql) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier("SELECT 1; DROP TABLE collaborateurs", TABLES)
 
@@ -105,23 +105,23 @@ def test_deux_instructions_sont_refusees(garde: GardeFouSql) -> None:
         "SELECT * FROM read_csv_auto('/etc/shadow')",
     ],
 )
-def test_les_lectures_de_fichiers_sont_refusees(garde: GardeFouSql, sql: str) -> None:
+def test_file_reads_are_refused(garde: GardeFouSql, sql: str) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier(sql, TABLES)
 
 
-def test_une_table_hors_espace_est_refusee(garde: GardeFouSql) -> None:
+def test_a_table_outside_the_workspace_is_refused(garde: GardeFouSql) -> None:
     with pytest.raises(SqlRefuse) as refus:
         garde.verifier("SELECT * FROM salaires_direction", TABLES)
     assert "collaborateurs" in refus.value.alternative
 
 
-def test_une_requete_vide_est_refusee(garde: GardeFouSql) -> None:
+def test_an_empty_query_is_refused(garde: GardeFouSql) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier("   ", TABLES)
 
 
-def test_un_texte_qui_n_est_pas_du_sql_est_refuse(garde: GardeFouSql) -> None:
+def test_text_that_is_not_sql_is_refused(garde: GardeFouSql) -> None:
     with pytest.raises(SqlRefuse):
         garde.verifier("montre moi les salaires", TABLES)
 
@@ -129,7 +129,7 @@ def test_un_texte_qui_n_est_pas_du_sql_est_refuse(garde: GardeFouSql) -> None:
 # --- La forme du refus ----------------------------------------------------
 
 
-def test_le_refus_propose_une_alternative(garde: GardeFouSql) -> None:
+def test_the_refusal_offers_an_alternative(garde: GardeFouSql) -> None:
     """C'est la demonstration de securite : le refus doit rester serviable."""
     with pytest.raises(SqlRefuse) as refus:
         garde.verifier("DELETE FROM collaborateurs", TABLES)

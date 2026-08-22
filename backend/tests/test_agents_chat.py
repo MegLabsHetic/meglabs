@@ -44,9 +44,7 @@ class FournisseurSimule:
         texte = self._suivante(requete)
         for mot in texte.split(" "):
             yield Fragment(texte=mot + " ")
-        yield Fragment(
-            fin=ReponseBrute(texte=texte, tokens_entree=900, tokens_sortie=120)
-        )
+        yield Fragment(fin=ReponseBrute(texte=texte, tokens_entree=900, tokens_sortie=120))
 
 
 def client(*reponses: str) -> tuple[LlmClient, FournisseurSimule]:
