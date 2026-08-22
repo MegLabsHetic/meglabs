@@ -32,9 +32,8 @@ export const ETAPES: Etape[] = [
   {
     chemin: "/ia",
     titre: "IA & prédictions",
-    resume: "Poser ses questions en français, simuler",
-    disponible: false,
-    attendu: "sprints 2 et 3",
+    resume: "Poser ses questions en français",
+    disponible: true,
   },
   {
     chemin: "/rapport",
