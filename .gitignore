@@ -2,6 +2,9 @@
 .env
 .env.*
 !.env.example
+# Les modèles de configuration serveur : des valeurs factices, jamais de secret.
+!.env.prod.example
+!.env.staging.example
 *.pem
 *.key
 

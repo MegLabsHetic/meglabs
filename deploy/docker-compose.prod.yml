@@ -1,0 +1,127 @@
+# Pile de production : deux environnements sur une seule machine.
+#
+#   main -> production      dev -> preproduction
+#
+# Airbyte n'est PAS ici, volontairement : il doit pouvoir demarrer et s'arreter
+# sans toucher au produit.
+#
+#   docker compose -f deploy/docker-compose.prod.yml up -d --build
+
+name: meglabs
+
+x-limites-back: &limites-back
+  mem_limit: 3g
+  restart: unless-stopped
+
+x-limites-front: &limites-front
+  mem_limit: 512m
+  restart: unless-stopped
+
+services:
+
+  # --- Entree unique ---------------------------------------------------------
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAINE: ${DOMAINE:?renseigne DOMAINE dans deploy/.env}
+      # Sans elle, Caddy retombe sur `admin@localhost`, que Let's Encrypt refuse
+      # (« contact email has invalid domain ») : aucun certificat n'est emis et
+      # le site ne repond qu'en HTTP.
+      EMAIL_ACME: ${EMAIL_ACME:?renseigne EMAIL_ACME dans deploy/.env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    networks: [edge]
+    mem_limit: 256m
+    restart: unless-stopped
+
+  # --- Base partagee ---------------------------------------------------------
+  # Une instance, deux bases, deux utilisateurs. L'isolation par base suffit ici
+  # et economise un composant a exploiter.
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?}
+      POSTGRES_DB: meglabs_prod
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init-databases.sh:/docker-entrypoint-initdb.d/init-databases.sh:ro
+    networks: [data]
+    mem_limit: 2g
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # --- Production ------------------------------------------------------------
+  back-prod:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile.prod
+    env_file: [.env.prod]
+    environment:
+      STORAGE_DIR: /data/storage
+    volumes:
+      - storage_prod:/data/storage
+    networks: [edge, data]
+    depends_on:
+      postgres: {condition: service_healthy}
+    <<: *limites-back
+
+  front-prod:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile.prod
+      args:
+        # Fige a la compilation : voir le commentaire dans frontend/Dockerfile.prod
+        NEXT_PUBLIC_API_URL: https://api.${DOMAINE}
+    networks: [edge]
+    depends_on: [back-prod]
+    <<: *limites-front
+
+  # --- Preproduction ---------------------------------------------------------
+  back-staging:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile.prod
+    env_file: [.env.staging]
+    environment:
+      STORAGE_DIR: /data/storage
+    volumes:
+      - storage_staging:/data/storage
+    networks: [edge, data]
+    depends_on:
+      postgres: {condition: service_healthy}
+    mem_limit: 2g
+    restart: unless-stopped
+
+  front-staging:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile.prod
+      args:
+        NEXT_PUBLIC_API_URL: https://api.staging.${DOMAINE}
+    networks: [edge]
+    depends_on: [back-staging]
+    <<: *limites-front
+
+networks:
+  # `edge` porte le trafic web, `data` isole la base : le front n'a aucune route
+  # vers PostgreSQL, meme s'il etait compromis.
+  edge:
+  data:
+    internal: true
+
+volumes:
+  pgdata:
+  storage_prod:
+  storage_staging:
+  caddy_data:
+  caddy_config:

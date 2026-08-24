@@ -1,0 +1,45 @@
+# Un seul point d'entree. Caddy obtient et renouvelle les certificats tout seul.
+#
+# `DOMAINE` vient de deploy/.env. Pour tester avant que le DNS ait propage,
+# mettre `DOMAINE=<ip-du-vps>.nip.io` : ce service resout n'importe quel
+# sous-domaine vers l'IP qu'il contient.
+
+{
+	email {$EMAIL_ACME:admin@localhost}
+}
+
+# --- Production --------------------------------------------------------------
+
+{$DOMAINE} {
+	reverse_proxy front-prod:3000
+}
+
+# La zone DNS porte un `www` historique qui pointe sur l'apex. Sans ce bloc,
+# Caddy ne reconnait pas le nom, ne demande aucun certificat, et le navigateur
+# affiche une erreur TLS plutot qu'une page introuvable — un symptome qui ne
+# designe pas sa cause.
+www.{$DOMAINE} {
+	redir https://{$DOMAINE}{uri} permanent
+}
+
+api.{$DOMAINE} {
+	reverse_proxy back-prod:8000 {
+		# La conversation est un flux Server-Sent Events. Sans cette ligne, un
+		# proxy peut retenir la reponse jusqu'a sa fin : le theatre des agents et
+		# la reponse mot a mot arrivent alors d'un bloc, et toute la demonstration
+		# tombe. -1 force l'envoi immediat de chaque fragment.
+		flush_interval -1
+	}
+}
+
+# --- Preproduction -----------------------------------------------------------
+
+staging.{$DOMAINE} {
+	reverse_proxy front-staging:3000
+}
+
+api.staging.{$DOMAINE} {
+	reverse_proxy back-staging:8000 {
+		flush_interval -1
+	}
+}
