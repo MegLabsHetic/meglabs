@@ -32,6 +32,16 @@ déroulé du projet dans `projet/`.
 | `06-pseudonymise.png` | Étape 2 — Après masquage | 944 valeurs remplacées par des jetons stables ; le compteur de colonnes sensibles retombe à zéro |
 | `07` à `09` | Étapes 3 à 5 | Ce qui n'est pas encore livré, annoncé comme tel plutôt que maquetté |
 | `10-accueil-mobile.png` | Landing, 414 px | Le premier écran sur téléphone |
+| `11-chat-agents.png` | Étape 4 — Conversation | La chaîne d'agents en cours de travail, prise au vol |
+| `12-chat-reponse.png` | Étape 4 — Conversation | La réponse en français et le compteur de coût de la session |
+| `13-chat-transparence.png` | Étape 4 — Tout déplié | La requête exécutée, le tableau, l'auto-réparation et le coût par appel |
+| `14-chat-securite.png` | Étape 4 — Refus | Une demande de suppression, refusée avec une alternative |
+
+Les quatre dernières demandent une clé API et de vrais appels au modèle : elles sont
+produites par `scripts/captures-chat.mjs`, lancé à part. Ce script redirige les appels
+du navigateur vers le service Docker plutôt que de les relayer — sans quoi la réponse
+arriverait d'un bloc et le streaming, justement, ne se verrait pas. Il faut donc que
+`CORS_ORIGINS` contienne `http://frontend:3000` dans le `.env` local.
 
 ## Le déroulé du projet — `projet/`
 

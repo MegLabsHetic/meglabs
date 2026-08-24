@@ -7,6 +7,7 @@ cout montre au jury deviendrait faux.
 """
 
 import time
+from collections.abc import AsyncIterator, Callable
 from dataclasses import dataclass, replace
 from typing import TypeVar
 
@@ -79,6 +80,28 @@ class LlmClient:
         requete = self._requete(tache, instruction, question, effort, max_tokens)
         brute, duree, tentatives = await self._appeler(requete)
         return Resultat(brute.texte, self._tracer(agent, requete, brute, duree, tentatives))
+
+    def diffuser_texte(
+        self,
+        tache: Task,
+        instruction: str,
+        question: str,
+        agent: str,
+        effort: str | None = None,
+        max_tokens: int = 2048,
+    ) -> "Diffusion":
+        """La meme reponse, rendue au fil de l'eau.
+
+        Pas de reprise ici, contrairement aux appels bloquants : les premiers mots sont
+        deja affiches quand l'echec se produit, on ne peut plus les reprendre. Un flux
+        interrompu est signale a l'appelant plutot que rejoue en double.
+        """
+        requete = self._requete(tache, instruction, question, effort, max_tokens)
+        return Diffusion(
+            self._fournisseur,
+            requete,
+            lambda brute, duree: self._tracer(agent, requete, brute, duree, tentatives=1),
+        )
 
     async def repondre_structure(
         self,
@@ -239,6 +262,45 @@ class LlmClient:
         return construire_fournisseur(self._settings)
 
 
+class Diffusion:
+    """Une reponse qui arrive par morceaux, et ce qu'elle aura coute.
+
+    Deux temps volontairement separes : on parcourt les morceaux pour les afficher,
+    puis on lit `trace` une fois le flux epuise. Renvoyer le cout dans le flux lui-meme
+    obligerait chaque appelant a trier les morceaux utiles des morceaux techniques.
+    """
+
+    def __init__(
+        self,
+        fournisseur: Fournisseur,
+        requete: Requete,
+        tracer: Callable[[ReponseBrute, int], Trace],
+    ) -> None:
+        self._fournisseur = fournisseur
+        self._requete = requete
+        self._tracer = tracer
+        self.texte = ""
+        self.trace: Trace | None = None
+
+    async def __aiter__(self) -> AsyncIterator[str]:
+        debut = time.perf_counter()
+        morceaux: list[str] = []
+        finale: ReponseBrute | None = None
+
+        async for fragment in self._fournisseur.diffuser(self._requete):
+            if fragment.fin is not None:
+                finale = fragment.fin
+                continue
+            morceaux.append(fragment.texte)
+            yield fragment.texte
+
+        self.texte = "".join(morceaux).strip()
+        # Un fournisseur qui ne renvoie pas de decompte ne doit pas faire disparaitre
+        # l'appel du journal : on trace ce qu'on sait, avec un cout nul assume.
+        brute = finale or ReponseBrute(texte=self.texte, tokens_entree=0, tokens_sortie=0)
+        self.trace = self._tracer(brute, int((time.perf_counter() - debut) * 1000))
+
+
 def construire_fournisseur(settings: Settings) -> Fournisseur:
     """Instancie le fournisseur configure. Importe a la demande : un SDK inutilise
     n'a pas besoin d'etre charge."""
@@ -253,6 +315,10 @@ def construire_fournisseur(settings: Settings) -> Fournisseur:
         from app.core.providers.openai_provider import FournisseurOpenAI
 
         return FournisseurOpenAI(cle)
+    if fournisseur is Provider.SCALEWAY:
+        from app.core.providers.openai_provider import FournisseurOpenAI
+
+        return FournisseurOpenAI(cle, base_url=settings.scaleway_base_url, nom="scaleway")
     from app.core.providers.anthropic_provider import FournisseurAnthropic
 
     return FournisseurAnthropic(cle)

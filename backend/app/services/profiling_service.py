@@ -64,6 +64,11 @@ class ProfilingService:
                     "part_manquantes": colonne["part_manquantes"],
                     "exemples": colonne["exemples"],
                     "statistiques": colonne["statistiques"],
+                    # Le modele doit savoir que la donnee est sale, sinon il ecrit du
+                    # SQL juste sur des donnees fausses : sans cette ligne, un GROUP BY
+                    # sur une colonne a modalites variantes rend « Data » et « data »
+                    # comme deux services distincts.
+                    "anomalies": colonne["anomalies"],
                 }
                 for colonne in profil["colonnes"]
             ],

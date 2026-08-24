@@ -16,10 +16,11 @@ Non verifie en appel reel : le compte de l'equipe n'a pas de credit.
 """
 
 import json
+from collections.abc import AsyncIterator
 
 from anthropic import AsyncAnthropic
 
-from app.core.providers.base import ReponseBrute, Requete
+from app.core.providers.base import Fragment, ReponseBrute, Requete
 
 
 class FournisseurAnthropic:
@@ -50,6 +51,36 @@ class FournisseurAnthropic:
             tokens_sortie=usage.output_tokens,
             tokens_caches=getattr(usage, "cache_read_input_tokens", 0) or 0,
             raison_arret=self._raison(reponse),
+        )
+
+    async def diffuser(self, requete: Requete) -> AsyncIterator[Fragment]:
+        """Le message complet, avec son decompte, n'est disponible qu'a la fermeture."""
+        async with self._client.messages.stream(
+            model=requete.modele,
+            max_tokens=requete.max_tokens,
+            system=[
+                {
+                    "type": "text",
+                    "text": requete.instruction,
+                    "cache_control": {"type": "ephemeral"},
+                }
+            ],
+            messages=[{"role": "user", "content": requete.question}],
+        ) as flux:
+            async for texte in flux.text_stream:
+                if texte:
+                    yield Fragment(texte=texte)
+            final = await flux.get_final_message()
+
+        usage = final.usage
+        yield Fragment(
+            fin=ReponseBrute(
+                texte=self._extraire(final, requete),
+                tokens_entree=usage.input_tokens,
+                tokens_sortie=usage.output_tokens,
+                tokens_caches=getattr(usage, "cache_read_input_tokens", 0) or 0,
+                raison_arret=self._raison(final),
+            )
         )
 
     def _options(self, requete: Requete) -> dict:

@@ -136,3 +136,24 @@ class BaseAgent:
         )
         self.traces.append(resultat.trace)
         return resultat.valeur
+
+    async def raconter(
+        self,
+        tache: Task,
+        instruction: str,
+        question: str,
+        effort: str | None = None,
+        max_tokens: int = 2048,
+    ) -> AsyncIterator[str]:
+        """Meme chose, mot a mot. La trace n'est connue qu'a la fin du flux.
+
+        L'attente avant le premier mot est ce qui distingue une interface qui repond
+        d'une interface qui semble bloquee : cette methode existe pour cela.
+        """
+        diffusion = self._client.diffuser_texte(
+            tache, instruction, question, agent=self.nom, effort=effort, max_tokens=max_tokens
+        )
+        async for morceau in diffusion:
+            yield morceau
+        if diffusion.trace is not None:
+            self.traces.append(diffusion.trace)

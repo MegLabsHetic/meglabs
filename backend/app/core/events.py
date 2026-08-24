@@ -18,6 +18,7 @@ from dataclasses import dataclass, field
 AGENT = "agent_status"
 JETON = "token"
 SQL = "sql"
+REPARATION = "sql_healing"
 ERREUR = "erreur"
 FIN = "done"
 
@@ -44,6 +45,33 @@ def evenement_agent(agent: str, etat: str, detail: str, duree_ms: int | None = N
     if duree_ms is not None:
         donnees["duree_ms"] = duree_ms
     return Evenement(AGENT, donnees)
+
+
+def evenement_sql(sql: str, duree_ms: int, nb_lignes: int, tronque: bool) -> Evenement:
+    """La requete reellement executee. Elle est montree, jamais resumee."""
+    return Evenement(
+        SQL,
+        {"sql": sql, "duree_ms": duree_ms, "nb_lignes": nb_lignes, "tronque": tronque},
+    )
+
+
+def evenement_reparation(
+    sql_echoue: str, erreur: str, sql_corrige: str, explication: str
+) -> Evenement:
+    """L'auto-reparation, rendue visible.
+
+    Une correction silencieuse serait plus confortable et beaucoup moins credible :
+    montrer l'echec puis la correction est ce qui prouve que le mecanisme existe.
+    """
+    return Evenement(
+        REPARATION,
+        {
+            "sql_echoue": sql_echoue,
+            "erreur": erreur,
+            "sql_corrige": sql_corrige,
+            "explication": explication,
+        },
+    )
 
 
 class FluxEvenements:
