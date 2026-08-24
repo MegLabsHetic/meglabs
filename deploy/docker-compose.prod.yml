@@ -27,6 +27,10 @@ services:
       - "443:443"
     environment:
       DOMAINE: ${DOMAINE:?renseigne DOMAINE dans deploy/.env}
+      # Sans elle, Caddy retombe sur `admin@localhost`, que Let's Encrypt refuse
+      # (« contact email has invalid domain ») : aucun certificat n'est emis et
+      # le site ne repond qu'en HTTP.
+      EMAIL_ACME: ${EMAIL_ACME:?renseigne EMAIL_ACME dans deploy/.env}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data
