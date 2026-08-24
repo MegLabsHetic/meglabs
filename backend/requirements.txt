@@ -6,8 +6,11 @@ pydantic-settings==2.10.1
 python-multipart==0.0.20
 
 # Persistance
+# SQLite en developpement, PostgreSQL sur le serveur : les deux pilotes sont
+# presents, le choix se fait par DATABASE_URL et rien d'autre.
 SQLAlchemy[asyncio]==2.0.43
 aiosqlite==0.21.0
+asyncpg==0.30.0
 
 # Analyse de donnees (Agent Data : Python pur, aucun appel LLM)
 pandas==2.3.2
