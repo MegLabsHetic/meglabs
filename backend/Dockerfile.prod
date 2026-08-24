@@ -1,0 +1,45 @@
+# Image de production. Le `Dockerfile` voisin sert au developpement et lance
+# uvicorn en mode rechargement.
+
+# --- Dependances ------------------------------------------------------------
+# Les paquets sont installes dans un environnement virtuel copie tel quel dans
+# l'image finale : les outils de compilation restent dans cette etape.
+FROM python:3.12-slim AS builder
+
+ENV PIP_NO_CACHE_DIR=1
+WORKDIR /app
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+# --- Execution --------------------------------------------------------------
+FROM python:3.12-slim AS runner
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PATH="/opt/venv/bin:$PATH"
+
+WORKDIR /app
+
+# Un conteneur qui tourne en root donne root sur l'hote a qui s'en echappe.
+RUN useradd --system --uid 1001 --create-home meglabs
+
+COPY --from=builder /opt/venv /opt/venv
+COPY --chown=meglabs:meglabs . .
+
+# Le dossier existe et appartient a l'utilisateur AVANT que le volume soit monte :
+# sinon Docker le cree en root et le depot de fichiers echoue en ecriture.
+RUN mkdir -p /data/storage && chown -R meglabs:meglabs /data
+
+USER meglabs
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
+    CMD python -c "import urllib.request as u, sys; sys.exit(0 if u.urlopen('http://127.0.0.1:8000/api/health', timeout=4).status == 200 else 1)"
+
+# Un seul worker : DuckDB et pandas travaillent en memoire dans le processus, et
+# plusieurs workers multiplieraient l'empreinte sans rien accelerer sur nos volumes.
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
