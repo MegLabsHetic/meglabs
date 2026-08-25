@@ -12,6 +12,7 @@ import { useCallback, useRef, useState } from "react";
 
 import { Alerte } from "@/components/Alerte";
 import { DetailReponse } from "@/components/DetailReponse";
+import { Graphique } from "@/components/Graphique";
 import { EtapeAgent, TheatreAgents, integrer } from "@/components/TheatreAgents";
 import { useAtelier } from "@/lib/atelier";
 import type { AppelTrace, EvenementReparation, EvenementSql } from "@/lib/sse";
@@ -33,6 +34,8 @@ interface Tour {
   colonnes: string[];
   lignes: (string | number | null)[][];
   tronque: boolean;
+  /** Décidé par l'orchestrateur : un graphique éclaire-t-il cette réponse ? */
+  visualisation: boolean;
   trace: AppelTrace[];
   cout: number;
   depuisCache: boolean;
@@ -50,6 +53,7 @@ function tourVierge(question: string): Tour {
     colonnes: [],
     lignes: [],
     tronque: false,
+    visualisation: false,
     trace: [],
     cout: 0,
     depuisCache: false,
@@ -96,6 +100,7 @@ export default function Conversation() {
             colonnes: reponse.colonnes,
             lignes: reponse.lignes,
             tronque: reponse.tronque,
+            visualisation: reponse.besoin_visualisation,
             trace: reponse.trace,
             cout: reponse.cout_centimes,
             depuisCache: reponse.depuis_cache,
@@ -201,6 +206,11 @@ export default function Conversation() {
                       ⚡ réponse en cache — 0 centime
                     </p>
                   )}
+                  <Graphique
+                    colonnes={tour.colonnes}
+                    lignes={tour.lignes}
+                    souhaite={tour.visualisation}
+                  />
                   <DetailReponse
                     sql={tour.sql}
                     colonnes={tour.colonnes}
