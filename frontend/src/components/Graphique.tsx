@@ -41,12 +41,16 @@ type Serie = {
 /**
  * Choisit la forme à partir des données, pas d'un réglage.
  *
- * On prend la première colonne non numérique comme libellé et la première
- * colonne numérique comme mesure : c'est la forme que produit un `GROUP BY`,
- * et elle couvre la quasi-totalité des réponses.
+ * Exactement deux colonnes : c'est ce que produit un `GROUP BY`, et c'est ce
+ * qui distingue une répartition d'une liste d'enregistrements. Trois colonnes
+ * ou plus, on ne dessine pas — on ne saurait pas laquelle porte le sens.
+ *
+ * Le nombre de lignes fait le reste du tri : une seule ligne est un total ou un
+ * pourcentage, et un total ne se dessine pas ; au-delà d'une douzaine de
+ * catégories les libellés se chevauchent et le tableau redevient plus lisible.
  */
 function analyser(colonnes: string[], lignes: Valeur[][]): Serie | null {
-  if (colonnes.length < 2 || lignes.length < 2) return null;
+  if (colonnes.length !== 2 || lignes.length < 2) return null;
 
   const indexMesure = colonnes.findIndex((_, colonne) =>
     lignes.every((ligne) => nombre(ligne[colonne]) !== null),
@@ -116,12 +120,12 @@ function Barres({ serie }: { serie: Serie }) {
 
             {/* La piste rend visible la part que la barre n'occupe pas. */}
             <span
-              className="block h-5 rounded-[4px]"
+              className="block h-5 rounded-sm"
               style={{ background: "var(--voile)" }}
               aria-hidden
             >
               <span
-                className="block h-full rounded-[4px]"
+                className="block h-full rounded-sm"
                 style={{
                   width: `${part}%`,
                   background: actif ? "var(--accent-clair)" : "var(--accent)",
@@ -219,18 +223,21 @@ function Courbe({ serie }: { serie: Serie }) {
   );
 }
 
-export function Graphique({
-  colonnes,
-  lignes,
-  souhaite,
-}: {
-  colonnes: string[];
-  lignes: Valeur[][];
-  /** Ce que l'orchestrateur a décidé : un graphique éclaire-t-il cette réponse ? */
-  souhaite: boolean;
-}) {
-  if (!souhaite) return null;
-
+/**
+ * L'orchestrateur renvoie aussi son avis, dans `besoin_visualisation`. On ne s'en
+ * sert pas pour décider, et c'est délibéré : mesuré sur « combien de
+ * collaborateurs par service », il a répondu `false` sur une répartition en cinq
+ * catégories — le cas que son propre prompt donne en exemple de `true`.
+ *
+ * C'est la règle de l'Agent Data appliquée à l'affichage : ce qui se calcule ne
+ * se demande pas à un modèle. La forme du résultat est un fait, pas un jugement.
+ *
+ * Le prix de ce choix : une colonne numérique qui serait un identifiant se
+ * dessinerait quand même. C'est rare, et moins coûteux que de ne jamais rien
+ * afficher. L'écart entre les deux décisions se journalise, et donne une
+ * métrique de plus sur la fiabilité de l'orchestrateur.
+ */
+export function Graphique({ colonnes, lignes }: { colonnes: string[]; lignes: Valeur[][] }) {
   const serie = analyser(colonnes, lignes);
   if (serie === null) return null;
 
