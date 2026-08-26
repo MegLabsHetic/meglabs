@@ -25,9 +25,8 @@ export const ETAPES: Etape[] = [
   {
     chemin: "/dashboard",
     titre: "Tableau de bord",
-    resume: "Indicateurs et graphiques interprétés",
-    disponible: false,
-    attendu: "sprint 3",
+    resume: "L'état de vos données, mesuré",
+    disponible: true,
   },
   {
     chemin: "/ia",
