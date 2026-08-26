@@ -1,6 +1,7 @@
 """Routes des fichiers. Couche fine : toute la logique vit dans les services."""
 
 from fastapi import APIRouter, Depends, File, UploadFile
+from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import get_settings
@@ -102,4 +103,37 @@ async def pseudonymiser(
         colonnes_pseudonymisees=colonnes,
         valeurs_remplacees=remplacees,
         profil=profil,
+    )
+
+
+@router.get("/files/{file_id}/nettoyage")
+async def proposer_nettoyage(
+    file_id: str, session: AsyncSession = Depends(get_session)
+) -> list[dict]:
+    """Les corrections que les défauts détectés justifient, avec leur impact.
+
+    Aucun appel à un modèle : les défauts sont dans le profil, qui les a comptés.
+    """
+    return await service.proposer_nettoyage(session, file_id)
+
+
+class ChoixNettoyage(BaseModel):
+    # Les types plutôt que des identifiants : une proposition est recalculée à
+    # chaque lecture, donc un identifiant n'y survivrait pas.
+    types: list[str] = Field(min_length=1)
+
+
+@router.post("/files/{file_id}/nettoyage", response_model=DepotReponse)
+async def appliquer_nettoyage(
+    file_id: str,
+    choix: ChoixNettoyage,
+    session: AsyncSession = Depends(get_session),
+) -> DepotReponse:
+    """Applique les corrections choisies et rend le nouveau profil."""
+    fichier, profil = await service.appliquer_nettoyage(session, file_id, choix.types)
+    detections = await service.detecter_pii(session, file_id)
+    return DepotReponse(
+        fichier=service.en_lecture(fichier),
+        profil=profil,
+        donnees_personnelles=service.detections_en_lecture(detections),
     )

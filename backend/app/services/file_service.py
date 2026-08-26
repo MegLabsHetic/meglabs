@@ -16,8 +16,9 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.agents.data_agent import DataAgent
 from app.core.config import Settings, get_settings
 from app.core.errors import ErreurUtilisateur, RessourceIntrouvable
-from app.models import DataFile, PiiMapping
+from app.models import CleaningAction, DataFile, PiiMapping
 from app.schemas.fichier import DetectionLecture, FichierLecture
+from app.services.cleaning_service import NettoyageService
 from app.services.pii_service import Detection
 
 EXTENSIONS = (".csv", ".xlsx", ".xls")
@@ -39,6 +40,7 @@ class FileService:
 
     def __init__(self, agent: DataAgent | None = None, settings: Settings | None = None) -> None:
         self._agent = agent or DataAgent()
+        self._nettoyage = NettoyageService()
         self._settings_impose = settings
 
     @property
@@ -222,3 +224,84 @@ class FileService:
             )
             for detection in detections
         ]
+
+    # --- Nettoyage guide -----------------------------------------------------
+
+    async def proposer_nettoyage(self, session: AsyncSession, file_id: str) -> list[dict]:
+        """Ce qu'il y aurait a corriger, calcule sur l'etat courant du fichier.
+
+        Sur l'etat courant et non sur l'original : proposer a nouveau de
+        supprimer des doublons deja supprimes serait au mieux inutile, au pire
+        troublant.
+        """
+        fichier = await self.recuperer(session, file_id)
+        table = await self.charger_nettoye(session, fichier)
+        profil = self._agent.profiler_table(table)
+        return [p.en_dict() for p in self._nettoyage.proposer(table, profil)]
+
+    async def appliquer_nettoyage(
+        self, session: AsyncSession, file_id: str, types: list[str]
+    ) -> tuple[DataFile, dict]:
+        """Enregistre les actions choisies et rend le profil de ce qu'elles donnent.
+
+        Les actions sont enregistrees, jamais le resultat : l'etat courant se
+        recalcule en les rejouant sur le fichier original, qui reste intact.
+        C'est ce qui rend chaque action reversible en la desactivant.
+        """
+        fichier = await self.recuperer(session, file_id)
+        proposees = await self.proposer_nettoyage(session, file_id)
+        choisies = [p for p in proposees if p["type"] in types]
+        if not choisies:
+            raise ErreurUtilisateur("Aucune correction sélectionnée.")
+
+        rang = await self._rang_suivant(session, file_id)
+        for decalage, action in enumerate(choisies):
+            session.add(
+                CleaningAction(
+                    file_id=file_id,
+                    order_index=rang + decalage,
+                    action_type=action["type"],
+                    column_name=action["colonne"],
+                    params=action["params"],
+                    rows_affected=action["lignes_affectees"],
+                )
+            )
+        await session.commit()
+
+        table = await self.charger_nettoye(session, fichier)
+        profil = self._agent.profiler_table(table)
+        fichier.profile = profil
+        fichier.quality_score = profil["score_qualite"]
+        await session.commit()
+        return fichier, profil
+
+    async def charger_nettoye(self, session: AsyncSession, fichier: DataFile) -> pd.DataFrame:
+        """Le fichier original, plus le rejeu ordonne des actions actives."""
+        table = self._agent.charger(Path(fichier.path))
+        actions = await self.actions_actives(session, fichier.id)
+        return self._nettoyage.appliquer(table, actions) if actions else table
+
+    async def actions_actives(self, session: AsyncSession, file_id: str) -> list[dict]:
+        resultat = await session.execute(
+            select(CleaningAction)
+            .where(CleaningAction.file_id == file_id, CleaningAction.enabled.is_(True))
+            .order_by(CleaningAction.order_index)
+        )
+        return [
+            {
+                "type": action.action_type,
+                "colonne": action.column_name,
+                "params": action.params or {},
+            }
+            for action in resultat.scalars()
+        ]
+
+    async def _rang_suivant(self, session: AsyncSession, file_id: str) -> int:
+        resultat = await session.execute(
+            select(CleaningAction.order_index)
+            .where(CleaningAction.file_id == file_id)
+            .order_by(CleaningAction.order_index.desc())
+            .limit(1)
+        )
+        dernier = resultat.scalar()
+        return 0 if dernier is None else dernier + 1
