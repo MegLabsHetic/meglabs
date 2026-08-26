@@ -38,6 +38,38 @@ type Serie = {
   points: { libelle: string; valeur: number }[];
 };
 
+type Tuiles = {
+  forme: "tuiles";
+  chiffres: { mesure: string; valeur: number }[];
+  /** Ce que la ligne unique qualifie, s'il y a une colonne textuelle. */
+  qualifiant: string | null;
+};
+
+type Vue = Serie | Tuiles;
+
+/** Au-delà, ce n'est plus un chiffre clé mais un tableau à une ligne. */
+const MAX_TUILES = 4;
+
+/**
+ * Une seule ligne n'est pas un graphique, c'est un résultat.
+ *
+ * « Quel est le salaire moyen ? » renvoie une valeur : la dessiner en barre
+ * n'apprend rien, puisqu'il n'y a rien à comparer. Le chiffre en grand est la
+ * bonne réponse — et sans cette forme, ces questions n'affichaient rien du tout.
+ */
+function tuiles(colonnes: string[], ligne: Valeur[]): Tuiles | null {
+  const chiffres = colonnes
+    .map((mesure, colonne) => ({ mesure, valeur: nombre(ligne[colonne]) }))
+    .filter((chiffre): chiffre is { mesure: string; valeur: number } => chiffre.valeur !== null);
+
+  if (chiffres.length === 0 || chiffres.length > MAX_TUILES) return null;
+
+  const textuelle = colonnes.findIndex((_, colonne) => nombre(ligne[colonne]) === null);
+  const qualifiant = textuelle === -1 ? null : String(ligne[textuelle] ?? "");
+
+  return { forme: "tuiles", chiffres, qualifiant: qualifiant || null };
+}
+
 /**
  * Choisit la forme à partir des données, pas d'un réglage.
  *
@@ -49,8 +81,10 @@ type Serie = {
  * pourcentage, et un total ne se dessine pas ; au-delà d'une douzaine de
  * catégories les libellés se chevauchent et le tableau redevient plus lisible.
  */
-function analyser(colonnes: string[], lignes: Valeur[][]): Serie | null {
-  if (colonnes.length !== 2 || lignes.length < 2) return null;
+function analyser(colonnes: string[], lignes: Valeur[][]): Vue | null {
+  if (colonnes.length === 0 || lignes.length === 0) return null;
+  if (lignes.length === 1) return tuiles(colonnes, lignes[0]);
+  if (colonnes.length !== 2) return null;
 
   const indexMesure = colonnes.findIndex((_, colonne) =>
     lignes.every((ligne) => nombre(ligne[colonne]) !== null),
@@ -83,6 +117,33 @@ function analyser(colonnes: string[], lignes: Valeur[][]): Serie | null {
     mesure: colonnes[indexMesure],
     points,
   };
+}
+
+/**
+ * Le chiffre en grand, et son nom en petit dessous.
+ *
+ * L'ordre importe : on lit la valeur avant de lire ce qu'elle mesure. L'inverse
+ * oblige à parcourir un libellé pour arriver à l'information.
+ */
+function Chiffres({ vue }: { vue: Tuiles }) {
+  return (
+    <div className="flex flex-wrap gap-x-10 gap-y-4">
+      {vue.chiffres.map((chiffre) => (
+        <div key={chiffre.mesure} className="flex flex-col gap-0.5">
+          <span
+            className="chiffres-alignes text-3xl leading-none"
+            style={{ color: "var(--accent-clair)" }}
+          >
+            {FORMAT.format(chiffre.valeur)}
+          </span>
+          <span className="text-xs" style={{ color: "var(--ink-muted)" }}>
+            {chiffre.mesure}
+            {vue.qualifiant && ` · ${vue.qualifiant}`}
+          </span>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 /**
@@ -238,15 +299,23 @@ function Courbe({ serie }: { serie: Serie }) {
  * métrique de plus sur la fiabilité de l'orchestrateur.
  */
 export function Graphique({ colonnes, lignes }: { colonnes: string[]; lignes: Valeur[][] }) {
-  const serie = analyser(colonnes, lignes);
-  if (serie === null) return null;
+  const vue = analyser(colonnes, lignes);
+  if (vue === null) return null;
+
+  if (vue.forme === "tuiles") {
+    return (
+      <figure className="mt-4">
+        <Chiffres vue={vue} />
+      </figure>
+    );
+  }
 
   return (
     <figure className="mt-4 flex flex-col gap-3">
       <figcaption className="text-xs" style={{ color: "var(--ink-muted)" }}>
-        {serie.mesure} par {serie.libelleAxe}
+        {vue.mesure} par {vue.libelleAxe}
       </figcaption>
-      {serie.forme === "barres" ? <Barres serie={serie} /> : <Courbe serie={serie} />}
+      {vue.forme === "barres" ? <Barres serie={vue} /> : <Courbe serie={vue} />}
     </figure>
   );
 }

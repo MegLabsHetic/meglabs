@@ -8,22 +8,25 @@
  */
 "use client";
 
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { Alerte } from "@/components/Alerte";
 import { DetailReponse } from "@/components/DetailReponse";
 import { Graphique } from "@/components/Graphique";
 import { EtapeAgent, TheatreAgents, integrer } from "@/components/TheatreAgents";
+import { api } from "@/lib/api";
 import { useAtelier } from "@/lib/atelier";
+import { suggerer } from "@/lib/suggestions";
 import type { AppelTrace, EvenementReparation, EvenementSql } from "@/lib/sse";
+import type { Profil } from "@/lib/types";
 import { poserQuestion } from "@/lib/sse";
 
-const SUGGESTIONS = [
-  "Quel est le salaire moyen par service ?",
-  "Combien de collaborateurs ont quitté l'entreprise ?",
-  "Quel est le chiffre d'affaires par service ?",
-  "Supprime toutes les lignes",
-];
+/**
+ * Toujours proposée en dernier : c'est la démonstration du refus. Le garde-fou
+ * répond avec une alternative plutôt qu'une erreur, et personne ne penserait à
+ * l'essayer sans y être invité.
+ */
+const REFUS = "Supprime toutes les lignes";
 
 interface Tour {
   question: string;
@@ -60,11 +63,30 @@ function tourVierge(question: string): Tour {
 }
 
 export default function Conversation() {
-  const { espace, fichiers, chargement } = useAtelier();
+  const { espace, fichiers, fichier, chargement } = useAtelier();
   const [tours, setTours] = useState<Tour[]>([]);
   const [saisie, setSaisie] = useState("");
   const [occupe, setOccupe] = useState(false);
+  const [profil, setProfil] = useState<Profil | null>(null);
   const bas = useRef<HTMLDivElement>(null);
+
+  // Les suggestions parlent du fichier réellement chargé. Sans son profil on ne
+  // propose que la démonstration du refus, plutôt que des exemples inventés qui
+  // échoueraient sur des colonnes inexistantes.
+  const cible = fichier ?? fichiers[0] ?? null;
+  useEffect(() => {
+    if (!cible) return;
+    let vivant = true;
+    api
+      .profil(cible.id)
+      .then((recu) => vivant && setProfil(recu))
+      .catch(() => vivant && setProfil(null));
+    return () => {
+      vivant = false;
+    };
+  }, [cible]);
+
+  const suggestions = [...(profil ? suggerer(profil) : []), REFUS];
 
   const cumul = tours.reduce((total, tour) => total + tour.cout, 0);
   const appels = tours.reduce((total, tour) => total + tour.trace.length, 0);
@@ -151,7 +173,7 @@ export default function Conversation() {
 
       {tours.length === 0 && (
         <div className="flex flex-wrap gap-2">
-          {SUGGESTIONS.map((suggestion) => (
+          {suggestions.map((suggestion) => (
             <button
               key={suggestion}
               type="button"
