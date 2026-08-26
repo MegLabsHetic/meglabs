@@ -90,6 +90,10 @@ export const api = {
 
   profil: (fichierId: string) => appeler<Profil>(`/api/files/${fichierId}/profile`),
 
+  /** Remplit l'espace avec les jeux de démonstration livrés avec le projet. */
+  demonstration: (workspaceId: string) =>
+    appeler<Fichier[]>(`/api/workspaces/${workspaceId}/demonstration`, { method: "POST" }),
+
   /** Teste la connexion puis enregistre la source. */
   connecterSource: (workspaceId: string, connexion: Record<string, unknown>) =>
     appeler<Source>(`/api/workspaces/${workspaceId}/sources`, {

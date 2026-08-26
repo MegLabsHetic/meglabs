@@ -6,9 +6,12 @@ import { useRef, useState } from "react";
 export function ZoneDepot({
   enCours,
   onFichier,
+  onDemonstration,
 }: {
   enCours: boolean;
   onFichier: (fichier: File) => void;
+  /** Absent quand il n'y a rien à proposer : le bouton disparaît alors. */
+  onDemonstration?: () => void;
 }) {
   const [survol, setSurvol] = useState(false);
   const champ = useRef<HTMLInputElement>(null);
@@ -48,15 +51,39 @@ export function ZoneDepot({
           : "CSV ou Excel, jusqu'à 100 Mo. Rien n'est envoyé à un modèle de langage."}
       </p>
 
-      <button
-        type="button"
-        onClick={() => champ.current?.click()}
-        disabled={enCours}
-        className="mt-4 rounded-lg border px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-60"
-        style={{ borderColor: "var(--filet)" }}
-      >
-        Choisir un fichier
-      </button>
+      <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+        <button
+          type="button"
+          onClick={() => champ.current?.click()}
+          disabled={enCours}
+          className="rounded-lg border px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-60"
+          style={{ borderColor: "var(--filet)" }}
+        >
+          Choisir un fichier
+        </button>
+
+        {/* La réponse à la page blanche. Quelqu'un qui découvre la plateforme
+            sait ce qu'il veut savoir, mais n'a pas forcément un fichier sous la
+            main — et sans fichier, il n'y a rien à voir. */}
+        {onDemonstration && (
+          <button
+            type="button"
+            onClick={onDemonstration}
+            disabled={enCours}
+            className="rounded-lg px-4 py-2 text-sm font-medium transition-opacity disabled:opacity-60"
+            style={{ background: "var(--accent)", color: "#04110f" }}
+          >
+            Essayer avec un jeu de démonstration
+          </button>
+        )}
+      </div>
+
+      {onDemonstration && !enCours && (
+        <p className="mt-3 text-xs" style={{ color: "var(--ink-muted)" }}>
+          232 collaborateurs et 3 000 transactions, avec des défauts volontaires —
+          doublons, dates mélangées, salaires aberrants.
+        </p>
+      )}
 
       <input
         ref={champ}
