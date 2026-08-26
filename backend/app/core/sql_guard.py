@@ -17,6 +17,9 @@ import sqlglot
 from sqlglot import exp
 
 from app.core.errors import ErreurUtilisateur
+from app.core.journal import obtenir
+
+journal = obtenir(__name__)
 
 DIALECTE = "duckdb"
 
@@ -107,11 +110,29 @@ class GardeFouSql:
         La requete renvoyee est regeneree depuis l'arbre analyse : ce qui s'execute
         est alors exactement ce qui a ete controle, sans qu'un commentaire ou une
         mise en forme puisse s'intercaler entre les deux.
+
+        Chaque refus est journalise avec la requete refusee. Sans cette trace, on
+        affirme que le garde-fou protege sans jamais pouvoir montrer qu'il a
+        refuse quoi que ce soit — et une protection qu'on ne peut pas prouver ne
+        vaut pas grand-chose devant quelqu'un qui doute.
         """
-        arbre = self._analyser(sql)
-        self._refuser_ecritures(arbre)
-        self._refuser_fonctions_fichier(arbre)
-        self._refuser_tables_inconnues(arbre, tables_autorisees)
+        try:
+            arbre = self._analyser(sql)
+            self._refuser_ecritures(arbre)
+            self._refuser_fonctions_fichier(arbre)
+            self._refuser_tables_inconnues(arbre, tables_autorisees)
+        except SqlRefuse as refus:
+            journal.warning(
+                "sql refuse",
+                extra={
+                    "raison": refus.raison,
+                    # La requete complete : c'est elle qu'on relit pour savoir si
+                    # le modele a derive ou si quelqu'un a essaye quelque chose.
+                    "sql_refuse": sql.strip()[:1000],
+                    "tables_autorisees": sorted(tables_autorisees),
+                },
+            )
+            raise
         return arbre.sql(dialect=DIALECTE)
 
     # --- Etapes du controle -------------------------------------------------
