@@ -9,7 +9,7 @@ from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from app.api import chat, files, workspaces
+from app.api import chat, files, partages, workspaces
 from app.core.config import get_settings
 from app.core.database import create_schema
 from app.core.errors import ErreurUtilisateur
@@ -97,6 +97,7 @@ async def erreur_utilisateur(_: Request, erreur: ErreurUtilisateur) -> JSONRespo
 app.include_router(workspaces.router)
 app.include_router(files.router)
 app.include_router(chat.router)
+app.include_router(partages.router)
 
 
 @app.get("/api/health", tags=["health"])

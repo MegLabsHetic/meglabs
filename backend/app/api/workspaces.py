@@ -66,3 +66,21 @@ async def notebook(workspace_id: str, session: AsyncSession = Depends(get_sessio
         media_type="application/x-ipynb+json",
         headers={"Content-Disposition": f'attachment; filename="{nom}.ipynb"'},
     )
+
+
+@router.post("/{workspace_id}/rapport/partage", status_code=201)
+async def partager(workspace_id: str, session: AsyncSession = Depends(get_session)) -> dict:
+    """Fige le rapport et rend un lien de lecture publique.
+
+    Le contenu est copié au moment du partage : un lien transmis doit montrer ce
+    qu'on a voulu montrer, pas ce que l'espace est devenu depuis.
+    """
+    await service.recuperer(session, workspace_id)
+    return {"jeton": await rapports.partager(session, workspace_id)}
+
+
+@router.delete("/{workspace_id}/rapport/partage")
+async def revoquer(workspace_id: str, session: AsyncSession = Depends(get_session)) -> dict:
+    """Coupe tous les liens de cet espace."""
+    await service.recuperer(session, workspace_id)
+    return {"liens_revoques": await rapports.revoquer(session, workspace_id)}
