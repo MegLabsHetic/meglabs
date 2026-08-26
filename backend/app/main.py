@@ -1,9 +1,11 @@
 """Point d'entree FastAPI. Les routers metier sont montes ici, jamais de logique."""
 
-from collections.abc import AsyncGenerator
+import time
+import uuid
+from collections.abc import AsyncGenerator, Callable
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
@@ -11,8 +13,11 @@ from app.api import chat, files, workspaces
 from app.core.config import get_settings
 from app.core.database import create_schema
 from app.core.errors import ErreurUtilisateur
+from app.core.journal import configurer, id_requete, obtenir
 
+configurer()
 settings = get_settings()
+journal = obtenir(__name__)
 
 
 @asynccontextmanager
@@ -38,9 +43,54 @@ app.add_middleware(
 )
 
 
+@app.middleware("http")
+async def tracer(requete: Request, suivant: Callable) -> Response:
+    """Donne un identifiant a chaque requete et journalise ce qu'elle a fait.
+
+    L'identifiant est renvoye dans l'en-tete : quand quelqu'un signale une erreur,
+    il suffit de le lire dans les outils du navigateur pour retrouver la ligne
+    exacte cote serveur, sans chercher par horodatage.
+    """
+    jeton = id_requete.set(uuid.uuid4().hex[:12])
+    debut = time.perf_counter()
+    try:
+        reponse = await suivant(requete)
+    except Exception:
+        # Journalise avant de laisser remonter : sinon la trace se perd dans le
+        # gestionnaire par defaut et il ne reste qu'un 500 sans explication.
+        journal.exception(
+            "requete interrompue",
+            extra={
+                "methode": requete.method,
+                "chemin": requete.url.path,
+                "duree_ms": int((time.perf_counter() - debut) * 1000),
+            },
+        )
+        id_requete.reset(jeton)
+        raise
+
+    duree = int((time.perf_counter() - debut) * 1000)
+    journal.info(
+        "requete",
+        extra={
+            "methode": requete.method,
+            "chemin": requete.url.path,
+            "statut": reponse.status_code,
+            "duree_ms": duree,
+        },
+    )
+    reponse.headers["X-Request-ID"] = id_requete.get() or ""
+    id_requete.reset(jeton)
+    return reponse
+
+
 @app.exception_handler(ErreurUtilisateur)
 async def erreur_utilisateur(_: Request, erreur: ErreurUtilisateur) -> JSONResponse:
     """Les erreurs imputables a la demande sortent telles quelles, en francais."""
+    journal.info(
+        "refus",
+        extra={"message_utilisateur": erreur.message, "statut": erreur.code_http},
+    )
     return JSONResponse(status_code=erreur.code_http, content={"detail": erreur.message})
 
 

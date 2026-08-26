@@ -6,6 +6,7 @@ qui appellerait un fournisseur directement echapperait a tout cela — et le com
 cout montre au jury deviendrait faux.
 """
 
+import logging
 import time
 from collections.abc import AsyncIterator, Callable
 from dataclasses import dataclass, replace
@@ -23,7 +24,10 @@ from app.core.config import (
     savings_in_cents,
 )
 from app.core.errors import ErreurUtilisateur
+from app.core.journal import obtenir
 from app.core.providers.base import Fournisseur, ReponseBrute, Requete
+
+journal = obtenir(__name__)
 
 Sortie = TypeVar("Sortie", bound=BaseModel)
 
@@ -225,6 +229,30 @@ class LlmClient:
     # --- Comptage -----------------------------------------------------------
 
     def _tracer(
+        self, agent: str, requete: Requete, brute: ReponseBrute, duree_ms: int, tentatives: int
+    ) -> Trace:
+        trace = self._construire(agent, requete, brute, duree_ms, tentatives)
+        # Tout appel passe ici : c'est donc le seul endroit ou le journaliser, et
+        # la garantie qu'aucun appel n'echappe au compte. Une seconde tentative
+        # est signalee en avertissement — c'est le symptome d'un prompt qui
+        # derive ou d'un modele qui fatigue, et ca doit se voir sans etre cherche.
+        journal.log(
+            logging.WARNING if tentatives > 1 else logging.INFO,
+            "appel modele",
+            extra={
+                "agent": agent,
+                "modele": trace.modele,
+                "fournisseur": trace.fournisseur,
+                "tokens_entree": trace.tokens_entree,
+                "tokens_sortie": trace.tokens_sortie,
+                "cout_centimes": trace.cout_centimes,
+                "duree_ms": trace.duree_ms,
+                "tentatives": tentatives,
+            },
+        )
+        return trace
+
+    def _construire(
         self, agent: str, requete: Requete, brute: ReponseBrute, duree_ms: int, tentatives: int
     ) -> Trace:
         return Trace(
