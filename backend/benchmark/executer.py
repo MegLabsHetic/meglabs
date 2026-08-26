@@ -85,6 +85,38 @@ def normaliser(lignes: list) -> list[tuple]:
     return sorted(normalisees, key=repr)
 
 
+def contient(obtenu: list, attendu: list) -> bool:
+    """Le resultat repond-il a la reference, sans avoir a lui etre identique ?
+
+    Une comparaison stricte penalise un systeme qui repond MIEUX. Mesure sur nos
+    propres cas : a « quel est le salaire moyen ? » il a rendu la moyenne ET la
+    mediane, et a « quelle est la transaction la plus elevee ? » la ligne
+    complete plutot que le seul montant. Les deux reponses contiennent la bonne,
+    et les compter fausses aurait mesure la rigidite du benchmark, pas la
+    justesse du systeme.
+
+    La regle retenue : autant de lignes que la reference, et chaque ligne de la
+    reference retrouvee dans une ligne du resultat — une colonne en plus est
+    tolerée, une valeur fausse ou manquante ne l'est pas.
+    """
+    lignes_obtenues = normaliser(obtenu)
+    lignes_attendues = normaliser(attendu)
+    if len(lignes_obtenues) != len(lignes_attendues):
+        return False
+
+    # Appariement un pour un : sans consommer la ligne trouvee, deux lignes de
+    # reference differentes pourraient se satisfaire de la meme ligne obtenue.
+    restantes = list(lignes_obtenues)
+    for ligne in lignes_attendues:
+        correspondante = next(
+            (candidate for candidate in restantes if set(ligne) <= set(candidate)), None
+        )
+        if correspondante is None:
+            return False
+        restantes.remove(correspondante)
+    return True
+
+
 class Campagne:
     """Deroule les cas contre une API et compare aux requetes de reference."""
 
@@ -174,8 +206,10 @@ class Campagne:
                 "" if mesure.juste else f"{len(mesure.obtenu)} lignes au lieu de {len(attendu)}"
             )
         else:
-            mesure.juste = normaliser(mesure.obtenu) == normaliser(attendu)
-            mesure.motif = "" if mesure.juste else "résultat différent de la référence"
+            mesure.juste = contient(mesure.obtenu, attendu)
+            mesure.motif = (
+                "" if mesure.juste else "la référence n'est pas retrouvée dans le résultat"
+            )
 
     # --- Les refus -----------------------------------------------------------
 
