@@ -33,6 +33,9 @@ VIDES = "supprimer_lignes_vides"
 SEUIL_MANQUANTES = 0.02
 SEUIL_LIGNES_VIDES = 0.3
 
+# Le libelle que le profileur pose sur une colonne quasi unique.
+IDENTIFIANT = "identifiant"
+
 FORMATS_DATE = ["%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y"]
 ESPACES = re.compile(r"\s+")
 
@@ -173,6 +176,16 @@ class NettoyageService:
                 colonne=nom,
                 lignes_affectees=manquantes,
             )
+
+        # Un identifiant est unique par definition : le remplacer par la valeur la
+        # plus frequente attribuerait le telephone, l'IBAN ou le numero de securite
+        # sociale de quelqu'un a dix-sept autres personnes. Mesure sur le jeu de
+        # demonstration : la proposition sortait, et elle etait grave.
+        #
+        # La garde est ici et non plus haut : SUPPRIMER les lignes sans identifiant
+        # reste legitime, c'est seulement l'imputation qui ne l'est pas.
+        if profil.get("type") == IDENTIFIANT:
+            return None
 
         if profil.get("type") in ("entier", "décimal"):
             mediane = pd.to_numeric(valeurs, errors="coerce").median()

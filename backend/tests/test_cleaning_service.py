@@ -12,6 +12,7 @@ from app.services.cleaning_service import (
     CASSE,
     DATES,
     DOUBLONS,
+    FREQUENT,
     MEDIANE,
     VIDES,
     NettoyageService,
@@ -168,4 +169,22 @@ def test_a_mostly_empty_column_is_offered_for_row_removal_not_imputation():
     table = pd.DataFrame({"note": [5.0, None, None, None, None, 3.0]})
     liste = NettoyageService().proposer(table, ProfilingService().profiler(table))
     assert par_type(liste, VIDES) is not None
+    assert par_type(liste, MEDIANE) is None
+
+
+def test_an_identifier_column_is_never_imputed():
+    """Le telephone d'une personne ne se recopie pas sur dix-sept autres.
+
+    Mesure sur le jeu de demonstration : la proposition sortait, et elle
+    proposait d'attribuer « +33615217166 » a tous ceux dont le numero manquait.
+    Un identifiant est unique par definition ; l'imputer produit une donnee
+    fausse, et sur une colonne personnelle, une donnee fausse ET sensible.
+    """
+    numeros = [f"+3361234{rang:04d}" for rang in range(18)] + [None, None]
+    table = pd.DataFrame({"telephone": numeros})
+    liste = NettoyageService().proposer(table, ProfilingService().profiler(table))
+
+    # Seules les imputations sont interdites. Supprimer des lignes reste
+    # legitime sur une colonne d'identifiants, et n'est donc pas verifie ici.
+    assert par_type(liste, FREQUENT) is None
     assert par_type(liste, MEDIANE) is None
