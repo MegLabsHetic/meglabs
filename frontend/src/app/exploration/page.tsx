@@ -8,6 +8,7 @@ import { BanniereePii } from "@/components/BanniereePii";
 import { Carte } from "@/components/Carte";
 import { DetailColonne } from "@/components/DetailColonne";
 import { ListeFichiers } from "@/components/ListeFichiers";
+import { Nettoyage, type Proposition } from "@/components/Nettoyage";
 import { ScoreQualite } from "@/components/ScoreQualite";
 import { TableauColonnes } from "@/components/TableauColonnes";
 import { SqueletteProfil } from "@/components/Squelette";
@@ -27,7 +28,9 @@ export default function Exploration() {
     fichierId: string;
     profil: Profil;
     detections: Detection[];
+    propositions: Proposition[];
   } | null>(null);
+  const [nettoyage, setNettoyage] = useState(false);
   const [colonneOuverte, setColonneOuverte] = useState<string | null>(null);
   const [masquage, setMasquage] = useState(false);
   const [derniereAction, setDerniereAction] = useState<{
@@ -42,10 +45,14 @@ export default function Exploration() {
     if (!identifiant) return;
 
     let abandonne = false;
-    Promise.all([api.profil(identifiant), api.donneesPersonnelles(identifiant)])
-      .then(([profil, detections]) => {
+    Promise.all([
+      api.profil(identifiant),
+      api.donneesPersonnelles(identifiant),
+      api.propositionsNettoyage(identifiant),
+    ])
+      .then(([profil, detections, propositions]) => {
         if (abandonne) return;
-        setDonnees({ fichierId: identifiant, profil, detections });
+        setDonnees({ fichierId: identifiant, profil, detections, propositions });
         setColonneOuverte(null);
       })
       .catch((probleme: unknown) => {
@@ -64,13 +71,47 @@ export default function Exploration() {
   const profil = aJour ? donnees.profil : null;
   const detections = aJour ? donnees.detections : [];
 
+  /**
+   * Applique les corrections choisies, puis relit tout.
+   *
+   * Les propositions sont recalculees apres coup : une fois les doublons
+   * supprimes, continuer a proposer de les supprimer serait troublant.
+   */
+  const nettoyer = async (types: string[]) => {
+    if (!fichier) return;
+    setNettoyage(true);
+    atelier.signaler(null);
+    try {
+      const resultat = await api.nettoyer(fichier.id, types);
+      setDonnees({
+        fichierId: fichier.id,
+        profil: resultat.profil,
+        detections: resultat.donnees_personnelles,
+        propositions: await api.propositionsNettoyage(fichier.id),
+      });
+      setColonneOuverte(null);
+      await atelier.rafraichir();
+    } catch (probleme) {
+      atelier.signaler(
+        probleme instanceof ErreurApi ? probleme.message : "Une erreur est survenue.",
+      );
+    } finally {
+      setNettoyage(false);
+    }
+  };
+
   const pseudonymiser = async () => {
     if (!fichier) return;
     setMasquage(true);
     atelier.signaler(null);
     try {
       const resultat = await api.pseudonymiser(fichier.id);
-      setDonnees({ fichierId: fichier.id, profil: resultat.profil, detections: [] });
+      setDonnees({
+        fichierId: fichier.id,
+        profil: resultat.profil,
+        detections: [],
+        propositions: await api.propositionsNettoyage(fichier.id),
+      });
       setDerniereAction({
         colonnes: resultat.colonnes_pseudonymisees,
         valeurs: resultat.valeurs_remplacees,
@@ -143,6 +184,23 @@ export default function Exploration() {
           enCours={masquage}
           onPseudonymiser={pseudonymiser}
         />
+
+        {profil && donnees && (
+          <Carte className="flex flex-col gap-3">
+            <div>
+              <h2 className="text-sm font-medium">Corrections proposées</h2>
+              <p className="mt-1 text-xs" style={{ color: "var(--ink-muted)" }}>
+                Calculées depuis le profil, pas devinées. Chacune dit ce qu&apos;elle change
+                et combien de lignes elle touche — vous décidez.
+              </p>
+            </div>
+            <Nettoyage
+              propositions={donnees.propositions}
+              enCours={nettoyage}
+              onAppliquer={nettoyer}
+            />
+          </Carte>
+        )}
 
         {profil && (
           <>
