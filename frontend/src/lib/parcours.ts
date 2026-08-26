@@ -37,8 +37,7 @@ export const ETAPES: Etape[] = [
   {
     chemin: "/rapport",
     titre: "Rapport",
-    resume: "Un document transmissible en dix sections",
-    disponible: false,
-    attendu: "sprint 4",
+    resume: "Un document transmissible, chiffres à l'appui",
+    disponible: true,
   },
 ];

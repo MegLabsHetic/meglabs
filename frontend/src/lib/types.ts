@@ -82,3 +82,31 @@ export interface Workspace {
   nom: string;
   cree_le: string;
 }
+
+/** Le rapport d'un espace : tout ce qui suit est mesuré ailleurs, jamais estimé ici. */
+export interface Rapport {
+  espace: string;
+  sources: {
+    nom: string;
+    lignes: number;
+    colonnes: number;
+    score_qualite: number | null;
+    doublons: number;
+    penalites: Penalite[];
+    statut_pii: StatutPii;
+    anomalies: { type: string; colonnes: string[] }[];
+  }[];
+  corrections: {
+    fichier: string;
+    type: string;
+    colonne: string | null;
+    lignes_affectees: number;
+  }[];
+  questions: { question: string; reponse: string; sql: string | null; cout_centimes: number }[];
+  confiance: {
+    score: number;
+    composantes: { libelle: string; valeur: number; poids: number }[];
+    corrections_appliquees: number;
+  };
+  cout: { centimes: number; questions: number };
+}
