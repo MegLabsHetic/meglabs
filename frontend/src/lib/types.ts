@@ -110,3 +110,21 @@ export interface Rapport {
   };
   cout: { centimes: number; questions: number };
 }
+
+/** Une base externe branchée à un espace. Le mot de passe n'en ressort jamais. */
+export interface Source {
+  id: string;
+  nom: string;
+  type: string;
+  derniere_synchro: string | null;
+  tables_synchronisees: number;
+  config: { hote: string; port: number; base: string; utilisateur: string; schema: string };
+}
+
+/** Une table telle que la base la décrit, avant toute copie. */
+export interface TableDistante {
+  schema: string;
+  nom: string;
+  /** Estimée depuis les statistiques de PostgreSQL, pas comptée. */
+  lignes: number | null;
+}

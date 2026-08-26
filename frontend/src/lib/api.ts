@@ -14,6 +14,8 @@ import type {
   Profil,
   Pseudonymisation,
   Rapport,
+  Source,
+  TableDistante,
   Workspace,
 } from "./types";
 
@@ -87,6 +89,30 @@ export const api = {
     }),
 
   profil: (fichierId: string) => appeler<Profil>(`/api/files/${fichierId}/profile`),
+
+  /** Teste la connexion puis enregistre la source. */
+  connecterSource: (workspaceId: string, connexion: Record<string, unknown>) =>
+    appeler<Source>(`/api/workspaces/${workspaceId}/sources`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(connexion),
+    }),
+
+  /** Les sources déjà branchées à cet espace. */
+  sources: (workspaceId: string) =>
+    appeler<Source[]>(`/api/workspaces/${workspaceId}/sources`),
+
+  /** Les tables lisibles, avec leur taille estimée. */
+  tablesSource: (sourceId: string) =>
+    appeler<TableDistante[]>(`/api/sources/${sourceId}/tables`),
+
+  /** Copie les tables choisies dans l'espace. */
+  synchroniserSource: (sourceId: string, tables: string[]) =>
+    appeler<{ fichiers: string[] }>(`/api/sources/${sourceId}/synchroniser`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ tables }),
+    }),
 
   /** Le lien de telechargement du notebook. Un `a href` plutot qu un fetch : le
    *  navigateur sait deja nommer et enregistrer un fichier, et un blob
