@@ -12,16 +12,19 @@ la part de questions qui ont abouti, et la presence de defauts non corriges —
 trois choses que le lecteur peut verifier ailleurs dans le rapport.
 """
 
+import secrets
 from dataclasses import dataclass
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import Task
+from app.core.errors import RessourceIntrouvable
 from app.core.journal import obtenir
 from app.models.chat_message import ChatMessage
 from app.models.cleaning_action import CleaningAction
 from app.models.data_file import DataFile
+from app.models.report import Report
 from app.models.workspace import Workspace
 from app.prompts import charger
 from app.services.file_service import FileService
@@ -238,3 +241,51 @@ class ReportService:
             f"## Questions posées\n\n{questions or 'aucune'}\n\n"
             f"## Score de confiance\n\n{rapport['confiance']['score']}/100"
         )
+
+    # --- Le partage ----------------------------------------------------------
+
+    async def partager(self, session: AsyncSession, workspace_id: str) -> str:
+        """Fige le rapport et rend un jeton de lecture publique.
+
+        Le contenu est copie au moment du partage, pas relu a chaque visite : un
+        lien transmis doit montrer ce qu'on a voulu montrer. Sans cette copie,
+        nettoyer un fichier apres coup changerait un document deja envoye.
+        """
+        contenu = await self.construire(session, workspace_id)
+        rapport = Report(
+            workspace_id=workspace_id,
+            content=contenu,
+            confidence_score=contenu["confiance"]["score"],
+            # `token_urlsafe` et non un UUID : le jeton est devinable en theorie,
+            # et 32 octets d'alea le rendent hors de portee en pratique.
+            share_token=secrets.token_urlsafe(32),
+        )
+        session.add(rapport)
+        await session.commit()
+        journal.info("rapport partage", extra={"espace": workspace_id})
+        return rapport.share_token or ""
+
+    async def revoquer(self, session: AsyncSession, workspace_id: str) -> int:
+        """Coupe tous les liens de cet espace. Le rapport reste, le lien meurt."""
+        resultat = await session.execute(
+            select(Report).where(
+                Report.workspace_id == workspace_id, Report.share_token.is_not(None)
+            )
+        )
+        rapports = list(resultat.scalars())
+        for rapport in rapports:
+            rapport.share_token = None
+        await session.commit()
+        return len(rapports)
+
+    async def lire_partage(self, session: AsyncSession, jeton: str) -> dict:
+        """Le contenu fige derriere un jeton, ou rien.
+
+        Aucune information sur l'espace n'est renvoyee : un lien revoque et un
+        lien qui n'a jamais existe doivent etre indiscernables.
+        """
+        resultat = await session.execute(select(Report).where(Report.share_token == jeton))
+        rapport = resultat.scalar()
+        if rapport is None:
+            raise RessourceIntrouvable("Ce lien de partage n'existe plus.")
+        return rapport.content
