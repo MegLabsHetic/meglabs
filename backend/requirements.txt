@@ -11,6 +11,7 @@ python-multipart==0.0.20
 SQLAlchemy[asyncio]==2.0.43
 aiosqlite==0.21.0
 asyncpg==0.30.0
+psycopg2-binary==2.9.10
 
 # Analyse de donnees (Agent Data : Python pur, aucun appel LLM)
 pandas==2.3.2
@@ -30,3 +31,6 @@ groq==0.31.1
 # Divers
 python-dotenv==1.1.1
 slowapi==0.1.9
+
+# Chiffrement des identifiants de connexion aux sources externes.
+cryptography==46.0.2
