@@ -7,7 +7,15 @@
 
 import type { Proposition } from "@/components/Nettoyage";
 
-import type { Depot, Detection, Fichier, Profil, Pseudonymisation, Workspace } from "./types";
+import type {
+  Depot,
+  Detection,
+  Fichier,
+  Profil,
+  Pseudonymisation,
+  Rapport,
+  Workspace,
+} from "./types";
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
 
@@ -79,6 +87,9 @@ export const api = {
     }),
 
   profil: (fichierId: string) => appeler<Profil>(`/api/files/${fichierId}/profile`),
+
+  /** Le rapport de l espace : sources, corrections, questions, score. */
+  rapport: (workspaceId: string) => appeler<Rapport>(`/api/workspaces/${workspaceId}/rapport`),
 
   /** Les corrections que les defauts detectes justifient, avec leur impact. */
   propositionsNettoyage: (fichierId: string) =>
