@@ -128,6 +128,9 @@ class ReportService:
                 "type": action.action_type,
                 "colonne": action.column_name,
                 "lignes_affectees": action.rows_affected,
+                # Les valeurs figees servent a l'export notebook : sans elles il
+                # recalculerait la mediane et ne reproduirait pas le resultat montre.
+                "params": action.params or {},
             }
             for action in resultat.scalars()
         ]

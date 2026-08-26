@@ -119,14 +119,23 @@ export default function Rapport() {
           </p>
         </div>
         {rapport && (
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="shrink-0 rounded-lg border px-3 py-1.5 text-xs transition-colors"
-            style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
-          >
-            Imprimer
-          </button>
+          <div className="flex shrink-0 gap-2">
+            <a
+              href={api.lienNotebook(espace.id)}
+              className="rounded-lg border px-3 py-1.5 text-xs transition-colors"
+              style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
+            >
+              Exporter en notebook
+            </a>
+            <button
+              type="button"
+              onClick={() => window.print()}
+              className="rounded-lg border px-3 py-1.5 text-xs transition-colors"
+              style={{ borderColor: "var(--filet)", color: "var(--ink-2)" }}
+            >
+              Imprimer
+            </button>
+          </div>
         )}
       </header>
 
