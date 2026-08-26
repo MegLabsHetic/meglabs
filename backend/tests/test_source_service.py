@@ -60,19 +60,36 @@ def test_credentials_encrypted_with_another_key_are_refused(service):
 # --- Ce qui est refuse avant de se connecter ---------------------------------
 
 
-@pytest.mark.parametrize("hote", ["localhost", "127.0.0.1", "0.0.0.0", "::1", "postgres"])
-def test_an_address_pointing_at_our_own_server_is_refused(service, hote):
-    """Sans ce filtre, une chaine de connexion devient un moyen de faire scanner
-    le reseau interne du serveur depuis l'exterieur — et d'atteindre notre propre
-    base, qui porte les donnees de tous les espaces."""
+@pytest.mark.parametrize(
+    "hote",
+    [
+        "localhost",
+        "127.0.0.1",
+        "0.0.0.0",
+        "10.0.0.5",  # reseau prive de classe A
+        "192.168.1.10",  # reseau domestique
+        "172.16.0.1",  # reseau prive de classe B
+        "169.254.169.254",  # metadonnees des fournisseurs cloud
+    ],
+)
+def test_an_address_on_a_private_network_is_refused(service, hote):
+    """Sans ce controle, une chaine de connexion devient un moyen de faire
+    scanner le reseau interne du serveur depuis l'exterieur — et d'atteindre
+    notre propre base, qui porte les donnees de TOUS les espaces.
+
+    `169.254.169.254` merite sa place : c'est l'adresse des metadonnees chez la
+    plupart des fournisseurs cloud, et elle rend des identifiants."""
     with pytest.raises(ErreurUtilisateur) as echec:
         service.tester(config(hote=hote))
-    assert "serveur MegLabs" in str(echec.value)
+    assert "reseau interne" in str(echec.value).replace("é", "e")
 
 
-def test_the_check_is_case_insensitive(service):
-    with pytest.raises(ErreurUtilisateur):
-        service.tester(config(hote="LocalHost"))
+def test_a_name_resolving_to_a_private_address_is_refused(service):
+    """C'est le contournement qu'une liste de noms interdits ne voit pas : il
+    suffit d'un domaine qu'on controle et qui pointe vers 127.0.0.1."""
+    with pytest.raises(ErreurUtilisateur) as echec:
+        service.tester(config(hote="localtest.me"))
+    assert "reseau interne" in str(echec.value).replace("é", "e")
 
 
 def test_an_empty_address_is_refused(service):

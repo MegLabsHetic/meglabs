@@ -18,7 +18,9 @@ une question posee deux fois pourrait donner deux reponses.
 """
 
 import asyncio
+import ipaddress
 import re
+import socket
 from dataclasses import dataclass
 from datetime import UTC, datetime
 
@@ -48,10 +50,45 @@ LIGNES_MAX = 200_000
 DELAI_CONNEXION = 10
 DELAI_REQUETE = 60_000
 
-# Hotes qu'une source ne doit jamais viser. Une chaine de connexion est fournie
-# par l'utilisateur : sans ce filtre, elle devient un moyen de faire scanner le
-# reseau interne du serveur depuis l'exterieur.
-HOTES_INTERDITS = frozenset({"localhost", "127.0.0.1", "0.0.0.0", "::1", "postgres"})
+
+def verifier_hote_public(hote: str) -> None:
+    """Refuse toute adresse qui n'est pas publique. Par liste blanche.
+
+    Une chaine de connexion est fournie par l'utilisateur et designe une machine :
+    sans ce controle, elle devient un moyen de faire scanner le reseau interne du
+    serveur depuis l'exterieur, et d'atteindre notre propre base — qui porte les
+    donnees de TOUS les espaces.
+
+    **Le nom est resolu avant d'etre juge.** Une liste de noms interdits
+    (`localhost`, `127.0.0.1`) se contourne en une ligne : il suffit d'un nom de
+    domaine qu'on controle et qui pointe vers `10.0.0.5`. Seule l'adresse
+    obtenue apres resolution dit ou l'on va reellement.
+
+    Toutes les adresses resolues sont verifiees, pas seulement la premiere : un
+    nom peut en porter plusieurs, et il suffirait d'une privee pour passer.
+    """
+    hote = (hote or "").strip()
+    if not hote:
+        raise ErreurUtilisateur("L'adresse du serveur est obligatoire.")
+
+    try:
+        resolues = socket.getaddrinfo(hote, None)
+    except socket.gaierror as echec:
+        raise ErreurUtilisateur(
+            f"L'adresse « {hote} » est introuvable. Vérifiez le nom du serveur."
+        ) from echec
+
+    for famille in resolues:
+        adresse_brute = famille[4][0]
+        try:
+            adresse_ip = ipaddress.ip_address(adresse_brute)
+        except ValueError:
+            continue
+        if not adresse_ip.is_global:
+            raise ErreurUtilisateur(
+                f"« {hote} » désigne une adresse du réseau interne ({adresse_brute}). "
+                "Une source doit être une base joignable depuis Internet."
+            )
 
 
 @dataclass(frozen=True)
@@ -114,13 +151,8 @@ class SourceService:
 
     def _url(self, config: dict) -> str:
         hote = str(config.get("hote", "")).strip()
-        if not hote:
-            raise ErreurUtilisateur("L'adresse du serveur est obligatoire.")
-        if hote.lower() in HOTES_INTERDITS:
-            raise ErreurUtilisateur(
-                "Cette adresse désigne le serveur MegLabs lui-même. "
-                "Indiquez l'adresse publique de votre base de données."
-            )
+        verifier_hote_public(hote)
+
         from urllib.parse import quote_plus
 
         return (
