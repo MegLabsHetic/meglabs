@@ -1,0 +1,4 @@
+# Les resultats d'une campagne de benchmark : ils datent de leur execution et
+# changent a chaque lancement. Ce qui se versionne, ce sont les questions et
+# les requetes de reference, pas les mesures d'un jour.
+benchmark/resultats.json

@@ -26,9 +26,11 @@ from app.core.duckdb_engine import ResultatSql, nom_de_table
 from app.core.errors import ErreurUtilisateur
 from app.core.events import JETON, Evenement, FluxEvenements
 from app.models.chat_message import ChatMessage
+from app.models.cleaning_action import CleaningAction
 from app.models.data_file import DataFile
 from app.models.query_cache import QueryCache
 from app.schemas.chat import Comprehension, Intention
+from app.services.cleaning_service import NettoyageService
 
 # Deux echanges de plus que ce que l'orchestrateur en garde : la troncature est sa
 # decision, pas celle de la base.
@@ -59,6 +61,7 @@ class QueryService:
 
     def __init__(self, agent_donnees: DataAgent | None = None) -> None:
         self._donnees = agent_donnees or DataAgent()
+        self._nettoyage = NettoyageService()
 
     async def repondre(
         self,
@@ -73,7 +76,7 @@ class QueryService:
             raise ErreurUtilisateur("Pose une question pour que je puisse y répondre.")
 
         fichiers = await self._fichiers(session, workspace_id)
-        tables = {nom: self._charger(fichier) for nom, fichier in fichiers.items()}
+        tables = {nom: await self._charger(session, fichier) for nom, fichier in fichiers.items()}
         schemas = {nom: self._contexte(fichier) for nom, fichier in fichiers.items()}
 
         cle = self._cle_cache(question, fichiers)
@@ -201,8 +204,27 @@ class QueryService:
             nommes[nom_de_table(fichier.name, set(nommes))] = fichier
         return nommes
 
-    def _charger(self, fichier: DataFile) -> pd.DataFrame:
-        return self._donnees.charger(Path(fichier.path))
+    async def _charger(self, session: AsyncSession, fichier: DataFile) -> pd.DataFrame:
+        """Le fichier original, plus le rejeu des actions de nettoyage actives.
+
+        Sans ce rejeu, le nettoyage serait cosmetique : l'ecran montrerait des
+        donnees corrigees pendant que les questions porteraient encore sur les
+        doublons et les modalites variantes.
+        """
+        table = self._donnees.charger(Path(fichier.path))
+        actions = await self._actions(session, fichier.id)
+        return self._nettoyage.appliquer(table, actions) if actions else table
+
+    async def _actions(self, session: AsyncSession, file_id: str) -> list[dict]:
+        resultat = await session.execute(
+            select(CleaningAction)
+            .where(CleaningAction.file_id == file_id, CleaningAction.enabled.is_(True))
+            .order_by(CleaningAction.order_index)
+        )
+        return [
+            {"type": a.action_type, "colonne": a.column_name, "params": a.params or {}}
+            for a in resultat.scalars()
+        ]
 
     def _contexte(self, fichier: DataFile) -> dict:
         """Le profil deja calcule, ou un profil recalcule si le fichier est ancien."""

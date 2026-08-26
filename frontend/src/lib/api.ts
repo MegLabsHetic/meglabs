@@ -5,6 +5,8 @@
  * l'utilisateur : on le remonte tel quel plutôt que d'en inventer un.
  */
 
+import type { Proposition } from "@/components/Nettoyage";
+
 import type { Depot, Detection, Fichier, Profil, Pseudonymisation, Workspace } from "./types";
 
 const BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
@@ -77,4 +79,16 @@ export const api = {
     }),
 
   profil: (fichierId: string) => appeler<Profil>(`/api/files/${fichierId}/profile`),
+
+  /** Les corrections que les defauts detectes justifient, avec leur impact. */
+  propositionsNettoyage: (fichierId: string) =>
+    appeler<Proposition[]>(`/api/files/${fichierId}/nettoyage`),
+
+  /** Applique les corrections choisies et rend le nouveau profil. */
+  nettoyer: (fichierId: string, types: string[]) =>
+    appeler<Depot>(`/api/files/${fichierId}/nettoyage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ types }),
+    }),
 };
