@@ -8,6 +8,7 @@ from app.models.base import Base, Entity
 from app.models.chat_message import ChatMessage
 from app.models.cleaning_action import CleaningAction
 from app.models.data_file import DataFile
+from app.models.data_source import DataSource
 from app.models.llm_call_log import LlmCallLog
 from app.models.ml_run import MLRun
 from app.models.pii_mapping import PiiMapping
@@ -20,6 +21,7 @@ __all__ = [
     "ChatMessage",
     "CleaningAction",
     "DataFile",
+    "DataSource",
     "Entity",
     "LlmCallLog",
     "MLRun",

@@ -116,6 +116,12 @@ class Settings(BaseSettings):
     cors_origins: str = "http://localhost:3000"
     storage_dir: Path = Path("./storage")
 
+    # Chiffre les identifiants de connexion aux bases externes. Une valeur par
+    # defaut existe pour que le developpement demarre sans reglage, mais elle
+    # est publique : en production, `CLE_CHIFFREMENT` DOIT etre renseignee, sinon
+    # n'importe qui ayant le code peut relire les mots de passe stockes.
+    cle_chiffrement: str = "UkVNUExBQ0VaLUNFVFRFLUNMRS1FTi1QUk9ELTEyMzQ="
+
     max_file_size_mb: int = 100
     max_rows: int = 1_000_000
     min_rows_for_ml: int = 50
