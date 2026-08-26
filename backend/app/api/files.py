@@ -1,11 +1,12 @@
 """Routes des fichiers. Couche fine : toute la logique vit dans les services."""
 
-from fastapi import APIRouter, Depends, File, UploadFile
+from fastapi import APIRouter, Depends, File, Request, UploadFile
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.config import get_settings
 from app.core.database import get_session
+from app.core.debit import LIMITE_DEPOT, limiteur
 from app.core.errors import ErreurUtilisateur
 from app.schemas.fichier import (
     DepotReponse,
@@ -44,8 +45,10 @@ async def _lire_borne(fichier: UploadFile) -> bytes:
 
 
 @router.post("/workspaces/{workspace_id}/files", response_model=DepotReponse, status_code=201)
+@limiteur.limit(LIMITE_DEPOT)
 async def deposer(
     workspace_id: str,
+    request: Request,
     fichier: UploadFile = File(...),
     session: AsyncSession = Depends(get_session),
 ) -> DepotReponse:

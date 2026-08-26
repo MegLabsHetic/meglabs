@@ -8,10 +8,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from slowapi.errors import RateLimitExceeded
 
 from app.api import chat, files, partages, workspaces
 from app.core.config import get_settings
 from app.core.database import create_schema
+from app.core.debit import MESSAGE, limiteur
 from app.core.errors import ErreurUtilisateur
 from app.core.journal import configurer, id_requete, obtenir
 
@@ -82,6 +84,19 @@ async def tracer(requete: Request, suivant: Callable) -> Response:
     reponse.headers["X-Request-ID"] = id_requete.get() or ""
     id_requete.reset(jeton)
     return reponse
+
+
+def depassement(_: Request, __: Exception) -> JSONResponse:
+    """Un refus pour cause de debit, en francais et avec la conduite a tenir."""
+    journal.info("debit depasse")
+    return JSONResponse(status_code=429, content={"detail": MESSAGE})
+
+
+# Enregistre APRES la definition du gestionnaire, et avant le montage des
+# routeurs : les decorateurs `@limiteur.limit` cherchent le limiteur dans
+# `app.state` au moment ou ils s'appliquent.
+app.state.limiter = limiteur
+app.add_exception_handler(RateLimitExceeded, depassement)
 
 
 @app.exception_handler(ErreurUtilisateur)

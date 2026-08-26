@@ -8,12 +8,13 @@ l'ordre d'arrivee.
 
 import asyncio
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_session
+from app.core.debit import LIMITE_CONVERSATION, limiteur
 from app.core.errors import ErreurUtilisateur
 from app.core.events import ERREUR, FIN, Evenement, FluxEvenements
 from app.services.query_service import QueryService
@@ -31,9 +32,13 @@ class Question(BaseModel):
 
 
 @router.post("/{workspace_id}")
+@limiteur.limit(LIMITE_CONVERSATION)
 async def poser(
     workspace_id: str,
     demande: Question,
+    # `slowapi` lit l'adresse dans la requete : le parametre est obligatoire
+    # meme quand la fonction ne s'en sert pas.
+    request: Request,
     session: AsyncSession = Depends(get_session),
 ) -> StreamingResponse:
     flux = FluxEvenements()

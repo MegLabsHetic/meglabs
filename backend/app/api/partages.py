@@ -5,10 +5,11 @@ d'entrée d'un lien transmis à quelqu'un d'extérieur. Il ne rend que le conten
 figé au moment du partage, et rien qui permette de remonter à l'espace.
 """
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_session
+from app.core.debit import LIMITE_PARTAGE, limiteur
 from app.services.report_service import ReportService
 
 router = APIRouter(prefix="/api/partages", tags=["partages"])
@@ -16,7 +17,8 @@ rapports = ReportService()
 
 
 @router.get("/{jeton}")
-async def lire(jeton: str, session: AsyncSession = Depends(get_session)) -> dict:
+@limiteur.limit(LIMITE_PARTAGE)
+async def lire(jeton: str, request: Request, session: AsyncSession = Depends(get_session)) -> dict:
     """Le rapport derrière un lien.
 
     Un lien révoqué et un lien qui n'a jamais existé rendent la même erreur :
