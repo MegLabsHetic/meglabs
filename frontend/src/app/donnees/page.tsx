@@ -42,6 +42,32 @@ export default function Donnees() {
     };
   }, [atelier.espace]);
 
+  /**
+   * Remplit l'espace avec les jeux livrés, puis emmène directement à l'exploration.
+   *
+   * Le bouton disparaît dès qu'un fichier existe : proposer un jeu de
+   * démonstration à quelqu'un qui a déjà ses données serait du bruit.
+   */
+  const remplirDemonstration = async () => {
+    if (!atelier.espace) return;
+    setAnalyse(true);
+    atelier.signaler(null);
+    try {
+      const deposes = await api.demonstration(atelier.espace.id);
+      await rafraichirTout();
+      if (deposes[0]) {
+        atelier.choisirFichier(deposes[0]);
+        router.push("/exploration");
+      }
+    } catch (probleme) {
+      atelier.signaler(
+        probleme instanceof ErreurApi ? probleme.message : "Une erreur est survenue.",
+      );
+    } finally {
+      setAnalyse(false);
+    }
+  };
+
   const deposer = async (fichier: File) => {
     if (!atelier.espace) return;
     setAnalyse(true);
@@ -75,7 +101,11 @@ export default function Donnees() {
 
         {atelier.espace ? (
           <>
-            <ZoneDepot enCours={analyse} onFichier={deposer} />
+            <ZoneDepot
+              enCours={analyse}
+              onFichier={deposer}
+              onDemonstration={atelier.fichiers.length === 0 ? remplirDemonstration : undefined}
+            />
             <Sources
               espaceId={atelier.espace.id}
               sources={sources}

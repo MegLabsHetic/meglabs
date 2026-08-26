@@ -226,3 +226,44 @@ async def test_reading_personal_columns_reflects_pseudonymisation(
     restantes = (await client.get(f"/api/files/{file_id}/pii")).json()
 
     assert all(d["type_pii"] != "adresse e-mail" for d in restantes)
+
+
+# --- Le jeu de demonstration -------------------------------------------------
+
+
+async def test_the_demo_datasets_go_through_the_normal_upload_path(client):
+    """Ce n'est pas une demonstration truquee, c'est le produit qui tourne.
+
+    Les fichiers sont deposes plutot que copies : ils sont donc valides,
+    profiles et analyses comme ceux d'un utilisateur. Un raccourci ici rendrait
+    la demonstration plus rapide et moins vraie.
+    """
+    espace = (await client.post("/api/workspaces", json={"nom": "Decouverte"})).json()["id"]
+
+    reponse = await client.post(f"/api/workspaces/{espace}/demonstration")
+    assert reponse.status_code == 201
+
+    deposes = reponse.json()
+    assert {fichier["nom"] for fichier in deposes} == {"collaborateurs.csv", "transactions.csv"}
+    # Profiles pour de vrai : un score de qualite calcule, pas une valeur posee.
+    assert all(fichier["score_qualite"] is not None for fichier in deposes)
+
+
+async def test_the_demo_collaborators_carry_their_intended_flaws(client):
+    """Les defauts sont le sujet de la demonstration, pas un accident."""
+    espace = (await client.post("/api/workspaces", json={"nom": "Decouverte"})).json()["id"]
+    deposes = (await client.post(f"/api/workspaces/{espace}/demonstration")).json()
+
+    collaborateurs = next(f for f in deposes if f["nom"] == "collaborateurs.csv")
+    assert collaborateurs["statut_pii"] == "detectee"
+
+    profil = (await client.get(f"/api/files/{collaborateurs['id']}/profile")).json()
+    assert profil["doublons"]["nombre"] > 0
+    anomalies = {a["type"] for c in profil["colonnes"] for a in c["anomalies"]}
+    assert "modalites_variantes" in anomalies
+    assert "formats_multiples" in anomalies
+
+
+async def test_filling_an_unknown_workspace_is_refused(client):
+    reponse = await client.post("/api/workspaces/inconnu/demonstration")
+    assert reponse.status_code == 404

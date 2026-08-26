@@ -1,5 +1,7 @@
 """Routes des fichiers. Couche fine : toute la logique vit dans les services."""
 
+from pathlib import Path
+
 from fastapi import APIRouter, Depends, File, Request, UploadFile
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -140,3 +142,45 @@ async def appliquer_nettoyage(
         profil=profil,
         donnees_personnelles=service.detections_en_lecture(detections),
     )
+
+
+# Les fichiers livrés avec le projet. Leurs défauts sont volontaires et
+# verrouillés par des tests : ce sont eux qui donnent matière au profilage, au
+# nettoyage et à la détection de données personnelles.
+DEMONSTRATION = ("collaborateurs.csv", "transactions.csv")
+
+
+@router.post("/workspaces/{workspace_id}/demonstration", status_code=201)
+@limiteur.limit(LIMITE_DEPOT)
+async def demonstration(
+    workspace_id: str,
+    request: Request,
+    session: AsyncSession = Depends(get_session),
+) -> list[FichierLecture]:
+    """Remplit l'espace avec les jeux de démonstration.
+
+    C'est la réponse à la page blanche : quelqu'un qui découvre la plateforme
+    sait ce qu'il veut savoir, mais n'a pas forcément un fichier sous la main —
+    et sans fichier, il n'y a rien à voir.
+
+    Les fichiers passent par le dépôt normal plutôt que d'être copiés : ils sont
+    donc validés, profilés et analysés comme les vôtres. Ce n'est pas une
+    démonstration truquée, c'est le produit qui tourne.
+    """
+    await espaces.recuperer(session, workspace_id)
+    racine = Path(__file__).resolve().parents[2] / "data"
+
+    deposes = []
+    for nom in DEMONSTRATION:
+        chemin = racine / nom
+        if not chemin.exists():
+            continue
+        fichier, _, _ = await service.deposer(session, workspace_id, nom, chemin.read_bytes())
+        deposes.append(service.en_lecture(fichier))
+
+    if not deposes:
+        raise ErreurUtilisateur(
+            "Les jeux de démonstration ne sont pas disponibles sur ce serveur.",
+            code_http=500,
+        )
+    return deposes
