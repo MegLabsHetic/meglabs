@@ -88,6 +88,12 @@ export const api = {
 
   profil: (fichierId: string) => appeler<Profil>(`/api/files/${fichierId}/profile`),
 
+  /** Le lien de telechargement du notebook. Un `a href` plutot qu un fetch : le
+   *  navigateur sait deja nommer et enregistrer un fichier, et un blob
+   *  intermediaire n apporterait rien. */
+  lienNotebook: (workspaceId: string) =>
+    `${BASE}/api/workspaces/${workspaceId}/rapport/notebook`,
+
   /** Le rapport de l espace : sources, corrections, questions, score. */
   rapport: (workspaceId: string) => appeler<Rapport>(`/api/workspaces/${workspaceId}/rapport`),
 

@@ -1,16 +1,18 @@
 """Routes des espaces de travail. Couche fine : toute la logique vit dans les services."""
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Response
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.database import get_session
 from app.schemas.workspace import WorkspaceCreation, WorkspaceLecture
+from app.services.notebook_service import NotebookService
 from app.services.report_service import ReportService
 from app.services.workspace_service import WorkspaceService
 
 router = APIRouter(prefix="/api/workspaces", tags=["espaces de travail"])
 service = WorkspaceService()
 rapports = ReportService()
+carnets = NotebookService()
 
 
 @router.post("", response_model=WorkspaceLecture, status_code=201)
@@ -42,3 +44,25 @@ async def rapport(workspace_id: str, session: AsyncSession = Depends(get_session
     """
     await service.recuperer(session, workspace_id)
     return await rapports.construire(session, workspace_id)
+
+
+@router.get("/{workspace_id}/rapport/notebook")
+async def notebook(workspace_id: str, session: AsyncSession = Depends(get_session)) -> Response:
+    """La session en notebook Python exécutable.
+
+    C'est la contrepartie du pilier transparence : les outils sans code enferment
+    leurs utilisateurs, on préfère leur rendre le code. Ce qui sort d'ici tourne
+    sans la plateforme — y compris pour vérifier qu'elle n'a pas menti.
+    """
+    espace = await service.recuperer(session, workspace_id)
+    donnees = await rapports.construire(session, workspace_id)
+    carnet = carnets.exporter(donnees, donnees["corrections"])
+
+    nom = (
+        "".join(c if c.isalnum() or c in "-_" else "-" for c in espace.name).strip("-") or "analyse"
+    )
+    return Response(
+        content=carnets.en_json(carnet),
+        media_type="application/x-ipynb+json",
+        headers={"Content-Disposition": f'attachment; filename="{nom}.ipynb"'},
+    )
